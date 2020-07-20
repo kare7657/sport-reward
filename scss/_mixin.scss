@@ -1,0 +1,1774 @@
+// RWD
+@mixin web-L {
+    @media (max-width: $web-L) {
+        @content;
+    }
+}
+@mixin web-S {
+    @media (max-width: $web-S) {
+        @content;
+    }
+}
+@mixin pad {
+    @media (max-width: $pad) {
+        @content;
+    }
+}
+@mixin mobile-L {
+    @media (max-width: $mobile-L) {
+        @content;
+    }
+}
+@mixin mobile-S {
+    @media (max-width: $mobile-S) {
+        @content;
+    }
+}
+@mixin mobile-XS {
+    @media (max-width: $mobile-XS) {
+        @content;
+    }
+}
+// 通用
+@mixin all() {
+    font-family: "微軟正黑體" !important;
+    box-sizing: border-box !important;
+    .container {
+        width: 1140px;
+        margin: auto;
+        padding: $padding-S 0;
+        @include pad() {
+            width: 80%;
+            padding: $padding-S 0;
+        }
+        @include mobile-L() {
+            padding: $padding-XS 0;
+        }
+        @include mobile-XS() {
+            // padding: $padding-XS 0;
+        }
+    }
+    h1 {
+        font-size: $size-h1;
+        color: $title-D;
+        padding: 0;
+        margin: 0;
+        margin-bottom: $margin-XS;
+    }
+    h2 {
+        font-size: $size-h2;
+        color: $title-D;
+        padding: 0;
+        margin: 0;
+        margin-bottom: $margin-XS;
+        line-height: $size-h2 * 2;
+    }
+    h3 {
+        font-size: $size-h3;
+        color: $title-D;
+        padding: 0;
+        margin: 0;
+        margin-bottom: $margin-S;
+        line-height: $size-h3 * 2;
+    }
+    h4 {
+        font-size: $size-h4;
+        color: $title-D;
+        padding: 0;
+        margin: 0;
+        margin-top: $margin-XS;
+        margin-bottom: $margin-XS;
+    }
+    p {
+        font-size: $size-p;
+        color: $text;
+        padding: 0;
+        margin: 0;
+        line-height: $size-p * 2;
+        font-weight: 500;
+        text-align: justify;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    a {
+        text-decoration: none !important;
+        list-style: none !important;
+        color: $dark-blue;
+        font-weight: bold;
+        &:hover {
+            color: $blue !important;
+        }
+    }
+    //font-awesome
+    .fa,
+    .fas,
+    .far,
+    .fal,
+    .fad,
+    .fab {
+        font-family: "Font Awesome 5 Free" !important;
+    }
+    //無障礙框線
+    :focus {
+        outline: $blue dotted 3px !important;
+    }
+    .clearfix {
+        clear: both;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+    }
+    section {
+        width: 100%;
+    }
+    hr {
+        border-top: 1px solid $light-sky;
+        margin: 0;
+        margin: auto;
+    }
+    //清除預設按鈕樣式
+    input[type="button"],
+    select {
+        -webkit-appearance: none; /* Safari & Chrome */
+        -moz-appearance: none; /* FireFox */
+        appearance: none;
+    }
+    //表單
+    input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: solid 1px $light-sky;
+        background-color: $title-W;
+        color: $text;
+        padding: 0 $padding-XXS;
+        font-size: $size-p;
+        line-height: $size-p * 1.5;
+        &[type="submit"],
+        &[type="reset"] {
+            width: 100%;
+            height: 40px;
+            background-color: $dark-blue;
+            color: $title-W;
+            font-size: $size-h4;
+            font-weight: bold;
+            line-height: 40px;
+            border: none;
+            border-radius: 8px;
+            padding: 0;
+            text-decoration: none;
+            margin-top: $margin-XS;
+            &:hover {
+                background-color: $blue;
+            }
+        }
+        &[disabled] {
+            background-color: $light-sky;
+            &:hover {
+                background-color: $light-sky;
+            }
+        }
+        &[type="range"] {
+            -webkit-appearance: none;
+            overflow: hidden; /* 限定範圍 */
+            width: 200px;
+            height: 20px;
+            outline: none;
+            background: none;
+            border: none;
+            // chrome
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                position: relative;
+                width: 15px;
+                height: 15px;
+                background: rgba($color: $title-BK, $alpha: 0.3);
+                border-radius: 50%;
+            }
+            &::-webkit-slider-runnable-track {
+                border-radius: 10px;
+                background: #fff;
+                background: -webkit-linear-gradient(to left, #fff, transparent); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #fff, transparent);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+            //火狐
+            &::-moz-range-track {
+                height: 15px;
+                border-radius: 15px;
+                background: -webkit-linear-gradient(to left, #fff, transparent);
+                background: linear-gradient(to left, #fff, transparent);
+                border: none;
+            }
+
+            &::-moz-range-thumb {
+                width: 15px;
+                height: 15px;
+                background: rgba($color: $title-BK, $alpha: 0.3);
+                border: none;
+                border-radius: 50%;
+            }
+
+            &::-moz-range-thumb:hover,
+            &:active::-moz-range-thumb {
+                width: 16px;
+                height: 16px;
+            }
+
+            &::-moz-range-progress {
+                height: 10px;
+                border-radius: 10px;
+            }
+
+            &::-moz-focus-outer {
+                border: none;
+            }
+            //IE
+            &::-ms-track {
+                height: 15px;
+                border-color: transparent;
+                color: transparent;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                background: #fff;
+                background: -webkit-linear-gradient(to left, #fff, transparent);
+                background: linear-gradient(to left, #fff, transparent);
+            }
+            &::-ms-thumb {
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                border: none;
+                outline: none;
+                background: rgba($color: $title-BK, $alpha: 0.3);
+            }
+            &::-ms-fill-lower {
+                background: transparent;
+            }
+        }
+    }
+    select {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: solid 1px $light-sky;
+        background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
+        background-position: 97% center;
+        background-color: $title-W;
+        color: $text;
+        padding: 0 $padding-XXS;
+
+        &::-ms-expand {
+            display: none;
+        }
+        option {
+            color: $text;
+        }
+    }
+    .form-control {
+        background-color: rgba($color: $dark-blue, $alpha: 0.2) !important;
+    }
+    //按鈕
+    button {
+        padding: 5px $padding-XS;
+        background-color: $dark-blue;
+        border-radius: 8px;
+        border: none;
+        font-size: $size-h4;
+        color: $title-W;
+        font-weight: bold;
+        &:hover {
+            background-color: $blue;
+            transition-duration: 0.5s;
+        }
+        &[disabled] {
+            background-color: $light-sky;
+            &:hover {
+                background-color: $light-sky;
+            }
+        }
+        .fas {
+            margin-right: $margin-XS;
+        }
+    }
+    .button-outline {
+        padding: 8px $padding-XS;
+        background-color: transparent;
+        box-shadow: $dark-blue 0 0 0 1px;
+        font-size: $size-h4;
+        color: $dark-blue;
+        font-weight: bold;
+        @include mobile-L() {
+            padding: 8px $padding-XS/2;
+        }
+        &:hover {
+            background-color: $blue;
+            color: $title-W;
+            transition-duration: 0.5s;
+        }
+        &[disabled] {
+            background-color: $light-sky;
+            &:hover {
+                background-color: $light-sky;
+            }
+        }
+        .fas {
+            margin-right: $margin-XS;
+        }
+    }
+    //swiper
+    .swiper-container {
+        .swiper-button-next,
+        .swiper-button-prev {
+            @include mobile-L() {
+                display: none;
+            }
+        }
+        .swiper-slide {
+            position: relative;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    }
+    //date-picker datedropper
+    div.datedropper.iot {
+        --dd-color1: #2faae5;
+        --dd-color2: #fff;
+        --dd-color3: #595757;
+        --dd-color4: #fff;
+
+        --dd-radius: 10px;
+        --dd-width: 180px;
+        --dd-shadow: 0 0 29px 0px rgba(0, 0, 0, 0.1);
+    }
+    //modal-iot
+    .modal-iot {
+        padding: 0;
+        .modal-dialog {
+            max-width: 650px;
+            .modal-content {
+                border-radius: 15px;
+                .modal-header {
+                    width: 100%;
+                    border-bottom: none;
+                    padding: 0 $padding-S;
+                    margin-top: $margin-M;
+                    @include mobile-XS() {
+                        margin-top: $margin-S;
+                    }
+                    .modal-title {
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .close {
+                        position: absolute;
+                        right: 2.5%;
+                        margin: -1rem -1rem -1rem 0;
+                    }
+                }
+                .modal-body {
+                    width: 100%;
+                    margin: auto;
+                    margin-bottom: $margin-XS;
+                    padding: 0;
+                    padding: 0 $padding-S;
+                    padding-top: $padding-XS;
+                    @include mobile-L() {
+                        padding: 0 $padding-XS * 1.5;
+                        padding-top: $padding-XS;
+                        margin-bottom: $margin-S;
+                    }
+                    @include mobile-XS() {
+                        padding: 0 $padding-XS;
+                        padding-top: $padding-XXS;
+                    }
+                    .form-gp {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        margin-bottom: $margin-S;
+                        @include mobile-L() {
+                            flex-wrap: wrap;
+                            margin-bottom: $margin-XS;
+                        }
+                        label {
+                            width: 40%;
+                            font-size: $size-h4;
+                            line-height: $size-h4 * 1.5;
+                            font-weight: bold;
+                            color: $text;
+                            margin: $margin-XS 0;
+                            @include mobile-L() {
+                                width: 100%;
+                            }
+                        }
+                        input,
+                        select {
+                            width: 60%;
+                            @include mobile-L() {
+                                width: 100%;
+                            }
+                        }
+                        .text {
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            font-size: $size-p;
+                            p,
+                            span {
+                                color: $red;
+                                text-align: right;
+                            }
+                        }
+                    }
+                    p,
+                    span {
+                        color: $red;
+                        margin-left: 3px;
+                    }
+                }
+                .modal-footer {
+                    border-top: none;
+                    margin-bottom: $margin-M;
+                    padding: 0;
+                    padding: 0 $padding-S;
+                    @include mobile-L() {
+                        padding: 0 $padding-XS * 1.5;
+                    }
+                    @include mobile-XS() {
+                        padding: 0 $padding-XS;
+                        margin-bottom: $margin-S;
+                    }
+                    .btn {
+                        margin-top: $margin-XS;
+                        display: flex;
+                        justify-content: center;
+                        padding: 0;
+                        @include mobile-L() {
+                            width: 100%;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            button {
+                                margin: 0;
+                                margin-top: $margin-S;
+                            }
+                        }
+                    }
+                    .g-recaptcha {
+                        width: 100%;
+                        margin-top: $margin-XS;
+                    }
+                }
+                .btn-iot {
+                    margin: 0;
+                    margin-left: $margin-S;
+                    @include mobile-L() {
+                        width: 100%;
+                        margin: unset;
+                        margin-bottom: $margin-S;
+                    }
+                    &[type="submit"],
+                    &[type="reset"] {
+                        height: 40px;
+                        background-color: $dark-blue;
+                        color: $title-W;
+                        font-size: $size-h4;
+                        font-weight: bold;
+                        border: none;
+                        border-radius: 8px;
+                        padding: 5px $padding-XS;
+                        text-decoration: none;
+                        text-align: center;
+                        &:hover {
+                            background-color: $blue;
+                        }
+                    }
+                    &[type="button"] {
+                        height: 40px;
+                        background-color: transparent;
+                        border: solid 1px $dark-blue;
+                        border-radius: 8px;
+                        color: $dark-blue;
+                        font-size: $size-h4;
+                        font-weight: bold;
+                        padding: 5px $padding-XS;
+                        text-decoration: none;
+                        text-align: center;
+                        &:hover {
+                            background-color: $blue;
+                            color: $title-W;
+                            border: solid 1px $blue;
+                        }
+                    }
+                    &[disabled] {
+                        background-color: $light-sky;
+                        &:hover {
+                            background-color: $light-sky;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //頁碼
+    .pagination {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: $margin-S;
+        white-space: nowrap;
+        @include mobile-L() {
+            justify-content: center;
+            text-align: left;
+            white-space: unset;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline;
+                text-decoration: none;
+                padding: 0;
+                a {
+                    display: inline;
+                    padding: 5px 12px;
+                    border: solid 1px $light-sky;
+                    margin: -2px;
+                    font-size: $size-p;
+                    line-height: $size-p * 3;
+                    color: $dark-blue;
+                    @include mobile-S() {
+                        width: 100%;
+                        padding: 5px 15px;
+                    }
+                    @include mobile-XS() {
+                        width: 100%;
+                        padding: 5px 15px;
+                    }
+                    &:hover {
+                        background-color: $table-blue;
+                        border: solid 1px $light-sky;
+                    }
+                }
+                .active {
+                    background-color: $dark-blue;
+                    color: $title-W;
+                    border: solid 1px $dark-blue;
+                }
+                .fas {
+                    font-size: $size-p;
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+@mixin minibar() {
+    display: block;
+    width: 100%;
+    height: 80px;
+    padding: 0;
+    position: fixed;
+    z-index: 1000;
+    background-color: #fff;
+    @include pad() {
+        display: none;
+    }
+    .container {
+        height: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        .navbar-L {
+            width: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            @include web-S() {
+                margin-left: $margin-S;
+            }
+            img {
+                width: 350px;
+            }
+            h4 {
+                font-size: $size-h4;
+                color: $title-W;
+                margin: 0;
+                padding: 0;
+                line-height: 40px;
+            }
+        }
+        .navbar-R {
+            width: 20%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            img {
+                margin-right: 20px;
+                padding: 5px 0;
+            }
+            .btn {
+                margin: 0;
+                background-color: $dark-blue;
+                border-radius: 40px;
+                padding: $padding-XXS/1.5 $padding-XXS * 1.5;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                }
+                li,
+                a {
+                    margin: 0;
+                    display: inline;
+                    color: $title-W;
+                }
+                li {
+                    padding: 0 8px;
+                }
+                a:hover {
+                    color: $light-sky !important;
+                }
+            }
+        }
+    }
+}
+@mixin navbar() {
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    z-index: 999;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    @include pad() {
+        display: unset;
+        justify-content: unset;
+    }
+    @include pad() {
+        margin-top: 0;
+    }
+    .pc {
+        width: 100vw;
+        height: 40px;
+        background-color: $dark-blue;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        @include pad() {
+            display: none;
+        }
+        .navbar-R {
+            width: 1140px;
+            height: 100%;
+            color: $title-W;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            @include web-S() {
+                padding: 0 $padding-XS;
+            }
+            h4 {
+                font-size: $size-h4;
+                color: $title-W;
+                margin: 0;
+                padding: 0;
+                margin-left: $margin-XS * 1.5;
+                line-height: 40px;
+                display: inline;
+                &:hover {
+                    color: $light-sky;
+                }
+            }
+            .nav-function {
+                position: relative;
+                &:hover {
+                    .nav-list {
+                        display: block;
+                        transition-duration: 0.5s;
+                    }
+                }
+            }
+            .nav-list {
+                display: none;
+                text-align: center;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                transform: translateX(-25%);
+                width: 180px;
+                border-radius: 0 0 8px 8px;
+                padding: 0 20px 10px 20px;
+                background-color: rgba($color: #1480be, $alpha: 1);
+
+                h4 {
+                    margin: 0;
+                    padding: 0;
+                    line-height: $size-h4 * 2.5;
+                    color: $title-W;
+                    &:hover {
+                        color: $light-sky;
+                    }
+                }
+            }
+        }
+    }
+    .mobile {
+        display: none;
+        height: 60px;
+        @include pad() {
+            display: block;
+            position: relative;
+        }
+        .menu {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            display: flex;
+            .fas.fa-bars {
+                font-size: 30px;
+                line-height: 60px;
+                padding: 0 20px;
+                color: $dark-blue;
+            }
+            ul {
+                display: inline-block;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.9);
+                font-size: $size-h4;
+                line-height: 60px;
+                position: absolute;
+                top: 60px;
+                left: -100vw;
+                margin: 0;
+                padding: 40px 0 0 0;
+                text-align: center;
+                transition-duration: 0.7s;
+                .nav-item.dropdown {
+                    .dropdown-menu {
+                        background-color: $dark-blue;
+                        color: $title-W;
+                        text-align: center;
+                        .dropdown-item {
+                            padding: 15px 0;
+                        }
+                    }
+                    .nav-link.dropdown-toggle {
+                        padding: 5px 0;
+                    }
+                }
+            }
+            h4 {
+                color: $light-sky;
+            }
+            a {
+                color: $title-W;
+            }
+            .active-ul {
+                display: inline-block;
+                color: $blue;
+                transition-duration: 0.7s;
+                top: 60px;
+                left: 0;
+
+                li {
+                    color: $blue;
+                }
+            }
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            h4 {
+                font-size: $size-h4;
+                color: $title-W;
+                line-height: 60px;
+                margin: 0;
+            }
+        }
+        .logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            img {
+                height: 35px;
+                padding: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+@mixin breadcrumb() {
+    width: 100%;
+    background-color: #fff;
+    padding: 8px 0;
+    margin: 0;
+    position: absolute;
+    top: 150px;
+    @include pad() {
+        top: 80px;
+        background-color: $table-blue;
+    }
+    @include mobile-L() {
+        top: 60px;
+    }
+    .container {
+        padding: 0;
+        @include mobile-L() {
+            width: 100%;
+            margin: 0;
+            padding: 0 20px;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            display: inline;
+            list-style: none;
+            a {
+                color: $text;
+                &:hover .fas,
+                &:hover p {
+                    color: $blue;
+                }
+            }
+            li {
+                color: $text;
+                line-height: $size-p * 1.5;
+                display: inline;
+                list-style: none;
+                margin-right: 2px;
+            }
+            .fas {
+                font-size: $size-p;
+                line-height: $size-p * 1.5;
+                color: $text;
+            }
+            span {
+                color: $title-BK;
+            }
+        }
+    }
+}
+
+@mixin footer() {
+    background-color: $light-gray;
+    .container {
+        .text-gp {
+            margin: 0;
+            padding: 0;
+            ul,
+            li {
+                display: inline;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                @include mobile-L() {
+                    display: block;
+                }
+            }
+            li {
+                margin-right: $margin-XS;
+            }
+            span {
+                font-size: $size-p;
+                color: $light-sky;
+                line-height: $size-p;
+                margin: 0;
+                padding: 0 $padding-XXS;
+                @include mobile-L() {
+                    line-height: $size-h4 * 1.5;
+                }
+            }
+            a {
+                font-size: $size-h4;
+                color: $title-BK;
+                font-weight: bold;
+                line-height: $size-h4 * 2;
+                &:hover {
+                    color: $dark-blue;
+                }
+            }
+            .fas {
+                width: 18px;
+                height: 18px;
+                text-align: center;
+                margin-right: 12px;
+            }
+        }
+        .contact {
+            margin: $margin-XS 0;
+            .text-gp {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                margin-bottom: $margin-XS/2;
+                text-align: justify;
+                @include mobile-L() {
+                    margin-bottom: $margin-XS;
+                }
+                h4 {
+                    color: $title-BK;
+                    font-size: $size-h4;
+                    font-weight: bold;
+                    line-height: $size-h4 * 1.5;
+                    padding: 0;
+                    margin: 0;
+                    margin-right: $margin-XS/2;
+                }
+                .fas,
+                .far {
+                    color: $title-BK;
+                    width: 18px;
+                    height: 18px;
+                    text-align: center;
+                    margin-right: 10px;
+                }
+                p {
+                    color: $text;
+                    line-height: $size-p * 1.5;
+                    margin: 0;
+                }
+            }
+        }
+        .notice {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            @include pad() {
+                justify-content: unset;
+                flex-wrap: wrap;
+            }
+            .text-gp {
+                width: 70%;
+                flex-wrap: wrap;
+                @include pad() {
+                    width: 100%;
+                }
+            }
+            .date {
+                display: flex;
+                justify-content: flex-end;
+                width: 30%;
+                @include pad() {
+                    width: 100%;
+                    margin-top: $margin-XS;
+                    justify-content: flex-start;
+                }
+                img {
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+@mixin back-top() {
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    background-color: rgba($color: $dark-blue, $alpha: 0.8);
+    border-radius: 50%;
+    font-size: $size-h4;
+    color: $title-W;
+    line-height: 55px;
+    text-align: center;
+    @include web-S() {
+        right: 25px;
+        bottom: 25px;
+    }
+}
+
+@mixin news-list($list-width, $span-width) {
+    width: $list-width;
+    @include pad() {
+        width: 100%;
+        margin-right: unset;
+        margin-bottom: $margin-S;
+    }
+    .list {
+        display: flex;
+        padding: $padding-XXS 0;
+        @include pad() {
+            padding: $padding-XXS $padding-XS;
+        }
+        @include mobile-L() {
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: $padding-XXS $padding-XXS * 2;
+        }
+        span {
+            width: $span-width;
+            text-align: center;
+            color: $dark-blue;
+            font-size: $size-p;
+            line-height: $size-p * 2;
+            font-weight: bold;
+            @include pad() {
+                margin-right: $margin-S;
+            }
+            @include mobile-L() {
+                margin-right: unset;
+            }
+        }
+        a:hover p {
+            color: $blue;
+        }
+    }
+    .gray {
+        background-color: $light-gray;
+    }
+    .blue {
+        background-color: $table-blue;
+    }
+    .white {
+        background-color: $title-W;
+    }
+    h4 {
+        text-align: right;
+    }
+}
+
+@mixin papers() {
+    padding-top: 120px;
+    @include pad() {
+        padding-top: 80px;
+    }
+    h1 {
+        margin: 30px 0;
+        text-align: center;
+        @include mobile-L() {
+            margin: $margin-S 0;
+            text-align: left;
+        }
+    }
+    h3 {
+        margin-top: $margin-S;
+        margin-bottom: $margin-XS;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        font-size: $size-p;
+        line-height: $size-p * 2;
+        color: $text;
+    }
+    .btn {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: $margin-M 0;
+    }
+}
+@mixin text-important() {
+    span {
+        color: $dark-blue;
+        font-weight: bold;
+    }
+}
+
+@mixin searchbar() {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: $margin-S;
+    @include mobile-L() {
+        justify-content: flex-start;
+    }
+    input[type="search"] {
+        width: 150px;
+        padding: 2px 8px;
+        border-radius: 5px;
+        border: solid 1px $blue;
+        background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
+        @include mobile-L() {
+            width: 90%;
+            padding: 5px 8px;
+        }
+        &:focus {
+            width: 180px;
+            transition: 0.5s;
+            outline: none;
+            box-shadow: $table-blue 0 0 0 5px;
+            @include mobile-L() {
+                width: 100%;
+            }
+        }
+    }
+}
+// 資料主題清單
+@mixin theme-list($width, $main-color) {
+    width: $width;
+    @include pad() {
+        width: 100%;
+        margin-right: unset;
+        margin-bottom: $margin-S;
+    }
+    .list {
+        display: flex;
+        justify-content: space-between;
+        padding: $padding-XXS $padding-XS;
+        @include mobile-L() {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            padding: $padding-XXS $padding-XXS * 2;
+        }
+        span {
+            text-align: center;
+            color: $title-W;
+            font-size: $size-p;
+            font-weight: bold;
+            line-height: $size-p * 2;
+            text-align: center;
+        }
+        a:hover p {
+            color: $blue;
+        }
+    }
+    .title {
+        background-color: $main-color;
+        margin-top: $margin-S;
+        flex-direction: row;
+    }
+    .main {
+        background-color: rgba($color: $main-color, $alpha: 0.1);
+    }
+    .white {
+        background-color: $title-W;
+    }
+    h4 {
+        text-align: right;
+    }
+    .left-gp {
+        width: 80%;
+        @include mobile-L() {
+            width: 50%;
+        }
+    }
+    .right-gp {
+        width: 20%;
+        text-align: center;
+        @include mobile-L() {
+            width: 40%;
+            display: block;
+        }
+        ul,
+        li {
+            display: inline;
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            @include mobile-L() {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+        }
+        li {
+            background-color: $blue;
+            padding: 3px 10px;
+            border-radius: 10px;
+            color: $title-W;
+            font-size: 0.875rem;
+            line-height: 0.875rem * 2;
+        }
+    }
+}
+
+//資料主題-浮動視窗
+@mixin modal($width, $main-color) {
+    .modal-dialog {
+        max-width: 650px;
+        transition: unset;
+        .modal-content {
+            border-radius: 15px;
+            .modal-header {
+                width: 100%;
+                border-bottom: unset;
+                .modal-title {
+                    width: 100%;
+                    text-align: center;
+                    padding-top: $padding-XS;
+                    @include mobile-L() {
+                        padding-top: $padding-XXS;
+                    }
+                }
+                .close {
+                    position: absolute;
+                    right: 2.5%;
+                    margin: -1rem -1rem -1rem 0;
+                }
+            }
+            .modal-body {
+                width: $width;
+                margin: auto;
+                margin-bottom: $margin-XS;
+                padding: 0;
+                @include pad() {
+                    margin-bottom: $margin-S;
+                }
+                @include mobile-L() {
+                    margin-bottom: unset;
+                }
+                .row {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .left-gp {
+                        width: 25%;
+                        text-align: center;
+                        padding: $padding-XXS 0;
+                        span {
+                            color: $title-W;
+                            font-size: $size-p;
+                            font-weight: bold;
+                            line-height: $size-p * 1.5;
+                        }
+                    }
+                    .right-gp {
+                        width: 70%;
+                        text-align: justify;
+                        padding: $padding-XXS 20px;
+                        @include mobile-L() {
+                            display: block;
+                        }
+                        a,
+                        p {
+                            line-height: $size-p * 1.5;
+                            word-wrap: break-word;
+                        }
+                    }
+                    .title {
+                        background-color: $main-color;
+                    }
+                    .main {
+                        background-color: rgba($color: $main-color, $alpha: 0.1);
+                    }
+                    .white {
+                        background-color: $title-W;
+                    }
+                }
+            }
+            .modal-footer {
+                border-top: unset;
+                padding-right: 20px;
+                p {
+                    text-align: right;
+                    color: $dark-blue;
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+// 示範應用
+@mixin example() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    h4 {
+        margin-bottom: 0;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+    img {
+        width: 100%;
+        height: 250px;
+        margin: $margin-S 0;
+        border-radius: 10px;
+        @include mobile-L() {
+            height: 150px;
+            margin: $margin-XS 0;
+        }
+    }
+    .example-gp {
+        width: 48%;
+        padding: $padding-S;
+        background-color: $table-blue;
+        border-radius: 20px;
+        text-align: center;
+        margin-bottom: $margin-M;
+        @include pad() {
+            width: 100%;
+        }
+        @include mobile-L() {
+            padding: $padding-XS;
+        }
+    }
+    .app {
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            @include mobile-L() {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        .app-icon {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: $padding-XS;
+            @include pad() {
+                padding-top: $padding-XXS;
+            }
+            img {
+                width: 35px;
+                height: 35px;
+                margin: 0 $margin-XS;
+                @include pad() {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            a:hover {
+                color: $blue;
+            }
+        }
+    }
+}
+
+@mixin form() {
+    background-color: $table-blue;
+    border-radius: 20px;
+    @include mobile-L() {
+        border-radius: unset;
+    }
+    form {
+        .form-gp {
+            padding: 0 $padding-S;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-bottom: $margin-S;
+            text-align: justify;
+            p {
+                width: 100%;
+                font-size: $size-p;
+                line-height: $size-p * 1.7;
+                padding-top: $padding-XXS;
+            }
+            @include web-S {
+                padding: 0;
+            }
+            @include pad() {
+                padding: 0 $padding-S * 1.5;
+                flex-direction: column;
+            }
+            @include mobile-L() {
+                padding: 0 $padding-XS * 1.5;
+            }
+
+            label {
+                width: 100%;
+                padding: 0;
+                margin-right: $margin-M;
+                color: $dark-blue;
+                font-size: $size-h4;
+                font-weight: bold;
+            }
+            input,
+            select {
+                &[type="submit"],
+                &[type="reset"] {
+                    width: 100%;
+                    height: 40px;
+                    background-color: $dark-blue;
+                    color: $title-W;
+                    font-size: $size-h4;
+                    font-weight: bold;
+                    line-height: 40px;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 0;
+                    text-decoration: none;
+                    margin-top: $margin-XS;
+                    &:hover {
+                        background-color: $blue;
+                    }
+                }
+                &[type="button"] {
+                    width: 100%;
+                    height: 40px;
+                    background-color: transparent;
+                    border: solid 1px $dark-blue;
+                    border-radius: 8px;
+                    color: $dark-blue;
+                    font-size: $size-h4;
+                    font-weight: bold;
+                    line-height: 40px;
+                    padding: 0;
+                    text-decoration: none;
+                    margin-top: $margin-XS * 2;
+                    &:hover {
+                        background-color: $blue;
+                        color: $title-W;
+                        border: solid 1px $blue;
+                    }
+                }
+                &[disabled] {
+                    background-color: $light-sky;
+                    &:hover {
+                        background-color: $light-sky;
+                    }
+                }
+            }
+            textarea {
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid $light-sky;
+                padding: 0 $padding-XXS;
+                color: $text;
+                font-size: $size-h4;
+                line-height: $size-h4 * 1.5;
+            }
+            a {
+                font-size: $size-h4;
+                line-height: $size-h4;
+                margin-top: $margin-XS * 2;
+                color: $dark-blue;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        //checkbox
+        .form-check {
+            width: 100%;
+            padding: 0 $padding-S;
+            margin: 0;
+            margin-bottom: $margin-S;
+            @include web-S {
+                padding: 0;
+            }
+            @include pad() {
+                padding: 0 $padding-S * 1.5;
+                flex-direction: column;
+            }
+            @include mobile-L() {
+                padding: 0 $padding-XS * 1.5;
+            }
+            input,
+            select {
+                text-align: left;
+                &[type="checkbox"] {
+                    width: 20px;
+                    height: 20px;
+                    line-height: $size-h4 * 2;
+                    margin-top: 8px;
+                    border: 1px solid $light-sky;
+                }
+            }
+            select {
+                width: 100%;
+                height: 40px;
+            }
+            label {
+                padding: 0;
+                margin: 0 $margin-S;
+                color: $text;
+                font-size: $size-p;
+            }
+            .form-check-label {
+                line-height: $size-h4 * 2;
+                margin: 0 $margin-XS * 2 $margin-XS $margin-S;
+            }
+            .form-check-input {
+                margin-left: 0px;
+            }
+            .check-input {
+                background-color: #fff;
+                width: 100%;
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid $light-sky;
+                padding: 0 $padding-XXS;
+                color: $text;
+                font-size: $size-h4;
+                line-height: $size-h4;
+                margin: $margin-XS 0;
+            }
+            .h4 {
+                color: $dark-blue;
+                font-size: $size-h4;
+                font-weight: bold;
+                padding: 0;
+                margin: 0;
+                margin-bottom: $margin-XS;
+            }
+        }
+        span {
+            color: $red;
+            margin-left: 3px;
+        }
+    }
+}
+@mixin account-list($main-color) {
+    width: 30%;
+    border-radius: 15px;
+    border: solid 1px $main-color;
+    margin-bottom: $margin-M;
+    &:hover {
+        transform: translateY(-1%);
+        transition: 0.5s;
+    }
+    @include pad() {
+        width: 100%;
+    }
+    @include mobile-L() {
+        border-radius: unset;
+        border: unset;
+        margin-bottom: unset;
+    }
+    .top {
+        width: 100%;
+        background-color: $main-color;
+        padding: $padding-XS * 1.5 0;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+        @include mobile-L() {
+            border-radius: unset;
+            padding: $padding-XS 0;
+        }
+        h3 {
+            margin: 0;
+            color: $title-W;
+        }
+        img {
+            @include mobile-L() {
+                width: 25%;
+            }
+        }
+    }
+    .body {
+        padding: $padding-XS;
+        text-align: center;
+        height: 41%;
+        @include web-S() {
+            height: unset;
+        }
+        h4 {
+            color: $main-color;
+            text-align: left;
+        }
+    }
+    .bot {
+        padding: $padding-XS;
+        padding-top: 0;
+        .btn {
+            padding: 5px 0;
+            width: 100%;
+            button {
+                background-color: $main-color;
+                width: 90%;
+                margin-bottom: $margin-S;
+                @include pad() {
+                    padding: 10px 0;
+                }
+                @include mobile-L() {
+                    width: 100%;
+                    padding: 8px 0;
+                }
+                &:hover {
+                    background-color: rgba($color: $blue, $alpha: 0.7);
+                }
+                &[disabled] {
+                    background-color: $light-sky;
+                    &:hover {
+                        background-color: $light-sky;
+                    }
+                }
+            }
+        }
+        .social {
+            margin-bottom: $margin-XS;
+            text-align: center;
+            p {
+                text-align: center;
+            }
+            img {
+                margin: $margin-XS;
+            }
+        }
+    }
+}
+@mixin opinion-list() {
+    margin-bottom: $margin-S * 1.5;
+    .list {
+        display: flex;
+        padding: $padding-XXS $padding-XS;
+        padding-left: $padding-S;
+        @include pad() {
+            padding-left: $padding-XS;
+            .c1 {
+                width: 80%;
+            }
+            .c2 {
+                display: none;
+            }
+            .c3 {
+                width: 20%;
+            }
+        }
+        @include mobile-L() {
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: $padding-XXS $padding-XS * 1.5;
+            .c1 {
+                width: 100%;
+            }
+            .c3 {
+                display: none;
+            }
+        }
+        a {
+            color: $text;
+            font-size: $size-p;
+            line-height: $size-p * 2;
+        }
+    }
+    .head {
+        background-color: $dark-blue;
+        border-radius: 20px 20px 0 0;
+        @include mobile-L() {
+            border-radius: unset;
+        }
+        p {
+            color: $title-W;
+            font-weight: bold;
+        }
+    }
+    .c1 {
+        width: 60%;
+    }
+    .c2 {
+        width: 30%;
+    }
+    .c3 {
+        width: 10%;
+    }
+    .blue {
+        background-color: $table-blue;
+    }
+    .white {
+        background-color: $title-W;
+    }
+    h4 {
+        text-align: right;
+    }
+}
+
+@mixin collapse($bg-color, $text-color) {
+    @include pad() {
+        padding: 0;
+    }
+    .collapsible {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: $padding-XXS $padding-XS;
+        margin-bottom: $margin-XS;
+        border: none;
+        background-color: $bg-color;
+        text-align: left;
+        outline: none;
+        font-size: $size-h4;
+        color: $text-color;
+        font-weight: bold;
+        @include web-S() {
+            margin-bottom: unset;
+            padding: $padding-XXS $padding-XXS * 2;
+        }
+        @include mobile-XS() {
+            font-size: $size-p;
+        }
+    }
+    .collapsible:after {
+        content: "\002B";
+        color: $text-color;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+    .active:after {
+        content: "\2212";
+    }
+    .content {
+        padding: 0 $padding-XS;
+        margin-bottom: $margin-S;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        @include web-S() {
+            margin-bottom: unset;
+            padding: $padding-XXS $padding-XXS * 2;
+        }
+        @include mobile-XS() {
+            margin-bottom: $margin-XS;
+        }
+        p {
+            text-align: left;
+            font-size: $size-p;
+            color: $text;
+            line-height: $size-p * 2;
+            @include mobile-XS() {
+                font-size: $size-p;
+                line-height: $size-p * 2;
+            }
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        ul,
+        li {
+            text-align: left;
+            list-style: none;
+            font-size: $size-p;
+            line-height: $size-p * 2.5;
+            @include mobile-XS() {
+                font-size: $size-p;
+            }
+        }
+        a {
+            color: $text;
+        }
+    }
+}

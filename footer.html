@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水資源物聯網入口網</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="text-gp">
+                <li>
+                    <a href="information.html"><i class="fas fa-file-alt"></i>政府網站資料開放宣告</a>
+                </li>
+                <li>
+                    <a href="private.html"><i class="fas fa-file-alt"></i>隱私權保護政策</a>
+                </li>
+                <li>
+                    <a href="security.html"><i class="fas fa-file-alt"></i>網站安全政策</a>
+                </li>
+            </ul>
+            <div class="contact">
+                <div class="text-gp">
+                    <h4><i class="fas fa-map-marker-alt"></i>新市政大樓</h4>
+                    <p>407201 臺中市西屯區臺灣大道三段99號惠中樓（A棟）10樓</p>
+                </div>
+                <div class="text-gp">
+                    <h4><i class="fas fa-map-marker-alt"></i>陽明大樓</h4>
+                    <p>420018 臺中市豐原區陽明街36號2樓</p>
+                </div>
+                <div class="text-gp">
+                    <h4><i class="fas fa-mobile-alt"></i>聯絡電話</h4>
+                    <p>市話總機代表號：04-22289111，本局傳真號碼：25260450</p>
+                </div>
+                <div class="text-gp">
+                    <h4><i class="far fa-clock"></i>辦公時間</h4>
+                    <p>8:00-17:00，中午休息時間：12:00-13:00，彈性上下班時間：8:00-8:30、13:00-13:30、17:00-17:30</p>
+                </div>
+            </div>
+            <div class="notice">
+                <div class="text-gp">
+                    <p>建議使用瀏覽器 Firefox58.0以上或IE10.0以上或google chrome版本瀏覽本站</p>
+                    <p>臺中市政府運動局版權所有 Copyright © 2018. All Rights Reserved.</p>
+                </div>
+                <div class="date">
+                    <p>最後更新：2020/09/09</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top">
+        <div class="back-top">▲</div>
+    </a>
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            // loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+        });
+    </script>
+
+</body>
+
+</html>

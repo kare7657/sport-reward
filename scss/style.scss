@@ -1,0 +1,1099 @@
+@import "./guideline";
+@import "./mixin";
+
+// 通用
+* {
+    @include all();
+}
+body.modal-open {
+    padding-right: 0px !important;
+    overflow-y: auto;
+}
+html,
+body {
+    font-size: 16px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    padding-right: 0 !important;
+    @include mobile-XS() {
+        font-size: 14px;
+    }
+    // 導覽列
+    .minibar {
+        @include minibar();
+    }
+    .navbar {
+        @include navbar();
+    }
+    // Banner
+    .content-banner {
+        padding-top: 120px;
+        @include pad() {
+            padding-top: 60px;
+        }
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center 0%;
+            @include mobile-L() {
+                height: 30vh;
+            }
+        }
+    }
+    //關於平台
+    .content-about {
+        .container {
+            display: flex;
+            @include pad() {
+                flex-wrap: wrap;
+                padding-bottom: unset;
+            }
+            .icon {
+                width: 15%;
+                margin-right: $margin-XS;
+                @include mobile-L() {
+                    width: 100%;
+                    margin-right: unset;
+                }
+                img{
+                    width: 100%;
+                    height: 130px;
+                }
+
+            }
+            .about {
+                width: 85%;
+            }
+
+        }
+        hr {
+            width: 60%;
+            @include pad() {
+                display: none;
+            }
+        }
+    }
+    //最新消息
+    .content-preview {
+        .container {
+            display: flex;
+            @include pad() {
+                flex-wrap: wrap;
+            }
+            .new {
+                @include news-list(100%, 15%);
+            }
+        }
+    }
+    //breadcrumb
+    .breadcrumb {
+        @include breadcrumb();
+    }
+
+    //政府網站資料開放宣告
+    .content-information {
+        @include papers();
+        @include text-important();
+        .container {
+            .list-gp {
+                @include news-list(100%, 15%);
+                margin: $margin-S * 1.5 0;
+            }
+        }
+    }
+    // 頁尾
+    footer {
+        @include footer();
+    }
+    .back-top {
+        @include back-top();
+    }
+    //QR code
+    .content-QRcode {
+        text-align: center;
+        .container {
+            @include pad() {
+                padding-bottom: 0;
+            }
+            .QRcode-gp {
+                width: 400px;
+                margin: auto;
+                display: flex;
+                border: solid 6px $light-sky;
+                border-radius: 20px;
+                padding: $padding-XS;
+                margin-top: 100px;
+                position: relative;
+                @include mobile-L() {
+                    width: 100%;
+                    flex-wrap: wrap;
+                }
+                .robot {
+                    z-index: -5;
+                    position: absolute;
+                    top: -82px;
+                    left: calc(50% - 53px);
+                }
+                .QR {
+                    width: 50%;
+                    height: 50%;
+                    @include mobile-L() {
+                        width: 100%;
+                    }
+                }
+                h3 {
+                    width: 50%;
+                    padding: $padding-XXS 0;
+                    padding-left: $padding-XS;
+                    margin: 0;
+                    text-align: left;
+                    @include mobile-L() {
+                        width: 100%;
+                        text-align: center;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    //交談機器人-使用步驟
+    .content-line-explain {
+        text-align: center;
+        .screenshot-gp {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: $margin-M;
+            @include mobile-L() {
+                margin-top: $margin-S;
+            }
+            .text-gp {
+                width: 300px;
+                margin-bottom: $margin-M;
+                @include pad() {
+                    width: 45%;
+                }
+                @include mobile-L() {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                    margin-bottom: $margin-XS;
+                }
+                @include text-important();
+            }
+        }
+    }
+    //導覽清單
+    .content-webmap {
+        .container {
+            padding-top: unset;
+            .list-gp {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .text-gp {
+                    width: 23%;
+                    @include pad() {
+                        width: 48%;
+                    }
+                    @include mobile-L() {
+                        width: 100%;
+                    }
+                    h3 {
+                        background-color: $table-blue;
+                        padding: 0 $padding-XS;
+                        margin: 0;
+                    }
+                    ul {
+                        padding: $padding-XS;
+                        padding-top: $padding-XXS;
+                        list-style: none;
+                        font-size: $size-p;
+                        line-height: $size-p * 2;
+                        margin: 0;
+                        margin-bottom: $margin-S;
+                        @include mobile-L() {
+                            margin-bottom: $margin-XS;
+                            line-height: $size-p * 2.5;
+                        }
+                        a {
+                            color: $dark-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //最新消息清單
+    .content-news {
+        @include papers();
+        .container {
+            .searchbar {
+                @include searchbar();
+            }
+            .list-gp {
+                @include news-list(100%, 15%);
+            }
+        }
+    }
+    //最新消息子頁
+    .content-news-info {
+        @include papers();
+        .container {
+            .info-top {
+                margin-top: $margin-S;
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    font-size: $size-p;
+                    color: $dark-blue;
+                    li {
+                        display: inline;
+                        margin-right: $margin-S;
+                        @include mobile-L() {
+                            display: block;
+                        }
+                    }
+                    .far {
+                        width: 13px;
+                        color: $dark-blue;
+                        font-size: $size-p;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .info-body {
+                img {
+                    width: 100%;
+                    max-height: 600px;
+                    object-position: center;
+                    margin-top: $margin-S;
+                    @include pad() {
+                        max-height: 400px;
+                    }
+                    @include mobile-L() {
+                        max-height: 300px;
+                    }
+                }
+                p {
+                    margin: $margin-S 0;
+                }
+            }
+            .btn {
+                display: flex;
+                justify-content: center;
+                margin-bottom: $margin-M;
+                @include web-S() {
+                    margin-bottom: $margin-S;
+                }
+            }
+        }
+    }
+    //資料主題
+    .content-theme {
+        .container {
+            padding-top: 220px;
+            display: flex;
+            justify-content: space-between;
+            @include mobile-L() {
+                flex-wrap: wrap;
+                padding-top: 130px;
+            }
+            // 左欄按鈕
+            .left {
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+                @include pad() {
+                    img {
+                        width: 60%;
+                    }
+                }
+                @include mobile-L() {
+                    width: 100%;
+                    flex-wrap: nowrap;
+                    flex-direction: row;
+                    img {
+                        width: 60%;
+                    }
+                }
+                .theme-btn {
+                    margin-bottom: $margin-M;
+                    @include mobile-L() {
+                        width: 45%;
+                        margin-bottom: $margin-S;
+                    }
+                    h3 {
+                        color: $title-BK;
+                        margin: unset;
+                    }
+                }
+            }
+            // 右欄
+            .right {
+                width: 70%;
+                @include mobile-L() {
+                    width: 100%;
+                }
+                // .theme-content {
+                //     display: none;
+                // }
+                // .theme-content.show {
+                //     display: block;
+                // }
+                // 右欄內容-河川
+                .river {
+                    text-align: center;
+                    @include theme-list(100%, $green);
+                    @include mobile-L() {
+                        @include theme-list(100%, $green);
+                    }
+                }
+                //右欄內容-淹水
+                .flood {
+                    text-align: center;
+                    @include theme-list(100%, $blue);
+                    @include mobile-L() {
+                        @include theme-list(100%, $blue);
+                    }
+                }
+            }
+            .pagination {
+                margin-top: $margin-M;
+            }
+        }
+    }
+    // 資料主題-浮動視窗
+    .theme-modal {
+        .river {
+            @include modal(80%, $green);
+        }
+        .flood {
+            @include modal(80%, $blue);
+        }
+    }
+    //資料使用統計
+    .content-data {
+        @include papers();
+        h1 {
+            @include mobile-L() {
+                margin: $margin-S 0;
+                text-align: center;
+            }
+        }
+        h3 {
+            text-align: center;
+            margin-top: $margin-XS;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    //示範應用
+    .content-example {
+        @include papers();
+        .container {
+            .example-head {
+                margin-bottom: $margin-M;
+                @include mobile-L() {
+                    margin-bottom: $margin-S;
+                }
+                .btn {
+                    display: flex;
+                    justify-content: center;
+                    @include mobile-L() {
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                    }
+                    button {
+                        margin: 0 $margin-XS;
+                        @include mobile-L() {
+                            margin-bottom: $margin-XS;
+                        }
+                    }
+                }
+                h1 {
+                    text-align: center;
+                }
+            }
+            .example-body {
+                @include example();
+            }
+            .pagination {
+                @include mobile-L() {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    //登入
+    .content-login {
+        @include papers();
+        .container {
+            @include mobile-L() {
+                width: 100%;
+                margin: 0;
+                padding-bottom: 0;
+                h1 {
+                    text-align: center;
+                }
+            }
+            .form {
+                @include form();
+                margin: auto;
+                width: 50%;
+                padding: $padding-S;
+                @include web-S() {
+                    width: 60%;
+                }
+                @include pad() {
+                    width: 80%;
+                    padding: $padding-S 0;
+                }
+                @include mobile-L() {
+                    width: 100%;
+                }
+                .g-recaptcha {
+                    width: 100%;
+                    margin-bottom: $margin-XS;
+                }
+            }
+        }
+    }
+    //註冊
+    .content-signup {
+        @include papers();
+        @include text-important();
+        .container {
+            @include mobile-L() {
+                width: 100%;
+                margin: 0;
+                padding-bottom: 0;
+                h1 {
+                    text-align: center;
+                }
+            }
+            .form-gp {
+                @include form();
+                background-color: unset;
+                form {
+                    width: 100%;
+                    padding: $padding-S;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    @include pad() {
+                        padding: 0;
+                    }
+                    .icon-gp {
+                        text-align: center;
+                        img {
+                            width: 20%;
+                            @include pad {
+                                width: 15%;
+                            }
+                            @include mobile-L() {
+                                width: 20%;
+                            }
+                        }
+                        h3 {
+                            margin: 0;
+                            margin-bottom: $margin-S;
+                        }
+                    }
+                    .form-left {
+                        width: 50%;
+                        border-radius: 20px 0 0 20px;
+                        background-color: $table-blue;
+                        border-right: solid 5px $title-W;
+                        padding: $padding-S 0;
+                        @include pad {
+                            border-radius: 20px 20px 0 0;
+                            border-right: unset;
+                        }
+                    }
+                    .form-right {
+                        width: 50%;
+                        border-radius: 0 20px 20px 0;
+                        background-color: $table-blue;
+                        padding: $padding-S 0;
+                        @include pad {
+                            border-radius: 0 0 20px 20px;
+                            border-top: solid 5px $title-W;
+                        }
+                    }
+                    .form-left,
+                    .form-right {
+                        @include web-S() {
+                            padding: $padding-S;
+                        }
+                        @include pad {
+                            width: 100%;
+                            padding: $padding-S 0;
+                        }
+                        @include mobile-L() {
+                            border-radius: unset;
+                            padding: $padding-S 0;
+                        }
+                    }
+                    .form-submit {
+                        width: 60%;
+                        background-color: unset;
+                        text-align: center;
+                        margin-top: $margin-M;
+                        @include web-S() {
+                            margin: $margin-S 0;
+                        }
+                        @include pad() {
+                            width: 80%;
+                        }
+                        @include mobile-L() {
+                            width: 100%;
+                            margin-bottom: $margin-M * 1.5;
+                        }
+                        .form-gp {
+                            display: flex;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            flex-direction: row;
+                            margin: $margin-XS 0;
+                            padding: 0 $padding-M;
+                            @include mobile-L() {
+                                padding: 0 $padding-XS * 1.5;
+                                margin: $margin-S 0;
+                            }
+                            label {
+                                width: 30%;
+                                margin: $margin-XS 0;
+                                @include pad() {
+                                    width: 100%;
+                                }
+                            }
+                            input {
+                                width: 30%;
+                                @include pad() {
+                                    width: 50%;
+                                }
+                                &[type="checkbox"] {
+                                    width: 20px;
+                                    height: 20px;
+                                    line-height: $size-h4 * 2;
+                                    margin-top: 8px;
+                                    border: 1px solid $light-sky;
+                                }
+                            }
+                            .code,
+                            img {
+                                width: 65px;
+                                height: 22px;
+                                object-position: center;
+                                margin: $margin-XS 0;
+                                margin-right: $margin-S;
+                            }
+                        }
+                        input {
+                            &[type="checkbox"] {
+                                width: 20px;
+                                height: 20px;
+                                line-height: $size-h4 * 2;
+                                margin-top: 8px;
+                                border: 1px solid $light-sky;
+                            }
+                        }
+                        .btn {
+                            width: 100%;
+                            padding: 0 $padding-M;
+                            margin-top: $margin-XS;
+                            @include mobile-L() {
+                                padding: 0 $padding-XS * 1.5;
+                            }
+                        }
+                        a {
+                            margin-left: 3px;
+                        }
+
+                        .form-check-label {
+                            line-height: $size-h4 * 2;
+                            margin-left: $margin-XS;
+                        }
+                    }
+                }
+            }
+            .notice {
+                h3 {
+                    text-align: center;
+                }
+                ul {
+                    color: $text;
+                    font-size: $size-p;
+                    line-height: $size-p * 2;
+                    text-align: justify;
+                    margin-bottom: $margin-S;
+                    li {
+                        margin-bottom: $margin-XS;
+                    }
+                    @include mobile-L() {
+                        padding: 0 $padding-XS * 1.5;
+                        margin-bottom: $margin-M;
+                    }
+                }
+            }
+        }
+    }
+    //註冊-後台
+    .content-signup {
+        @include papers();
+        @include text-important();
+        .container {
+            .account-list-gp {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                @include pad() {
+                    flex-wrap: wrap;
+                }
+                #team {
+                    @include account-list($dark-blue);
+                }
+                #egov {
+                    @include account-list($green);
+                }
+                #wrisp {
+                    @include account-list($blue);
+                }
+            }
+            .notice {
+                @include mobile-L() {
+                    h3 {
+                        margin-top: unset;
+                    }
+                }
+            }
+        }
+    }
+    //註冊成功
+    .content-sign-up-success {
+        .container {
+            padding: $padding-M;
+            padding-top: 220px;
+            height: 100%;
+            text-align: center;
+            @include pad() {
+                padding-top: 150px;
+            }
+            @include mobile-L() {
+                padding: $padding-M 0;
+                padding-top: 150px;
+            }
+            p {
+                text-align: center;
+                @include pad() {
+                    margin-top: $margin-XS;
+                }
+            }
+            img {
+                width: 100px;
+                margin-bottom: $margin-S;
+            }
+            .btn {
+                margin: $margin-S 0;
+            }
+        }
+    }
+    //會員資料修改
+    .content-member-data {
+        @include papers();
+        .container {
+            @include mobile-L() {
+                width: 100%;
+                h1 {
+                    text-align: center;
+                }
+                padding-bottom: 0;
+            }
+            .member-data {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                .head-gp {
+                    width: 30%;
+                    text-align: center;
+                    @include pad() {
+                        width: 100%;
+                    }
+                    img {
+                        margin-bottom: $margin-XS;
+                    }
+                    h4 {
+                        color: $text;
+                        text-align: center;
+                        margin-bottom: $margin-S;
+                        @include pad() {
+                            margin-bottom: $margin-M;
+                        }
+                    }
+                }
+                .form {
+                    @include form();
+                    width: 60%;
+                    padding: $padding-S;
+                    margin-bottom: $margin-M;
+                    @include pad {
+                        width: 100%;
+                    }
+                    @include mobile-L() {
+                        padding: $padding-XS 0;
+                        margin-bottom: 0;
+                    }
+                    .form-right {
+                        .form-gp {
+                            padding: 0 $padding-S;
+                            @include mobile-L() {
+                                padding: 0 $padding-XS * 1.5;
+                            }
+                        }
+                    }
+                    .btn {
+                        width: 100%;
+                        padding: 0 $padding-S;
+                        margin-top: $margin-XS * 2;
+                        text-align: center;
+                        @include mobile-L() {
+                            padding: 0px $padding-XS * 1.5;
+                            margin-top: $margin-S;
+                            margin-bottom: $margin-S * 1.5;
+                        }
+                        input[type="submit"] {
+                            margin: 0;
+                            text-align: center;
+                            height: 44px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //意見反映
+    .content-opinion {
+        @include papers();
+        @include text-important();
+        .container {
+            @include mobile-L() {
+                margin: 0;
+                width: 100%;
+                h1 {
+                    text-align: center;
+                }
+            }
+            .notice {
+                border: solid 3px $light-sky;
+                border-radius: 20px;
+                padding: $padding-XS * 1.5 $padding-S;
+                margin-bottom: $margin-M;
+                @include mobile-L() {
+                    padding: $padding-XS $padding-XS * 1.5;
+                    border: unset;
+                    border-radius: unset;
+                    margin-bottom: $margin-XS;
+                }
+                .top {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    @include pad() {
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                    }
+                    .left {
+                        width: 20%;
+                        display: flex;
+                        justify-content: center;
+                        @include pad() {
+                            width: 100%;
+                            margin-bottom: $margin-S;
+                        }
+                        img {
+                            width: 100px;
+                            @include mobile-L() {
+                                width: 35%;
+                            }
+                        }
+                    }
+                    .right {
+                        width: 80%;
+                        @include pad() {
+                            width: 100%;
+                        }
+                    }
+                }
+                .bot {
+                    text-align: center;
+                    width: 100%;
+                    margin-top: $margin-S;
+                    .btn {
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        button {
+                            width: 20%;
+                            @include pad() {
+                                width: 45%;
+                            }
+                            @include mobile-L() {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .filter {
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                margin-bottom: $margin-S;
+                @include mobile-L() {
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 0 $padding-XS * 1.5;
+                }
+                label {
+                    font-size: $size-h4;
+                    line-height: $size-h4 * 1.5;
+                    font-weight: bold;
+                    color: $dark-blue;
+                }
+                input {
+                    width: 12%;
+                    height: 30px;
+                    margin: 0 $margin-XS;
+                    background-color: unset;
+                    border: solid 1px $dark-blue;
+                    border-radius: 8px;
+                    font-size: $size-p;
+                    line-height: $size-p * 2;
+                    color: $text;
+                    text-align: center;
+                    @include pad() {
+                        width: 20%;
+                        margin-bottom: $margin-XS * 1.5;
+                    }
+                    @include mobile-L() {
+                        width: 40%;
+                        margin: unset;
+                        margin-bottom: $margin-XS * 1.5;
+                    }
+                    &[type="submit"],
+                    &[type="reset"] {
+                        width: 9%;
+                        padding: 5px 0;
+                        background-color: unset;
+                        border: solid 1px $dark-blue;
+                        border-radius: 8px;
+                        font-size: $size-h4;
+                        line-height: $size-h4;
+                        color: $dark-blue;
+                        font-family: "微軟正黑體";
+                        font-weight: bold;
+                        @include pad() {
+                            width: 17%;
+                        }
+                        @include mobile-L() {
+                            width: 100%;
+                        }
+                        &:hover {
+                            background-color: $blue;
+                            transition-duration: 0.5s;
+                            color: $title-W;
+                        }
+                    }
+                }
+            }
+            .opinion-list {
+                @include opinion-list();
+            }
+            .pagination {
+                @include mobile-L() {
+                    padding: 0 $padding-XS * 1.5;
+                }
+            }
+        }
+    }
+    //新增意見
+    .content-opinion-add {
+        @include papers();
+        .container {
+            @include mobile-L() {
+                width: 100%;
+                margin: 0;
+                padding-bottom: 0;
+                h1 {
+                    text-align: center;
+                }
+            }
+            .form {
+                @include form();
+                margin: auto;
+                width: 60%;
+                padding: $padding-S;
+
+                @include web-S() {
+                    width: 60%;
+                }
+                @include pad() {
+                    width: 100%;
+                    padding: $padding-S 0;
+                }
+                @include mobile-L() {
+                    padding: $padding-XS 0;
+                }
+                .g-recaptcha {
+                    width: 100%;
+                    margin-bottom: $margin-XS * 2;
+                }
+            }
+        }
+    }
+    //範例程式碼
+    .content-example-code {
+        .container {
+            padding-top: 220px;
+            h1 {
+                text-align: center;
+                margin-bottom: $margin-M;
+            }
+            @include mobile-L() {
+                padding-top: 130px;
+                width: 100%;
+                h1 {
+                    margin-bottom: $margin-S;
+                    padding: 0 $padding-XS * 1.5;
+                }
+            }
+            .example-body {
+                display: flex;
+                justify-content: space-between;
+                @include pad() {
+                    flex-wrap: wrap;
+                }
+
+                // 左欄清單
+                .left {
+                    @include collapse($dark-blue, $title-W);
+                    width: 30%;
+                    margin-right: $margin-M;
+                    @include pad() {
+                        width: 100%;
+                        margin-right: unset;
+                        margin-bottom: $margin-XS * 2;
+                        padding: unset;
+                    }
+                    @include mobile-L() {
+                        padding: 0 $padding-XS * 1.5;
+                    }
+                    .searchbar {
+                        @include searchbar();
+                        justify-content: flex-start;
+                        margin-bottom: $margin-S * 1.5;
+                        input[type="search"] {
+                            width: 200px;
+                            &:focus {
+                                width: 230px;
+                            }
+                        }
+                        @include mobile-L() {
+                            input[type="search"] {
+                                width: 90%;
+                                &:focus {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                // 右欄內容
+                .right {
+                    width: 70%;
+                    // margin-top: 55px;
+                    @include pad() {
+                        width: 100%;
+                        margin-top: unset;
+                    }
+                    .text-gp {
+                        margin-bottom: $margin-S;
+                        @include mobile-L() {
+                            padding: 0 $padding-XS * 1.5;
+                            #pad-pd {
+                                padding: 0 $padding-XS * 1.5;
+                            }
+                        }
+                        h3 {
+                            margin-bottom: 5px;
+                        }
+                        p {
+                            text-align: left;
+                        }
+                        pre {
+                            padding: $padding-XS;
+                            border: solid 2px $light-sky;
+                            border-radius: 10px;
+                            color: $text;
+                            font-size: $size-p;
+                            line-height: $size-p * 2;
+                            text-align: left;
+                            margin-top: $margin-XS;
+                            @include mobile-L() {
+                                padding: $padding-XS;
+                                border: unset;
+                                border-radius: unset;
+                                background-color: $table-blue;
+                            }
+                        }
+                        .list-gp {
+                            @include news-list(100%, 30%);
+                            word-wrap: break-word;
+                            .list {
+                                padding: $padding-XXS $padding-XS;
+                                border: solid 2px $light-sky;
+                                border-radius: 10px;
+                                margin-bottom: $margin-XS;
+                                @include pad() {
+                                    padding: $padding-XXS $padding-XXS * 2;
+                                }
+                                span {
+                                    text-align: left;
+                                    margin-right: $margin-S;
+                                    padding: 0;
+                                    margin: 0;
+                                    @include pad() {
+                                        width: 100%;
+                                    }
+                                }
+                                p {
+                                    width: 100%;
+                                    text-align: justify;
+                                }
+                            }
+                        }
+                        .btn {
+                            padding-left: 0;
+                            @include pad() {
+                                padding: 0;
+                            }
+                        }
+                    }
+                    .pd0 {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
