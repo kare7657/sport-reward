@@ -93,7 +93,7 @@
     a {
         text-decoration: none !important;
         list-style: none !important;
-        color: $dark-blue;
+        color: $blue;
         font-weight: bold;
         &:hover {
             color: $blue !important;
@@ -153,7 +153,7 @@
         &[type="reset"] {
             width: 100%;
             height: 40px;
-            background-color: $dark-blue;
+            background-color: $blue;
             color: $title-W;
             font-size: $size-h4;
             font-weight: bold;
@@ -272,19 +272,19 @@
         }
     }
     .form-control {
-        background-color: rgba($color: $dark-blue, $alpha: 0.2) !important;
+        background-color: rgba($color: $blue, $alpha: 0.2) !important;
     }
     //按鈕
     button {
         padding: 5px $padding-XS;
-        background-color: $dark-blue;
-        border-radius: 8px;
+        background-color: $blue;
+        border-radius: 20px;
         border: none;
         font-size: $size-h4;
         color: $title-W;
         font-weight: bold;
         &:hover {
-            background-color: $blue;
+            background-color: $title-BK;
             transition-duration: 0.5s;
         }
         &[disabled] {
@@ -297,12 +297,15 @@
             margin-right: $margin-XS;
         }
     }
+    .bg-green {
+        background-color: $green;
+    }
     .button-outline {
-        padding: 8px $padding-XS;
+        padding: 5px $padding-XS;
         background-color: transparent;
-        box-shadow: $dark-blue 0 0 0 1px;
+        box-shadow: $blue 0 0 0 1px;
         font-size: $size-h4;
-        color: $dark-blue;
+        color: $blue;
         font-weight: bold;
         @include mobile-L() {
             padding: 8px $padding-XS/2;
@@ -492,7 +495,7 @@
                     &[type="submit"],
                     &[type="reset"] {
                         height: 40px;
-                        background-color: $dark-blue;
+                        background-color: $blue;
                         color: $title-W;
                         font-size: $size-h4;
                         font-weight: bold;
@@ -508,9 +511,9 @@
                     &[type="button"] {
                         height: 40px;
                         background-color: transparent;
-                        border: solid 1px $dark-blue;
+                        border: solid 1px $blue;
                         border-radius: 8px;
-                        color: $dark-blue;
+                        color: $blue;
                         font-size: $size-h4;
                         font-weight: bold;
                         padding: 5px $padding-XS;
@@ -534,10 +537,12 @@
     }
     //頁碼
     .pagination {
+        width: 100%;
         display: flex;
         justify-content: flex-end;
         margin-top: $margin-S;
         white-space: nowrap;
+        flex-direction: row;
         @include mobile-L() {
             justify-content: center;
             text-align: left;
@@ -553,11 +558,11 @@
                 a {
                     display: inline;
                     padding: 5px 12px;
-                    border: solid 1px $light-sky;
+                    border: solid 1px $gray;
                     margin: -2px;
                     font-size: $size-p;
                     line-height: $size-p * 3;
-                    color: $dark-blue;
+                    color: $text;
                     @include mobile-S() {
                         width: 100%;
                         padding: 5px 15px;
@@ -568,17 +573,15 @@
                     }
                     &:hover {
                         background-color: $table-blue;
-                        border: solid 1px $light-sky;
                     }
                 }
                 .active {
-                    background-color: $dark-blue;
-                    color: $title-W;
-                    border: solid 1px $dark-blue;
+                    background-color: $gray;
+                    color: $text;
                 }
                 .fas {
                     font-size: $size-p;
-                    color: $blue;
+                    color: $text;
                 }
             }
         }
@@ -631,7 +634,7 @@
             }
             .btn {
                 margin: 0;
-                background-color: $dark-blue;
+                background-color: $green;
                 border-radius: 40px;
                 padding: $padding-XXS/1.5 $padding-XXS * 1.5;
                 ul {
@@ -673,7 +676,7 @@
     .pc {
         width: 100vw;
         height: 40px;
-        background-color: $dark-blue;
+        background-color: $blue;
         display: flex;
         justify-content: center;
         text-align: center;
@@ -751,7 +754,7 @@
                 font-size: 30px;
                 line-height: 60px;
                 padding: 0 20px;
-                color: $dark-blue;
+                color: $blue;
             }
             ul {
                 display: inline-block;
@@ -769,7 +772,7 @@
                 transition-duration: 0.7s;
                 .nav-item.dropdown {
                     .dropdown-menu {
-                        background-color: $dark-blue;
+                        background-color: $blue;
                         color: $title-W;
                         text-align: center;
                         .dropdown-item {
@@ -913,7 +916,7 @@
                 font-weight: bold;
                 line-height: $size-h4 * 2;
                 &:hover {
-                    color: $dark-blue;
+                    color: $blue;
                 }
             }
             .fas {
@@ -998,7 +1001,7 @@
     position: fixed;
     right: 40px;
     bottom: 30px;
-    background-color: rgba($color: $dark-blue, $alpha: 0.8);
+    background-color: rgba($color: $blue, $alpha: 0.8);
     border-radius: 50%;
     font-size: $size-h4;
     color: $title-W;
@@ -1031,10 +1034,9 @@
         span {
             width: $span-width;
             text-align: center;
-            color: $dark-blue;
+            color: $title-BK;
             font-size: $size-p;
             line-height: $size-p * 2;
-            font-weight: bold;
             @include pad() {
                 margin-right: $margin-S;
             }
@@ -1048,6 +1050,9 @@
     }
     .gray {
         background-color: $light-gray;
+    }
+    .green {
+        background-color: rgba($color: $green, $alpha: 0.2);
     }
     .blue {
         background-color: $table-blue;
@@ -1070,7 +1075,7 @@
         text-align: center;
         @include mobile-L() {
             margin: $margin-S 0;
-            text-align: left;
+            // text-align: left;
         }
     }
     h3 {
@@ -1093,12 +1098,13 @@
 }
 @mixin text-important() {
     span {
-        color: $dark-blue;
+        color: $blue;
         font-weight: bold;
     }
 }
 
 @mixin searchbar() {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     margin-bottom: $margin-S;
@@ -1106,20 +1112,22 @@
         justify-content: flex-start;
     }
     input[type="search"] {
-        width: 150px;
-        padding: 2px 8px;
-        border-radius: 5px;
-        border: solid 1px $blue;
+        width: 180px;
+        padding: 2px 10px;
+        border: none;
+        border-radius: 0px;
+        border-bottom: solid 1px $gray;
         background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
         @include mobile-L() {
             width: 90%;
-            padding: 5px 8px;
+            padding: 5px 10px;
         }
         &:focus {
-            width: 180px;
+            // width: 180px;
+            background-color: $light-gray;
+            border: none;
             transition: 0.5s;
             outline: none;
-            box-shadow: $table-blue 0 0 0 5px;
             @include mobile-L() {
                 width: 100%;
             }
@@ -1284,7 +1292,7 @@
                 padding-right: 20px;
                 p {
                     text-align: right;
-                    color: $dark-blue;
+                    color: $blue;
                     i {
                         margin-right: 5px;
                     }
@@ -1401,7 +1409,7 @@
                 width: 100%;
                 padding: 0;
                 margin-right: $margin-M;
-                color: $dark-blue;
+                color: $blue;
                 font-size: $size-h4;
                 font-weight: bold;
             }
@@ -1411,7 +1419,7 @@
                 &[type="reset"] {
                     width: 100%;
                     height: 40px;
-                    background-color: $dark-blue;
+                    background-color: $blue;
                     color: $title-W;
                     font-size: $size-h4;
                     font-weight: bold;
@@ -1429,9 +1437,9 @@
                     width: 100%;
                     height: 40px;
                     background-color: transparent;
-                    border: solid 1px $dark-blue;
+                    border: solid 1px $blue;
                     border-radius: 8px;
-                    color: $dark-blue;
+                    color: $blue;
                     font-size: $size-h4;
                     font-weight: bold;
                     line-height: 40px;
@@ -1464,7 +1472,7 @@
                 font-size: $size-h4;
                 line-height: $size-h4;
                 margin-top: $margin-XS * 2;
-                color: $dark-blue;
+                color: $blue;
                 font-weight: bold;
                 text-align: center;
             }
@@ -1526,7 +1534,7 @@
                 margin: $margin-XS 0;
             }
             .h4 {
-                color: $dark-blue;
+                color: $blue;
                 font-size: $size-h4;
                 font-weight: bold;
                 padding: 0;
@@ -1665,7 +1673,7 @@
         }
     }
     .head {
-        background-color: $dark-blue;
+        background-color: $blue;
         border-radius: 20px 20px 0 0;
         @include mobile-L() {
             border-radius: unset;
