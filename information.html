@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>政府網站資料開放宣告</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+
+    <!-- 政府網站資料開放宣告 -->
+    <section class="content-information">
+        <div class="container">
+            <h1>政府網站資料開放宣告</h1>
+            <h3>授權方式及範圍</h3>
+            <p>為利各界廣為利用網站資料，水利署水資源物聯網入口網站上刊載之所有資料與素材，其得受著作權保護之範圍，以無償、非專屬，得再授權之方式提供公眾使用，使用者得不限時間及地域，重製、改作、編輯、公開傳輸或為其他方式之利用，開發各種產品或服務（簡稱加值衍生物），此一授權行為不會嗣後撤回，使用者亦無須取得本機關之書面或其他方式授權；然使用時，應註明出處。
+            </p>
+            <h3>相關事項說明</h3>
+            <p>1.本授權範圍僅及於著作權保護之範圍，不及於其他智慧財產權利，包括但不限於專利、商標、及機關標誌之提供。 <br>
+                2.當事人自行公開或依法令公開之個人資料是否得被蒐集、處理及利用，使用者須自行依照個人資料保護法之相關規定，規劃並執行法律要求之相應措施。 <br>
+                3.本網站的影音、圖像、樂譜、專人專案撰文或經機關特別聲明之其他著作，須經同意方可使用。</p>
+            <h3>注意事項</h3>
+            <p>1.應注意不得侵害第三人之著作人格權(包括姓名表示權及禁止不當變更權)。 <br>
+                2.使用本授權提供之資料與素材，不得惡意變更其相關資訊，若利用後所展示之資訊與原資料與素材不符，使用者須自負民事、刑事上之法律責任。 <br>
+                3.本網站之授權，並不授予使用者代表本機關建議、認可或贊同其加值衍生物之地位。</p>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <script src="js/footer.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            // loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+        });
+    </script>
+
+    <!-- 最新消息list -->
+    <script>
+        var btn1 = document.querySelector(".btn1")
+        var btn2 = document.querySelector(".btn2")
+        var list1 = document.querySelector(".list1")
+        var list2 = document.querySelector(".list2")
+        function clear_active() {
+            btn1.classList.remove("active-btn")
+            btn2.classList.remove("active-btn")
+            list1.classList.remove("active-list")
+            list2.classList.remove("active-list")
+        }
+        btn1.onclick = function () {
+            clear_active()
+            btn1.classList.add("active-btn")
+            list1.classList.add("active-list")
+        }
+        btn2.onclick = function () {
+            clear_active()
+            btn2.classList.add("active-btn")
+            list2.classList.add("active-list")
+        }
+    </script>
+</body>
+
+</html>

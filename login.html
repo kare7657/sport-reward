@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+
+    <!-- 登入 -->
+    <section class="content-login">
+        <div class="container">
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+            <h1>登入</h1>
+            <div class="form">
+                <form>
+                    <div class="form-gp">
+                        <label for="account">帳號</label>
+                        <input type="text" name="account" id="account">
+                    </div>
+                    <div class="form-gp">
+                        <label for="password">密碼</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LcEuLAUAAAAAOK774BX-VqhAYq-gBoCLIoPXWQj">
+                        <div style="width: 304px; height: 78px;margin: auto;">
+                            <div><iframe
+                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcEuLAUAAAAAOK774BX-VqhAYq-gBoCLIoPXWQj&amp;co=aHR0cHM6Ly9pb3Qud3JhLmdvdi50dzo0NDM.&amp;hl=zh-TW&amp;v=2diXFiiA9NsPIBTU15LG6xPf&amp;size=normal&amp;cb=w9t57zywk9t1"
+                                    width="304" height="78" role="presentation" name="a-bhf3r1m2u1sq" frameborder="0"
+                                    scrolling="no"
+                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                            </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                class="g-recaptcha-response"
+                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                        </div><iframe style="display: none;"></iframe>
+
+                        <input name="JSessId" type="hidden" value="25C42F78A3D3E67621485F7594B29385">
+                    </div>
+                    <div class="form-gp">
+                        <input type="submit" value="送出">
+                        <input type="button" value="忘記密碼？" data-toggle="modal" data-target="#modalChangPWD">
+                        <a href="#">補發會員認證信</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal-iot -->
+    <div class="modal fade modal-sp" id="modalChangPWD" tabindex="-1" role="dialog" aria-labelledby="modalPrivateLabel"
+        data-backdrop="static" style=" padding-top: 0;">
+        <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h2 class="modal-title" id="modalPrivateLabel">變更密碼</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-gp">
+                            <label for="Password">舊密碼<span>*</span></label>
+                            <input type="password" name="Password" id="Password" value="">
+                            <div class="text">
+                                <p>testtesttesttest</p>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="NewPassword">新密碼<span>*</span></label>
+                            <input type="password" name="NewPassword" id="NewPassword" value="">
+                            <div class="text">
+                                <span>testtest</span>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="DB_NewPassword">新密碼確認<span>*</span></label>
+                            <input type="password" name="DB_NewPassword" id="DB_NewPassword" value="">
+                            <div class="text">
+                                <span>testtest</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="go" id="go" class="btn-sp">確認更改</button>
+                        <button type="button" name="cancel" id="cancel" class="btn-sp" data-dismiss="modal">取消</button>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <script src="js/footer.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            // loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+        });
+    </script>
+
+    <!-- 最新消息list -->
+    <script>
+        var btn1 = document.querySelector(".btn1")
+        var btn2 = document.querySelector(".btn2")
+        var list1 = document.querySelector(".list1")
+        var list2 = document.querySelector(".list2")
+        function clear_active() {
+            btn1.classList.remove("active-btn")
+            btn2.classList.remove("active-btn")
+            list1.classList.remove("active-list")
+            list2.classList.remove("active-list")
+        }
+        btn1.onclick = function () {
+            clear_active()
+            btn1.classList.add("active-btn")
+            list1.classList.add("active-list")
+        }
+        btn2.onclick = function () {
+            clear_active()
+            btn2.classList.add("active-btn")
+            list2.classList.add("active-list")
+        }
+    </script>
+</body>
+
+</html>

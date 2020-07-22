@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>水資源物聯網入口網</title>
+    <title>註冊成功</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="scss/style.css">
@@ -15,53 +15,24 @@
 </head>
 
 <body>
-    <!-- footer -->
-    <footer class="footer">
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+
+    <!-- 註冊成功 -->
+    <section class="content-sign-up-success">
         <div class="container">
-            <ul class="text-gp">
-                <li>
-                    <a href="information.html"><i class="fas fa-file-alt"></i>政府網站資料開放宣告</a>
-                </li>
-                <li>
-                    <a href="private.html"><i class="fas fa-file-alt"></i>隱私權政策</a>
-                </li>
-                <li>
-                    <a href="security.html"><i class="fas fa-file-alt"></i>資訊安全政策</a>
-                </li>
-            </ul>
-            <div class="contact">
-                <div class="text-gp">
-                    <h4><i class="fas fa-map-marker-alt"></i>新市政大樓</h4>
-                    <p>407201 臺中市西屯區臺灣大道三段99號惠中樓（A棟）10樓</p>
-                </div>
-                <div class="text-gp">
-                    <h4><i class="fas fa-map-marker-alt"></i>陽明大樓</h4>
-                    <p>420018 臺中市豐原區陽明街36號2樓</p>
-                </div>
-                <div class="text-gp">
-                    <h4><i class="fas fa-mobile-alt"></i>聯絡電話</h4>
-                    <p>市話總機代表號：04-22289111，本局傳真號碼：25260450</p>
-                </div>
-                <div class="text-gp">
-                    <h4><i class="far fa-clock"></i>辦公時間</h4>
-                    <p>8:00-17:00，中午休息時間：12:00-13:00，彈性上下班時間：8:00-8:30、13:00-13:30、17:00-17:30</p>
-                </div>
-            </div>
-            <div class="notice">
-                <div class="text-gp">
-                    <p>建議使用瀏覽器 Firefox58.0以上或IE10.0以上或google chrome版本瀏覽本站</p>
-                    <p>臺中市政府運動局版權所有 Copyright © 2018. All Rights Reserved.</p>
-                </div>
-                <div class="date">
-                    <p>最後更新：2020/09/09</p>
-                </div>
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+            <img src="img/icon-medal.svg" alt="">
+            <h1>註冊成功</h1>
+            <p>您已完成註冊手續，現在即可登入會員</p>
+            <div class="btn">
+                <button type="button" onclick="javascript:location.href='login.html'">登入會員</button>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <a href="#top">
-        <div class="back-top">▲</div>
-    </a>
+    <!-- footer -->
+    <script src="js/footer.js"></script>
 
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -112,6 +83,29 @@
         });
     </script>
 
+    <!-- 最新消息list -->
+    <script>
+        var btn1 = document.querySelector(".btn1")
+        var btn2 = document.querySelector(".btn2")
+        var list1 = document.querySelector(".list1")
+        var list2 = document.querySelector(".list2")
+        function clear_active() {
+            btn1.classList.remove("active-btn")
+            btn2.classList.remove("active-btn")
+            list1.classList.remove("active-list")
+            list2.classList.remove("active-list")
+        }
+        btn1.onclick = function () {
+            clear_active()
+            btn1.classList.add("active-btn")
+            list1.classList.add("active-list")
+        }
+        btn2.onclick = function () {
+            clear_active()
+            btn2.classList.add("active-btn")
+            list2.classList.add("active-list")
+        }
+    </script>
 </body>
 
 </html>

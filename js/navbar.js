@@ -1,5 +1,4 @@
-document.write( '<!-- 導覽列 -->\n' );
-document.write( '    <div class=\"minibar\">\n' );
+document.write( '<div class=\"minibar\">\n' );
 document.write( '        <div class=\"container\">\n' );
 document.write( '            <div class=\"navbar-L\">\n' );
 document.write( '                <a href=\"index.html\">\n' );
@@ -48,6 +47,8 @@ document.write( '                    <li><a href=\"download.html\">檔案下載<
 document.write( '                    <li><a href=\"FAQ.html\">FAQ</a></li>\n' );
 document.write( '                    <li><a href=\"signUp-explain.html\">報名教學</a></li>\n' );
 document.write( '                    <li><a href=\"link.html\">相關連結</a></li>\n' );
+document.write( '                    <li><a href=\"login.html\">登入</a></li>\n' );
+document.write( '                    <li><a href=\"sign-up.html\">註冊</a></li>\n' );
 document.write( '                </ul>\n' );
 document.write( '            </div>\n' );
 document.write( '            <div class=\"logo\">\n' );

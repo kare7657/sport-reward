@@ -143,7 +143,7 @@
         width: 100%;
         height: 40px;
         border-radius: 5px;
-        border: solid 1px $light-sky;
+        border: solid 1px $gray;
         background-color: $title-W;
         color: $text;
         padding: 0 $padding-XXS;
@@ -164,7 +164,7 @@
             text-decoration: none;
             margin-top: $margin-XS;
             &:hover {
-                background-color: $blue;
+                background-color: $title-BK;
             }
         }
         &[disabled] {
@@ -272,7 +272,7 @@
         }
     }
     .form-control {
-        background-color: rgba($color: $blue, $alpha: 0.2) !important;
+        background-color: $gray !important;
     }
     //按鈕
     button {
@@ -365,8 +365,8 @@
         --dd-width: 180px;
         --dd-shadow: 0 0 29px 0px rgba(0, 0, 0, 0.1);
     }
-    //modal-iot
-    .modal-iot {
+    //modal-sp
+    .modal-sp {
         padding: 0;
         .modal-dialog {
             max-width: 650px;
@@ -376,9 +376,9 @@
                     width: 100%;
                     border-bottom: none;
                     padding: 0 $padding-S;
-                    margin-top: $margin-M;
+                    margin-top: $margin-S;
                     @include mobile-XS() {
-                        margin-top: $margin-S;
+                        margin-top: $margin-XS;
                     }
                     .modal-title {
                         width: 100%;
@@ -400,7 +400,6 @@
                     @include mobile-L() {
                         padding: 0 $padding-XS * 1.5;
                         padding-top: $padding-XS;
-                        margin-bottom: $margin-S;
                     }
                     @include mobile-XS() {
                         padding: 0 $padding-XS;
@@ -411,10 +410,10 @@
                         display: flex;
                         justify-content: space-between;
                         flex-wrap: wrap;
-                        margin-bottom: $margin-S;
+                        margin-bottom: $margin-XS;
                         @include mobile-L() {
                             flex-wrap: wrap;
-                            margin-bottom: $margin-XS;
+                            margin-bottom: $margin-XS/2;
                         }
                         label {
                             width: 40%;
@@ -422,7 +421,7 @@
                             line-height: $size-h4 * 1.5;
                             font-weight: bold;
                             color: $text;
-                            margin: $margin-XS 0;
+                            margin: $margin-XS/2 0;
                             @include mobile-L() {
                                 width: 100%;
                             }
@@ -454,15 +453,15 @@
                 }
                 .modal-footer {
                     border-top: none;
-                    margin-bottom: $margin-M;
+                    margin-bottom: $margin-S;
                     padding: 0;
                     padding: 0 $padding-S;
                     @include mobile-L() {
                         padding: 0 $padding-XS * 1.5;
+                        margin-bottom: $margin-XS;
                     }
                     @include mobile-XS() {
                         padding: 0 $padding-XS;
-                        margin-bottom: $margin-S;
                     }
                     .btn {
                         margin-top: $margin-XS;
@@ -475,7 +474,7 @@
                             flex-direction: column;
                             button {
                                 margin: 0;
-                                margin-top: $margin-S;
+                                margin-top: $margin-XS;
                             }
                         }
                     }
@@ -484,13 +483,13 @@
                         margin-top: $margin-XS;
                     }
                 }
-                .btn-iot {
+                .btn-sp {
                     margin: 0;
                     margin-left: $margin-S;
                     @include mobile-L() {
                         width: 100%;
                         margin: unset;
-                        margin-bottom: $margin-S;
+                        margin-bottom: $margin-XS;
                     }
                     &[type="submit"],
                     &[type="reset"] {
@@ -505,7 +504,7 @@
                         text-decoration: none;
                         text-align: center;
                         &:hover {
-                            background-color: $blue;
+                            background-color: $title-BK;
                         }
                     }
                     &[type="button"] {
@@ -520,15 +519,15 @@
                         text-decoration: none;
                         text-align: center;
                         &:hover {
-                            background-color: $blue;
+                            background-color: $title-BK;
                             color: $title-W;
-                            border: solid 1px $blue;
+                            border: solid 1px $title-BK;
                         }
                     }
                     &[disabled] {
-                        background-color: $light-sky;
+                        background-color: $gray;
                         &:hover {
-                            background-color: $light-sky;
+                            background-color: $gray;
                         }
                     }
                 }
@@ -605,7 +604,7 @@
         display: flex;
         justify-content: flex-end;
         .navbar-L {
-            width: 80%;
+            width: 70%;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -624,7 +623,7 @@
             }
         }
         .navbar-R {
-            width: 20%;
+            width: 30%;
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -741,6 +740,7 @@
     .mobile {
         display: none;
         height: 60px;
+        box-shadow: 5px 5px 15px $light-gray;
         @include pad() {
             display: block;
             position: relative;
@@ -760,7 +760,7 @@
                 display: inline-block;
                 width: 100vw;
                 height: 100vh;
-                background-color: rgba(0, 0, 0, 0.9);
+                background-color: $blue;
                 font-size: $size-h4;
                 line-height: 60px;
                 position: absolute;
@@ -789,6 +789,9 @@
             }
             a {
                 color: $title-W;
+                &:hover{
+                    color: $title-BK !important;
+                }
             }
             .active-ul {
                 display: inline-block;
@@ -1068,19 +1071,18 @@
 @mixin papers() {
     padding-top: 120px;
     @include pad() {
-        padding-top: 80px;
+        padding-top: 60px;
     }
     h1 {
-        margin: 30px 0;
+        margin-bottom: $margin-XS;
         text-align: center;
         @include mobile-L() {
             margin: $margin-S 0;
-            // text-align: left;
         }
     }
     h3 {
-        margin-top: $margin-S;
-        margin-bottom: $margin-XS;
+        margin-top: $margin-XS;
+        margin-bottom: $margin-XS/2.5;
     }
     ul {
         padding: 0;
@@ -1110,6 +1112,7 @@
     margin-bottom: $margin-S;
     @include mobile-L() {
         justify-content: flex-start;
+        margin-top: $margin-XS;
     }
     input[type="search"] {
         width: 180px;
@@ -1119,14 +1122,13 @@
         border-bottom: solid 1px $gray;
         background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
         @include mobile-L() {
-            width: 90%;
+            width: 100%;
             padding: 5px 10px;
         }
         &:focus {
-            // width: 180px;
             background-color: $light-gray;
             border: none;
-            transition: 0.5s;
+            transition: 0.3s;
             outline: none;
             @include mobile-L() {
                 width: 100%;
@@ -1372,10 +1374,14 @@
 }
 
 @mixin form() {
-    background-color: $table-blue;
+    background-color: $light-gray;
     border-radius: 20px;
+    @include web-S {
+        margin-bottom: 0;
+    }
     @include mobile-L() {
         border-radius: unset;
+        margin-bottom: $margin-XS;
     }
     form {
         .form-gp {
@@ -1386,7 +1392,7 @@
             justify-content: center;
             flex-wrap: wrap;
             flex-direction: row;
-            margin-bottom: $margin-S;
+            margin-bottom: $margin-XS;
             text-align: justify;
             p {
                 width: 100%;
@@ -1430,7 +1436,7 @@
                     text-decoration: none;
                     margin-top: $margin-XS;
                     &:hover {
-                        background-color: $blue;
+                        background-color: $title-BK;
                     }
                 }
                 &[type="button"] {
@@ -1445,11 +1451,11 @@
                     line-height: 40px;
                     padding: 0;
                     text-decoration: none;
-                    margin-top: $margin-XS * 2;
+                    margin-top: $margin-XS;
                     &:hover {
-                        background-color: $blue;
+                        background-color: $title-BK;
                         color: $title-W;
-                        border: solid 1px $blue;
+                        border: solid 1px $title-BK;
                     }
                 }
                 &[disabled] {
@@ -1471,10 +1477,13 @@
             a {
                 font-size: $size-h4;
                 line-height: $size-h4;
-                margin-top: $margin-XS * 2;
+                margin-top: $margin-XS;
                 color: $blue;
                 font-weight: bold;
                 text-align: center;
+                &:hover {
+                    color: $title-BK !important;
+                }
             }
         }
         //checkbox
