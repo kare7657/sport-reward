@@ -55,7 +55,7 @@ body {
             .icon {
                 width: 15%;
                 margin-right: $margin-XS;
-                @include pad(){
+                @include pad() {
                     width: 20%;
                 }
                 @include mobile-L() {
@@ -74,7 +74,7 @@ body {
             }
             .about {
                 width: 85%;
-                @include pad(){
+                @include pad() {
                     width: 80%;
                 }
                 @include mobile-L() {
@@ -94,10 +94,10 @@ body {
         .container {
             display: flex;
             flex-wrap: wrap;
-            @include web-S(){
+            @include web-S() {
                 padding-bottom: $padding-XS;
             }
-            @include pad(){
+            @include pad() {
                 padding-bottom: 0;
             }
             .new-btn {
@@ -123,10 +123,10 @@ body {
     .content-video {
         width: 100%;
         padding-bottom: $padding-S * 1.5;
-        @include web-S(){
+        @include web-S() {
             padding-bottom: $padding-S;
         }
-        @include mobile-L{
+        @include mobile-L {
             display: none;
         }
         h2 {
@@ -139,10 +139,10 @@ body {
                 width: 32.5%;
                 height: 30vh;
                 border: none;
-                @include web-S(){
+                @include web-S() {
                     height: 15vh;
                 }
-                @include pad(){
+                @include pad() {
                     height: 13vh;
                 }
             }
@@ -192,7 +192,7 @@ body {
             .new {
                 @include news-list(100%, 15%);
                 display: none;
-                @include mobile-L(){
+                @include mobile-L() {
                     margin-bottom: 0;
                 }
             }
@@ -258,125 +258,34 @@ body {
             }
         }
     }
-    //資料主題
-    .content-theme {
+    //相關連結
+    .content-link {
+        @include papers();
+        @include text-important();
         .container {
-            padding-top: 220px;
-            display: flex;
-            justify-content: space-between;
-            @include mobile-L() {
-                flex-wrap: wrap;
-                padding-top: 130px;
+            h1 {
+                margin: $margin-XS 0;
             }
-            // 左欄按鈕
-            .left {
-                width: 30%;
+            .logo-gp {
                 display: flex;
                 justify-content: center;
-                text-align: center;
                 flex-wrap: wrap;
-                flex-direction: column;
-                @include pad() {
-                    img {
-                        width: 60%;
-                    }
-                }
-                @include mobile-L() {
-                    width: 100%;
-                    flex-wrap: nowrap;
-                    flex-direction: row;
-                    img {
-                        width: 60%;
-                    }
-                }
-                .theme-btn {
-                    margin-bottom: $margin-M;
-                    @include mobile-L() {
-                        width: 45%;
-                        margin-bottom: $margin-S;
-                    }
-                    h3 {
-                        color: $title-BK;
-                        margin: unset;
-                    }
-                }
-            }
-            // 右欄
-            .right {
-                width: 70%;
-                @include mobile-L() {
-                    width: 100%;
-                }
-                // .theme-content {
-                //     display: none;
-                // }
-                // .theme-content.show {
-                //     display: block;
-                // }
-                // 右欄內容-河川
-                .river {
-                    text-align: center;
-                    @include theme-list(100%, $green);
-                    @include mobile-L() {
-                        @include theme-list(100%, $green);
-                    }
-                }
-                //右欄內容-淹水
-                .flood {
-                    text-align: center;
-                    @include theme-list(100%, $blue);
-                    @include mobile-L() {
-                        @include theme-list(100%, $blue);
-                    }
-                }
-            }
-            .pagination {
-                margin-top: $margin-M;
-            }
-        }
-    }
-    // 資料主題-浮動視窗
-    .theme-modal {
-        .river {
-            @include modal(80%, $green);
-        }
-        .flood {
-            @include modal(80%, $blue);
-        }
-    }
-    //示範應用
-    .content-example {
-        @include papers();
-        .container {
-            .example-head {
-                margin-bottom: $margin-M;
-                @include mobile-L() {
+                a {
+                    margin: 0 $margin-XS;
                     margin-bottom: $margin-S;
+                    @include pad() {
+                        margin-bottom: $margin-XS;
+                    }
                 }
-                .btn {
-                    display: flex;
-                    justify-content: center;
+                img {
+                    max-width: 350px;
+                    max-height: 100px;
+                    @include pad() {
+                        width: 25vh;
+                    }
                     @include mobile-L() {
-                        flex-wrap: wrap;
-                        flex-direction: column;
+                        width: 35vh;
                     }
-                    button {
-                        margin: 0 $margin-XS;
-                        @include mobile-L() {
-                            margin-bottom: $margin-XS;
-                        }
-                    }
-                }
-                h1 {
-                    text-align: center;
-                }
-            }
-            .example-body {
-                @include example();
-            }
-            .pagination {
-                @include mobile-L() {
-                    margin: 0;
                 }
             }
         }
@@ -599,37 +508,6 @@ body {
             }
         }
     }
-    //註冊-後台
-    .content-signup {
-        @include papers();
-        @include text-important();
-        .container {
-            .account-list-gp {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                @include pad() {
-                    flex-wrap: wrap;
-                }
-                #team {
-                    @include account-list($blue);
-                }
-                #egov {
-                    @include account-list($green);
-                }
-                #wrisp {
-                    @include account-list($blue);
-                }
-            }
-            .notice {
-                @include mobile-L() {
-                    h3 {
-                        margin-top: unset;
-                    }
-                }
-            }
-        }
-    }
     //註冊成功
     .content-sign-up-success {
         .container {
@@ -685,7 +563,7 @@ body {
                     margin-bottom: $margin-M;
                     @include web-S {
                         width: 70%;
-                        padding: $padding-S $padding-S*1.5;
+                        padding: $padding-S $padding-S * 1.5;
                     }
                     @include pad {
                         width: 100%;
@@ -700,9 +578,9 @@ body {
                         margin: $margin-XS 0;
                         text-align: center;
                         @include web-S {
-                            padding: 0 ;
+                            padding: 0;
                         }
-                        @include pad(){
+                        @include pad() {
                             padding: 0 $padding-M;
                         }
                         @include mobile-L() {
@@ -895,141 +773,6 @@ body {
                 .g-recaptcha {
                     width: 100%;
                     margin-bottom: $margin-XS * 2;
-                }
-            }
-        }
-    }
-    //範例程式碼
-    .content-example-code {
-        .container {
-            padding-top: 220px;
-            h1 {
-                text-align: center;
-                margin-bottom: $margin-M;
-            }
-            @include mobile-L() {
-                padding-top: 130px;
-                width: 100%;
-                h1 {
-                    margin-bottom: $margin-S;
-                    padding: 0 $padding-XS * 1.5;
-                }
-            }
-            .example-body {
-                display: flex;
-                justify-content: space-between;
-                @include pad() {
-                    flex-wrap: wrap;
-                }
-
-                // 左欄清單
-                .left {
-                    @include collapse($blue, $title-W);
-                    width: 30%;
-                    margin-right: $margin-M;
-                    @include pad() {
-                        width: 100%;
-                        margin-right: unset;
-                        margin-bottom: $margin-XS * 2;
-                        padding: unset;
-                    }
-                    @include mobile-L() {
-                        padding: 0 $padding-XS * 1.5;
-                    }
-                    .searchbar {
-                        @include searchbar();
-                        justify-content: flex-start;
-                        margin-bottom: $margin-S * 1.5;
-                        input[type="search"] {
-                            width: 200px;
-                            &:focus {
-                                width: 230px;
-                            }
-                        }
-                        @include mobile-L() {
-                            input[type="search"] {
-                                width: 90%;
-                                &:focus {
-                                    width: 100%;
-                                }
-                            }
-                        }
-                    }
-                }
-                // 右欄內容
-                .right {
-                    width: 70%;
-                    // margin-top: 55px;
-                    @include pad() {
-                        width: 100%;
-                        margin-top: unset;
-                    }
-                    .text-gp {
-                        margin-bottom: $margin-S;
-                        @include mobile-L() {
-                            padding: 0 $padding-XS * 1.5;
-                            #pad-pd {
-                                padding: 0 $padding-XS * 1.5;
-                            }
-                        }
-                        h3 {
-                            margin-bottom: 5px;
-                        }
-                        p {
-                            text-align: left;
-                        }
-                        pre {
-                            padding: $padding-XS;
-                            border: solid 2px $light-sky;
-                            border-radius: 10px;
-                            color: $text;
-                            font-size: $size-p;
-                            line-height: $size-p * 2;
-                            text-align: left;
-                            margin-top: $margin-XS;
-                            @include mobile-L() {
-                                padding: $padding-XS;
-                                border: unset;
-                                border-radius: unset;
-                                background-color: $table-blue;
-                            }
-                        }
-                        .list-gp {
-                            @include news-list(100%, 30%);
-                            word-wrap: break-word;
-                            .list {
-                                padding: $padding-XXS $padding-XS;
-                                border: solid 2px $light-sky;
-                                border-radius: 10px;
-                                margin-bottom: $margin-XS;
-                                @include pad() {
-                                    padding: $padding-XXS $padding-XXS * 2;
-                                }
-                                span {
-                                    text-align: left;
-                                    margin-right: $margin-S;
-                                    padding: 0;
-                                    margin: 0;
-                                    @include pad() {
-                                        width: 100%;
-                                    }
-                                }
-                                p {
-                                    width: 100%;
-                                    text-align: justify;
-                                }
-                            }
-                        }
-                        .btn {
-                            padding-left: 0;
-                            @include pad() {
-                                padding: 0;
-                            }
-                        }
-                    }
-                    .pd0 {
-                        padding: 0;
-                    }
                 }
             }
         }

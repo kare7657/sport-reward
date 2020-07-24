@@ -110,7 +110,7 @@
     }
     //無障礙框線
     :focus {
-        outline: $blue dotted 3px !important;
+        outline: $blue dotted 2px !important;
     }
     .clearfix {
         clear: both;
@@ -173,85 +173,7 @@
                 background-color: $light-sky;
             }
         }
-        &[type="range"] {
-            -webkit-appearance: none;
-            overflow: hidden; /* 限定範圍 */
-            width: 200px;
-            height: 20px;
-            outline: none;
-            background: none;
-            border: none;
-            // chrome
-            &::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                position: relative;
-                width: 15px;
-                height: 15px;
-                background: rgba($color: $title-BK, $alpha: 0.3);
-                border-radius: 50%;
-            }
-            &::-webkit-slider-runnable-track {
-                border-radius: 10px;
-                background: #fff;
-                background: -webkit-linear-gradient(to left, #fff, transparent); /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to left, #fff, transparent);
-                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            }
-            //火狐
-            &::-moz-range-track {
-                height: 15px;
-                border-radius: 15px;
-                background: -webkit-linear-gradient(to left, #fff, transparent);
-                background: linear-gradient(to left, #fff, transparent);
-                border: none;
-            }
 
-            &::-moz-range-thumb {
-                width: 15px;
-                height: 15px;
-                background: rgba($color: $title-BK, $alpha: 0.3);
-                border: none;
-                border-radius: 50%;
-            }
-
-            &::-moz-range-thumb:hover,
-            &:active::-moz-range-thumb {
-                width: 16px;
-                height: 16px;
-            }
-
-            &::-moz-range-progress {
-                height: 10px;
-                border-radius: 10px;
-            }
-
-            &::-moz-focus-outer {
-                border: none;
-            }
-            //IE
-            &::-ms-track {
-                height: 15px;
-                border-color: transparent;
-                color: transparent;
-                border: none;
-                outline: none;
-                border-radius: 10px;
-                background: #fff;
-                background: -webkit-linear-gradient(to left, #fff, transparent);
-                background: linear-gradient(to left, #fff, transparent);
-            }
-            &::-ms-thumb {
-                height: 15px;
-                width: 15px;
-                border-radius: 50%;
-                border: none;
-                outline: none;
-                background: rgba($color: $title-BK, $alpha: 0.3);
-            }
-            &::-ms-fill-lower {
-                background: transparent;
-            }
-        }
     }
     select {
         width: 100%;
@@ -300,20 +222,26 @@
     .bg-green {
         background-color: $green;
     }
-    .button-outline {
-        padding: 5px $padding-XS;
+    .btn-outline {
+        padding: 4px $padding-XXS * 2;
         background-color: transparent;
-        box-shadow: $blue 0 0 0 1px;
+        border: solid 1px $blue;
         font-size: $size-h4;
         color: $blue;
         font-weight: bold;
+        border-radius: 20px;
         @include mobile-L() {
-            padding: 8px $padding-XS/2;
+            // width: 100%;
+            margin-bottom: $margin-XS/2;
         }
         &:hover {
-            background-color: $blue;
+            background-color: $title-BK;
+            box-shadow: $title-BK 0 0 0 1px;
             color: $title-W;
             transition-duration: 0.5s;
+            a {
+                color: $title-W !important;
+            }
         }
         &[disabled] {
             background-color: $light-sky;
@@ -324,6 +252,10 @@
         .fas {
             margin-right: $margin-XS;
         }
+    }
+    .outline-BK {
+        border: solid 1px $title-BK;
+        color: $title-BK;
     }
     //swiper
     .swiper-container {
@@ -353,17 +285,6 @@
             -webkit-align-items: center;
             align-items: center;
         }
-    }
-    //date-picker datedropper
-    div.datedropper.iot {
-        --dd-color1: #2faae5;
-        --dd-color2: #fff;
-        --dd-color3: #595757;
-        --dd-color4: #fff;
-
-        --dd-radius: 10px;
-        --dd-width: 180px;
-        --dd-shadow: 0 0 29px 0px rgba(0, 0, 0, 0.1);
     }
     //modal-sp
     .modal-sp {
@@ -485,7 +406,7 @@
                 }
                 .btn-sp {
                     margin: 0;
-                    margin-left: $margin-S;
+                    margin-left: $margin-XS;
                     @include mobile-L() {
                         width: 100%;
                         margin: unset;
@@ -499,7 +420,7 @@
                         font-size: $size-h4;
                         font-weight: bold;
                         border: none;
-                        border-radius: 8px;
+                        border-radius: 20px;
                         padding: 5px $padding-XS;
                         text-decoration: none;
                         text-align: center;
@@ -511,7 +432,7 @@
                         height: 40px;
                         background-color: transparent;
                         border: solid 1px $blue;
-                        border-radius: 8px;
+                        border-radius: 20px;
                         color: $blue;
                         font-size: $size-h4;
                         font-weight: bold;
@@ -789,7 +710,7 @@
             }
             a {
                 color: $title-W;
-                &:hover{
+                &:hover {
                     color: $title-BK !important;
                 }
             }
@@ -890,27 +811,11 @@
         .text-gp {
             margin: 0;
             padding: 0;
-            ul,
-            li {
-                display: inline;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                @include mobile-L() {
-                    display: block;
-                }
-            }
-            li {
-                margin-right: $margin-XS;
-            }
-            span {
-                font-size: $size-p;
-                color: $light-sky;
-                line-height: $size-p;
-                margin: 0;
-                padding: 0 $padding-XXS;
-                @include mobile-L() {
-                    line-height: $size-h4 * 1.5;
+            button{
+                margin-right: $margin-XS/2;
+                @include mobile-L(){
+                    width: 100%;
+                    margin-right:0;
                 }
             }
             a {
@@ -1136,243 +1041,6 @@
         }
     }
 }
-// 資料主題清單
-@mixin theme-list($width, $main-color) {
-    width: $width;
-    @include pad() {
-        width: 100%;
-        margin-right: unset;
-        margin-bottom: $margin-S;
-    }
-    .list {
-        display: flex;
-        justify-content: space-between;
-        padding: $padding-XXS $padding-XS;
-        @include mobile-L() {
-            flex-wrap: nowrap;
-            flex-direction: row;
-            padding: $padding-XXS $padding-XXS * 2;
-        }
-        span {
-            text-align: center;
-            color: $title-W;
-            font-size: $size-p;
-            font-weight: bold;
-            line-height: $size-p * 2;
-            text-align: center;
-        }
-        a:hover p {
-            color: $blue;
-        }
-    }
-    .title {
-        background-color: $main-color;
-        margin-top: $margin-S;
-        flex-direction: row;
-    }
-    .main {
-        background-color: rgba($color: $main-color, $alpha: 0.1);
-    }
-    .white {
-        background-color: $title-W;
-    }
-    h4 {
-        text-align: right;
-    }
-    .left-gp {
-        width: 80%;
-        @include mobile-L() {
-            width: 50%;
-        }
-    }
-    .right-gp {
-        width: 20%;
-        text-align: center;
-        @include mobile-L() {
-            width: 40%;
-            display: block;
-        }
-        ul,
-        li {
-            display: inline;
-            list-style: none;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            @include mobile-L() {
-                flex-direction: column;
-                flex-wrap: wrap;
-            }
-        }
-        li {
-            background-color: $blue;
-            padding: 3px 10px;
-            border-radius: 10px;
-            color: $title-W;
-            font-size: 0.875rem;
-            line-height: 0.875rem * 2;
-        }
-    }
-}
-
-//資料主題-浮動視窗
-@mixin modal($width, $main-color) {
-    .modal-dialog {
-        max-width: 650px;
-        transition: unset;
-        .modal-content {
-            border-radius: 15px;
-            .modal-header {
-                width: 100%;
-                border-bottom: unset;
-                .modal-title {
-                    width: 100%;
-                    text-align: center;
-                    padding-top: $padding-XS;
-                    @include mobile-L() {
-                        padding-top: $padding-XXS;
-                    }
-                }
-                .close {
-                    position: absolute;
-                    right: 2.5%;
-                    margin: -1rem -1rem -1rem 0;
-                }
-            }
-            .modal-body {
-                width: $width;
-                margin: auto;
-                margin-bottom: $margin-XS;
-                padding: 0;
-                @include pad() {
-                    margin-bottom: $margin-S;
-                }
-                @include mobile-L() {
-                    margin-bottom: unset;
-                }
-                .row {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    .left-gp {
-                        width: 25%;
-                        text-align: center;
-                        padding: $padding-XXS 0;
-                        span {
-                            color: $title-W;
-                            font-size: $size-p;
-                            font-weight: bold;
-                            line-height: $size-p * 1.5;
-                        }
-                    }
-                    .right-gp {
-                        width: 70%;
-                        text-align: justify;
-                        padding: $padding-XXS 20px;
-                        @include mobile-L() {
-                            display: block;
-                        }
-                        a,
-                        p {
-                            line-height: $size-p * 1.5;
-                            word-wrap: break-word;
-                        }
-                    }
-                    .title {
-                        background-color: $main-color;
-                    }
-                    .main {
-                        background-color: rgba($color: $main-color, $alpha: 0.1);
-                    }
-                    .white {
-                        background-color: $title-W;
-                    }
-                }
-            }
-            .modal-footer {
-                border-top: unset;
-                padding-right: 20px;
-                p {
-                    text-align: right;
-                    color: $blue;
-                    i {
-                        margin-right: 5px;
-                    }
-                }
-            }
-        }
-    }
-}
-// 示範應用
-@mixin example() {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    h4 {
-        margin-bottom: 0;
-    }
-    h2 {
-        margin-bottom: 0;
-    }
-    img {
-        width: 100%;
-        height: 250px;
-        margin: $margin-S 0;
-        border-radius: 10px;
-        @include mobile-L() {
-            height: 150px;
-            margin: $margin-XS 0;
-        }
-    }
-    .example-gp {
-        width: 48%;
-        padding: $padding-S;
-        background-color: $table-blue;
-        border-radius: 20px;
-        text-align: center;
-        margin-bottom: $margin-M;
-        @include pad() {
-            width: 100%;
-        }
-        @include mobile-L() {
-            padding: $padding-XS;
-        }
-    }
-    .app {
-        img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            @include mobile-L() {
-                width: 150px;
-                height: 150px;
-            }
-        }
-        .app-icon {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding-top: $padding-XS;
-            @include pad() {
-                padding-top: $padding-XXS;
-            }
-            img {
-                width: 35px;
-                height: 35px;
-                margin: 0 $margin-XS;
-                @include pad() {
-                    width: 40px;
-                    height: 40px;
-                }
-            }
-            a:hover {
-                color: $blue;
-            }
-        }
-    }
-}
-
 @mixin form() {
     background-color: $light-gray;
     border-radius: 20px;
@@ -1431,7 +1099,7 @@
                     font-weight: bold;
                     line-height: 40px;
                     border: none;
-                    border-radius: 8px;
+                    border-radius: 20px;
                     padding: 0;
                     text-decoration: none;
                     margin-top: $margin-XS;
@@ -1444,7 +1112,7 @@
                     height: 40px;
                     background-color: transparent;
                     border: solid 1px $blue;
-                    border-radius: 8px;
+                    border-radius: 20px;
                     color: $blue;
                     font-size: $size-h4;
                     font-weight: bold;

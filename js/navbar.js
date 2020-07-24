@@ -1,5 +1,6 @@
 document.write( '<div class=\"minibar\">\n' );
 document.write( '        <div class=\"container\">\n' );
+document.write( '            <a href=\"#U\" id=\"AU\" title=\"右上方功能區塊\" accesskey=\"U\" tabindex=\"2\"></a>\n' );
 document.write( '            <div class=\"navbar-L\">\n' );
 document.write( '                <a href=\"index.html\">\n' );
 document.write( '                    <img src=\"img/logo.png\" alt=\"logo\">\n' );
