@@ -369,7 +369,7 @@ body {
                 padding: $padding-S;
 
                 @include pad() {
-                    padding: $padding-XS*1.5;
+                    padding: $padding-XS * 1.5;
                 }
                 @include mobile-L() {
                 }
@@ -513,7 +513,7 @@ body {
                         margin: $margin-XS/2 0;
                     }
                     label {
-                        margin-left: $margin-XS*1.5;
+                        margin-left: $margin-XS * 1.5;
                     }
                 }
             }
@@ -593,6 +593,37 @@ body {
             }
             .btn {
                 margin: $margin-XS 0;
+            }
+        }
+    }
+    //會員專區
+    .content-member {
+        @include papers();
+        .container {
+            .btn-gp {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+                margin-top: $margin-S;
+
+                .member-btn {
+                    width: 530px;
+                    height: 130px;
+                    background-color: $blue;
+                    border-radius: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: $margin-S;
+
+                    p {
+                        color: $title-W;
+                        font-size: 32px;
+                        font-weight: bold;
+                    }
+                }
             }
         }
     }

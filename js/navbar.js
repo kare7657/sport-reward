@@ -36,6 +36,9 @@ document.write( '                </a>\n' );
 document.write( '                <a href=\"link.html\">\n' );
 document.write( '                    <h4>相關連結</h4>\n' );
 document.write( '                </a>\n' );
+document.write( '                <a href=\"member.html\">\n' );
+document.write( '                    <h4>會員專區</h4>\n' );
+document.write( '                </a>\n' );
 document.write( '            </div>\n' );
 document.write( '        </div>\n' );
 document.write( '        <div class=\"mobile\">\n' );
@@ -50,6 +53,7 @@ document.write( '                    <li><a href=\"signUp-explain.html\">報名�
 document.write( '                    <li><a href=\"link.html\">相關連結</a></li>\n' );
 document.write( '                    <li><a href=\"login.html\">登入</a></li>\n' );
 document.write( '                    <li><a href=\"sign-up-personal.html\">註冊</a></li>\n' );
+document.write( '                    <li><a href=\"member.html\">會員專區</a></li>\n' );
 document.write( '                </ul>\n' );
 document.write( '            </div>\n' );
 document.write( '            <div class=\"logo\">\n' );

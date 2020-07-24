@@ -3630,6 +3630,97 @@ body .content-sign-up-success .container .btn {
   margin: 1.25rem 0;
 }
 
+html .content-member,
+body .content-member {
+  padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  html .content-member,
+  body .content-member {
+    padding-top: 60px;
+  }
+}
+
+html .content-member h1,
+body .content-member h1 {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+@media (max-width: 568px) {
+  html .content-member h1,
+  body .content-member h1 {
+    margin: 2.5rem 0;
+  }
+}
+
+html .content-member h3,
+body .content-member h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+html .content-member ul,
+body .content-member ul {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #595757;
+}
+
+html .content-member .btn,
+body .content-member .btn {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  margin: 3.75rem 0;
+}
+
+html .content-member .container .btn-gp,
+body .content-member .container .btn-gp {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+html .content-member .container .btn-gp .member-btn,
+body .content-member .container .btn-gp .member-btn {
+  width: 530px;
+  height: 130px;
+  background-color: #0290cc;
+  border-radius: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+html .content-member .container .btn-gp .member-btn p,
+body .content-member .container .btn-gp .member-btn p {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
 html .content-member-data,
 body .content-member-data {
   padding-top: 120px;
