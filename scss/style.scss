@@ -333,176 +333,235 @@ body {
         @include papers();
         @include text-important();
         .container {
+            padding-bottom: 0;
             @include mobile-L() {
                 width: 100%;
                 margin: 0;
                 padding-bottom: 0;
                 h1 {
+                    margin: 0;
                     text-align: center;
                 }
             }
-            .form-gp {
-                @include form();
-                background-color: unset;
-                form {
-                    width: 100%;
-                    padding: $padding-S;
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    @include pad() {
-                        padding: 0;
-                    }
-                    .icon-gp {
-                        text-align: center;
-                        img {
-                            width: 20%;
-                            @include pad {
-                                width: 15%;
-                            }
-                            @include mobile-L() {
-                                width: 20%;
-                            }
-                        }
-                        h3 {
-                            margin: 0;
-                            margin-bottom: $margin-S;
-                        }
-                    }
-                    .form-left {
-                        width: 50%;
-                        border-radius: 20px 0 0 20px;
-                        background-color: $table-blue;
-                        border-right: solid 5px $title-W;
-                        padding: $padding-S 0;
-                        @include pad {
-                            border-radius: 20px 20px 0 0;
-                            border-right: unset;
-                        }
-                    }
-                    .form-right {
-                        width: 50%;
-                        border-radius: 0 20px 20px 0;
-                        background-color: $table-blue;
-                        padding: $padding-S 0;
-                        @include pad {
-                            border-radius: 0 0 20px 20px;
-                            border-top: solid 5px $title-W;
-                        }
-                    }
-                    .form-left,
-                    .form-right {
-                        @include web-S() {
-                            padding: $padding-S;
-                        }
-                        @include pad {
-                            width: 100%;
-                            padding: $padding-S 0;
-                        }
-                        @include mobile-L() {
-                            border-radius: unset;
-                            padding: $padding-S 0;
-                        }
-                    }
-                    .form-submit {
-                        width: 60%;
-                        background-color: unset;
-                        text-align: center;
-                        margin-top: $margin-M;
-                        @include web-S() {
-                            margin: $margin-S 0;
-                        }
-                        @include pad() {
-                            width: 80%;
-                        }
-                        @include mobile-L() {
-                            width: 100%;
-                            margin-bottom: $margin-M * 1.5;
-                        }
-                        .form-gp {
-                            display: flex;
-                            justify-content: center;
-                            flex-wrap: wrap;
-                            flex-direction: row;
-                            margin: $margin-XS 0;
-                            padding: 0 $padding-M;
-                            @include mobile-L() {
-                                padding: 0 $padding-XS * 1.5;
-                                margin: $margin-S 0;
-                            }
-                            label {
-                                width: 30%;
-                                margin: $margin-XS 0;
-                                @include pad() {
-                                    width: 100%;
-                                }
-                            }
-                            input {
-                                width: 30%;
-                                @include pad() {
-                                    width: 50%;
-                                }
-                                &[type="checkbox"] {
-                                    width: 20px;
-                                    height: 20px;
-                                    line-height: $size-h4 * 2;
-                                    margin-top: 8px;
-                                    border: 1px solid $light-sky;
-                                }
-                            }
-                            .code,
-                            img {
-                                width: 65px;
-                                height: 22px;
-                                object-position: center;
-                                margin: $margin-XS 0;
-                                margin-right: $margin-S;
-                            }
-                        }
-                        input {
-                            &[type="checkbox"] {
-                                width: 20px;
-                                height: 20px;
-                                line-height: $size-h4 * 2;
-                                margin-top: 8px;
-                                border: 1px solid $light-sky;
-                            }
-                        }
-                        .btn {
-                            width: 100%;
-                            padding: 0 $padding-M;
-                            margin-top: $margin-XS;
-                            @include mobile-L() {
-                                padding: 0 $padding-XS * 1.5;
-                            }
-                        }
-                        a {
-                            margin-left: 3px;
-                        }
+        }
+        .form-menu {
+            width: 100%;
+            text-align: center;
+            margin: $margin-S 0;
+            button {
+                margin: 0 $margin-XS/2;
+                opacity: 0.3;
+            }
+            .show-menu {
+                opacity: 1;
+            }
+        }
+        .form-personal {
+            width: 100%;
+            margin: 0;
+            @include form();
+            border-radius: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .form-body {
+                width: 55vh;
+                padding: $padding-S 0;
 
-                        .form-check-label {
-                            line-height: $size-h4 * 2;
-                            margin-left: $margin-XS;
+                @include pad() {
+                    padding: 0;
+                }
+                @include mobile-L() {
+                    padding: 0 $padding-XS * 1.5;
+                }
+                h4 {
+                    margin: 0;
+                    margin: $margin-XS/2 0;
+                }
+                .form-gp {
+                    padding: 0;
+                    .city,
+                    .area,
+                    .postcode {
+                        width: 30%;
+                        margin-bottom: $margin-XS;
+                        @include mobile-L() {
+                            width: 100%;
                         }
                     }
                 }
-            }
-            .notice {
-                h3 {
-                    text-align: center;
+                .form-check {
+                    padding: 0;
+                    h4 {
+                        margin: 0;
+                        margin: $margin-XS/2 0;
+                    }
                 }
-                ul {
-                    color: $text;
-                    font-size: $size-p;
-                    line-height: $size-p * 2;
-                    text-align: justify;
-                    margin-bottom: $margin-S;
-                    li {
-                        margin-bottom: $margin-XS;
+            }
+            .form-bot {
+                width: 100%;
+                background-color: $title-W;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: $padding-S 0;
+                @include pad() {
+                    padding: $padding-XS 0;
+                }
+                .form-submit {
+                    width: 20%;
+                    text-align: center;
+                    @include pad() {
+                        width: 30%;
                     }
                     @include mobile-L() {
-                        padding: 0 $padding-XS * 1.5;
-                        margin-bottom: $margin-M;
+                        width: 100%;
+                    }
+                    input {
+                        &[type="checkbox"] {
+                            width: 20px;
+                            height: 20px;
+                            line-height: $size-h4 * 2;
+                            margin-top: 8px;
+                            border: 1px solid $light-sky;
+                        }
+                    }
+                    .btn {
+                        padding: 0;
+                        margin: 0;
+                        @include mobile-L() {
+                            width: 100%;
+                            padding: 0 $padding-XS * 1.5;
+                        }
+                    }
+                    a {
+                        margin-left: 3px;
+                    }
+                    .form-check-label {
+                        line-height: $size-h4 * 2;
+                        margin-left: $margin-XS;
+                    }
+                }
+            }
+        }
+
+        .form-group {
+            width: 100%;
+            margin: 0;
+            @include form();
+            border-radius: 0;
+            .form-body {
+                padding: $padding-S 0;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                @include pad() {
+                    padding: 0;
+                }
+                @include mobile-L() {
+                    padding: 0 $padding-XS * 1.5;
+                }
+                width: 100%;
+                .form-left {
+                    width: 30%;
+                    border-radius: 20px 0 0 20px;
+                    padding-top: $padding-XS;
+                    padding-left: $padding-S;
+                    padding-right: $padding-XS;
+                    @include mobile-L() {
+                        padding-top: $padding-XS * 1.5 !important;
+                    }
+                }
+                .form-right {
+                    width: 30%;
+                    border-radius: 0 20px 20px 0;
+                    padding-top: $padding-XS;
+                    padding-right: $padding-S;
+                    padding-left: $padding-XS;
+                    @include mobile-L() {
+                        padding-bottom: $padding-XS * 1.5 !important;
+                    }
+                }
+                .form-left,
+                .form-right {
+                    @include web-S() {
+                        width: 50%;
+                    }
+                    @include pad {
+                        width: 60%;
+                        padding: $padding-XS 0;
+                    }
+                    @include mobile-L() {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+                .form-gp {
+                    padding: 0;
+                    .city,
+                    .area,
+                    .postcode {
+                        width: 30%;
+                        margin-bottom: $margin-XS;
+                        @include mobile-L() {
+                            width: 100%;
+                        }
+                    }
+                }
+                .form-check {
+                    width: 100%;
+                    padding: 0;
+                    h4 {
+                        margin: 0;
+                        margin: $margin-XS/2 0;
+                    }
+                    label {
+                        margin-left: $margin-XS*1.5;
+                    }
+                }
+            }
+            .form-bot {
+                width: 100%;
+                background-color: $title-W;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: $padding-S 0;
+                @include pad() {
+                    padding: $padding-XS 0;
+                }
+                .form-submit {
+                    width: 20%;
+                    text-align: center;
+                    @include pad() {
+                        width: 30%;
+                    }
+                    @include mobile-L() {
+                        width: 100%;
+                    }
+                    input {
+                        &[type="checkbox"] {
+                            width: 20px;
+                            height: 20px;
+                            line-height: $size-h4 * 2;
+                            margin-top: 8px;
+                            border: 1px solid $light-sky;
+                        }
+                    }
+                    .btn {
+                        padding: 0;
+                        margin: 0;
+                        @include mobile-L() {
+                            width: 100%;
+                            padding: 0 $padding-XS * 1.5;
+                        }
+                    }
+                    a {
+                        margin-left: 3px;
+                    }
+                    .form-check-label {
+                        line-height: $size-h4 * 2;
+                        margin-left: $margin-XS;
                     }
                 }
             }

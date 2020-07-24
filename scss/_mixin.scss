@@ -173,13 +173,12 @@
                 background-color: $light-sky;
             }
         }
-
     }
     select {
         width: 100%;
         height: 40px;
         border-radius: 5px;
-        border: solid 1px $light-sky;
+        border: solid 1px $gray;
         background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
         background-position: 97% center;
         background-color: $title-W;
@@ -811,11 +810,11 @@
         .text-gp {
             margin: 0;
             padding: 0;
-            button{
+            button {
                 margin-right: $margin-XS/2;
-                @include mobile-L(){
+                @include mobile-L() {
                     width: 100%;
-                    margin-right:0;
+                    margin-right: 0;
                 }
             }
             a {
@@ -1051,178 +1050,183 @@
         border-radius: unset;
         margin-bottom: $margin-XS;
     }
-    form {
-        .form-gp {
-            padding: 0 $padding-S;
-            margin: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            flex-direction: row;
-            margin-bottom: $margin-XS;
-            text-align: justify;
-            p {
-                width: 100%;
-                font-size: $size-p;
-                line-height: $size-p * 1.7;
-                padding-top: $padding-XXS;
-            }
-            @include web-S {
-                padding: 0;
-            }
-            @include pad() {
-                padding: 0 $padding-S * 1.5;
-                flex-direction: column;
-            }
-            @include mobile-L() {
-                padding: 0 $padding-XS * 1.5;
-            }
 
-            label {
-                width: 100%;
-                padding: 0;
-                margin-right: $margin-M;
-                color: $blue;
-                font-size: $size-h4;
-                font-weight: bold;
-            }
-            input,
-            select {
-                &[type="submit"],
-                &[type="reset"] {
-                    width: 100%;
-                    height: 40px;
-                    background-color: $blue;
-                    color: $title-W;
-                    font-size: $size-h4;
-                    font-weight: bold;
-                    line-height: 40px;
-                    border: none;
-                    border-radius: 20px;
-                    padding: 0;
-                    text-decoration: none;
-                    margin-top: $margin-XS;
-                    &:hover {
-                        background-color: $title-BK;
-                    }
-                }
-                &[type="button"] {
-                    width: 100%;
-                    height: 40px;
-                    background-color: transparent;
-                    border: solid 1px $blue;
-                    border-radius: 20px;
-                    color: $blue;
-                    font-size: $size-h4;
-                    font-weight: bold;
-                    line-height: 40px;
-                    padding: 0;
-                    text-decoration: none;
-                    margin-top: $margin-XS;
-                    &:hover {
-                        background-color: $title-BK;
-                        color: $title-W;
-                        border: solid 1px $title-BK;
-                    }
-                }
-                &[disabled] {
-                    background-color: $light-sky;
-                    &:hover {
-                        background-color: $light-sky;
-                    }
-                }
-            }
-            textarea {
-                width: 100%;
-                border-radius: 5px;
-                border: 1px solid $light-sky;
-                padding: 0 $padding-XXS;
-                color: $text;
-                font-size: $size-h4;
-                line-height: $size-h4 * 1.5;
-            }
-            a {
-                font-size: $size-h4;
-                line-height: $size-h4;
-                margin-top: $margin-XS;
-                color: $blue;
-                font-weight: bold;
-                text-align: center;
-                &:hover {
-                    color: $title-BK !important;
-                }
-            }
-        }
-        //checkbox
-        .form-check {
+    .form-gp {
+        padding: 0 $padding-S;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: $margin-XS;
+        text-align: justify;
+        p {
             width: 100%;
-            padding: 0 $padding-S;
-            margin: 0;
-            margin-bottom: $margin-S;
-            @include web-S {
+            font-size: $size-p;
+            line-height: $size-p * 1.7;
+            padding-top: $padding-XXS;
+        }
+        @include web-S {
+            padding: 0;
+        }
+        @include pad() {
+            padding: 0 $padding-S * 1.5;
+        }
+        @include mobile-L() {
+            padding: 0 $padding-XS * 1.5;
+            flex-direction: column;
+        }
+
+        label {
+            width: 100%;
+            padding: 0;
+            margin-right: $margin-M;
+            color: $blue;
+            font-size: $size-h4;
+            font-weight: bold;
+        }
+        input,
+        select {
+            &[type="submit"],
+            &[type="reset"] {
+                width: 100%;
+                height: 40px;
+                background-color: $blue;
+                color: $title-W;
+                font-size: $size-h4;
+                font-weight: bold;
+                line-height: 40px;
+                border: none;
+                border-radius: 20px;
                 padding: 0;
-            }
-            @include pad() {
-                padding: 0 $padding-S * 1.5;
-                flex-direction: column;
-            }
-            @include mobile-L() {
-                padding: 0 $padding-XS * 1.5;
-            }
-            input,
-            select {
-                text-align: left;
-                &[type="checkbox"] {
-                    width: 20px;
-                    height: 20px;
-                    line-height: $size-h4 * 2;
-                    margin-top: 8px;
-                    border: 1px solid $light-sky;
+                text-decoration: none;
+                margin-top: $margin-XS;
+                &:hover {
+                    background-color: $title-BK;
                 }
             }
-            select {
+            &[type="button"] {
                 width: 100%;
                 height: 40px;
-            }
-            label {
-                padding: 0;
-                margin: 0 $margin-S;
-                color: $text;
-                font-size: $size-p;
-            }
-            .form-check-label {
-                line-height: $size-h4 * 2;
-                margin: 0 $margin-XS * 2 $margin-XS $margin-S;
-            }
-            .form-check-input {
-                margin-left: 0px;
-            }
-            .check-input {
-                background-color: #fff;
-                width: 100%;
-                height: 40px;
-                border-radius: 5px;
-                border: 1px solid $light-sky;
-                padding: 0 $padding-XXS;
-                color: $text;
-                font-size: $size-h4;
-                line-height: $size-h4;
-                margin: $margin-XS 0;
-            }
-            .h4 {
+                background-color: transparent;
+                border: solid 1px $blue;
+                border-radius: 20px;
                 color: $blue;
                 font-size: $size-h4;
                 font-weight: bold;
+                line-height: 40px;
                 padding: 0;
-                margin: 0;
-                margin-bottom: $margin-XS;
+                text-decoration: none;
+                margin-top: $margin-XS;
+                &:hover {
+                    background-color: $title-BK;
+                    color: $title-W;
+                    border: solid 1px $title-BK;
+                }
+            }
+            &[disabled] {
+                background-color: $light-sky;
+                &:hover {
+                    background-color: $light-sky;
+                }
             }
         }
-        span {
-            color: $red;
-            margin-left: 3px;
+        textarea {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid $gray;
+            padding: 0 $padding-XXS;
+            color: $text;
+            font-size: $size-h4;
+            line-height: $size-h4 * 1.5;
         }
+        a {
+            font-size: $size-h4;
+            line-height: $size-h4;
+            margin-top: $margin-XS;
+            color: $blue;
+            font-weight: bold;
+            text-align: center;
+            &:hover {
+                color: $title-BK !important;
+            }
+        }
+    }
+    //checkbox
+    .form-check {
+        padding: 0 $padding-S;
+        margin: 0;
+        margin-bottom: $margin-XS;
+        @include web-S {
+            padding: 0;
+        }
+        @include pad() {
+            padding: 0 $padding-S * 1.5;
+            flex-direction: column;
+        }
+        @include mobile-L() {
+            padding: 0 $padding-XS * 1.5;
+        }
+        input,
+        select {
+            text-align: left;
+            &[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                line-height: $size-h4 * 2;
+                margin-top: 8px;
+                border: 1px solid $gray;
+            }
+            &[type="radio"] {
+                width: 20px;
+                height: 20px;
+                line-height: $size-h4 * 2;
+                margin-right: 8px;
+                border: 1px solid $gray;
+            }
+        }
+        select {
+            width: 100%;
+            height: 40px;
+        }
+        label {
+            padding: 0;
+            color: $text;
+            font-size: $size-p;
+        }
+        .form-check-label {
+            line-height: $size-h4*2;
+            margin-right: $margin-XS;
+        }
+        .form-check-input {
+            margin-left: 0px;
+            margin-right: 15px;
+        }
+        .check-input {
+            background-color: #fff;
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid $gray;
+            padding: 0 $padding-XXS;
+            color: $text;
+            font-size: $size-h4;
+            line-height: $size-h4;
+            margin: $margin-XS 0;
+        }
+        .h4 {
+            color: $blue;
+            font-size: $size-h4;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+            margin-bottom: $margin-XS/2;
+        }
+    }
+    span {
+        color: $red;
+        margin-left: 3px;
     }
 }
 @mixin account-list($main-color) {

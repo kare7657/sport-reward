@@ -170,7 +170,7 @@
   width: 100%;
   height: 40px;
   border-radius: 5px;
-  border: solid 1px #a7e5ff;
+  border: solid 1px #cccccc;
   background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
   background-position: 97% center;
   background-color: white;
@@ -2230,17 +2230,17 @@ body .content-login .container .form {
   }
 }
 
-html .content-login .container .form form .form-gp,
-body .content-login .container .form form .form-gp {
+html .content-login .container .form .form-gp,
+body .content-login .container .form .form-gp {
   padding: 0 3.75rem;
   margin: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -2251,8 +2251,8 @@ body .content-login .container .form form .form-gp {
   text-align: justify;
 }
 
-html .content-login .container .form form .form-gp p,
-body .content-login .container .form form .form-gp p {
+html .content-login .container .form .form-gp p,
+body .content-login .container .form .form-gp p {
   width: 100%;
   font-size: 1rem;
   line-height: 1.7rem;
@@ -2260,16 +2260,23 @@ body .content-login .container .form form .form-gp p {
 }
 
 @media (max-width: 1024px) {
-  html .content-login .container .form form .form-gp,
-  body .content-login .container .form form .form-gp {
+  html .content-login .container .form .form-gp,
+  body .content-login .container .form .form-gp {
     padding: 0;
   }
 }
 
 @media (max-width: 768px) {
-  html .content-login .container .form form .form-gp,
-  body .content-login .container .form form .form-gp {
+  html .content-login .container .form .form-gp,
+  body .content-login .container .form .form-gp {
     padding: 0 5.625rem;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-login .container .form .form-gp,
+  body .content-login .container .form .form-gp {
+    padding: 0 2.8125rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2277,15 +2284,8 @@ body .content-login .container .form form .form-gp p {
   }
 }
 
-@media (max-width: 568px) {
-  html .content-login .container .form form .form-gp,
-  body .content-login .container .form form .form-gp {
-    padding: 0 2.8125rem;
-  }
-}
-
-html .content-login .container .form form .form-gp label,
-body .content-login .container .form form .form-gp label {
+html .content-login .container .form .form-gp label,
+body .content-login .container .form .form-gp label {
   width: 100%;
   padding: 0;
   margin-right: 3.75rem;
@@ -2294,13 +2294,13 @@ body .content-login .container .form form .form-gp label {
   font-weight: bold;
 }
 
-html .content-login .container .form form .form-gp input[type="submit"], html .content-login .container .form form .form-gp input[type="reset"],
-html .content-login .container .form form .form-gp select[type="submit"],
-html .content-login .container .form form .form-gp select[type="reset"],
-body .content-login .container .form form .form-gp input[type="submit"],
-body .content-login .container .form form .form-gp input[type="reset"],
-body .content-login .container .form form .form-gp select[type="submit"],
-body .content-login .container .form form .form-gp select[type="reset"] {
+html .content-login .container .form .form-gp input[type="submit"], html .content-login .container .form .form-gp input[type="reset"],
+html .content-login .container .form .form-gp select[type="submit"],
+html .content-login .container .form .form-gp select[type="reset"],
+body .content-login .container .form .form-gp input[type="submit"],
+body .content-login .container .form .form-gp input[type="reset"],
+body .content-login .container .form .form-gp select[type="submit"],
+body .content-login .container .form .form-gp select[type="reset"] {
   width: 100%;
   height: 40px;
   background-color: #0290cc;
@@ -2315,20 +2315,20 @@ body .content-login .container .form form .form-gp select[type="reset"] {
   margin-top: 1.25rem;
 }
 
-html .content-login .container .form form .form-gp input[type="submit"]:hover, html .content-login .container .form form .form-gp input[type="reset"]:hover,
-html .content-login .container .form form .form-gp select[type="submit"]:hover,
-html .content-login .container .form form .form-gp select[type="reset"]:hover,
-body .content-login .container .form form .form-gp input[type="submit"]:hover,
-body .content-login .container .form form .form-gp input[type="reset"]:hover,
-body .content-login .container .form form .form-gp select[type="submit"]:hover,
-body .content-login .container .form form .form-gp select[type="reset"]:hover {
+html .content-login .container .form .form-gp input[type="submit"]:hover, html .content-login .container .form .form-gp input[type="reset"]:hover,
+html .content-login .container .form .form-gp select[type="submit"]:hover,
+html .content-login .container .form .form-gp select[type="reset"]:hover,
+body .content-login .container .form .form-gp input[type="submit"]:hover,
+body .content-login .container .form .form-gp input[type="reset"]:hover,
+body .content-login .container .form .form-gp select[type="submit"]:hover,
+body .content-login .container .form .form-gp select[type="reset"]:hover {
   background-color: black;
 }
 
-html .content-login .container .form form .form-gp input[type="button"],
-html .content-login .container .form form .form-gp select[type="button"],
-body .content-login .container .form form .form-gp input[type="button"],
-body .content-login .container .form form .form-gp select[type="button"] {
+html .content-login .container .form .form-gp input[type="button"],
+html .content-login .container .form .form-gp select[type="button"],
+body .content-login .container .form .form-gp input[type="button"],
+body .content-login .container .form .form-gp select[type="button"] {
   width: 100%;
   height: 40px;
   background-color: transparent;
@@ -2343,42 +2343,42 @@ body .content-login .container .form form .form-gp select[type="button"] {
   margin-top: 1.25rem;
 }
 
-html .content-login .container .form form .form-gp input[type="button"]:hover,
-html .content-login .container .form form .form-gp select[type="button"]:hover,
-body .content-login .container .form form .form-gp input[type="button"]:hover,
-body .content-login .container .form form .form-gp select[type="button"]:hover {
+html .content-login .container .form .form-gp input[type="button"]:hover,
+html .content-login .container .form .form-gp select[type="button"]:hover,
+body .content-login .container .form .form-gp input[type="button"]:hover,
+body .content-login .container .form .form-gp select[type="button"]:hover {
   background-color: black;
   color: white;
   border: solid 1px black;
 }
 
-html .content-login .container .form form .form-gp input[disabled],
-html .content-login .container .form form .form-gp select[disabled],
-body .content-login .container .form form .form-gp input[disabled],
-body .content-login .container .form form .form-gp select[disabled] {
+html .content-login .container .form .form-gp input[disabled],
+html .content-login .container .form .form-gp select[disabled],
+body .content-login .container .form .form-gp input[disabled],
+body .content-login .container .form .form-gp select[disabled] {
   background-color: #a7e5ff;
 }
 
-html .content-login .container .form form .form-gp input[disabled]:hover,
-html .content-login .container .form form .form-gp select[disabled]:hover,
-body .content-login .container .form form .form-gp input[disabled]:hover,
-body .content-login .container .form form .form-gp select[disabled]:hover {
+html .content-login .container .form .form-gp input[disabled]:hover,
+html .content-login .container .form .form-gp select[disabled]:hover,
+body .content-login .container .form .form-gp input[disabled]:hover,
+body .content-login .container .form .form-gp select[disabled]:hover {
   background-color: #a7e5ff;
 }
 
-html .content-login .container .form form .form-gp textarea,
-body .content-login .container .form form .form-gp textarea {
+html .content-login .container .form .form-gp textarea,
+body .content-login .container .form .form-gp textarea {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
   padding: 0 0.625rem;
   color: #595757;
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
 
-html .content-login .container .form form .form-gp a,
-body .content-login .container .form form .form-gp a {
+html .content-login .container .form .form-gp a,
+body .content-login .container .form .form-gp a {
   font-size: 1.125rem;
   line-height: 1.125rem;
   margin-top: 1.25rem;
@@ -2387,29 +2387,28 @@ body .content-login .container .form form .form-gp a {
   text-align: center;
 }
 
-html .content-login .container .form form .form-gp a:hover,
-body .content-login .container .form form .form-gp a:hover {
+html .content-login .container .form .form-gp a:hover,
+body .content-login .container .form .form-gp a:hover {
   color: black !important;
 }
 
-html .content-login .container .form form .form-check,
-body .content-login .container .form form .form-check {
-  width: 100%;
+html .content-login .container .form .form-check,
+body .content-login .container .form .form-check {
   padding: 0 3.75rem;
   margin: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 1024px) {
-  html .content-login .container .form form .form-check,
-  body .content-login .container .form form .form-check {
+  html .content-login .container .form .form-check,
+  body .content-login .container .form .form-check {
     padding: 0;
   }
 }
 
 @media (max-width: 768px) {
-  html .content-login .container .form form .form-check,
-  body .content-login .container .form form .form-check {
+  html .content-login .container .form .form-check,
+  body .content-login .container .form .form-check {
     padding: 0 5.625rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2419,62 +2418,73 @@ body .content-login .container .form form .form-check {
 }
 
 @media (max-width: 568px) {
-  html .content-login .container .form form .form-check,
-  body .content-login .container .form form .form-check {
+  html .content-login .container .form .form-check,
+  body .content-login .container .form .form-check {
     padding: 0 2.8125rem;
   }
 }
 
-html .content-login .container .form form .form-check input,
-html .content-login .container .form form .form-check select,
-body .content-login .container .form form .form-check input,
-body .content-login .container .form form .form-check select {
+html .content-login .container .form .form-check input,
+html .content-login .container .form .form-check select,
+body .content-login .container .form .form-check input,
+body .content-login .container .form .form-check select {
   text-align: left;
 }
 
-html .content-login .container .form form .form-check input[type="checkbox"],
-html .content-login .container .form form .form-check select[type="checkbox"],
-body .content-login .container .form form .form-check input[type="checkbox"],
-body .content-login .container .form form .form-check select[type="checkbox"] {
+html .content-login .container .form .form-check input[type="checkbox"],
+html .content-login .container .form .form-check select[type="checkbox"],
+body .content-login .container .form .form-check input[type="checkbox"],
+body .content-login .container .form .form-check select[type="checkbox"] {
   width: 20px;
   height: 20px;
   line-height: 2.25rem;
   margin-top: 8px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
 }
 
-html .content-login .container .form form .form-check select,
-body .content-login .container .form form .form-check select {
+html .content-login .container .form .form-check input[type="radio"],
+html .content-login .container .form .form-check select[type="radio"],
+body .content-login .container .form .form-check input[type="radio"],
+body .content-login .container .form .form-check select[type="radio"] {
+  width: 20px;
+  height: 20px;
+  line-height: 2.25rem;
+  margin-right: 8px;
+  border: 1px solid #cccccc;
+}
+
+html .content-login .container .form .form-check select,
+body .content-login .container .form .form-check select {
   width: 100%;
   height: 40px;
 }
 
-html .content-login .container .form form .form-check label,
-body .content-login .container .form form .form-check label {
+html .content-login .container .form .form-check label,
+body .content-login .container .form .form-check label {
   padding: 0;
-  margin: 0 2.5rem;
   color: #595757;
   font-size: 1rem;
 }
 
-html .content-login .container .form form .form-check .form-check-label,
-body .content-login .container .form form .form-check .form-check-label {
+html .content-login .container .form .form-check .form-check-label,
+body .content-login .container .form .form-check .form-check-label {
   line-height: 2.25rem;
-  margin: 0 2.5rem 1.25rem 2.5rem;
+  margin-right: 1.25rem;
 }
 
-html .content-login .container .form form .form-check .form-check-input,
-body .content-login .container .form form .form-check .form-check-input {
+html .content-login .container .form .form-check .form-check-input,
+body .content-login .container .form .form-check .form-check-input {
   margin-left: 0px;
+  margin-right: 15px;
 }
 
-html .content-login .container .form form .form-check .check-input,
-body .content-login .container .form form .form-check .check-input {
+html .content-login .container .form .form-check .check-input,
+body .content-login .container .form .form-check .check-input {
   background-color: #fff;
   width: 100%;
   height: 40px;
   border-radius: 5px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
   padding: 0 0.625rem;
   color: #595757;
   font-size: 1.125rem;
@@ -2482,18 +2492,18 @@ body .content-login .container .form form .form-check .check-input {
   margin: 1.25rem 0;
 }
 
-html .content-login .container .form form .form-check .h4,
-body .content-login .container .form form .form-check .h4 {
+html .content-login .container .form .form-check .h4,
+body .content-login .container .form .form-check .h4 {
   color: #0290cc;
   font-size: 1.125rem;
   font-weight: bold;
   padding: 0;
   margin: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 
-html .content-login .container .form form span,
-body .content-login .container .form form span {
+html .content-login .container .form span,
+body .content-login .container .form span {
   color: #da382d;
   margin-left: 3px;
 }
@@ -2582,6 +2592,11 @@ body .content-signup span {
   font-weight: bold;
 }
 
+html .content-signup .container,
+body .content-signup .container {
+  padding-bottom: 0;
+}
+
 @media (max-width: 568px) {
   html .content-signup .container,
   body .content-signup .container {
@@ -2591,43 +2606,72 @@ body .content-signup span {
   }
   html .content-signup .container h1,
   body .content-signup .container h1 {
+    margin: 0;
     text-align: center;
   }
 }
 
-html .content-signup .container .form-gp,
-body .content-signup .container .form-gp {
+html .content-signup .form-menu,
+body .content-signup .form-menu {
+  width: 100%;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+html .content-signup .form-menu button,
+body .content-signup .form-menu button {
+  margin: 0 0.625rem;
+  opacity: 0.3;
+}
+
+html .content-signup .form-menu .show-menu,
+body .content-signup .form-menu .show-menu {
+  opacity: 1;
+}
+
+html .content-signup .form-personal,
+body .content-signup .form-personal {
+  width: 100%;
+  margin: 0;
   background-color: #eeefef;
   border-radius: 20px;
-  background-color: unset;
-}
-
-@media (max-width: 1024px) {
-  html .content-signup .container .form-gp,
-  body .content-signup .container .form-gp {
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: 568px) {
-  html .content-signup .container .form-gp,
-  body .content-signup .container .form-gp {
-    border-radius: unset;
-    margin-bottom: 1.25rem;
-  }
-}
-
-html .content-signup .container .form-gp form .form-gp,
-body .content-signup .container .form-gp form .form-gp {
-  padding: 0 3.75rem;
-  margin: 0;
-  width: 100%;
+  border-radius: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  html .content-signup .form-personal,
+  body .content-signup .form-personal {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-personal,
+  body .content-signup .form-personal {
+    border-radius: unset;
+    margin-bottom: 1.25rem;
+  }
+}
+
+html .content-signup .form-personal .form-gp,
+body .content-signup .form-personal .form-gp {
+  padding: 0 3.75rem;
+  margin: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -2638,8 +2682,8 @@ body .content-signup .container .form-gp form .form-gp {
   text-align: justify;
 }
 
-html .content-signup .container .form-gp form .form-gp p,
-body .content-signup .container .form-gp form .form-gp p {
+html .content-signup .form-personal .form-gp p,
+body .content-signup .form-personal .form-gp p {
   width: 100%;
   font-size: 1rem;
   line-height: 1.7rem;
@@ -2647,16 +2691,23 @@ body .content-signup .container .form-gp form .form-gp p {
 }
 
 @media (max-width: 1024px) {
-  html .content-signup .container .form-gp form .form-gp,
-  body .content-signup .container .form-gp form .form-gp {
+  html .content-signup .form-personal .form-gp,
+  body .content-signup .form-personal .form-gp {
     padding: 0;
   }
 }
 
 @media (max-width: 768px) {
-  html .content-signup .container .form-gp form .form-gp,
-  body .content-signup .container .form-gp form .form-gp {
+  html .content-signup .form-personal .form-gp,
+  body .content-signup .form-personal .form-gp {
     padding: 0 5.625rem;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-personal .form-gp,
+  body .content-signup .form-personal .form-gp {
+    padding: 0 2.8125rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2664,15 +2715,8 @@ body .content-signup .container .form-gp form .form-gp p {
   }
 }
 
-@media (max-width: 568px) {
-  html .content-signup .container .form-gp form .form-gp,
-  body .content-signup .container .form-gp form .form-gp {
-    padding: 0 2.8125rem;
-  }
-}
-
-html .content-signup .container .form-gp form .form-gp label,
-body .content-signup .container .form-gp form .form-gp label {
+html .content-signup .form-personal .form-gp label,
+body .content-signup .form-personal .form-gp label {
   width: 100%;
   padding: 0;
   margin-right: 3.75rem;
@@ -2681,13 +2725,13 @@ body .content-signup .container .form-gp form .form-gp label {
   font-weight: bold;
 }
 
-html .content-signup .container .form-gp form .form-gp input[type="submit"], html .content-signup .container .form-gp form .form-gp input[type="reset"],
-html .content-signup .container .form-gp form .form-gp select[type="submit"],
-html .content-signup .container .form-gp form .form-gp select[type="reset"],
-body .content-signup .container .form-gp form .form-gp input[type="submit"],
-body .content-signup .container .form-gp form .form-gp input[type="reset"],
-body .content-signup .container .form-gp form .form-gp select[type="submit"],
-body .content-signup .container .form-gp form .form-gp select[type="reset"] {
+html .content-signup .form-personal .form-gp input[type="submit"], html .content-signup .form-personal .form-gp input[type="reset"],
+html .content-signup .form-personal .form-gp select[type="submit"],
+html .content-signup .form-personal .form-gp select[type="reset"],
+body .content-signup .form-personal .form-gp input[type="submit"],
+body .content-signup .form-personal .form-gp input[type="reset"],
+body .content-signup .form-personal .form-gp select[type="submit"],
+body .content-signup .form-personal .form-gp select[type="reset"] {
   width: 100%;
   height: 40px;
   background-color: #0290cc;
@@ -2702,20 +2746,20 @@ body .content-signup .container .form-gp form .form-gp select[type="reset"] {
   margin-top: 1.25rem;
 }
 
-html .content-signup .container .form-gp form .form-gp input[type="submit"]:hover, html .content-signup .container .form-gp form .form-gp input[type="reset"]:hover,
-html .content-signup .container .form-gp form .form-gp select[type="submit"]:hover,
-html .content-signup .container .form-gp form .form-gp select[type="reset"]:hover,
-body .content-signup .container .form-gp form .form-gp input[type="submit"]:hover,
-body .content-signup .container .form-gp form .form-gp input[type="reset"]:hover,
-body .content-signup .container .form-gp form .form-gp select[type="submit"]:hover,
-body .content-signup .container .form-gp form .form-gp select[type="reset"]:hover {
+html .content-signup .form-personal .form-gp input[type="submit"]:hover, html .content-signup .form-personal .form-gp input[type="reset"]:hover,
+html .content-signup .form-personal .form-gp select[type="submit"]:hover,
+html .content-signup .form-personal .form-gp select[type="reset"]:hover,
+body .content-signup .form-personal .form-gp input[type="submit"]:hover,
+body .content-signup .form-personal .form-gp input[type="reset"]:hover,
+body .content-signup .form-personal .form-gp select[type="submit"]:hover,
+body .content-signup .form-personal .form-gp select[type="reset"]:hover {
   background-color: black;
 }
 
-html .content-signup .container .form-gp form .form-gp input[type="button"],
-html .content-signup .container .form-gp form .form-gp select[type="button"],
-body .content-signup .container .form-gp form .form-gp input[type="button"],
-body .content-signup .container .form-gp form .form-gp select[type="button"] {
+html .content-signup .form-personal .form-gp input[type="button"],
+html .content-signup .form-personal .form-gp select[type="button"],
+body .content-signup .form-personal .form-gp input[type="button"],
+body .content-signup .form-personal .form-gp select[type="button"] {
   width: 100%;
   height: 40px;
   background-color: transparent;
@@ -2730,42 +2774,42 @@ body .content-signup .container .form-gp form .form-gp select[type="button"] {
   margin-top: 1.25rem;
 }
 
-html .content-signup .container .form-gp form .form-gp input[type="button"]:hover,
-html .content-signup .container .form-gp form .form-gp select[type="button"]:hover,
-body .content-signup .container .form-gp form .form-gp input[type="button"]:hover,
-body .content-signup .container .form-gp form .form-gp select[type="button"]:hover {
+html .content-signup .form-personal .form-gp input[type="button"]:hover,
+html .content-signup .form-personal .form-gp select[type="button"]:hover,
+body .content-signup .form-personal .form-gp input[type="button"]:hover,
+body .content-signup .form-personal .form-gp select[type="button"]:hover {
   background-color: black;
   color: white;
   border: solid 1px black;
 }
 
-html .content-signup .container .form-gp form .form-gp input[disabled],
-html .content-signup .container .form-gp form .form-gp select[disabled],
-body .content-signup .container .form-gp form .form-gp input[disabled],
-body .content-signup .container .form-gp form .form-gp select[disabled] {
+html .content-signup .form-personal .form-gp input[disabled],
+html .content-signup .form-personal .form-gp select[disabled],
+body .content-signup .form-personal .form-gp input[disabled],
+body .content-signup .form-personal .form-gp select[disabled] {
   background-color: #a7e5ff;
 }
 
-html .content-signup .container .form-gp form .form-gp input[disabled]:hover,
-html .content-signup .container .form-gp form .form-gp select[disabled]:hover,
-body .content-signup .container .form-gp form .form-gp input[disabled]:hover,
-body .content-signup .container .form-gp form .form-gp select[disabled]:hover {
+html .content-signup .form-personal .form-gp input[disabled]:hover,
+html .content-signup .form-personal .form-gp select[disabled]:hover,
+body .content-signup .form-personal .form-gp input[disabled]:hover,
+body .content-signup .form-personal .form-gp select[disabled]:hover {
   background-color: #a7e5ff;
 }
 
-html .content-signup .container .form-gp form .form-gp textarea,
-body .content-signup .container .form-gp form .form-gp textarea {
+html .content-signup .form-personal .form-gp textarea,
+body .content-signup .form-personal .form-gp textarea {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
   padding: 0 0.625rem;
   color: #595757;
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
 
-html .content-signup .container .form-gp form .form-gp a,
-body .content-signup .container .form-gp form .form-gp a {
+html .content-signup .form-personal .form-gp a,
+body .content-signup .form-personal .form-gp a {
   font-size: 1.125rem;
   line-height: 1.125rem;
   margin-top: 1.25rem;
@@ -2774,29 +2818,28 @@ body .content-signup .container .form-gp form .form-gp a {
   text-align: center;
 }
 
-html .content-signup .container .form-gp form .form-gp a:hover,
-body .content-signup .container .form-gp form .form-gp a:hover {
+html .content-signup .form-personal .form-gp a:hover,
+body .content-signup .form-personal .form-gp a:hover {
   color: black !important;
 }
 
-html .content-signup .container .form-gp form .form-check,
-body .content-signup .container .form-gp form .form-check {
-  width: 100%;
+html .content-signup .form-personal .form-check,
+body .content-signup .form-personal .form-check {
   padding: 0 3.75rem;
   margin: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 1024px) {
-  html .content-signup .container .form-gp form .form-check,
-  body .content-signup .container .form-gp form .form-check {
+  html .content-signup .form-personal .form-check,
+  body .content-signup .form-personal .form-check {
     padding: 0;
   }
 }
 
 @media (max-width: 768px) {
-  html .content-signup .container .form-gp form .form-check,
-  body .content-signup .container .form-gp form .form-check {
+  html .content-signup .form-personal .form-check,
+  body .content-signup .form-personal .form-check {
     padding: 0 5.625rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2806,62 +2849,73 @@ body .content-signup .container .form-gp form .form-check {
 }
 
 @media (max-width: 568px) {
-  html .content-signup .container .form-gp form .form-check,
-  body .content-signup .container .form-gp form .form-check {
+  html .content-signup .form-personal .form-check,
+  body .content-signup .form-personal .form-check {
     padding: 0 2.8125rem;
   }
 }
 
-html .content-signup .container .form-gp form .form-check input,
-html .content-signup .container .form-gp form .form-check select,
-body .content-signup .container .form-gp form .form-check input,
-body .content-signup .container .form-gp form .form-check select {
+html .content-signup .form-personal .form-check input,
+html .content-signup .form-personal .form-check select,
+body .content-signup .form-personal .form-check input,
+body .content-signup .form-personal .form-check select {
   text-align: left;
 }
 
-html .content-signup .container .form-gp form .form-check input[type="checkbox"],
-html .content-signup .container .form-gp form .form-check select[type="checkbox"],
-body .content-signup .container .form-gp form .form-check input[type="checkbox"],
-body .content-signup .container .form-gp form .form-check select[type="checkbox"] {
+html .content-signup .form-personal .form-check input[type="checkbox"],
+html .content-signup .form-personal .form-check select[type="checkbox"],
+body .content-signup .form-personal .form-check input[type="checkbox"],
+body .content-signup .form-personal .form-check select[type="checkbox"] {
   width: 20px;
   height: 20px;
   line-height: 2.25rem;
   margin-top: 8px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
 }
 
-html .content-signup .container .form-gp form .form-check select,
-body .content-signup .container .form-gp form .form-check select {
+html .content-signup .form-personal .form-check input[type="radio"],
+html .content-signup .form-personal .form-check select[type="radio"],
+body .content-signup .form-personal .form-check input[type="radio"],
+body .content-signup .form-personal .form-check select[type="radio"] {
+  width: 20px;
+  height: 20px;
+  line-height: 2.25rem;
+  margin-right: 8px;
+  border: 1px solid #cccccc;
+}
+
+html .content-signup .form-personal .form-check select,
+body .content-signup .form-personal .form-check select {
   width: 100%;
   height: 40px;
 }
 
-html .content-signup .container .form-gp form .form-check label,
-body .content-signup .container .form-gp form .form-check label {
+html .content-signup .form-personal .form-check label,
+body .content-signup .form-personal .form-check label {
   padding: 0;
-  margin: 0 2.5rem;
   color: #595757;
   font-size: 1rem;
 }
 
-html .content-signup .container .form-gp form .form-check .form-check-label,
-body .content-signup .container .form-gp form .form-check .form-check-label {
+html .content-signup .form-personal .form-check .form-check-label,
+body .content-signup .form-personal .form-check .form-check-label {
   line-height: 2.25rem;
-  margin: 0 2.5rem 1.25rem 2.5rem;
+  margin-right: 1.25rem;
 }
 
-html .content-signup .container .form-gp form .form-check .form-check-input,
-body .content-signup .container .form-gp form .form-check .form-check-input {
+html .content-signup .form-personal .form-check .form-check-input,
+body .content-signup .form-personal .form-check .form-check-input {
   margin-left: 0px;
+  margin-right: 15px;
 }
 
-html .content-signup .container .form-gp form .form-check .check-input,
-body .content-signup .container .form-gp form .form-check .check-input {
+html .content-signup .form-personal .form-check .check-input,
+body .content-signup .form-personal .form-check .check-input {
   background-color: #fff;
   width: 100%;
   height: 40px;
   border-radius: 5px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
   padding: 0 0.625rem;
   color: #595757;
   font-size: 1.125rem;
@@ -2869,26 +2923,89 @@ body .content-signup .container .form-gp form .form-check .check-input {
   margin: 1.25rem 0;
 }
 
-html .content-signup .container .form-gp form .form-check .h4,
-body .content-signup .container .form-gp form .form-check .h4 {
+html .content-signup .form-personal .form-check .h4,
+body .content-signup .form-personal .form-check .h4 {
   color: #0290cc;
   font-size: 1.125rem;
   font-weight: bold;
   padding: 0;
   margin: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 
-html .content-signup .container .form-gp form span,
-body .content-signup .container .form-gp form span {
+html .content-signup .form-personal span,
+body .content-signup .form-personal span {
   color: #da382d;
   margin-left: 3px;
 }
 
-html .content-signup .container .form-gp form,
-body .content-signup .container .form-gp form {
+html .content-signup .form-personal .form-body,
+body .content-signup .form-personal .form-body {
+  width: 55vh;
+  padding: 3.75rem 0;
+}
+
+@media (max-width: 768px) {
+  html .content-signup .form-personal .form-body,
+  body .content-signup .form-personal .form-body {
+    padding: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-personal .form-body,
+  body .content-signup .form-personal .form-body {
+    padding: 0 2.8125rem;
+  }
+}
+
+html .content-signup .form-personal .form-body h4,
+body .content-signup .form-personal .form-body h4 {
+  margin: 0;
+  margin: 0.625rem 0;
+}
+
+html .content-signup .form-personal .form-body .form-gp,
+body .content-signup .form-personal .form-body .form-gp {
+  padding: 0;
+}
+
+html .content-signup .form-personal .form-body .form-gp .city,
+html .content-signup .form-personal .form-body .form-gp .area,
+html .content-signup .form-personal .form-body .form-gp .postcode,
+body .content-signup .form-personal .form-body .form-gp .city,
+body .content-signup .form-personal .form-body .form-gp .area,
+body .content-signup .form-personal .form-body .form-gp .postcode {
+  width: 30%;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-personal .form-body .form-gp .city,
+  html .content-signup .form-personal .form-body .form-gp .area,
+  html .content-signup .form-personal .form-body .form-gp .postcode,
+  body .content-signup .form-personal .form-body .form-gp .city,
+  body .content-signup .form-personal .form-body .form-gp .area,
+  body .content-signup .form-personal .form-body .form-gp .postcode {
+    width: 100%;
+  }
+}
+
+html .content-signup .form-personal .form-body .form-check,
+body .content-signup .form-personal .form-body .form-check {
+  padding: 0;
+}
+
+html .content-signup .form-personal .form-body .form-check h4,
+body .content-signup .form-personal .form-body .form-check h4 {
+  margin: 0;
+  margin: 0.625rem 0;
+}
+
+html .content-signup .form-personal .form-bot,
+body .content-signup .form-personal .form-bot {
   width: 100%;
-  padding: 3.75rem;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2897,268 +3014,578 @@ body .content-signup .container .form-gp form {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 3.75rem 0;
 }
 
 @media (max-width: 768px) {
-  html .content-signup .container .form-gp form,
-  body .content-signup .container .form-gp form {
-    padding: 0;
+  html .content-signup .form-personal .form-bot,
+  body .content-signup .form-personal .form-bot {
+    padding: 1.875rem 0;
   }
 }
 
-html .content-signup .container .form-gp form .icon-gp,
-body .content-signup .container .form-gp form .icon-gp {
-  text-align: center;
-}
-
-html .content-signup .container .form-gp form .icon-gp img,
-body .content-signup .container .form-gp form .icon-gp img {
+html .content-signup .form-personal .form-bot .form-submit,
+body .content-signup .form-personal .form-bot .form-submit {
   width: 20%;
-}
-
-@media (max-width: 768px) {
-  html .content-signup .container .form-gp form .icon-gp img,
-  body .content-signup .container .form-gp form .icon-gp img {
-    width: 15%;
-  }
-}
-
-@media (max-width: 568px) {
-  html .content-signup .container .form-gp form .icon-gp img,
-  body .content-signup .container .form-gp form .icon-gp img {
-    width: 20%;
-  }
-}
-
-html .content-signup .container .form-gp form .icon-gp h3,
-body .content-signup .container .form-gp form .icon-gp h3 {
-  margin: 0;
-  margin-bottom: 2.5rem;
-}
-
-html .content-signup .container .form-gp form .form-left,
-body .content-signup .container .form-gp form .form-left {
-  width: 50%;
-  border-radius: 20px 0 0 20px;
-  background-color: #e5f1f9;
-  border-right: solid 5px white;
-  padding: 3.75rem 0;
-}
-
-@media (max-width: 768px) {
-  html .content-signup .container .form-gp form .form-left,
-  body .content-signup .container .form-gp form .form-left {
-    border-radius: 20px 20px 0 0;
-    border-right: unset;
-  }
-}
-
-html .content-signup .container .form-gp form .form-right,
-body .content-signup .container .form-gp form .form-right {
-  width: 50%;
-  border-radius: 0 20px 20px 0;
-  background-color: #e5f1f9;
-  padding: 3.75rem 0;
-}
-
-@media (max-width: 768px) {
-  html .content-signup .container .form-gp form .form-right,
-  body .content-signup .container .form-gp form .form-right {
-    border-radius: 0 0 20px 20px;
-    border-top: solid 5px white;
-  }
-}
-
-@media (max-width: 1024px) {
-  html .content-signup .container .form-gp form .form-left,
-  html .content-signup .container .form-gp form .form-right,
-  body .content-signup .container .form-gp form .form-left,
-  body .content-signup .container .form-gp form .form-right {
-    padding: 3.75rem;
-  }
-}
-
-@media (max-width: 768px) {
-  html .content-signup .container .form-gp form .form-left,
-  html .content-signup .container .form-gp form .form-right,
-  body .content-signup .container .form-gp form .form-left,
-  body .content-signup .container .form-gp form .form-right {
-    width: 100%;
-    padding: 3.75rem 0;
-  }
-}
-
-@media (max-width: 568px) {
-  html .content-signup .container .form-gp form .form-left,
-  html .content-signup .container .form-gp form .form-right,
-  body .content-signup .container .form-gp form .form-left,
-  body .content-signup .container .form-gp form .form-right {
-    border-radius: unset;
-    padding: 3.75rem 0;
-  }
-}
-
-html .content-signup .container .form-gp form .form-submit,
-body .content-signup .container .form-gp form .form-submit {
-  width: 60%;
-  background-color: unset;
   text-align: center;
-  margin-top: 3.75rem;
-}
-
-@media (max-width: 1024px) {
-  html .content-signup .container .form-gp form .form-submit,
-  body .content-signup .container .form-gp form .form-submit {
-    margin: 2.5rem 0;
-  }
 }
 
 @media (max-width: 768px) {
-  html .content-signup .container .form-gp form .form-submit,
-  body .content-signup .container .form-gp form .form-submit {
-    width: 80%;
+  html .content-signup .form-personal .form-bot .form-submit,
+  body .content-signup .form-personal .form-bot .form-submit {
+    width: 30%;
   }
 }
 
 @media (max-width: 568px) {
-  html .content-signup .container .form-gp form .form-submit,
-  body .content-signup .container .form-gp form .form-submit {
+  html .content-signup .form-personal .form-bot .form-submit,
+  body .content-signup .form-personal .form-bot .form-submit {
     width: 100%;
-    margin-bottom: 5.625rem;
   }
 }
 
-html .content-signup .container .form-gp form .form-submit .form-gp,
-body .content-signup .container .form-gp form .form-submit .form-gp {
+html .content-signup .form-personal .form-bot .form-submit input[type="checkbox"],
+body .content-signup .form-personal .form-bot .form-submit input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  line-height: 2.25rem;
+  margin-top: 8px;
+  border: 1px solid #a7e5ff;
+}
+
+html .content-signup .form-personal .form-bot .form-submit .btn,
+body .content-signup .form-personal .form-bot .form-submit .btn {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-personal .form-bot .form-submit .btn,
+  body .content-signup .form-personal .form-bot .form-submit .btn {
+    width: 100%;
+    padding: 0 2.8125rem;
+  }
+}
+
+html .content-signup .form-personal .form-bot .form-submit a,
+body .content-signup .form-personal .form-bot .form-submit a {
+  margin-left: 3px;
+}
+
+html .content-signup .form-personal .form-bot .form-submit .form-check-label,
+body .content-signup .form-personal .form-bot .form-submit .form-check-label {
+  line-height: 2.25rem;
+  margin-left: 1.25rem;
+}
+
+html .content-signup .form-group,
+body .content-signup .form-group {
+  width: 100%;
+  margin: 0;
+  background-color: #eeefef;
+  border-radius: 20px;
+  border-radius: 0;
+}
+
+@media (max-width: 1024px) {
+  html .content-signup .form-group,
+  body .content-signup .form-group {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-group,
+  body .content-signup .form-group {
+    border-radius: unset;
+    margin-bottom: 1.25rem;
+  }
+}
+
+html .content-signup .form-group .form-gp,
+body .content-signup .form-group .form-gp {
+  padding: 0 3.75rem;
+  margin: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 1.25rem 0;
-  padding: 0 5.625rem;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+
+html .content-signup .form-group .form-gp p,
+body .content-signup .form-group .form-gp p {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  padding-top: 0.625rem;
+}
+
+@media (max-width: 1024px) {
+  html .content-signup .form-group .form-gp,
+  body .content-signup .form-group .form-gp {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  html .content-signup .form-group .form-gp,
+  body .content-signup .form-group .form-gp {
+    padding: 0 5.625rem;
+  }
 }
 
 @media (max-width: 568px) {
-  html .content-signup .container .form-gp form .form-submit .form-gp,
-  body .content-signup .container .form-gp form .form-submit .form-gp {
+  html .content-signup .form-group .form-gp,
+  body .content-signup .form-group .form-gp {
     padding: 0 2.8125rem;
-    margin: 2.5rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-html .content-signup .container .form-gp form .form-submit .form-gp label,
-body .content-signup .container .form-gp form .form-submit .form-gp label {
-  width: 30%;
+html .content-signup .form-group .form-gp label,
+body .content-signup .form-group .form-gp label {
+  width: 100%;
+  padding: 0;
+  margin-right: 3.75rem;
+  color: #0290cc;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+html .content-signup .form-group .form-gp input[type="submit"], html .content-signup .form-group .form-gp input[type="reset"],
+html .content-signup .form-group .form-gp select[type="submit"],
+html .content-signup .form-group .form-gp select[type="reset"],
+body .content-signup .form-group .form-gp input[type="submit"],
+body .content-signup .form-group .form-gp input[type="reset"],
+body .content-signup .form-group .form-gp select[type="submit"],
+body .content-signup .form-group .form-gp select[type="reset"] {
+  width: 100%;
+  height: 40px;
+  background-color: #0290cc;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+  text-decoration: none;
+  margin-top: 1.25rem;
+}
+
+html .content-signup .form-group .form-gp input[type="submit"]:hover, html .content-signup .form-group .form-gp input[type="reset"]:hover,
+html .content-signup .form-group .form-gp select[type="submit"]:hover,
+html .content-signup .form-group .form-gp select[type="reset"]:hover,
+body .content-signup .form-group .form-gp input[type="submit"]:hover,
+body .content-signup .form-group .form-gp input[type="reset"]:hover,
+body .content-signup .form-group .form-gp select[type="submit"]:hover,
+body .content-signup .form-group .form-gp select[type="reset"]:hover {
+  background-color: black;
+}
+
+html .content-signup .form-group .form-gp input[type="button"],
+html .content-signup .form-group .form-gp select[type="button"],
+body .content-signup .form-group .form-gp input[type="button"],
+body .content-signup .form-group .form-gp select[type="button"] {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: solid 1px #0290cc;
+  border-radius: 20px;
+  color: #0290cc;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 40px;
+  padding: 0;
+  text-decoration: none;
+  margin-top: 1.25rem;
+}
+
+html .content-signup .form-group .form-gp input[type="button"]:hover,
+html .content-signup .form-group .form-gp select[type="button"]:hover,
+body .content-signup .form-group .form-gp input[type="button"]:hover,
+body .content-signup .form-group .form-gp select[type="button"]:hover {
+  background-color: black;
+  color: white;
+  border: solid 1px black;
+}
+
+html .content-signup .form-group .form-gp input[disabled],
+html .content-signup .form-group .form-gp select[disabled],
+body .content-signup .form-group .form-gp input[disabled],
+body .content-signup .form-group .form-gp select[disabled] {
+  background-color: #a7e5ff;
+}
+
+html .content-signup .form-group .form-gp input[disabled]:hover,
+html .content-signup .form-group .form-gp select[disabled]:hover,
+body .content-signup .form-group .form-gp input[disabled]:hover,
+body .content-signup .form-group .form-gp select[disabled]:hover {
+  background-color: #a7e5ff;
+}
+
+html .content-signup .form-group .form-gp textarea,
+body .content-signup .form-group .form-gp textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding: 0 0.625rem;
+  color: #595757;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+}
+
+html .content-signup .form-group .form-gp a,
+body .content-signup .form-group .form-gp a {
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  margin-top: 1.25rem;
+  color: #0290cc;
+  font-weight: bold;
+  text-align: center;
+}
+
+html .content-signup .form-group .form-gp a:hover,
+body .content-signup .form-group .form-gp a:hover {
+  color: black !important;
+}
+
+html .content-signup .form-group .form-check,
+body .content-signup .form-group .form-check {
+  padding: 0 3.75rem;
+  margin: 0;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  html .content-signup .form-group .form-check,
+  body .content-signup .form-group .form-check {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  html .content-signup .form-group .form-check,
+  body .content-signup .form-group .form-check {
+    padding: 0 5.625rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-group .form-check,
+  body .content-signup .form-group .form-check {
+    padding: 0 2.8125rem;
+  }
+}
+
+html .content-signup .form-group .form-check input,
+html .content-signup .form-group .form-check select,
+body .content-signup .form-group .form-check input,
+body .content-signup .form-group .form-check select {
+  text-align: left;
+}
+
+html .content-signup .form-group .form-check input[type="checkbox"],
+html .content-signup .form-group .form-check select[type="checkbox"],
+body .content-signup .form-group .form-check input[type="checkbox"],
+body .content-signup .form-group .form-check select[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  line-height: 2.25rem;
+  margin-top: 8px;
+  border: 1px solid #cccccc;
+}
+
+html .content-signup .form-group .form-check input[type="radio"],
+html .content-signup .form-group .form-check select[type="radio"],
+body .content-signup .form-group .form-check input[type="radio"],
+body .content-signup .form-group .form-check select[type="radio"] {
+  width: 20px;
+  height: 20px;
+  line-height: 2.25rem;
+  margin-right: 8px;
+  border: 1px solid #cccccc;
+}
+
+html .content-signup .form-group .form-check select,
+body .content-signup .form-group .form-check select {
+  width: 100%;
+  height: 40px;
+}
+
+html .content-signup .form-group .form-check label,
+body .content-signup .form-group .form-check label {
+  padding: 0;
+  color: #595757;
+  font-size: 1rem;
+}
+
+html .content-signup .form-group .form-check .form-check-label,
+body .content-signup .form-group .form-check .form-check-label {
+  line-height: 2.25rem;
+  margin-right: 1.25rem;
+}
+
+html .content-signup .form-group .form-check .form-check-input,
+body .content-signup .form-group .form-check .form-check-input {
+  margin-left: 0px;
+  margin-right: 15px;
+}
+
+html .content-signup .form-group .form-check .check-input,
+body .content-signup .form-group .form-check .check-input {
+  background-color: #fff;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding: 0 0.625rem;
+  color: #595757;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
   margin: 1.25rem 0;
 }
 
+html .content-signup .form-group .form-check .h4,
+body .content-signup .form-group .form-check .h4 {
+  color: #0290cc;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.625rem;
+}
+
+html .content-signup .form-group span,
+body .content-signup .form-group span {
+  color: #da382d;
+  margin-left: 3px;
+}
+
+html .content-signup .form-group .form-body,
+body .content-signup .form-group .form-body {
+  padding: 3.75rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
-  html .content-signup .container .form-gp form .form-submit .form-gp label,
-  body .content-signup .container .form-gp form .form-submit .form-gp label {
-    width: 100%;
+  html .content-signup .form-group .form-body,
+  body .content-signup .form-group .form-body {
+    padding: 0;
   }
 }
 
-html .content-signup .container .form-gp form .form-submit .form-gp input,
-body .content-signup .container .form-gp form .form-submit .form-gp input {
-  width: 30%;
+@media (max-width: 568px) {
+  html .content-signup .form-group .form-body,
+  body .content-signup .form-group .form-body {
+    padding: 0 2.8125rem;
+  }
 }
 
-@media (max-width: 768px) {
-  html .content-signup .container .form-gp form .form-submit .form-gp input,
-  body .content-signup .container .form-gp form .form-submit .form-gp input {
+html .content-signup .form-group .form-body .form-left,
+body .content-signup .form-group .form-body .form-left {
+  width: 30%;
+  border-radius: 20px 0 0 20px;
+  padding-top: 1.875rem;
+  padding-left: 3.75rem;
+  padding-right: 1.875rem;
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-group .form-body .form-left,
+  body .content-signup .form-group .form-body .form-left {
+    padding-top: 2.8125rem !important;
+  }
+}
+
+html .content-signup .form-group .form-body .form-right,
+body .content-signup .form-group .form-body .form-right {
+  width: 30%;
+  border-radius: 0 20px 20px 0;
+  padding-top: 1.875rem;
+  padding-right: 3.75rem;
+  padding-left: 1.875rem;
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-group .form-body .form-right,
+  body .content-signup .form-group .form-body .form-right {
+    padding-bottom: 2.8125rem !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  html .content-signup .form-group .form-body .form-left,
+  html .content-signup .form-group .form-body .form-right,
+  body .content-signup .form-group .form-body .form-left,
+  body .content-signup .form-group .form-body .form-right {
     width: 50%;
   }
 }
 
-html .content-signup .container .form-gp form .form-submit .form-gp input[type="checkbox"],
-body .content-signup .container .form-gp form .form-submit .form-gp input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  line-height: 2.25rem;
-  margin-top: 8px;
-  border: 1px solid #a7e5ff;
-}
-
-html .content-signup .container .form-gp form .form-submit .form-gp .code,
-html .content-signup .container .form-gp form .form-submit .form-gp img,
-body .content-signup .container .form-gp form .form-submit .form-gp .code,
-body .content-signup .container .form-gp form .form-submit .form-gp img {
-  width: 65px;
-  height: 22px;
-  -o-object-position: center;
-     object-position: center;
-  margin: 1.25rem 0;
-  margin-right: 2.5rem;
-}
-
-html .content-signup .container .form-gp form .form-submit input[type="checkbox"],
-body .content-signup .container .form-gp form .form-submit input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  line-height: 2.25rem;
-  margin-top: 8px;
-  border: 1px solid #a7e5ff;
-}
-
-html .content-signup .container .form-gp form .form-submit .btn,
-body .content-signup .container .form-gp form .form-submit .btn {
-  width: 100%;
-  padding: 0 5.625rem;
-  margin-top: 1.25rem;
-}
-
-@media (max-width: 568px) {
-  html .content-signup .container .form-gp form .form-submit .btn,
-  body .content-signup .container .form-gp form .form-submit .btn {
-    padding: 0 2.8125rem;
+@media (max-width: 768px) {
+  html .content-signup .form-group .form-body .form-left,
+  html .content-signup .form-group .form-body .form-right,
+  body .content-signup .form-group .form-body .form-left,
+  body .content-signup .form-group .form-body .form-right {
+    width: 60%;
+    padding: 1.875rem 0;
   }
 }
 
-html .content-signup .container .form-gp form .form-submit a,
-body .content-signup .container .form-gp form .form-submit a {
-  margin-left: 3px;
+@media (max-width: 568px) {
+  html .content-signup .form-group .form-body .form-left,
+  html .content-signup .form-group .form-body .form-right,
+  body .content-signup .form-group .form-body .form-left,
+  body .content-signup .form-group .form-body .form-right {
+    width: 100%;
+    padding: 0;
+  }
 }
 
-html .content-signup .container .form-gp form .form-submit .form-check-label,
-body .content-signup .container .form-gp form .form-submit .form-check-label {
-  line-height: 2.25rem;
-  margin-left: 1.25rem;
+html .content-signup .form-group .form-body .form-gp,
+body .content-signup .form-group .form-body .form-gp {
+  padding: 0;
 }
 
-html .content-signup .container .notice h3,
-body .content-signup .container .notice h3 {
-  text-align: center;
-}
-
-html .content-signup .container .notice ul,
-body .content-signup .container .notice ul {
-  color: #595757;
-  font-size: 1rem;
-  line-height: 2rem;
-  text-align: justify;
-  margin-bottom: 2.5rem;
-}
-
-html .content-signup .container .notice ul li,
-body .content-signup .container .notice ul li {
+html .content-signup .form-group .form-body .form-gp .city,
+html .content-signup .form-group .form-body .form-gp .area,
+html .content-signup .form-group .form-body .form-gp .postcode,
+body .content-signup .form-group .form-body .form-gp .city,
+body .content-signup .form-group .form-body .form-gp .area,
+body .content-signup .form-group .form-body .form-gp .postcode {
+  width: 30%;
   margin-bottom: 1.25rem;
 }
 
 @media (max-width: 568px) {
-  html .content-signup .container .notice ul,
-  body .content-signup .container .notice ul {
-    padding: 0 2.8125rem;
-    margin-bottom: 3.75rem;
+  html .content-signup .form-group .form-body .form-gp .city,
+  html .content-signup .form-group .form-body .form-gp .area,
+  html .content-signup .form-group .form-body .form-gp .postcode,
+  body .content-signup .form-group .form-body .form-gp .city,
+  body .content-signup .form-group .form-body .form-gp .area,
+  body .content-signup .form-group .form-body .form-gp .postcode {
+    width: 100%;
   }
+}
+
+html .content-signup .form-group .form-body .form-check,
+body .content-signup .form-group .form-body .form-check {
+  width: 100%;
+  padding: 0;
+}
+
+html .content-signup .form-group .form-body .form-check h4,
+body .content-signup .form-group .form-body .form-check h4 {
+  margin: 0;
+  margin: 0.625rem 0;
+}
+
+html .content-signup .form-group .form-body .form-check label,
+body .content-signup .form-group .form-body .form-check label {
+  margin-left: 1.875rem;
+}
+
+html .content-signup .form-group .form-bot,
+body .content-signup .form-group .form-bot {
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 3.75rem 0;
+}
+
+@media (max-width: 768px) {
+  html .content-signup .form-group .form-bot,
+  body .content-signup .form-group .form-bot {
+    padding: 1.875rem 0;
+  }
+}
+
+html .content-signup .form-group .form-bot .form-submit,
+body .content-signup .form-group .form-bot .form-submit {
+  width: 20%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  html .content-signup .form-group .form-bot .form-submit,
+  body .content-signup .form-group .form-bot .form-submit {
+    width: 30%;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-group .form-bot .form-submit,
+  body .content-signup .form-group .form-bot .form-submit {
+    width: 100%;
+  }
+}
+
+html .content-signup .form-group .form-bot .form-submit input[type="checkbox"],
+body .content-signup .form-group .form-bot .form-submit input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  line-height: 2.25rem;
+  margin-top: 8px;
+  border: 1px solid #a7e5ff;
+}
+
+html .content-signup .form-group .form-bot .form-submit .btn,
+body .content-signup .form-group .form-bot .form-submit .btn {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 568px) {
+  html .content-signup .form-group .form-bot .form-submit .btn,
+  body .content-signup .form-group .form-bot .form-submit .btn {
+    width: 100%;
+    padding: 0 2.8125rem;
+  }
+}
+
+html .content-signup .form-group .form-bot .form-submit a,
+body .content-signup .form-group .form-bot .form-submit a {
+  margin-left: 3px;
+}
+
+html .content-signup .form-group .form-bot .form-submit .form-check-label,
+body .content-signup .form-group .form-bot .form-submit .form-check-label {
+  line-height: 2.25rem;
+  margin-left: 1.25rem;
 }
 
 html .content-sign-up-success .container,
@@ -3309,17 +3736,17 @@ body .content-member-data .container .member-data .form {
   }
 }
 
-html .content-member-data .container .member-data .form form .form-gp,
-body .content-member-data .container .member-data .form form .form-gp {
+html .content-member-data .container .member-data .form .form-gp,
+body .content-member-data .container .member-data .form .form-gp {
   padding: 0 3.75rem;
   margin: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -3330,8 +3757,8 @@ body .content-member-data .container .member-data .form form .form-gp {
   text-align: justify;
 }
 
-html .content-member-data .container .member-data .form form .form-gp p,
-body .content-member-data .container .member-data .form form .form-gp p {
+html .content-member-data .container .member-data .form .form-gp p,
+body .content-member-data .container .member-data .form .form-gp p {
   width: 100%;
   font-size: 1rem;
   line-height: 1.7rem;
@@ -3339,16 +3766,23 @@ body .content-member-data .container .member-data .form form .form-gp p {
 }
 
 @media (max-width: 1024px) {
-  html .content-member-data .container .member-data .form form .form-gp,
-  body .content-member-data .container .member-data .form form .form-gp {
+  html .content-member-data .container .member-data .form .form-gp,
+  body .content-member-data .container .member-data .form .form-gp {
     padding: 0;
   }
 }
 
 @media (max-width: 768px) {
-  html .content-member-data .container .member-data .form form .form-gp,
-  body .content-member-data .container .member-data .form form .form-gp {
+  html .content-member-data .container .member-data .form .form-gp,
+  body .content-member-data .container .member-data .form .form-gp {
     padding: 0 5.625rem;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-member-data .container .member-data .form .form-gp,
+  body .content-member-data .container .member-data .form .form-gp {
+    padding: 0 2.8125rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3356,15 +3790,8 @@ body .content-member-data .container .member-data .form form .form-gp p {
   }
 }
 
-@media (max-width: 568px) {
-  html .content-member-data .container .member-data .form form .form-gp,
-  body .content-member-data .container .member-data .form form .form-gp {
-    padding: 0 2.8125rem;
-  }
-}
-
-html .content-member-data .container .member-data .form form .form-gp label,
-body .content-member-data .container .member-data .form form .form-gp label {
+html .content-member-data .container .member-data .form .form-gp label,
+body .content-member-data .container .member-data .form .form-gp label {
   width: 100%;
   padding: 0;
   margin-right: 3.75rem;
@@ -3373,13 +3800,13 @@ body .content-member-data .container .member-data .form form .form-gp label {
   font-weight: bold;
 }
 
-html .content-member-data .container .member-data .form form .form-gp input[type="submit"], html .content-member-data .container .member-data .form form .form-gp input[type="reset"],
-html .content-member-data .container .member-data .form form .form-gp select[type="submit"],
-html .content-member-data .container .member-data .form form .form-gp select[type="reset"],
-body .content-member-data .container .member-data .form form .form-gp input[type="submit"],
-body .content-member-data .container .member-data .form form .form-gp input[type="reset"],
-body .content-member-data .container .member-data .form form .form-gp select[type="submit"],
-body .content-member-data .container .member-data .form form .form-gp select[type="reset"] {
+html .content-member-data .container .member-data .form .form-gp input[type="submit"], html .content-member-data .container .member-data .form .form-gp input[type="reset"],
+html .content-member-data .container .member-data .form .form-gp select[type="submit"],
+html .content-member-data .container .member-data .form .form-gp select[type="reset"],
+body .content-member-data .container .member-data .form .form-gp input[type="submit"],
+body .content-member-data .container .member-data .form .form-gp input[type="reset"],
+body .content-member-data .container .member-data .form .form-gp select[type="submit"],
+body .content-member-data .container .member-data .form .form-gp select[type="reset"] {
   width: 100%;
   height: 40px;
   background-color: #0290cc;
@@ -3394,20 +3821,20 @@ body .content-member-data .container .member-data .form form .form-gp select[typ
   margin-top: 1.25rem;
 }
 
-html .content-member-data .container .member-data .form form .form-gp input[type="submit"]:hover, html .content-member-data .container .member-data .form form .form-gp input[type="reset"]:hover,
-html .content-member-data .container .member-data .form form .form-gp select[type="submit"]:hover,
-html .content-member-data .container .member-data .form form .form-gp select[type="reset"]:hover,
-body .content-member-data .container .member-data .form form .form-gp input[type="submit"]:hover,
-body .content-member-data .container .member-data .form form .form-gp input[type="reset"]:hover,
-body .content-member-data .container .member-data .form form .form-gp select[type="submit"]:hover,
-body .content-member-data .container .member-data .form form .form-gp select[type="reset"]:hover {
+html .content-member-data .container .member-data .form .form-gp input[type="submit"]:hover, html .content-member-data .container .member-data .form .form-gp input[type="reset"]:hover,
+html .content-member-data .container .member-data .form .form-gp select[type="submit"]:hover,
+html .content-member-data .container .member-data .form .form-gp select[type="reset"]:hover,
+body .content-member-data .container .member-data .form .form-gp input[type="submit"]:hover,
+body .content-member-data .container .member-data .form .form-gp input[type="reset"]:hover,
+body .content-member-data .container .member-data .form .form-gp select[type="submit"]:hover,
+body .content-member-data .container .member-data .form .form-gp select[type="reset"]:hover {
   background-color: black;
 }
 
-html .content-member-data .container .member-data .form form .form-gp input[type="button"],
-html .content-member-data .container .member-data .form form .form-gp select[type="button"],
-body .content-member-data .container .member-data .form form .form-gp input[type="button"],
-body .content-member-data .container .member-data .form form .form-gp select[type="button"] {
+html .content-member-data .container .member-data .form .form-gp input[type="button"],
+html .content-member-data .container .member-data .form .form-gp select[type="button"],
+body .content-member-data .container .member-data .form .form-gp input[type="button"],
+body .content-member-data .container .member-data .form .form-gp select[type="button"] {
   width: 100%;
   height: 40px;
   background-color: transparent;
@@ -3422,42 +3849,42 @@ body .content-member-data .container .member-data .form form .form-gp select[typ
   margin-top: 1.25rem;
 }
 
-html .content-member-data .container .member-data .form form .form-gp input[type="button"]:hover,
-html .content-member-data .container .member-data .form form .form-gp select[type="button"]:hover,
-body .content-member-data .container .member-data .form form .form-gp input[type="button"]:hover,
-body .content-member-data .container .member-data .form form .form-gp select[type="button"]:hover {
+html .content-member-data .container .member-data .form .form-gp input[type="button"]:hover,
+html .content-member-data .container .member-data .form .form-gp select[type="button"]:hover,
+body .content-member-data .container .member-data .form .form-gp input[type="button"]:hover,
+body .content-member-data .container .member-data .form .form-gp select[type="button"]:hover {
   background-color: black;
   color: white;
   border: solid 1px black;
 }
 
-html .content-member-data .container .member-data .form form .form-gp input[disabled],
-html .content-member-data .container .member-data .form form .form-gp select[disabled],
-body .content-member-data .container .member-data .form form .form-gp input[disabled],
-body .content-member-data .container .member-data .form form .form-gp select[disabled] {
+html .content-member-data .container .member-data .form .form-gp input[disabled],
+html .content-member-data .container .member-data .form .form-gp select[disabled],
+body .content-member-data .container .member-data .form .form-gp input[disabled],
+body .content-member-data .container .member-data .form .form-gp select[disabled] {
   background-color: #a7e5ff;
 }
 
-html .content-member-data .container .member-data .form form .form-gp input[disabled]:hover,
-html .content-member-data .container .member-data .form form .form-gp select[disabled]:hover,
-body .content-member-data .container .member-data .form form .form-gp input[disabled]:hover,
-body .content-member-data .container .member-data .form form .form-gp select[disabled]:hover {
+html .content-member-data .container .member-data .form .form-gp input[disabled]:hover,
+html .content-member-data .container .member-data .form .form-gp select[disabled]:hover,
+body .content-member-data .container .member-data .form .form-gp input[disabled]:hover,
+body .content-member-data .container .member-data .form .form-gp select[disabled]:hover {
   background-color: #a7e5ff;
 }
 
-html .content-member-data .container .member-data .form form .form-gp textarea,
-body .content-member-data .container .member-data .form form .form-gp textarea {
+html .content-member-data .container .member-data .form .form-gp textarea,
+body .content-member-data .container .member-data .form .form-gp textarea {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
   padding: 0 0.625rem;
   color: #595757;
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
 
-html .content-member-data .container .member-data .form form .form-gp a,
-body .content-member-data .container .member-data .form form .form-gp a {
+html .content-member-data .container .member-data .form .form-gp a,
+body .content-member-data .container .member-data .form .form-gp a {
   font-size: 1.125rem;
   line-height: 1.125rem;
   margin-top: 1.25rem;
@@ -3466,29 +3893,28 @@ body .content-member-data .container .member-data .form form .form-gp a {
   text-align: center;
 }
 
-html .content-member-data .container .member-data .form form .form-gp a:hover,
-body .content-member-data .container .member-data .form form .form-gp a:hover {
+html .content-member-data .container .member-data .form .form-gp a:hover,
+body .content-member-data .container .member-data .form .form-gp a:hover {
   color: black !important;
 }
 
-html .content-member-data .container .member-data .form form .form-check,
-body .content-member-data .container .member-data .form form .form-check {
-  width: 100%;
+html .content-member-data .container .member-data .form .form-check,
+body .content-member-data .container .member-data .form .form-check {
   padding: 0 3.75rem;
   margin: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 1024px) {
-  html .content-member-data .container .member-data .form form .form-check,
-  body .content-member-data .container .member-data .form form .form-check {
+  html .content-member-data .container .member-data .form .form-check,
+  body .content-member-data .container .member-data .form .form-check {
     padding: 0;
   }
 }
 
 @media (max-width: 768px) {
-  html .content-member-data .container .member-data .form form .form-check,
-  body .content-member-data .container .member-data .form form .form-check {
+  html .content-member-data .container .member-data .form .form-check,
+  body .content-member-data .container .member-data .form .form-check {
     padding: 0 5.625rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3498,62 +3924,73 @@ body .content-member-data .container .member-data .form form .form-check {
 }
 
 @media (max-width: 568px) {
-  html .content-member-data .container .member-data .form form .form-check,
-  body .content-member-data .container .member-data .form form .form-check {
+  html .content-member-data .container .member-data .form .form-check,
+  body .content-member-data .container .member-data .form .form-check {
     padding: 0 2.8125rem;
   }
 }
 
-html .content-member-data .container .member-data .form form .form-check input,
-html .content-member-data .container .member-data .form form .form-check select,
-body .content-member-data .container .member-data .form form .form-check input,
-body .content-member-data .container .member-data .form form .form-check select {
+html .content-member-data .container .member-data .form .form-check input,
+html .content-member-data .container .member-data .form .form-check select,
+body .content-member-data .container .member-data .form .form-check input,
+body .content-member-data .container .member-data .form .form-check select {
   text-align: left;
 }
 
-html .content-member-data .container .member-data .form form .form-check input[type="checkbox"],
-html .content-member-data .container .member-data .form form .form-check select[type="checkbox"],
-body .content-member-data .container .member-data .form form .form-check input[type="checkbox"],
-body .content-member-data .container .member-data .form form .form-check select[type="checkbox"] {
+html .content-member-data .container .member-data .form .form-check input[type="checkbox"],
+html .content-member-data .container .member-data .form .form-check select[type="checkbox"],
+body .content-member-data .container .member-data .form .form-check input[type="checkbox"],
+body .content-member-data .container .member-data .form .form-check select[type="checkbox"] {
   width: 20px;
   height: 20px;
   line-height: 2.25rem;
   margin-top: 8px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
 }
 
-html .content-member-data .container .member-data .form form .form-check select,
-body .content-member-data .container .member-data .form form .form-check select {
+html .content-member-data .container .member-data .form .form-check input[type="radio"],
+html .content-member-data .container .member-data .form .form-check select[type="radio"],
+body .content-member-data .container .member-data .form .form-check input[type="radio"],
+body .content-member-data .container .member-data .form .form-check select[type="radio"] {
+  width: 20px;
+  height: 20px;
+  line-height: 2.25rem;
+  margin-right: 8px;
+  border: 1px solid #cccccc;
+}
+
+html .content-member-data .container .member-data .form .form-check select,
+body .content-member-data .container .member-data .form .form-check select {
   width: 100%;
   height: 40px;
 }
 
-html .content-member-data .container .member-data .form form .form-check label,
-body .content-member-data .container .member-data .form form .form-check label {
+html .content-member-data .container .member-data .form .form-check label,
+body .content-member-data .container .member-data .form .form-check label {
   padding: 0;
-  margin: 0 2.5rem;
   color: #595757;
   font-size: 1rem;
 }
 
-html .content-member-data .container .member-data .form form .form-check .form-check-label,
-body .content-member-data .container .member-data .form form .form-check .form-check-label {
+html .content-member-data .container .member-data .form .form-check .form-check-label,
+body .content-member-data .container .member-data .form .form-check .form-check-label {
   line-height: 2.25rem;
-  margin: 0 2.5rem 1.25rem 2.5rem;
+  margin-right: 1.25rem;
 }
 
-html .content-member-data .container .member-data .form form .form-check .form-check-input,
-body .content-member-data .container .member-data .form form .form-check .form-check-input {
+html .content-member-data .container .member-data .form .form-check .form-check-input,
+body .content-member-data .container .member-data .form .form-check .form-check-input {
   margin-left: 0px;
+  margin-right: 15px;
 }
 
-html .content-member-data .container .member-data .form form .form-check .check-input,
-body .content-member-data .container .member-data .form form .form-check .check-input {
+html .content-member-data .container .member-data .form .form-check .check-input,
+body .content-member-data .container .member-data .form .form-check .check-input {
   background-color: #fff;
   width: 100%;
   height: 40px;
   border-radius: 5px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
   padding: 0 0.625rem;
   color: #595757;
   font-size: 1.125rem;
@@ -3561,18 +3998,18 @@ body .content-member-data .container .member-data .form form .form-check .check-
   margin: 1.25rem 0;
 }
 
-html .content-member-data .container .member-data .form form .form-check .h4,
-body .content-member-data .container .member-data .form form .form-check .h4 {
+html .content-member-data .container .member-data .form .form-check .h4,
+body .content-member-data .container .member-data .form .form-check .h4 {
   color: #0290cc;
   font-size: 1.125rem;
   font-weight: bold;
   padding: 0;
   margin: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 
-html .content-member-data .container .member-data .form form span,
-body .content-member-data .container .member-data .form form span {
+html .content-member-data .container .member-data .form span,
+body .content-member-data .container .member-data .form span {
   color: #da382d;
   margin-left: 3px;
 }
@@ -4125,17 +4562,17 @@ body .content-opinion-add .container .form {
   }
 }
 
-html .content-opinion-add .container .form form .form-gp,
-body .content-opinion-add .container .form form .form-gp {
+html .content-opinion-add .container .form .form-gp,
+body .content-opinion-add .container .form .form-gp {
   padding: 0 3.75rem;
   margin: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -4146,8 +4583,8 @@ body .content-opinion-add .container .form form .form-gp {
   text-align: justify;
 }
 
-html .content-opinion-add .container .form form .form-gp p,
-body .content-opinion-add .container .form form .form-gp p {
+html .content-opinion-add .container .form .form-gp p,
+body .content-opinion-add .container .form .form-gp p {
   width: 100%;
   font-size: 1rem;
   line-height: 1.7rem;
@@ -4155,16 +4592,23 @@ body .content-opinion-add .container .form form .form-gp p {
 }
 
 @media (max-width: 1024px) {
-  html .content-opinion-add .container .form form .form-gp,
-  body .content-opinion-add .container .form form .form-gp {
+  html .content-opinion-add .container .form .form-gp,
+  body .content-opinion-add .container .form .form-gp {
     padding: 0;
   }
 }
 
 @media (max-width: 768px) {
-  html .content-opinion-add .container .form form .form-gp,
-  body .content-opinion-add .container .form form .form-gp {
+  html .content-opinion-add .container .form .form-gp,
+  body .content-opinion-add .container .form .form-gp {
     padding: 0 5.625rem;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-opinion-add .container .form .form-gp,
+  body .content-opinion-add .container .form .form-gp {
+    padding: 0 2.8125rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4172,15 +4616,8 @@ body .content-opinion-add .container .form form .form-gp p {
   }
 }
 
-@media (max-width: 568px) {
-  html .content-opinion-add .container .form form .form-gp,
-  body .content-opinion-add .container .form form .form-gp {
-    padding: 0 2.8125rem;
-  }
-}
-
-html .content-opinion-add .container .form form .form-gp label,
-body .content-opinion-add .container .form form .form-gp label {
+html .content-opinion-add .container .form .form-gp label,
+body .content-opinion-add .container .form .form-gp label {
   width: 100%;
   padding: 0;
   margin-right: 3.75rem;
@@ -4189,13 +4626,13 @@ body .content-opinion-add .container .form form .form-gp label {
   font-weight: bold;
 }
 
-html .content-opinion-add .container .form form .form-gp input[type="submit"], html .content-opinion-add .container .form form .form-gp input[type="reset"],
-html .content-opinion-add .container .form form .form-gp select[type="submit"],
-html .content-opinion-add .container .form form .form-gp select[type="reset"],
-body .content-opinion-add .container .form form .form-gp input[type="submit"],
-body .content-opinion-add .container .form form .form-gp input[type="reset"],
-body .content-opinion-add .container .form form .form-gp select[type="submit"],
-body .content-opinion-add .container .form form .form-gp select[type="reset"] {
+html .content-opinion-add .container .form .form-gp input[type="submit"], html .content-opinion-add .container .form .form-gp input[type="reset"],
+html .content-opinion-add .container .form .form-gp select[type="submit"],
+html .content-opinion-add .container .form .form-gp select[type="reset"],
+body .content-opinion-add .container .form .form-gp input[type="submit"],
+body .content-opinion-add .container .form .form-gp input[type="reset"],
+body .content-opinion-add .container .form .form-gp select[type="submit"],
+body .content-opinion-add .container .form .form-gp select[type="reset"] {
   width: 100%;
   height: 40px;
   background-color: #0290cc;
@@ -4210,20 +4647,20 @@ body .content-opinion-add .container .form form .form-gp select[type="reset"] {
   margin-top: 1.25rem;
 }
 
-html .content-opinion-add .container .form form .form-gp input[type="submit"]:hover, html .content-opinion-add .container .form form .form-gp input[type="reset"]:hover,
-html .content-opinion-add .container .form form .form-gp select[type="submit"]:hover,
-html .content-opinion-add .container .form form .form-gp select[type="reset"]:hover,
-body .content-opinion-add .container .form form .form-gp input[type="submit"]:hover,
-body .content-opinion-add .container .form form .form-gp input[type="reset"]:hover,
-body .content-opinion-add .container .form form .form-gp select[type="submit"]:hover,
-body .content-opinion-add .container .form form .form-gp select[type="reset"]:hover {
+html .content-opinion-add .container .form .form-gp input[type="submit"]:hover, html .content-opinion-add .container .form .form-gp input[type="reset"]:hover,
+html .content-opinion-add .container .form .form-gp select[type="submit"]:hover,
+html .content-opinion-add .container .form .form-gp select[type="reset"]:hover,
+body .content-opinion-add .container .form .form-gp input[type="submit"]:hover,
+body .content-opinion-add .container .form .form-gp input[type="reset"]:hover,
+body .content-opinion-add .container .form .form-gp select[type="submit"]:hover,
+body .content-opinion-add .container .form .form-gp select[type="reset"]:hover {
   background-color: black;
 }
 
-html .content-opinion-add .container .form form .form-gp input[type="button"],
-html .content-opinion-add .container .form form .form-gp select[type="button"],
-body .content-opinion-add .container .form form .form-gp input[type="button"],
-body .content-opinion-add .container .form form .form-gp select[type="button"] {
+html .content-opinion-add .container .form .form-gp input[type="button"],
+html .content-opinion-add .container .form .form-gp select[type="button"],
+body .content-opinion-add .container .form .form-gp input[type="button"],
+body .content-opinion-add .container .form .form-gp select[type="button"] {
   width: 100%;
   height: 40px;
   background-color: transparent;
@@ -4238,42 +4675,42 @@ body .content-opinion-add .container .form form .form-gp select[type="button"] {
   margin-top: 1.25rem;
 }
 
-html .content-opinion-add .container .form form .form-gp input[type="button"]:hover,
-html .content-opinion-add .container .form form .form-gp select[type="button"]:hover,
-body .content-opinion-add .container .form form .form-gp input[type="button"]:hover,
-body .content-opinion-add .container .form form .form-gp select[type="button"]:hover {
+html .content-opinion-add .container .form .form-gp input[type="button"]:hover,
+html .content-opinion-add .container .form .form-gp select[type="button"]:hover,
+body .content-opinion-add .container .form .form-gp input[type="button"]:hover,
+body .content-opinion-add .container .form .form-gp select[type="button"]:hover {
   background-color: black;
   color: white;
   border: solid 1px black;
 }
 
-html .content-opinion-add .container .form form .form-gp input[disabled],
-html .content-opinion-add .container .form form .form-gp select[disabled],
-body .content-opinion-add .container .form form .form-gp input[disabled],
-body .content-opinion-add .container .form form .form-gp select[disabled] {
+html .content-opinion-add .container .form .form-gp input[disabled],
+html .content-opinion-add .container .form .form-gp select[disabled],
+body .content-opinion-add .container .form .form-gp input[disabled],
+body .content-opinion-add .container .form .form-gp select[disabled] {
   background-color: #a7e5ff;
 }
 
-html .content-opinion-add .container .form form .form-gp input[disabled]:hover,
-html .content-opinion-add .container .form form .form-gp select[disabled]:hover,
-body .content-opinion-add .container .form form .form-gp input[disabled]:hover,
-body .content-opinion-add .container .form form .form-gp select[disabled]:hover {
+html .content-opinion-add .container .form .form-gp input[disabled]:hover,
+html .content-opinion-add .container .form .form-gp select[disabled]:hover,
+body .content-opinion-add .container .form .form-gp input[disabled]:hover,
+body .content-opinion-add .container .form .form-gp select[disabled]:hover {
   background-color: #a7e5ff;
 }
 
-html .content-opinion-add .container .form form .form-gp textarea,
-body .content-opinion-add .container .form form .form-gp textarea {
+html .content-opinion-add .container .form .form-gp textarea,
+body .content-opinion-add .container .form .form-gp textarea {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
   padding: 0 0.625rem;
   color: #595757;
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
 
-html .content-opinion-add .container .form form .form-gp a,
-body .content-opinion-add .container .form form .form-gp a {
+html .content-opinion-add .container .form .form-gp a,
+body .content-opinion-add .container .form .form-gp a {
   font-size: 1.125rem;
   line-height: 1.125rem;
   margin-top: 1.25rem;
@@ -4282,29 +4719,28 @@ body .content-opinion-add .container .form form .form-gp a {
   text-align: center;
 }
 
-html .content-opinion-add .container .form form .form-gp a:hover,
-body .content-opinion-add .container .form form .form-gp a:hover {
+html .content-opinion-add .container .form .form-gp a:hover,
+body .content-opinion-add .container .form .form-gp a:hover {
   color: black !important;
 }
 
-html .content-opinion-add .container .form form .form-check,
-body .content-opinion-add .container .form form .form-check {
-  width: 100%;
+html .content-opinion-add .container .form .form-check,
+body .content-opinion-add .container .form .form-check {
   padding: 0 3.75rem;
   margin: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 1024px) {
-  html .content-opinion-add .container .form form .form-check,
-  body .content-opinion-add .container .form form .form-check {
+  html .content-opinion-add .container .form .form-check,
+  body .content-opinion-add .container .form .form-check {
     padding: 0;
   }
 }
 
 @media (max-width: 768px) {
-  html .content-opinion-add .container .form form .form-check,
-  body .content-opinion-add .container .form form .form-check {
+  html .content-opinion-add .container .form .form-check,
+  body .content-opinion-add .container .form .form-check {
     padding: 0 5.625rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4314,62 +4750,73 @@ body .content-opinion-add .container .form form .form-check {
 }
 
 @media (max-width: 568px) {
-  html .content-opinion-add .container .form form .form-check,
-  body .content-opinion-add .container .form form .form-check {
+  html .content-opinion-add .container .form .form-check,
+  body .content-opinion-add .container .form .form-check {
     padding: 0 2.8125rem;
   }
 }
 
-html .content-opinion-add .container .form form .form-check input,
-html .content-opinion-add .container .form form .form-check select,
-body .content-opinion-add .container .form form .form-check input,
-body .content-opinion-add .container .form form .form-check select {
+html .content-opinion-add .container .form .form-check input,
+html .content-opinion-add .container .form .form-check select,
+body .content-opinion-add .container .form .form-check input,
+body .content-opinion-add .container .form .form-check select {
   text-align: left;
 }
 
-html .content-opinion-add .container .form form .form-check input[type="checkbox"],
-html .content-opinion-add .container .form form .form-check select[type="checkbox"],
-body .content-opinion-add .container .form form .form-check input[type="checkbox"],
-body .content-opinion-add .container .form form .form-check select[type="checkbox"] {
+html .content-opinion-add .container .form .form-check input[type="checkbox"],
+html .content-opinion-add .container .form .form-check select[type="checkbox"],
+body .content-opinion-add .container .form .form-check input[type="checkbox"],
+body .content-opinion-add .container .form .form-check select[type="checkbox"] {
   width: 20px;
   height: 20px;
   line-height: 2.25rem;
   margin-top: 8px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
 }
 
-html .content-opinion-add .container .form form .form-check select,
-body .content-opinion-add .container .form form .form-check select {
+html .content-opinion-add .container .form .form-check input[type="radio"],
+html .content-opinion-add .container .form .form-check select[type="radio"],
+body .content-opinion-add .container .form .form-check input[type="radio"],
+body .content-opinion-add .container .form .form-check select[type="radio"] {
+  width: 20px;
+  height: 20px;
+  line-height: 2.25rem;
+  margin-right: 8px;
+  border: 1px solid #cccccc;
+}
+
+html .content-opinion-add .container .form .form-check select,
+body .content-opinion-add .container .form .form-check select {
   width: 100%;
   height: 40px;
 }
 
-html .content-opinion-add .container .form form .form-check label,
-body .content-opinion-add .container .form form .form-check label {
+html .content-opinion-add .container .form .form-check label,
+body .content-opinion-add .container .form .form-check label {
   padding: 0;
-  margin: 0 2.5rem;
   color: #595757;
   font-size: 1rem;
 }
 
-html .content-opinion-add .container .form form .form-check .form-check-label,
-body .content-opinion-add .container .form form .form-check .form-check-label {
+html .content-opinion-add .container .form .form-check .form-check-label,
+body .content-opinion-add .container .form .form-check .form-check-label {
   line-height: 2.25rem;
-  margin: 0 2.5rem 1.25rem 2.5rem;
+  margin-right: 1.25rem;
 }
 
-html .content-opinion-add .container .form form .form-check .form-check-input,
-body .content-opinion-add .container .form form .form-check .form-check-input {
+html .content-opinion-add .container .form .form-check .form-check-input,
+body .content-opinion-add .container .form .form-check .form-check-input {
   margin-left: 0px;
+  margin-right: 15px;
 }
 
-html .content-opinion-add .container .form form .form-check .check-input,
-body .content-opinion-add .container .form form .form-check .check-input {
+html .content-opinion-add .container .form .form-check .check-input,
+body .content-opinion-add .container .form .form-check .check-input {
   background-color: #fff;
   width: 100%;
   height: 40px;
   border-radius: 5px;
-  border: 1px solid #a7e5ff;
+  border: 1px solid #cccccc;
   padding: 0 0.625rem;
   color: #595757;
   font-size: 1.125rem;
@@ -4377,18 +4824,18 @@ body .content-opinion-add .container .form form .form-check .check-input {
   margin: 1.25rem 0;
 }
 
-html .content-opinion-add .container .form form .form-check .h4,
-body .content-opinion-add .container .form form .form-check .h4 {
+html .content-opinion-add .container .form .form-check .h4,
+body .content-opinion-add .container .form .form-check .h4 {
   color: #0290cc;
   font-size: 1.125rem;
   font-weight: bold;
   padding: 0;
   margin: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 
-html .content-opinion-add .container .form form span,
-body .content-opinion-add .container .form form span {
+html .content-opinion-add .container .form span,
+body .content-opinion-add .container .form span {
   color: #da382d;
   margin-left: 3px;
 }
