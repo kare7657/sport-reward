@@ -2942,20 +2942,13 @@ body .content-signup .form-personal span {
 html .content-signup .form-personal .form-body,
 body .content-signup .form-personal .form-body {
   width: 55vh;
-  padding: 3.75rem 0;
+  padding: 3.75rem;
 }
 
 @media (max-width: 768px) {
   html .content-signup .form-personal .form-body,
   body .content-signup .form-personal .form-body {
-    padding: 0;
-  }
-}
-
-@media (max-width: 568px) {
-  html .content-signup .form-personal .form-body,
-  body .content-signup .form-personal .form-body {
-    padding: 0 2.8125rem;
+    padding: 2.8125rem;
   }
 }
 
@@ -3412,7 +3405,6 @@ html .content-signup .form-group .form-body .form-left,
 body .content-signup .form-group .form-body .form-left {
   width: 30%;
   border-radius: 20px 0 0 20px;
-  padding-top: 1.875rem;
   padding-left: 3.75rem;
   padding-right: 1.875rem;
 }
@@ -3428,7 +3420,6 @@ html .content-signup .form-group .form-body .form-right,
 body .content-signup .form-group .form-body .form-right {
   width: 30%;
   border-radius: 0 20px 20px 0;
-  padding-top: 1.875rem;
   padding-right: 3.75rem;
   padding-left: 1.875rem;
 }

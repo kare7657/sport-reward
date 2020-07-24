@@ -366,13 +366,12 @@ body {
             flex-wrap: wrap;
             .form-body {
                 width: 55vh;
-                padding: $padding-S 0;
+                padding: $padding-S;
 
                 @include pad() {
-                    padding: 0;
+                    padding: $padding-XS*1.5;
                 }
                 @include mobile-L() {
-                    padding: 0 $padding-XS * 1.5;
                 }
                 h4 {
                     margin: 0;
@@ -465,7 +464,6 @@ body {
                 .form-left {
                     width: 30%;
                     border-radius: 20px 0 0 20px;
-                    padding-top: $padding-XS;
                     padding-left: $padding-S;
                     padding-right: $padding-XS;
                     @include mobile-L() {
@@ -475,7 +473,6 @@ body {
                 .form-right {
                     width: 30%;
                     border-radius: 0 20px 20px 0;
-                    padding-top: $padding-XS;
                     padding-right: $padding-S;
                     padding-left: $padding-XS;
                     @include mobile-L() {
