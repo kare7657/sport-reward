@@ -601,27 +601,48 @@ body {
         @include papers();
         .container {
             .btn-gp {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                flex-direction: column;
                 margin-top: $margin-S;
-
-                .member-btn {
-                    width: 530px;
-                    height: 130px;
-                    background-color: $blue;
-                    border-radius: 80px;
+                a {
+                    // width: 60%;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
                     margin-bottom: $margin-S;
 
-                    p {
-                        color: $title-W;
-                        font-size: 32px;
-                        font-weight: bold;
+                    .member-btn {
+                        width: 500px;
+                        height: 120px;
+                        background-color: $blue;
+                        border-radius: 80px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            color: $title-W;
+                            font-size: 32px;
+                            font-weight: bold;
+                        }
+                        img {
+                            margin-right: $margin-XS;
+                        }
+                    }
+                    #case-apply {
+                        background-color: $green;
+                        &:hover {
+                            background-color: $title-BK;
+                        }
+                    }
+                    #case-list {
+                        background-color: $blue;
+                        &:hover {
+                            background-color: $title-BK;
+                        }
+                    }
+                    #change-data {
+                        background-color: $text;
+                        &:hover {
+                            background-color: $title-BK;
+                        }
                     }
                 }
             }

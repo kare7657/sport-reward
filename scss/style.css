@@ -3680,26 +3680,24 @@ body .content-member .btn {
 
 html .content-member .container .btn-gp,
 body .content-member .container .btn-gp {
-  width: 100%;
+  margin-top: 2.5rem;
+}
+
+html .content-member .container .btn-gp a,
+body .content-member .container .btn-gp a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-html .content-member .container .btn-gp .member-btn,
-body .content-member .container .btn-gp .member-btn {
-  width: 530px;
-  height: 130px;
+html .content-member .container .btn-gp a .member-btn,
+body .content-member .container .btn-gp a .member-btn {
+  width: 500px;
+  height: 120px;
   background-color: #0290cc;
   border-radius: 80px;
   display: -webkit-box;
@@ -3711,14 +3709,48 @@ body .content-member .container .btn-gp .member-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 2.5rem;
 }
 
-html .content-member .container .btn-gp .member-btn p,
-body .content-member .container .btn-gp .member-btn p {
+html .content-member .container .btn-gp a .member-btn p,
+body .content-member .container .btn-gp a .member-btn p {
   color: white;
   font-size: 32px;
   font-weight: bold;
+}
+
+html .content-member .container .btn-gp a .member-btn img,
+body .content-member .container .btn-gp a .member-btn img {
+  margin-right: 1.25rem;
+}
+
+html .content-member .container .btn-gp a #case-apply,
+body .content-member .container .btn-gp a #case-apply {
+  background-color: #90c541;
+}
+
+html .content-member .container .btn-gp a #case-apply:hover,
+body .content-member .container .btn-gp a #case-apply:hover {
+  background-color: black;
+}
+
+html .content-member .container .btn-gp a #case-list,
+body .content-member .container .btn-gp a #case-list {
+  background-color: #0290cc;
+}
+
+html .content-member .container .btn-gp a #case-list:hover,
+body .content-member .container .btn-gp a #case-list:hover {
+  background-color: black;
+}
+
+html .content-member .container .btn-gp a #change-data,
+body .content-member .container .btn-gp a #change-data {
+  background-color: #595757;
+}
+
+html .content-member .container .btn-gp a #change-data:hover,
+body .content-member .container .btn-gp a #change-data:hover {
+  background-color: black;
 }
 
 html .content-member-data,
