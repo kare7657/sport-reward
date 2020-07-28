@@ -24,13 +24,13 @@
             <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
             <h1>案件申請</h1>
             <div class="btn">
-                <button class="active-blue" type="button"
-                    onclick="javascript:location.href='case-apply.html'">運動獎金</button>
-                <button type="button" onclick="javascript:location.href='case-apply-training.html'">培訓獎助金</button>
+                <button type="button" onclick="javascript:location.href='case-apply.html'">運動獎金</button>
+                <button class="active-green" type="button"
+                    onclick="javascript:location.href='case-apply-training.html'">培訓獎助金</button>
                 <button type="button" onclick="javascript:location.href='case-apply-group.html'">民間團體補助</button>
             </div>
             <form class="form-apply">
-                <div class="title">
+                <div class="title green">
                     <h3>案件資料</h3>
                 </div>
                 <div class="form-gp">
@@ -41,13 +41,28 @@
                         <option value="list3">選單3</option>
                     </select>
                 </div>
-                <div class="form-gp">
-                    <label for="competition-name">比賽名稱<span>*</span></label>
-                    <input type="text" name="competition-name" id="competition-name">
+                <div class="form-check">
+                    <h4>比賽項目<span>*</span></h4>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="competition-TNG" name="competition-kind" class="custom-control-input">
+                        <label class="custom-control-label" for="competition-TNG">全國運</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="competition-NHCA" name="competition-kind" class="custom-control-input">
+                        <label class="custom-control-label" for="competition-NHCA">全中運</label>
+                    </div>
+                </div>
+                <div class="form-gp w100-Full">
+                    <h4>比賽日期<span>*</span></h4>
+                    <div class="date">
+                        <input type="date" id="from" name="from">
+                        <h4>~</h4>
+                        <input type="date" id="to" name="to">
+                    </div>
                 </div>
                 <div class="form-gp">
-                    <label for="competition-place">比賽地點<span>*</span></label>
-                    <input type="text" name="competition-place" id="competition-place">
+                    <label for="competition-location">比賽地點<span>*</span></label>
+                    <input type="text" name="competition-location" id="competition-location">
                 </div>
                 <div class="form-gp">
                     <label for="competition-team">參加單位(隊)數<span>*</span></label>
@@ -77,112 +92,66 @@
                     <label for="result">成績<span>*</span></label>
                     <input type="text" name="result" id="result" placeholder="分數/秒數">
                 </div>
-                <div class="form-gp">
-                    <label for="continuous">連霸數<span>*</span></label>
-                    <input type="text" name="continuous" id="continuous">
-                </div>
-                <div class="title">
+                <div class="title green">
                     <h3>選手資料</h3>
                 </div>
-                <div class="list" id="list-contestant">
-                    <a class="close"><i class="fas fa-times"></i></a>
-                    <div class="form-gp">
-                        <label for="contestant-ID">選手身份證字號<span>*</span></label>
-                        <input type="text" name="contestant-ID" id="contestant-ID">
-                    </div>
-                    <div class="form-gp">
-                        <label for="contestant-name">選手姓名<span>*</span></label>
-                        <input type="text" name="contestant-name" id="contestant-name">
-                    </div>
-                    <div class="form-gp">
-                        <label for="contestant-email">選手Email<span>*</span></label>
-                        <input type="email" name="contestant-email" id="contestant-email">
-                    </div>
-                    <div class="form-gp">
-                        <label for="contestant-clause">選手適用條款<span>*</span></label>
-                        <select name="type" id="contestant-clause">
-                            <option value="list1">第三點第一項第七款</option>
-                            <option value="list2">選單2</option>
-                            <option value="list3">選單3</option>
-                        </select>
-                    </div>
-                    <div class="form-gp">
-                        <label for="content-service">選手條款說明</label>
-                        <textarea name="content-service" id="content-service" rows="2"></textarea>
-                    </div>
-                    <div class="form-gp">
-                        <label for="contestant-award">選手獎金<span>*</span></label>
-                        <input type="number" name="contestant-award" id="contestant-award">
-                    </div>
-                    <h4>選手帳戶</h4>
-                    <div class="form-gp">
-                        <label for="contestant-bankname">銀行名稱<span>*</span></label>
-                        <input type="text" name="contestant-bankname" id="contestant-bankname">
-                    </div>
-                    <div class="form-gp">
-                        <label for="contestant-branchname">分行名稱<span>*</span></label>
-                        <input type="text" name="contestant-branchname" id="contestant-branchname">
-                    </div>
-                    <div class="form-gp">
-                        <label for="contestant-bankcode">銀行代碼<span>*</span></label>
-                        <input type="number" name="contestant-bankcode" id="contestant-bankcode">
-                    </div>
-                    <div class="form-gp">
-                        <label for="contestant-account-number">帳號<span>*</span></label>
-                        <input type="number" name="contestant-account-number" id="contestant-account-number">
-                    </div>
-                </div>
-                <!-- <div class="list" id="list-next"></div> -->
-                <button class="add-btn" type="button">增加選手資料(團體)</button>
-                <div class="title">
-                    <h3>教練資料</h3>
+                <div class="form-gp">
+                    <label for="contestant-ID">選手身份證字號<span>*</span></label>
+                    <input type="text" name="contestant-ID" id="contestant-ID">
                 </div>
                 <div class="form-gp">
-                    <label for="instructor-ID">教練身份證字號<span>*</span></label>
-                    <input type="text" name="instructor-ID" id="instructor-ID">
+                    <label for="contestant-name">選手姓名<span>*</span></label>
+                    <input type="text" name="contestant-name" id="contestant-name">
                 </div>
                 <div class="form-gp">
-                    <label for="instructor-name">教練姓名<span>*</span></label>
-                    <input type="text" name="instructor-name" id="instructor-name">
+                    <label for="contestant-email">選手Email<span>*</span></label>
+                    <input type="email" name="contestant-email" id="contestant-email">
                 </div>
                 <div class="form-gp">
-                    <label for="instructor-email">教練Email<span>*</span></label>
-                    <input type="email" name="instructor-email" id="instructor-email">
-                </div>
-                <div class="form-gp">
-                    <label for="instructor-clause">教練適用條款<span>*</span></label>
-                    <select name="type" id="instructor-clause">
+                    <label for="contestant-clause">選手適用條款<span>*</span></label>
+                    <select name="type" id="contestant-clause">
                         <option value="list1">第三點第一項第七款</option>
                         <option value="list2">選單2</option>
                         <option value="list3">選單3</option>
                     </select>
                 </div>
-                <div class="form-gp">
-                    <label for="instructor-service">教練條款說明</label>
-                    <textarea name="instructor-service" id="instructor-service" rows="2"></textarea>
+                <div class="form-gp w100-Full">
+                    <label for="content-service">選手條款說明</label>
+                    <textarea name="content-service" id="content-service" rows="2"></textarea>
                 </div>
                 <div class="form-gp">
-                    <label for="instructor-award">教練獎金<span>*</span></label>
-                    <input type="number" name="instructor-award" id="instructor-award">
+                    <label for="contestant-award">選手獎金<span>*</span></label>
+                    <input type="number" name="contestant-award" id="contestant-award">
                 </div>
-                <h4>教練帳戶</h4>
+                <div class="form-check">
+                    <h4>申請發放次<span>*</span></h4>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="award-first" name="award-frequency" class="custom-control-input">
+                        <label class="custom-control-label" for="award-first">第一次</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="award-second" name="award-frequency" class="custom-control-input">
+                        <label class="custom-control-label" for="award-second">第二次</label>
+                    </div>
+                </div>
+                <h4 class="green-h4">選手帳戶</h4>
                 <div class="form-gp">
-                    <label for="instructor-bankname">銀行名稱<span>*</span></label>
-                    <input type="text" name="instructor-bankname" id="instructor-bankname">
+                    <label for="contestant-bankname">銀行名稱<span>*</span></label>
+                    <input type="text" name="contestant-bankname" id="contestant-bankname">
                 </div>
                 <div class="form-gp">
-                    <label for="instructor-branchname">分行名稱<span>*</span></label>
-                    <input type="text" name="instructor-branchname" id="instructor-branchname">
+                    <label for="contestant-branchname">分行名稱<span>*</span></label>
+                    <input type="text" name="contestant-branchname" id="contestant-branchname">
                 </div>
                 <div class="form-gp">
-                    <label for="instructor-bankcode">銀行代碼<span>*</span></label>
-                    <input type="number" name="instructor-bankcode" id="instructor-bankcode">
+                    <label for="contestant-bankcode">銀行代碼<span>*</span></label>
+                    <input type="number" name="contestant-bankcode" id="contestant-bankcode">
                 </div>
                 <div class="form-gp">
-                    <label for="instructor-account-number">帳號<span>*</span></label>
-                    <input type="number" name="instructor-account-number" id="instructor-account-number">
+                    <label for="contestant-account-number">帳號<span>*</span></label>
+                    <input type="number" name="contestant-account-number" id="contestant-account-number">
                 </div>
-                <div class="title">
+                <div class="title green">
                     <h3>佐證資料</h3>
                 </div>
                 <div class="form-gp">
@@ -280,31 +249,6 @@
         });
     </script>
 
-    <!-- 案件申請list -->
-    <script>
-        var close = document.querySelector(".close")
-        var list = document.querySelector(".list")
-        var add_btn = document.querySelector(".add-btn")
-
-        // function add_list() {
-        //     var x = document.getElementById("list-contestant").innerHTML;
-        //     document.getElementById("list-next").innerHTML = x;
-        // }
-        close.onclick = function () {
-            list.classList.add("hide")
-        }
-        add_btn.onclick = function () {
-            // add_list()
-            list.classList.remove("hide")
-            // if (list.classList.contains("hide")) {
-            // list.classList.remove("hide")
-            // add_list()
-            // } else {
-            // list.classList.add("hide")
-            // add_list()
-            // }
-        }
-    </script>
 </body>
 
 </html>

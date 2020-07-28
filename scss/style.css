@@ -3892,9 +3892,15 @@ body .content-case-apply .container .btn button {
   }
 }
 
-html .content-case-apply .container .btn .active-blue-btn,
-body .content-case-apply .container .btn .active-blue-btn {
+html .content-case-apply .container .btn .active-blue,
+body .content-case-apply .container .btn .active-blue {
   background-color: #0290cc;
+  color: white;
+}
+
+html .content-case-apply .container .btn .active-green,
+body .content-case-apply .container .btn .active-green {
+  background-color: #90c541;
   color: white;
 }
 
@@ -3930,15 +3936,30 @@ body .content-case-apply .container .form-apply .title h3 {
   margin-bottom: 0;
 }
 
+html .content-case-apply .container .form-apply .green,
+body .content-case-apply .container .form-apply .green {
+  border-bottom: solid 3px #90c541;
+}
+
+html .content-case-apply .container .form-apply .green h3,
+body .content-case-apply .container .form-apply .green h3 {
+  color: #90c541;
+}
+
 html .content-case-apply .container .form-apply .form-gp,
-body .content-case-apply .container .form-apply .form-gp {
+html .content-case-apply .container .form-apply .form-check,
+body .content-case-apply .container .form-apply .form-gp,
+body .content-case-apply .container .form-apply .form-check {
   width: 45%;
   margin-top: 1.25rem;
+  padding: 0;
 }
 
 @media (max-width: 568px) {
   html .content-case-apply .container .form-apply .form-gp,
-  body .content-case-apply .container .form-apply .form-gp {
+  html .content-case-apply .container .form-apply .form-check,
+  body .content-case-apply .container .form-apply .form-gp,
+  body .content-case-apply .container .form-apply .form-check {
     width: 100%;
     padding: 0 2.8125rem;
   }
@@ -3948,10 +3969,18 @@ html .content-case-apply .container .form-apply .form-gp label,
 html .content-case-apply .container .form-apply .form-gp input,
 html .content-case-apply .container .form-apply .form-gp select,
 html .content-case-apply .container .form-apply .form-gp textarea,
+html .content-case-apply .container .form-apply .form-check label,
+html .content-case-apply .container .form-apply .form-check input,
+html .content-case-apply .container .form-apply .form-check select,
+html .content-case-apply .container .form-apply .form-check textarea,
 body .content-case-apply .container .form-apply .form-gp label,
 body .content-case-apply .container .form-apply .form-gp input,
 body .content-case-apply .container .form-apply .form-gp select,
-body .content-case-apply .container .form-apply .form-gp textarea {
+body .content-case-apply .container .form-apply .form-gp textarea,
+body .content-case-apply .container .form-apply .form-check label,
+body .content-case-apply .container .form-apply .form-check input,
+body .content-case-apply .container .form-apply .form-check select,
+body .content-case-apply .container .form-apply .form-check textarea {
   width: 100%;
   margin-bottom: 0.625rem;
   font-size: 1.125rem;
@@ -3960,16 +3989,115 @@ body .content-case-apply .container .form-apply .form-gp textarea {
 }
 
 html .content-case-apply .container .form-apply .form-gp label,
-body .content-case-apply .container .form-apply .form-gp label {
+html .content-case-apply .container .form-apply .form-check label,
+body .content-case-apply .container .form-apply .form-gp label,
+body .content-case-apply .container .form-apply .form-check label {
   font-weight: bold;
 }
 
 html .content-case-apply .container .form-apply .form-gp p,
 html .content-case-apply .container .form-apply .form-gp span,
+html .content-case-apply .container .form-apply .form-check p,
+html .content-case-apply .container .form-apply .form-check span,
 body .content-case-apply .container .form-apply .form-gp p,
-body .content-case-apply .container .form-apply .form-gp span {
+body .content-case-apply .container .form-apply .form-gp span,
+body .content-case-apply .container .form-apply .form-check p,
+body .content-case-apply .container .form-apply .form-check span {
   color: #da382d;
   margin-left: 3px;
+}
+
+html .content-case-apply .container .form-apply .form-gp h4,
+html .content-case-apply .container .form-apply .form-check h4,
+body .content-case-apply .container .form-apply .form-gp h4,
+body .content-case-apply .container .form-apply .form-check h4 {
+  color: #595757;
+  padding: 0;
+}
+
+html .content-case-apply .container .form-apply .form-gp .date,
+html .content-case-apply .container .form-apply .form-check .date,
+body .content-case-apply .container .form-apply .form-gp .date,
+body .content-case-apply .container .form-apply .form-check .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .form-gp .date,
+  html .content-case-apply .container .form-apply .form-check .date,
+  body .content-case-apply .container .form-apply .form-gp .date,
+  body .content-case-apply .container .form-apply .form-check .date {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+html .content-case-apply .container .form-apply .form-gp .date input,
+html .content-case-apply .container .form-apply .form-gp .date label,
+html .content-case-apply .container .form-apply .form-check .date input,
+html .content-case-apply .container .form-apply .form-check .date label,
+body .content-case-apply .container .form-apply .form-gp .date input,
+body .content-case-apply .container .form-apply .form-gp .date label,
+body .content-case-apply .container .form-apply .form-check .date input,
+body .content-case-apply .container .form-apply .form-check .date label {
+  width: 45%;
+  margin-top: 0.625rem;
+}
+
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .form-gp .date input,
+  html .content-case-apply .container .form-apply .form-gp .date label,
+  html .content-case-apply .container .form-apply .form-check .date input,
+  html .content-case-apply .container .form-apply .form-check .date label,
+  body .content-case-apply .container .form-apply .form-gp .date input,
+  body .content-case-apply .container .form-apply .form-gp .date label,
+  body .content-case-apply .container .form-apply .form-check .date input,
+  body .content-case-apply .container .form-apply .form-check .date label {
+    width: 100%;
+  }
+}
+
+html .content-case-apply .container .form-apply .form-gp .date h4,
+html .content-case-apply .container .form-apply .form-check .date h4,
+body .content-case-apply .container .form-apply .form-gp .date h4,
+body .content-case-apply .container .form-apply .form-check .date h4 {
+  width: unset;
+}
+
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .form-gp .date h4,
+  html .content-case-apply .container .form-apply .form-check .date h4,
+  body .content-case-apply .container .form-apply .form-gp .date h4,
+  body .content-case-apply .container .form-apply .form-check .date h4 {
+    display: none;
+  }
+}
+
+html .content-case-apply .container .form-apply .form-check input,
+html .content-case-apply .container .form-apply .form-check label,
+body .content-case-apply .container .form-apply .form-check input,
+body .content-case-apply .container .form-apply .form-check label {
+  width: unset;
+}
+
+html .content-case-apply .container .form-apply .form-check .custom-control-label,
+body .content-case-apply .container .form-apply .form-check .custom-control-label {
+  margin-top: 0.625rem;
+  font-weight: normal;
+  font-size: 1.125rem;
+  color: #595757;
 }
 
 html .content-case-apply .container .form-apply .w100-Full,
@@ -4090,12 +4218,27 @@ body .content-case-apply .container .form-apply .hide {
 html .content-case-apply .container .form-apply h4,
 body .content-case-apply .container .form-apply h4 {
   width: 100%;
-  margin-bottom: 0;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  margin: 0;
+  margin-top: 0.625rem;
 }
 
 @media (max-width: 568px) {
   html .content-case-apply .container .form-apply h4,
   body .content-case-apply .container .form-apply h4 {
+    padding: 0 2.8125rem;
+  }
+}
+
+html .content-case-apply .container .form-apply .green-h4,
+body .content-case-apply .container .form-apply .green-h4 {
+  color: #90c541;
+}
+
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .green-h4,
+  body .content-case-apply .container .form-apply .green-h4 {
     padding: 0 2.8125rem;
   }
 }
