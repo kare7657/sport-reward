@@ -702,6 +702,10 @@ body {
                     background-color: $green;
                     color: $title-W;
                 }
+                .active-black {
+                    background-color: $title-BK;
+                    color: $title-W;
+                }
             }
             .form-apply {
                 width: 100%;
@@ -724,6 +728,12 @@ body {
                         color: $green;
                     }
                     border-bottom: solid 3px $green;
+                }
+                .black {
+                    h3 {
+                        color: $title-BK;
+                    }
+                    border-bottom: solid 3px $title-BK;
                 }
                 .form-gp,
                 .form-check {
@@ -752,7 +762,7 @@ body {
                         color: $red;
                         margin-left: 3px;
                     }
-                    h4{
+                    h4 {
                         color: $text;
                         padding: 0;
                         margin: 0;
@@ -802,15 +812,15 @@ body {
                     justify-content: flex-start;
                     flex-wrap: wrap;
                     flex-direction: column;
-                    label,
-                    input,
-                    select,
-                    textarea {
-                        width: 45%;
-                        @include mobile-L() {
-                            width: 100%;
-                        }
-                    }
+                    // label,
+                    // input,
+                    // select,
+                    // textarea {
+                    //     width: 45%;
+                    //     @include mobile-L() {
+                    //         width: 100%;
+                    //     }
+                    // }
                 }
                 .list {
                     width: 100%;
@@ -819,7 +829,7 @@ body {
                     display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
-                    padding: $padding-S;
+                    padding: $padding-XS $padding-S;
                     margin: $margin-XS 0;
                     position: relative;
                     transition: 0.5s;
@@ -843,12 +853,10 @@ body {
                         padding: $padding-XS 0;
                         border-radius: 0px;
                     }
-                    .form-gp:nth-child(1) {
-                        margin-top: 0;
-                    }
-                    .form-gp:nth-child(2) {
-                        margin-top: 0;
-                    }
+                    // .form-gp:nth-child(1),
+                    // .form-gp:nth-child(2) {
+                    //     margin-top: 0;
+                    // }
                 }
                 .hide {
                     display: none;
@@ -865,6 +873,12 @@ body {
                 }
                 .green-h4 {
                     color: $green;
+                    @include mobile-L() {
+                        padding: 0 $padding-XS * 1.5;
+                    }
+                }
+                .black-h4 {
+                    color: $title-BK;
                     @include mobile-L() {
                         padding: 0 $padding-XS * 1.5;
                     }

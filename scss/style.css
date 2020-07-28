@@ -3904,6 +3904,12 @@ body .content-case-apply .container .btn .active-green {
   color: white;
 }
 
+html .content-case-apply .container .btn .active-black,
+body .content-case-apply .container .btn .active-black {
+  background-color: black;
+  color: white;
+}
+
 html .content-case-apply .container .form-apply,
 body .content-case-apply .container .form-apply {
   width: 100%;
@@ -3944,6 +3950,16 @@ body .content-case-apply .container .form-apply .green {
 html .content-case-apply .container .form-apply .green h3,
 body .content-case-apply .container .form-apply .green h3 {
   color: #90c541;
+}
+
+html .content-case-apply .container .form-apply .black,
+body .content-case-apply .container .form-apply .black {
+  border-bottom: solid 3px black;
+}
+
+html .content-case-apply .container .form-apply .black h3,
+body .content-case-apply .container .form-apply .black h3 {
+  color: black;
 }
 
 html .content-case-apply .container .form-apply .form-gp,
@@ -4123,30 +4139,6 @@ body .content-case-apply .container .form-apply .w100 {
           flex-direction: column;
 }
 
-html .content-case-apply .container .form-apply .w100 label,
-html .content-case-apply .container .form-apply .w100 input,
-html .content-case-apply .container .form-apply .w100 select,
-html .content-case-apply .container .form-apply .w100 textarea,
-body .content-case-apply .container .form-apply .w100 label,
-body .content-case-apply .container .form-apply .w100 input,
-body .content-case-apply .container .form-apply .w100 select,
-body .content-case-apply .container .form-apply .w100 textarea {
-  width: 45%;
-}
-
-@media (max-width: 568px) {
-  html .content-case-apply .container .form-apply .w100 label,
-  html .content-case-apply .container .form-apply .w100 input,
-  html .content-case-apply .container .form-apply .w100 select,
-  html .content-case-apply .container .form-apply .w100 textarea,
-  body .content-case-apply .container .form-apply .w100 label,
-  body .content-case-apply .container .form-apply .w100 input,
-  body .content-case-apply .container .form-apply .w100 select,
-  body .content-case-apply .container .form-apply .w100 textarea {
-    width: 100%;
-  }
-}
-
 html .content-case-apply .container .form-apply .list,
 body .content-case-apply .container .form-apply .list {
   width: 100%;
@@ -4160,7 +4152,7 @@ body .content-case-apply .container .form-apply .list {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 3.75rem;
+  padding: 1.875rem 3.75rem;
   margin: 1.25rem 0;
   position: relative;
   -webkit-transition: 0.5s;
@@ -4201,16 +4193,6 @@ body .content-case-apply .container .form-apply .list .fas:hover {
   }
 }
 
-html .content-case-apply .container .form-apply .list .form-gp:nth-child(1),
-body .content-case-apply .container .form-apply .list .form-gp:nth-child(1) {
-  margin-top: 0;
-}
-
-html .content-case-apply .container .form-apply .list .form-gp:nth-child(2),
-body .content-case-apply .container .form-apply .list .form-gp:nth-child(2) {
-  margin-top: 0;
-}
-
 html .content-case-apply .container .form-apply .hide,
 body .content-case-apply .container .form-apply .hide {
   display: none;
@@ -4240,6 +4222,18 @@ body .content-case-apply .container .form-apply .green-h4 {
 @media (max-width: 568px) {
   html .content-case-apply .container .form-apply .green-h4,
   body .content-case-apply .container .form-apply .green-h4 {
+    padding: 0 2.8125rem;
+  }
+}
+
+html .content-case-apply .container .form-apply .black-h4,
+body .content-case-apply .container .form-apply .black-h4 {
+  color: black;
+}
+
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .black-h4,
+  body .content-case-apply .container .form-apply .black-h4 {
     padding: 0 2.8125rem;
   }
 }
