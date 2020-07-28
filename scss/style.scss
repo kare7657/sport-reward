@@ -600,14 +600,20 @@ body {
     .content-member {
         @include papers();
         .container {
+            h1 {
+                @include mobile-L() {
+                    margin-top: 0;
+                }
+            }
             .btn-gp {
                 margin-top: $margin-S;
                 a {
-                    // width: 60%;
                     display: flex;
                     justify-content: center;
                     margin-bottom: $margin-S;
-
+                    @include mobile-L() {
+                        margin-bottom: $margin-XS * 1.5;
+                    }
                     .member-btn {
                         width: 500px;
                         height: 120px;
@@ -616,30 +622,38 @@ body {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-
+                        @include mobile-L() {
+                            width: 100%;
+                            height: 80px;
+                        }
                         p {
                             color: $title-W;
                             font-size: 32px;
                             font-weight: bold;
+                            @include mobile-L() {
+                                font-size: $size-h2;
+                            }
                         }
                         img {
                             margin-right: $margin-XS;
+                            @include mobile-L() {
+                                width: 50px;
+                                height: 50px;
+                            }
                         }
                     }
                     #case-apply {
                         background-color: $green;
-                        &:hover {
-                            background-color: $title-BK;
-                        }
                     }
                     #case-list {
                         background-color: $blue;
-                        &:hover {
-                            background-color: $title-BK;
-                        }
                     }
                     #change-data {
                         background-color: $text;
+                    }
+                    #case-apply,
+                    #case-list,
+                    #change-data {
                         &:hover {
                             background-color: $title-BK;
                         }
@@ -648,6 +662,183 @@ body {
             }
         }
     }
+    //案件申請
+    .content-case-apply {
+        @include papers();
+        .container {
+            @include mobile-L() {
+                margin: 0;
+                width: 100%;
+            }
+            h1 {
+                @include mobile-L() {
+                    margin: 0;
+                    margin-bottom: $margin-XS;
+                }
+            }
+            .btn {
+                margin: $margin-XS/2 0;
+                @include mobile-L() {
+                    margin: 0;
+                    padding: 0 $padding-XS * 1.5;
+                }
+                button {
+                    height: 40px;
+                    margin: 0 $margin-XS/2;
+                    border-radius: 40px;
+                    background-color: $light-gray;
+                    color: $text;
+                    @include mobile-L() {
+                        width: 100%;
+                        margin: 0;
+                        margin-bottom: $margin-XS;
+                    }
+                }
+                .active-blue-btn {
+                    background-color: $blue;
+                    color: $title-W;
+                }
+            }
+            .form-apply {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .title {
+                    width: 100%;
+                    @include mobile-L() {
+                        margin: 0 $padding-XS * 1.5;
+                    }
+                    h3 {
+                        margin-bottom: 0;
+                    }
+                    border-bottom: solid 3px $blue;
+                    margin-bottom: $margin-XS/2;
+                }
+                .form-gp {
+                    width: 45%;
+                    margin-top: $margin-XS;
+                    @include mobile-L() {
+                        width: 100%;
+                        padding: 0 $padding-XS * 1.5;
+                    }
+                    label,
+                    input,
+                    select,
+                    textarea {
+                        width: 100%;
+                        margin-bottom: $margin-XS/2;
+                        font-size: $size-h4;
+                        line-height: $size-h4 * 1.5;
+                        color: $text;
+                    }
+                    label {
+                        font-weight: bold;
+                    }
+                    p,
+                    span {
+                        color: $red;
+                        margin-left: 3px;
+                    }
+                }
+                .w100-Full {
+                    width: 100%;
+                }
+                .w100 {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    label,
+                    input,
+                    select,
+                    textarea {
+                        width: 45%;
+                        @include mobile-L() {
+                            width: 100%;
+                        }
+                    }
+                }
+                .list {
+                    width: 100%;
+                    background-color: $table-blue;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    padding: $padding-S;
+                    margin: $margin-XS 0;
+                    position: relative;
+                    transition: 0.5s;
+                    .close {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        cursor: pointer;
+                    }
+                    .fas {
+                        color: $blue;
+                        font-size: $size-h1 * 1.2;
+                        &:hover {
+                            color: $title-BK;
+                        }
+                    }
+                    @include pad() {
+                        padding: $padding-XS;
+                    }
+                    @include mobile-L() {
+                        padding: $padding-XS 0;
+                        border-radius: 0px;
+                    }
+                    .form-gp:nth-child(1) {
+                        margin-top: 0;
+                    }
+                    .form-gp:nth-child(2) {
+                        margin-top: 0;
+                    }
+                }
+                .hide{
+                    display: none;
+                }
+                h4 {
+                    width: 100%;
+                    margin-bottom: 0;
+                    @include mobile-L() {
+                        padding: 0 $padding-XS * 1.5;
+                    }
+                }
+                button {
+                    margin: $margin-XS/2 0;
+                    @include mobile-L() {
+                        margin: $margin-XS $padding-XS * 1.5;
+                    }
+                }
+                .form-submit {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    text-align: center;
+                    margin-top: $margin-S;
+                    .btn {
+                        width: 100%;
+                        margin-top: $margin-XS;
+                        input {
+                            width: 30%;
+                            margin: 0;
+                            @include mobile-L() {
+                                width: 100%;
+                                margin-bottom: $margin-XS;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     //會員資料修改
     .content-member-data {
         @include papers();
@@ -660,51 +851,9 @@ body {
                 }
                 padding-bottom: 0;
             }
-            .member-data {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                .form {
-                    @include form();
-                    width: 60%;
-                    padding: $padding-S;
-                    margin-bottom: $margin-M;
-                    @include web-S {
-                        width: 70%;
-                        padding: $padding-S $padding-S * 1.5;
-                    }
-                    @include pad {
-                        width: 100%;
-                        padding: $padding-S 0;
-                    }
-                    @include mobile-L() {
-                        padding: $padding-XS * 1.5 0;
-                    }
-                    .btn {
-                        width: 100%;
-                        padding: 0 $padding-S;
-                        margin: $margin-XS 0;
-                        text-align: center;
-                        @include web-S {
-                            padding: 0;
-                        }
-                        @include pad() {
-                            padding: 0 $padding-M;
-                        }
-                        @include mobile-L() {
-                            padding: 0px $padding-XS * 1.5;
-                            margin-bottom: 0;
-                        }
-                        input[type="submit"] {
-                            margin: 0;
-                            text-align: center;
-                            height: 44px;
-                        }
-                    }
-                }
-            }
         }
     }
+
     //意見反映
     .content-opinion {
         @include papers();
