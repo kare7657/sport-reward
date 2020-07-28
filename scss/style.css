@@ -4013,6 +4013,7 @@ body .content-case-apply .container .form-apply .form-gp h4,
 body .content-case-apply .container .form-apply .form-check h4 {
   color: #595757;
   padding: 0;
+  margin: 0;
 }
 
 html .content-case-apply .container .form-apply .form-gp .date,
