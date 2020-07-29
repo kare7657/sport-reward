@@ -144,7 +144,7 @@
   font-weight: bold;
   line-height: 40px;
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 0;
   text-decoration: none;
   margin-top: 1.25rem;
@@ -1371,7 +1371,7 @@ body .content-information h1 {
 @media (max-width: 568px) {
   html .content-information h1,
   body .content-information h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -1712,7 +1712,7 @@ body .content-news h1 {
 @media (max-width: 568px) {
   html .content-news h1,
   body .content-news h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -1956,7 +1956,7 @@ body .content-news-info h1 {
 @media (max-width: 568px) {
   html .content-news-info h1,
   body .content-news-info h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -2085,7 +2085,7 @@ body .content-link h1 {
 @media (max-width: 568px) {
   html .content-link h1,
   body .content-link h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -2121,6 +2121,13 @@ body .content-link span {
 html .content-link .container h1,
 body .content-link .container h1 {
   margin: 1.25rem 0;
+}
+
+@media (max-width: 568px) {
+  html .content-link .container h1,
+  body .content-link .container h1 {
+    margin-top: 0;
+  }
 }
 
 html .content-link .container .logo-gp,
@@ -2189,7 +2196,7 @@ body .content-login h1 {
 @media (max-width: 568px) {
   html .content-login h1,
   body .content-login h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -2381,14 +2388,7 @@ html .content-login .container .form .form-gp input[disabled],
 html .content-login .container .form .form-gp select[disabled],
 body .content-login .container .form .form-gp input[disabled],
 body .content-login .container .form .form-gp select[disabled] {
-  background-color: #a7e5ff;
-}
-
-html .content-login .container .form .form-gp input[disabled]:hover,
-html .content-login .container .form .form-gp select[disabled]:hover,
-body .content-login .container .form .form-gp input[disabled]:hover,
-body .content-login .container .form .form-gp select[disabled]:hover {
-  background-color: #a7e5ff;
+  background-color: #cccccc;
 }
 
 html .content-login .container .form .form-gp textarea,
@@ -2553,7 +2553,10 @@ body .content-login .container .form span {
   html .content-login .container .form,
   body .content-login .container .form {
     width: 100%;
-    padding: 2.8125rem 0;
+    padding-top: 0.9375rem;
+    padding-bottom: 2.8125rem;
+    background-color: white;
+    margin: 0;
   }
 }
 
@@ -2584,7 +2587,7 @@ body .content-signup h1 {
 @media (max-width: 568px) {
   html .content-signup h1,
   body .content-signup h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -2631,7 +2634,7 @@ body .content-signup .container {
   }
   html .content-signup .container h1,
   body .content-signup .container h1 {
-    margin: 0;
+    margin-top: 0;
     text-align: center;
   }
 }
@@ -2812,14 +2815,7 @@ html .content-signup .form-personal .form-gp input[disabled],
 html .content-signup .form-personal .form-gp select[disabled],
 body .content-signup .form-personal .form-gp input[disabled],
 body .content-signup .form-personal .form-gp select[disabled] {
-  background-color: #a7e5ff;
-}
-
-html .content-signup .form-personal .form-gp input[disabled]:hover,
-html .content-signup .form-personal .form-gp select[disabled]:hover,
-body .content-signup .form-personal .form-gp input[disabled]:hover,
-body .content-signup .form-personal .form-gp select[disabled]:hover {
-  background-color: #a7e5ff;
+  background-color: #cccccc;
 }
 
 html .content-signup .form-personal .form-gp textarea,
@@ -3246,14 +3242,7 @@ html .content-signup .form-group .form-gp input[disabled],
 html .content-signup .form-group .form-gp select[disabled],
 body .content-signup .form-group .form-gp input[disabled],
 body .content-signup .form-group .form-gp select[disabled] {
-  background-color: #a7e5ff;
-}
-
-html .content-signup .form-group .form-gp input[disabled]:hover,
-html .content-signup .form-group .form-gp select[disabled]:hover,
-body .content-signup .form-group .form-gp input[disabled]:hover,
-body .content-signup .form-group .form-gp select[disabled]:hover {
-  background-color: #a7e5ff;
+  background-color: #cccccc;
 }
 
 html .content-signup .form-group .form-gp textarea,
@@ -3676,7 +3665,7 @@ body .content-member h1 {
 @media (max-width: 568px) {
   html .content-member h1,
   body .content-member h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -3830,7 +3819,7 @@ body .content-case-apply h1 {
 @media (max-width: 568px) {
   html .content-case-apply h1,
   body .content-case-apply h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -4341,7 +4330,7 @@ body .content-member-data h1 {
 @media (max-width: 568px) {
   html .content-member-data h1,
   body .content-member-data h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -4402,7 +4391,7 @@ body .content-case-list h1 {
 @media (max-width: 568px) {
   html .content-case-list h1,
   body .content-case-list h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 
@@ -4709,7 +4698,7 @@ body .content-FQA h1 {
 @media (max-width: 568px) {
   html .content-FQA h1,
   body .content-FQA h1 {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
 }
 

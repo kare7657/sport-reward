@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員資料修改</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+
+    <!-- 會員資料修改-團體 -->
+    <section class="content-signup">
+        <div class="container">
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+            <h1>會員資料修改</h1>
+        </div>
+        <form class="form-group">
+            <div class="form-body">
+                <div class="form-left">
+                    <div class="form-gp">
+                        <label for="account">帳號</label>
+                        <input type="text" name="account" id="account" disabled placeholder="account123">
+                    </div>
+                    <div class="form-gp">
+                        <label for="password">密碼<span>*</span></label>
+                        <input type="password" name="password" id="password">
+                        <p>★密碼需8至15字，且包含 英文字母大寫、英文字母小寫、數字、符號等四項中三項之組成，也不得與帳號相同；★密碼有區分大小寫，不可輸入單引號、雙引號以及空白。</p>
+                    </div>
+                    <div class="form-gp">
+                        <label for="password-again">再次輸入密碼<span>*</span></label>
+                        <input type="password" name="password" id="password-again">
+                    </div>
+                    <div class="form-gp">
+                        <label for="group-name">團體/公司名稱</label>
+                        <input type="text" name="group-name" id="group-name">
+                    </div>
+                    <div class="form-gp">
+                        <label for="email">信箱</label>
+                        <input type="email" name="email" id="email" placeholder="simple@com.tw">
+                    </div>
+                    <div class="form-gp">
+                        <label for="register-city">立案縣市</label>
+                        <select name="type" id="register-city">
+                            <option value="list1">台中市</option>
+                            <option value="list2">選單2</option>
+                            <option value="list3">選單3</option>
+                        </select>
+                    </div>
+                    <div class="form-gp">
+                        <label for="register-number">立案字號</label>
+                        <input type="text" name="register-number" id="register-number">
+                    </div>
+                    <div class="form-gp">
+                        <label for="group-number">統一編號</label>
+                        <input type="text" name="group-number" id="group-number">
+                    </div>
+                    <div class="form-gp">
+                        <label for="representative">負責人姓名</label>
+                        <input type="text" name="representative" id="representative">
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div class="form-gp">
+                        <label for="group-phone">團體/公司電話</label>
+                        <input type="number" name="group-phone" id="group-phone">
+                    </div>
+                    <div class="form-gp">
+                        <label for="group-address">團體/公司地址</label>
+                        <select name="type" class="city mr-4" id="group-city">
+                            <option value="list1">台中市</option>
+                            <option value="list2">選單2</option>
+                            <option value="list3">選單3</option>
+                        </select>
+                        <select name="type" class="area mr-4" id="group-area">
+                            <option value="list1">中區</option>
+                            <option value="list2">選單2</option>
+                            <option value="list3">選單3</option>
+                        </select>
+                        <input class="postcode" type="text" name="group-postcode" id="group-postcode"
+                            placeholder="郵遞區號">
+                        <input type="text" name="group-address" id="group-address" placeholder="地址">
+                    </div>
+                    <div class="form-gp">
+                        <label for="contact-name">聯絡人姓名</label>
+                        <input type="text" name="contact-name" id="contact-name">
+                    </div>
+                    <div class="form-gp">
+                        <label for="contact-title">聯絡人職稱</label>
+                        <input type="text" name="contact-title" id="contact-title">
+                    </div>
+                    <div class="form-gp">
+                        <label for="contact-phone">聯絡電話</label>
+                        <input type="number" name="contact-phone" id="contact-phone">
+                    </div>
+                    <div class="form-gp">
+                        <label for="contact-mobile">聯絡手機</label>
+                        <input type="number" name="contact-mobile" id="contact-mobile">
+                    </div>
+                    <div class="form-gp">
+                        <label for="group-fax">傳真</label>
+                        <input type="number" name="group-fax" id="group-fax">
+                    </div>
+                    <div class="form-gp mb-2">
+                        <label for="contact-address">聯絡地址</label>
+                        <select name="type" class="city mr-4" id="contact-city">
+                            <option value="list1">台中市</option>
+                            <option value="list2">選單2</option>
+                            <option value="list3">選單3</option>
+                        </select>
+                        <select name="type" class="area mr-4" id="contact-area">
+                            <option value="list1">中區</option>
+                            <option value="list2">選單2</option>
+                            <option value="list3">選單3</option>
+                        </select>
+                        <input class="postcode" type="text" name="contact-postcode" id="contact-postcode"
+                            placeholder="郵遞區號">
+                        <input type="text" name="contact-address" id="contact-address" placeholder="地址">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input form-check-inline" type="checkbox" value="" id="same-address">
+                        <label class="form-check-label form-check-inline" for="same-address">
+                            同團體/公司地址
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-bot">
+                <div class="form-submit">
+                    <input class="form-check-input form-check-inline" type="checkbox" value="" id="private-agree">
+                    <label class="form-check-label" for="private-agree">
+                        我同意<a href="private.html" target="_blank">隱私權保護政策</a><span>*</span>
+                    </label>
+                    <div class="btn">
+                        <input type="submit" value="送出表單">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- footer -->
+    <script src="js/footer.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            // loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+        });
+    </script>
+
+    <!-- 最新消息list -->
+    <script>
+        var btn1 = document.querySelector(".btn1")
+        var btn2 = document.querySelector(".btn2")
+        var list1 = document.querySelector(".list1")
+        var list2 = document.querySelector(".list2")
+        function clear_active() {
+            btn1.classList.remove("active-btn")
+            btn2.classList.remove("active-btn")
+            list1.classList.remove("active-list")
+            list2.classList.remove("active-list")
+        }
+        btn1.onclick = function () {
+            clear_active()
+            btn1.classList.add("active-btn")
+            list1.classList.add("active-list")
+        }
+        btn2.onclick = function () {
+            clear_active()
+            btn2.classList.add("active-btn")
+            list2.classList.add("active-list")
+        }
+    </script>
+</body>
+
+</html>

@@ -155,7 +155,7 @@
             font-weight: bold;
             line-height: 40px;
             border: none;
-            border-radius: 8px;
+            border-radius: 20px;
             padding: 0;
             text-decoration: none;
             margin-top: $margin-XS;
@@ -991,7 +991,7 @@
         margin-bottom: $margin-XS;
         text-align: center;
         @include mobile-L() {
-            margin: $margin-S 0;
+            margin: $margin-XS 0;
         }
     }
     h3 {
@@ -1136,10 +1136,7 @@
                 }
             }
             &[disabled] {
-                background-color: $light-sky;
-                &:hover {
-                    background-color: $light-sky;
-                }
+                background-color: $gray;
             }
         }
         textarea {
