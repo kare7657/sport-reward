@@ -280,7 +280,7 @@
     </script>
 
     <!-- 案件申請list -->
-    <script>
+    <!-- <script>
         var close = document.querySelector(".close")
         var list = document.querySelector(".list")
         var add_btn = document.querySelector(".add-btn")
@@ -291,7 +291,14 @@
         add_btn.onclick = function () {
             list.classList.remove("hide")
         }
+    </script> -->
+    <script>
+        $(".add-btn").click(function () {
+            $('#list-contestant').after('<div class="list"</div>');
+        })
     </script>
+
+
 </body>
 
 </html>
