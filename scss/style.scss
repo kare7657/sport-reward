@@ -311,7 +311,7 @@ body {
                 padding: $padding-S;
                 @include web-S() {
                     width: 55%;
-                    padding: $padding-S $padding-S * 1.5;
+                    padding: $padding-XS $padding-S * 1.5;
                 }
                 @include pad() {
                     width: 80%;
@@ -943,7 +943,7 @@ body {
     }
 
     //意見反映
-    .content-opinion {
+    .content-case-list {
         @include papers();
         @include text-important();
         .container {
@@ -952,66 +952,8 @@ body {
                 width: 100%;
                 h1 {
                     text-align: center;
-                }
-            }
-            .notice {
-                border: solid 3px $light-sky;
-                border-radius: 20px;
-                padding: $padding-XS * 1.5 $padding-S;
-                margin-bottom: $margin-M;
-                @include mobile-L() {
-                    padding: $padding-XS $padding-XS * 1.5;
-                    border: unset;
-                    border-radius: unset;
-                    margin-bottom: $margin-XS;
-                }
-                .top {
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    @include pad() {
-                        flex-direction: column;
-                        flex-wrap: wrap;
-                    }
-                    .left {
-                        width: 20%;
-                        display: flex;
-                        justify-content: center;
-                        @include pad() {
-                            width: 100%;
-                            margin-bottom: $margin-S;
-                        }
-                        img {
-                            width: 100px;
-                            @include mobile-L() {
-                                width: 35%;
-                            }
-                        }
-                    }
-                    .right {
-                        width: 80%;
-                        @include pad() {
-                            width: 100%;
-                        }
-                    }
-                }
-                .bot {
-                    text-align: center;
-                    width: 100%;
-                    margin-top: $margin-S;
-                    .btn {
-                        width: 100%;
-                        padding: 0;
+                    @include mobile-L() {
                         margin: 0;
-                        button {
-                            width: 20%;
-                            @include pad() {
-                                width: 45%;
-                            }
-                            @include mobile-L() {
-                                width: 100%;
-                            }
-                        }
                     }
                 }
             }
@@ -1019,66 +961,72 @@ body {
                 display: flex;
                 justify-content: flex-start;
                 width: 100%;
-                margin-bottom: $margin-S;
+                margin-top: $margin-S;
+                margin-bottom: $margin-XS;
                 @include mobile-L() {
                     flex-wrap: wrap;
                     justify-content: space-between;
                     padding: 0 $padding-XS * 1.5;
+                    margin-top: $margin-XS;
                 }
                 label {
                     font-size: $size-h4;
                     line-height: $size-h4 * 1.5;
                     font-weight: bold;
-                    color: $blue;
+                    color: $text;
+                    margin-right: $margin-XS;
+                    @include mobile-L() {
+                        display: none;
+                    }
                 }
                 input {
-                    width: 12%;
+                    width: 15%;
                     height: 30px;
-                    margin: 0 $margin-XS;
+                    margin: 0;
+                    margin-right: $margin-XS;
                     background-color: unset;
-                    border: solid 1px $blue;
+                    border: solid 1px $text;
                     border-radius: 8px;
                     font-size: $size-p;
                     line-height: $size-p * 2;
                     color: $text;
                     text-align: center;
                     @include pad() {
-                        width: 20%;
-                        margin-bottom: $margin-XS * 1.5;
+                        width: 25%;
                     }
                     @include mobile-L() {
-                        width: 40%;
+                        width: 100%;
                         margin: unset;
-                        margin-bottom: $margin-XS * 1.5;
+                        margin-bottom: $margin-XS;
                     }
                     &[type="submit"],
                     &[type="reset"] {
                         width: 9%;
                         padding: 5px 0;
                         background-color: unset;
-                        border: solid 1px $blue;
+                        border: solid 1px $text;
                         border-radius: 8px;
                         font-size: $size-h4;
                         line-height: $size-h4;
-                        color: $blue;
+                        color: $text;
                         font-family: "微軟正黑體";
                         font-weight: bold;
                         @include pad() {
-                            width: 17%;
+                            width: 20%;
                         }
                         @include mobile-L() {
                             width: 100%;
                         }
                         &:hover {
-                            background-color: $blue;
+                            background-color: $title-BK;
                             transition-duration: 0.5s;
                             color: $title-W;
                         }
                     }
                 }
             }
-            .opinion-list {
-                @include opinion-list();
+            .case-list {
+                @include case-list();
             }
             .pagination {
                 @include mobile-L() {
@@ -1087,38 +1035,26 @@ body {
             }
         }
     }
-    //新增意見
-    .content-opinion-add {
+    //FAQ
+    .content-FQA {
         @include papers();
         .container {
             @include mobile-L() {
                 width: 100%;
                 margin: 0;
-                padding-bottom: 0;
                 h1 {
                     text-align: center;
+                    @include mobile-L() {
+                        margin: 0;
+                        margin-bottom: $margin-XS;
+                    }
                 }
             }
-            .form {
-                @include form();
-                margin: auto;
-                width: 60%;
-                padding: $padding-S;
-
-                @include web-S() {
-                    width: 60%;
-                }
-                @include pad() {
-                    width: 100%;
-                    padding: $padding-S 0;
-                }
-                @include mobile-L() {
-                    padding: $padding-XS 0;
-                }
-                .g-recaptcha {
-                    width: 100%;
-                    margin-bottom: $margin-XS * 2;
-                }
+            .collapse-gp {
+                @include collapse;
+            }
+            span{
+                color: $blue;
             }
         }
     }

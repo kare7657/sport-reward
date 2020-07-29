@@ -91,10 +91,6 @@
   font-family: "Font Awesome 5 Free" !important;
 }
 
-* :focus {
-  outline: #0290cc dotted 2px !important;
-}
-
 * .clearfix {
   clear: both;
 }
@@ -2398,6 +2394,7 @@ body .content-login .container .form .form-gp a {
   color: #0290cc;
   font-weight: bold;
   text-align: center;
+  width: 100%;
 }
 
 html .content-login .container .form .form-gp a:hover,
@@ -2525,7 +2522,7 @@ body .content-login .container .form span {
   html .content-login .container .form,
   body .content-login .container .form {
     width: 55%;
-    padding: 3.75rem 5.625rem;
+    padding: 1.875rem 5.625rem;
   }
 }
 
@@ -2829,6 +2826,7 @@ body .content-signup .form-personal .form-gp a {
   color: #0290cc;
   font-weight: bold;
   text-align: center;
+  width: 100%;
 }
 
 html .content-signup .form-personal .form-gp a:hover,
@@ -3263,6 +3261,7 @@ body .content-signup .form-group .form-gp a {
   color: #0290cc;
   font-weight: bold;
   text-align: center;
+  width: 100%;
 }
 
 html .content-signup .form-group .form-gp a:hover,
@@ -4369,39 +4368,39 @@ body .content-member-data .btn {
   }
 }
 
-html .content-opinion,
-body .content-opinion {
+html .content-case-list,
+body .content-case-list {
   padding-top: 120px;
 }
 
 @media (max-width: 768px) {
-  html .content-opinion,
-  body .content-opinion {
+  html .content-case-list,
+  body .content-case-list {
     padding-top: 60px;
   }
 }
 
-html .content-opinion h1,
-body .content-opinion h1 {
+html .content-case-list h1,
+body .content-case-list h1 {
   margin-bottom: 1.25rem;
   text-align: center;
 }
 
 @media (max-width: 568px) {
-  html .content-opinion h1,
-  body .content-opinion h1 {
+  html .content-case-list h1,
+  body .content-case-list h1 {
     margin: 2.5rem 0;
   }
 }
 
-html .content-opinion h3,
-body .content-opinion h3 {
+html .content-case-list h3,
+body .content-case-list h3 {
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
-html .content-opinion ul,
-body .content-opinion ul {
+html .content-case-list ul,
+body .content-case-list ul {
   padding: 0;
   margin: 0;
   font-size: 1rem;
@@ -4409,151 +4408,41 @@ body .content-opinion ul {
   color: #595757;
 }
 
-html .content-opinion .btn,
-body .content-opinion .btn {
+html .content-case-list .btn,
+body .content-case-list .btn {
   width: 100%;
   padding: 0;
   text-align: center;
   margin: 3.75rem 0;
 }
 
-html .content-opinion span,
-body .content-opinion span {
+html .content-case-list span,
+body .content-case-list span {
   color: #0290cc;
   font-weight: bold;
 }
 
 @media (max-width: 568px) {
-  html .content-opinion .container,
-  body .content-opinion .container {
+  html .content-case-list .container,
+  body .content-case-list .container {
     margin: 0;
     width: 100%;
   }
-  html .content-opinion .container h1,
-  body .content-opinion .container h1 {
+  html .content-case-list .container h1,
+  body .content-case-list .container h1 {
     text-align: center;
   }
 }
 
-html .content-opinion .container .notice,
-body .content-opinion .container .notice {
-  border: solid 3px #a7e5ff;
-  border-radius: 20px;
-  padding: 2.8125rem 3.75rem;
-  margin-bottom: 3.75rem;
-}
-
-@media (max-width: 568px) {
-  html .content-opinion .container .notice,
-  body .content-opinion .container .notice {
-    padding: 1.875rem 2.8125rem;
-    border: unset;
-    border-radius: unset;
-    margin-bottom: 1.25rem;
+@media (max-width: 568px) and (max-width: 568px) {
+  html .content-case-list .container h1,
+  body .content-case-list .container h1 {
+    margin: 0;
   }
 }
 
-html .content-opinion .container .notice .top,
-body .content-opinion .container .notice .top {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (max-width: 768px) {
-  html .content-opinion .container .notice .top,
-  body .content-opinion .container .notice .top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-html .content-opinion .container .notice .top .left,
-body .content-opinion .container .notice .top .left {
-  width: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media (max-width: 768px) {
-  html .content-opinion .container .notice .top .left,
-  body .content-opinion .container .notice .top .left {
-    width: 100%;
-    margin-bottom: 2.5rem;
-  }
-}
-
-html .content-opinion .container .notice .top .left img,
-body .content-opinion .container .notice .top .left img {
-  width: 100px;
-}
-
-@media (max-width: 568px) {
-  html .content-opinion .container .notice .top .left img,
-  body .content-opinion .container .notice .top .left img {
-    width: 35%;
-  }
-}
-
-html .content-opinion .container .notice .top .right,
-body .content-opinion .container .notice .top .right {
-  width: 80%;
-}
-
-@media (max-width: 768px) {
-  html .content-opinion .container .notice .top .right,
-  body .content-opinion .container .notice .top .right {
-    width: 100%;
-  }
-}
-
-html .content-opinion .container .notice .bot,
-body .content-opinion .container .notice .bot {
-  text-align: center;
-  width: 100%;
-  margin-top: 2.5rem;
-}
-
-html .content-opinion .container .notice .bot .btn,
-body .content-opinion .container .notice .bot .btn {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-html .content-opinion .container .notice .bot .btn button,
-body .content-opinion .container .notice .bot .btn button {
-  width: 20%;
-}
-
-@media (max-width: 768px) {
-  html .content-opinion .container .notice .bot .btn button,
-  body .content-opinion .container .notice .bot .btn button {
-    width: 45%;
-  }
-}
-
-@media (max-width: 568px) {
-  html .content-opinion .container .notice .bot .btn button,
-  body .content-opinion .container .notice .bot .btn button {
-    width: 100%;
-  }
-}
-
-html .content-opinion .container .filter,
-body .content-opinion .container .filter {
+html .content-case-list .container .filter,
+body .content-case-list .container .filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4561,36 +4450,47 @@ body .content-opinion .container .filter {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 568px) {
-  html .content-opinion .container .filter,
-  body .content-opinion .container .filter {
+  html .content-case-list .container .filter,
+  body .content-case-list .container .filter {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 2.8125rem;
+    margin-top: 1.25rem;
   }
 }
 
-html .content-opinion .container .filter label,
-body .content-opinion .container .filter label {
+html .content-case-list .container .filter label,
+body .content-case-list .container .filter label {
   font-size: 1.125rem;
   line-height: 1.6875rem;
   font-weight: bold;
-  color: #0290cc;
+  color: #595757;
+  margin-right: 1.25rem;
 }
 
-html .content-opinion .container .filter input,
-body .content-opinion .container .filter input {
-  width: 12%;
+@media (max-width: 568px) {
+  html .content-case-list .container .filter label,
+  body .content-case-list .container .filter label {
+    display: none;
+  }
+}
+
+html .content-case-list .container .filter input,
+body .content-case-list .container .filter input {
+  width: 15%;
   height: 30px;
-  margin: 0 1.25rem;
+  margin: 0;
+  margin-right: 1.25rem;
   background-color: unset;
-  border: solid 1px #0290cc;
+  border: solid 1px #595757;
   border-radius: 8px;
   font-size: 1rem;
   line-height: 2rem;
@@ -4599,69 +4499,63 @@ body .content-opinion .container .filter input {
 }
 
 @media (max-width: 768px) {
-  html .content-opinion .container .filter input,
-  body .content-opinion .container .filter input {
-    width: 20%;
-    margin-bottom: 1.875rem;
+  html .content-case-list .container .filter input,
+  body .content-case-list .container .filter input {
+    width: 25%;
   }
 }
 
 @media (max-width: 568px) {
-  html .content-opinion .container .filter input,
-  body .content-opinion .container .filter input {
-    width: 40%;
+  html .content-case-list .container .filter input,
+  body .content-case-list .container .filter input {
+    width: 100%;
     margin: unset;
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.25rem;
   }
 }
 
-html .content-opinion .container .filter input[type="submit"], html .content-opinion .container .filter input[type="reset"],
-body .content-opinion .container .filter input[type="submit"],
-body .content-opinion .container .filter input[type="reset"] {
+html .content-case-list .container .filter input[type="submit"], html .content-case-list .container .filter input[type="reset"],
+body .content-case-list .container .filter input[type="submit"],
+body .content-case-list .container .filter input[type="reset"] {
   width: 9%;
   padding: 5px 0;
   background-color: unset;
-  border: solid 1px #0290cc;
+  border: solid 1px #595757;
   border-radius: 8px;
   font-size: 1.125rem;
   line-height: 1.125rem;
-  color: #0290cc;
+  color: #595757;
   font-family: "微軟正黑體";
   font-weight: bold;
 }
 
 @media (max-width: 768px) {
-  html .content-opinion .container .filter input[type="submit"], html .content-opinion .container .filter input[type="reset"],
-  body .content-opinion .container .filter input[type="submit"],
-  body .content-opinion .container .filter input[type="reset"] {
-    width: 17%;
+  html .content-case-list .container .filter input[type="submit"], html .content-case-list .container .filter input[type="reset"],
+  body .content-case-list .container .filter input[type="submit"],
+  body .content-case-list .container .filter input[type="reset"] {
+    width: 20%;
   }
 }
 
 @media (max-width: 568px) {
-  html .content-opinion .container .filter input[type="submit"], html .content-opinion .container .filter input[type="reset"],
-  body .content-opinion .container .filter input[type="submit"],
-  body .content-opinion .container .filter input[type="reset"] {
+  html .content-case-list .container .filter input[type="submit"], html .content-case-list .container .filter input[type="reset"],
+  body .content-case-list .container .filter input[type="submit"],
+  body .content-case-list .container .filter input[type="reset"] {
     width: 100%;
   }
 }
 
-html .content-opinion .container .filter input[type="submit"]:hover, html .content-opinion .container .filter input[type="reset"]:hover,
-body .content-opinion .container .filter input[type="submit"]:hover,
-body .content-opinion .container .filter input[type="reset"]:hover {
-  background-color: #0290cc;
+html .content-case-list .container .filter input[type="submit"]:hover, html .content-case-list .container .filter input[type="reset"]:hover,
+body .content-case-list .container .filter input[type="submit"]:hover,
+body .content-case-list .container .filter input[type="reset"]:hover {
+  background-color: black;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   color: white;
 }
 
-html .content-opinion .container .opinion-list,
-body .content-opinion .container .opinion-list {
-  margin-bottom: 3.75rem;
-}
-
-html .content-opinion .container .opinion-list .list,
-body .content-opinion .container .opinion-list .list {
+html .content-case-list .container .case-list .list,
+body .content-case-list .container .case-list .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4670,141 +4564,150 @@ body .content-opinion .container .opinion-list .list {
 }
 
 @media (max-width: 768px) {
-  html .content-opinion .container .opinion-list .list,
-  body .content-opinion .container .opinion-list .list {
+  html .content-case-list .container .case-list .list,
+  body .content-case-list .container .case-list .list {
     padding-left: 1.875rem;
-  }
-  html .content-opinion .container .opinion-list .list .c1,
-  body .content-opinion .container .opinion-list .list .c1 {
-    width: 80%;
-  }
-  html .content-opinion .container .opinion-list .list .c2,
-  body .content-opinion .container .opinion-list .list .c2 {
-    display: none;
-  }
-  html .content-opinion .container .opinion-list .list .c3,
-  body .content-opinion .container .opinion-list .list .c3 {
-    width: 20%;
   }
 }
 
 @media (max-width: 568px) {
-  html .content-opinion .container .opinion-list .list,
-  body .content-opinion .container .opinion-list .list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0.625rem 2.8125rem;
-  }
-  html .content-opinion .container .opinion-list .list .c1,
-  body .content-opinion .container .opinion-list .list .c1 {
+  html .content-case-list .container .case-list .list,
+  body .content-case-list .container .case-list .list {
+    padding: 0.625rem 1.875rem;
     width: 100%;
   }
-  html .content-opinion .container .opinion-list .list .c3,
-  body .content-opinion .container .opinion-list .list .c3 {
+  html .content-case-list .container .case-list .list .c1,
+  body .content-case-list .container .case-list .list .c1 {
+    width: 30%;
+    margin-right: 15px;
+  }
+  html .content-case-list .container .case-list .list .c2,
+  body .content-case-list .container .case-list .list .c2 {
+    width: 50%;
+    margin-right: 10px;
+  }
+  html .content-case-list .container .case-list .list .c3,
+  body .content-case-list .container .case-list .list .c3 {
     display: none;
+  }
+  html .content-case-list .container .case-list .list .c4,
+  body .content-case-list .container .case-list .list .c4 {
+    width: 20%;
   }
 }
 
-html .content-opinion .container .opinion-list .list a,
-body .content-opinion .container .opinion-list .list a {
+html .content-case-list .container .case-list .list a,
+body .content-case-list .container .case-list .list a {
   color: #595757;
   font-size: 1rem;
   line-height: 2rem;
 }
 
-html .content-opinion .container .opinion-list .head,
-body .content-opinion .container .opinion-list .head {
+html .content-case-list .container .case-list .head,
+body .content-case-list .container .case-list .head {
   background-color: #0290cc;
-  border-radius: 20px 20px 0 0;
 }
 
 @media (max-width: 568px) {
-  html .content-opinion .container .opinion-list .head,
-  body .content-opinion .container .opinion-list .head {
+  html .content-case-list .container .case-list .head,
+  body .content-case-list .container .case-list .head {
     border-radius: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
-html .content-opinion .container .opinion-list .head p,
-body .content-opinion .container .opinion-list .head p {
+html .content-case-list .container .case-list .head p,
+body .content-case-list .container .case-list .head p {
   color: white;
   font-weight: bold;
 }
 
-html .content-opinion .container .opinion-list .c1,
-body .content-opinion .container .opinion-list .c1 {
-  width: 60%;
+html .content-case-list .container .case-list .c1,
+body .content-case-list .container .case-list .c1 {
+  width: 25%;
 }
 
-html .content-opinion .container .opinion-list .c2,
-body .content-opinion .container .opinion-list .c2 {
-  width: 30%;
+html .content-case-list .container .case-list .c2,
+body .content-case-list .container .case-list .c2 {
+  width: 35%;
 }
 
-html .content-opinion .container .opinion-list .c3,
-body .content-opinion .container .opinion-list .c3 {
+html .content-case-list .container .case-list .c3,
+body .content-case-list .container .case-list .c3 {
+  width: 35%;
+}
+
+html .content-case-list .container .case-list .c4,
+body .content-case-list .container .case-list .c4 {
   width: 10%;
 }
 
-html .content-opinion .container .opinion-list .blue,
-body .content-opinion .container .opinion-list .blue {
+html .content-case-list .container .case-list .blue,
+body .content-case-list .container .case-list .blue {
   background-color: #e5f1f9;
 }
 
-html .content-opinion .container .opinion-list .white,
-body .content-opinion .container .opinion-list .white {
+html .content-case-list .container .case-list .white,
+body .content-case-list .container .case-list .white {
   background-color: white;
 }
 
-html .content-opinion .container .opinion-list h4,
-body .content-opinion .container .opinion-list h4 {
+html .content-case-list .container .case-list h4,
+body .content-case-list .container .case-list h4 {
   text-align: right;
 }
 
 @media (max-width: 568px) {
-  html .content-opinion .container .pagination,
-  body .content-opinion .container .pagination {
+  html .content-case-list .container .pagination,
+  body .content-case-list .container .pagination {
     padding: 0 2.8125rem;
   }
 }
 
-html .content-opinion-add,
-body .content-opinion-add {
+html .content-FQA,
+body .content-FQA {
   padding-top: 120px;
 }
 
 @media (max-width: 768px) {
-  html .content-opinion-add,
-  body .content-opinion-add {
+  html .content-FQA,
+  body .content-FQA {
     padding-top: 60px;
   }
 }
 
-html .content-opinion-add h1,
-body .content-opinion-add h1 {
+html .content-FQA h1,
+body .content-FQA h1 {
   margin-bottom: 1.25rem;
   text-align: center;
 }
 
 @media (max-width: 568px) {
-  html .content-opinion-add h1,
-  body .content-opinion-add h1 {
+  html .content-FQA h1,
+  body .content-FQA h1 {
     margin: 2.5rem 0;
   }
 }
 
-html .content-opinion-add h3,
-body .content-opinion-add h3 {
+html .content-FQA h3,
+body .content-FQA h3 {
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
-html .content-opinion-add ul,
-body .content-opinion-add ul {
+html .content-FQA ul,
+body .content-FQA ul {
   padding: 0;
   margin: 0;
   font-size: 1rem;
@@ -4812,8 +4715,8 @@ body .content-opinion-add ul {
   color: #595757;
 }
 
-html .content-opinion-add .btn,
-body .content-opinion-add .btn {
+html .content-FQA .btn,
+body .content-FQA .btn {
   width: 100%;
   padding: 0;
   text-align: center;
@@ -4821,345 +4724,127 @@ body .content-opinion-add .btn {
 }
 
 @media (max-width: 568px) {
-  html .content-opinion-add .container,
-  body .content-opinion-add .container {
+  html .content-FQA .container,
+  body .content-FQA .container {
     width: 100%;
     margin: 0;
-    padding-bottom: 0;
   }
-  html .content-opinion-add .container h1,
-  body .content-opinion-add .container h1 {
+  html .content-FQA .container h1,
+  body .content-FQA .container h1 {
     text-align: center;
   }
 }
 
-html .content-opinion-add .container .form,
-body .content-opinion-add .container .form {
-  background-color: #eeefef;
-  border-radius: 20px;
-  margin: auto;
-  width: 60%;
-  padding: 3.75rem;
-}
-
-@media (max-width: 1024px) {
-  html .content-opinion-add .container .form,
-  body .content-opinion-add .container .form {
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: 568px) {
-  html .content-opinion-add .container .form,
-  body .content-opinion-add .container .form {
-    border-radius: unset;
+@media (max-width: 568px) and (max-width: 568px) {
+  html .content-FQA .container h1,
+  body .content-FQA .container h1 {
+    margin: 0;
     margin-bottom: 1.25rem;
   }
 }
 
-html .content-opinion-add .container .form .form-gp,
-body .content-opinion-add .container .form .form-gp {
-  padding: 0 3.75rem;
-  margin: 0;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-bottom: 1.25rem;
-  text-align: justify;
-}
-
-html .content-opinion-add .container .form .form-gp p,
-body .content-opinion-add .container .form .form-gp p {
-  width: 100%;
-  font-size: 1rem;
-  line-height: 1.7rem;
-  padding-top: 0.625rem;
-}
-
-@media (max-width: 1024px) {
-  html .content-opinion-add .container .form .form-gp,
-  body .content-opinion-add .container .form .form-gp {
-    padding: 0;
-  }
+html .content-FQA .container .collapse-gp,
+body .content-FQA .container .collapse-gp {
+  padding: 0 7.5rem;
 }
 
 @media (max-width: 768px) {
-  html .content-opinion-add .container .form .form-gp,
-  body .content-opinion-add .container .form .form-gp {
-    padding: 0 5.625rem;
+  html .content-FQA .container .collapse-gp,
+  body .content-FQA .container .collapse-gp {
+    padding: 0 1.875rem;
   }
 }
 
-@media (max-width: 568px) {
-  html .content-opinion-add .container .form .form-gp,
-  body .content-opinion-add .container .form .form-gp {
-    padding: 0 2.8125rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-html .content-opinion-add .container .form .form-gp label,
-body .content-opinion-add .container .form .form-gp label {
+html .content-FQA .container .collapse-gp .collapsible,
+body .content-FQA .container .collapse-gp .collapsible {
   width: 100%;
-  padding: 0;
-  margin-right: 3.75rem;
-  color: #0290cc;
-  font-size: 1.125rem;
-  font-weight: bold;
-}
-
-html .content-opinion-add .container .form .form-gp input[type="submit"], html .content-opinion-add .container .form .form-gp input[type="reset"],
-html .content-opinion-add .container .form .form-gp select[type="submit"],
-html .content-opinion-add .container .form .form-gp select[type="reset"],
-body .content-opinion-add .container .form .form-gp input[type="submit"],
-body .content-opinion-add .container .form .form-gp input[type="reset"],
-body .content-opinion-add .container .form .form-gp select[type="submit"],
-body .content-opinion-add .container .form .form-gp select[type="reset"] {
-  width: 100%;
-  height: 40px;
-  background-color: #0290cc;
-  color: white;
-  font-size: 1.125rem;
-  font-weight: bold;
-  line-height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.625rem 1.875rem;
   border: none;
-  border-radius: 20px;
-  padding: 0;
-  text-decoration: none;
-  margin-top: 1.25rem;
-}
-
-html .content-opinion-add .container .form .form-gp input[type="submit"]:hover, html .content-opinion-add .container .form .form-gp input[type="reset"]:hover,
-html .content-opinion-add .container .form .form-gp select[type="submit"]:hover,
-html .content-opinion-add .container .form .form-gp select[type="reset"]:hover,
-body .content-opinion-add .container .form .form-gp input[type="submit"]:hover,
-body .content-opinion-add .container .form .form-gp input[type="reset"]:hover,
-body .content-opinion-add .container .form .form-gp select[type="submit"]:hover,
-body .content-opinion-add .container .form .form-gp select[type="reset"]:hover {
-  background-color: black;
-}
-
-html .content-opinion-add .container .form .form-gp input[type="button"],
-html .content-opinion-add .container .form .form-gp select[type="button"],
-body .content-opinion-add .container .form .form-gp input[type="button"],
-body .content-opinion-add .container .form .form-gp select[type="button"] {
-  width: 100%;
-  height: 40px;
-  background-color: transparent;
-  border: solid 1px #0290cc;
-  border-radius: 20px;
-  color: #0290cc;
-  font-size: 1.125rem;
-  font-weight: bold;
-  line-height: 40px;
-  padding: 0;
-  text-decoration: none;
-  margin-top: 1.25rem;
-}
-
-html .content-opinion-add .container .form .form-gp input[type="button"]:hover,
-html .content-opinion-add .container .form .form-gp select[type="button"]:hover,
-body .content-opinion-add .container .form .form-gp input[type="button"]:hover,
-body .content-opinion-add .container .form .form-gp select[type="button"]:hover {
-  background-color: black;
-  color: white;
-  border: solid 1px black;
-}
-
-html .content-opinion-add .container .form .form-gp input[disabled],
-html .content-opinion-add .container .form .form-gp select[disabled],
-body .content-opinion-add .container .form .form-gp input[disabled],
-body .content-opinion-add .container .form .form-gp select[disabled] {
-  background-color: #a7e5ff;
-}
-
-html .content-opinion-add .container .form .form-gp input[disabled]:hover,
-html .content-opinion-add .container .form .form-gp select[disabled]:hover,
-body .content-opinion-add .container .form .form-gp input[disabled]:hover,
-body .content-opinion-add .container .form .form-gp select[disabled]:hover {
-  background-color: #a7e5ff;
-}
-
-html .content-opinion-add .container .form .form-gp textarea,
-body .content-opinion-add .container .form .form-gp textarea {
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid #cccccc;
-  padding: 0 0.625rem;
-  color: #595757;
-  font-size: 1.125rem;
-  line-height: 1.6875rem;
-}
-
-html .content-opinion-add .container .form .form-gp a,
-body .content-opinion-add .container .form .form-gp a {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  margin-top: 1.25rem;
-  color: #0290cc;
-  font-weight: bold;
-  text-align: center;
-}
-
-html .content-opinion-add .container .form .form-gp a:hover,
-body .content-opinion-add .container .form .form-gp a:hover {
-  color: black !important;
-}
-
-html .content-opinion-add .container .form .form-check,
-body .content-opinion-add .container .form .form-check {
-  padding: 0 3.75rem;
-  margin: 0;
-  margin-bottom: 1.25rem;
-}
-
-@media (max-width: 1024px) {
-  html .content-opinion-add .container .form .form-check,
-  body .content-opinion-add .container .form .form-check {
-    padding: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  html .content-opinion-add .container .form .form-check,
-  body .content-opinion-add .container .form .form-check {
-    padding: 0 5.625rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (max-width: 568px) {
-  html .content-opinion-add .container .form .form-check,
-  body .content-opinion-add .container .form .form-check {
-    padding: 0 2.8125rem;
-  }
-}
-
-html .content-opinion-add .container .form .form-check input,
-html .content-opinion-add .container .form .form-check select,
-body .content-opinion-add .container .form .form-check input,
-body .content-opinion-add .container .form .form-check select {
+  background-color: #eeefef;
   text-align: left;
-}
-
-html .content-opinion-add .container .form .form-check input[type="checkbox"],
-html .content-opinion-add .container .form .form-check select[type="checkbox"],
-body .content-opinion-add .container .form .form-check input[type="checkbox"],
-body .content-opinion-add .container .form .form-check select[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  line-height: 2.25rem;
-  margin-top: 8px;
-  border: 1px solid #cccccc;
-}
-
-html .content-opinion-add .container .form .form-check input[type="radio"],
-html .content-opinion-add .container .form .form-check select[type="radio"],
-body .content-opinion-add .container .form .form-check input[type="radio"],
-body .content-opinion-add .container .form .form-check select[type="radio"] {
-  width: 20px;
-  height: 20px;
-  line-height: 2.25rem;
-  margin-right: 8px;
-  border: 1px solid #cccccc;
-}
-
-html .content-opinion-add .container .form .form-check select,
-body .content-opinion-add .container .form .form-check select {
-  width: 100%;
-  height: 40px;
-}
-
-html .content-opinion-add .container .form .form-check label,
-body .content-opinion-add .container .form .form-check label {
-  padding: 0;
-  color: #595757;
-  font-size: 1rem;
-}
-
-html .content-opinion-add .container .form .form-check .form-check-label,
-body .content-opinion-add .container .form .form-check .form-check-label {
-  line-height: 2.25rem;
-  margin-right: 1.25rem;
-}
-
-html .content-opinion-add .container .form .form-check .form-check-input,
-body .content-opinion-add .container .form .form-check .form-check-input {
-  margin-left: 0px;
-  margin-right: 15px;
-}
-
-html .content-opinion-add .container .form .form-check .check-input,
-body .content-opinion-add .container .form .form-check .check-input {
-  background-color: #fff;
-  width: 100%;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid #cccccc;
-  padding: 0 0.625rem;
-  color: #595757;
+  outline: none;
   font-size: 1.125rem;
-  line-height: 1.125rem;
-  margin: 1.25rem 0;
-}
-
-html .content-opinion-add .container .form .form-check .h4,
-body .content-opinion-add .container .form .form-check .h4 {
-  color: #0290cc;
-  font-size: 1.125rem;
+  color: black;
   font-weight: bold;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 0.625rem;
 }
 
-html .content-opinion-add .container .form span,
-body .content-opinion-add .container .form span {
-  color: #da382d;
-  margin-left: 3px;
-}
-
-@media (max-width: 1024px) {
-  html .content-opinion-add .container .form,
-  body .content-opinion-add .container .form {
-    width: 60%;
+@media (max-width: 320px) {
+  html .content-FQA .container .collapse-gp .collapsible,
+  body .content-FQA .container .collapse-gp .collapsible {
+    font-size: #595757;
   }
 }
 
-@media (max-width: 768px) {
-  html .content-opinion-add .container .form,
-  body .content-opinion-add .container .form {
-    width: 100%;
-    padding: 3.75rem 0;
+html .content-FQA .container .collapse-gp .collapsible:after,
+body .content-FQA .container .collapse-gp .collapsible:after {
+  content: "\002B";
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+html .content-FQA .container .collapse-gp .active:after,
+body .content-FQA .container .collapse-gp .active:after {
+  content: "\2212";
+}
+
+html .content-FQA .container .collapse-gp .content,
+body .content-FQA .container .collapse-gp .content {
+  padding: 0 1.875rem;
+  margin-bottom: 1.25rem;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+@media (max-width: 320px) {
+  html .content-FQA .container .collapse-gp .content,
+  body .content-FQA .container .collapse-gp .content {
+    margin-bottom: 1.25rem;
   }
 }
 
-@media (max-width: 568px) {
-  html .content-opinion-add .container .form,
-  body .content-opinion-add .container .form {
-    padding: 1.875rem 0;
+html .content-FQA .container .collapse-gp .content p,
+body .content-FQA .container .collapse-gp .content p {
+  text-align: justify;
+  font-size: #595757;
+  color: #595757;
+  line-height: #b2aeae;
+  margin-top: 0.625rem;
+}
+
+@media (max-width: 320px) {
+  html .content-FQA .container .collapse-gp .content p,
+  body .content-FQA .container .collapse-gp .content p {
+    font-size: 1rem;
+    line-height: 2rem;
   }
 }
 
-html .content-opinion-add .container .form .g-recaptcha,
-body .content-opinion-add .container .form .g-recaptcha {
-  width: 100%;
-  margin-bottom: 2.5rem;
+html .content-FQA .container .collapse-gp .content ul,
+html .content-FQA .container .collapse-gp .content li,
+body .content-FQA .container .collapse-gp .content ul,
+body .content-FQA .container .collapse-gp .content li {
+  list-style: none;
+  font-size: #595757;
+  color: #595757;
+}
+
+@media (max-width: 320px) {
+  html .content-FQA .container .collapse-gp .content ul,
+  html .content-FQA .container .collapse-gp .content li,
+  body .content-FQA .container .collapse-gp .content ul,
+  body .content-FQA .container .collapse-gp .content li {
+    font-size: 1rem;
+  }
+}
+
+html .content-FQA .container span,
+body .content-FQA .container span {
+  color: #0290cc;
 }
 /*# sourceMappingURL=style.css.map */
