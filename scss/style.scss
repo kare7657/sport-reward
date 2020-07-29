@@ -839,6 +839,19 @@ body {
                         right: 20px;
                         cursor: pointer;
                     }
+                    .form-check {
+                        text-align: right;
+                        .form-check-input {
+                            width: 15px;
+                            height: 15px;
+                            margin: 0;
+                            margin-top: 5px;
+                        }
+                        .form-check-label {
+                            margin: 0;
+                            margin-left: $margin-XS * 1.2;
+                        }
+                    }
                     .fas {
                         color: $blue;
                         font-size: $size-h1 * 1.2;

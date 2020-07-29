@@ -31,7 +31,7 @@
             </div>
             <form class="form-apply">
                 <div class="title black">
-                    <h3>案件資料</h3>
+                    <h3>活動資料</h3>
                 </div>
                 <div class="form-gp">
                     <label for="action-name">活動名稱<span>*</span></label>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-gp">
                     <label for="action-note">活動備註<span>*</span></label>
-                    <input type="text" name="action-note" id="action-note">
+                    <input type="text" name="action-note" id="action-note" placeholder="活動週期，如每周一">
                 </div>
                 <div class="form-gp w100-Full">
                     <h4>活動日期<span>*</span></h4>
@@ -50,11 +50,11 @@
                     </div>
                 </div>
                 <div class="form-gp">
-                    <label for="action-purpose">活動宗旨</label>
+                    <label for="action-purpose">活動宗旨<span>*</span></label>
                     <textarea name="action-purpose" id="action-purpose" rows="3"></textarea>
                 </div>
                 <div class="form-gp">
-                    <label for="related-unit">相關單位</label>
+                    <label for="related-unit">相關單位<span>*</span></label>
                     <textarea name="related-unit" id="related-unit" rows="3"></textarea>
                 </div>
                 <div class="form-gp w100-Full">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="form-gp">
                     <label for="action-object">活動參與對象<span>*</span></label>
-                    <input type="text" name="action-object" id="action-object" placeholder="分數/秒數">
+                    <input type="text" name="action-object" id="action-object">
                 </div>
                 <div class="form-gp">
                     <label for="session">場次<span>*</span></label>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-gp">
                     <label for="person-time">人次<span>*</span></label>
-                    <input type="text" name="person-time" id="person-time" placeholder="分數/秒數">
+                    <input type="text" name="person-time" id="person-time">
                 </div>
                 <div class="form-gp w100-Full">
                     <label for="action-marketing">行銷宣傳方式</label>
@@ -84,99 +84,126 @@
                 <div class="title black">
                     <h3>申請補助資料</h3>
                 </div>
-                <h4>申請經費<span>*</span></h4>
-                <div class="list" id="list-contestant">
+                <h4>申請經費</h4>
+                <div class="list" id="expense">
                     <a class="close"><i class="fas fa-times"></i></a>
                     <div class="form-gp">
-                        <label for="contestant-clause">項目<span>*</span></label>
-                        <select name="type" id="contestant-clause">
+                        <label for="expense-item">項目<span>*</span></label>
+                        <select name="type" id="expense-item">
                             <option value="list1">獎盃(牌/品)費用</option>
                             <option value="list2">選單2</option>
                             <option value="list3">選單3</option>
                         </select>
                     </div>
                     <div class="form-gp">
-                        <label for="contestant-award">數量<span>*</span></label>
-                        <input type="number" name="contestant-award" id="contestant-award">
+                        <label for="amount">數量<span>*</span></label>
+                        <input type="number" name="amount" id="amount">
                     </div>
                     <div class="form-gp">
-                        <label for="contestant-award">單價<span>*</span></label>
-                        <input type="number" name="contestant-award" id="contestant-award">
+                        <label for="unit-price">單價<span>*</span></label>
+                        <input type="number" name="unit-price" id="unit-price">
                     </div>
                     <div class="form-gp">
-                        <label for="contestant-award">小計<span>*</span></label>
-                        <input type="number" name="contestant-award" id="contestant-award">
+                        <label for="subtotal">小計<span>*</span></label>
+                        <input type="number" name="subtotal" id="subtotal">
                     </div>
                     <div class="form-gp">
-                        <label for="contestant-award">申請金額<span>*</span></label>
-                        <input type="number" name="contestant-award" id="contestant-award">
+                        <label for="apply-money">申請金額<span>*</span></label>
+                        <input type="number" name="apply-money" id="apply-money">
                     </div>
                     <div class="form-gp">
-                        <label for="person-time">備註<span>*</span></label>
-                        <input type="text" name="person-time" id="person-time">
+                        <label for="expense-remarks">備註<span>*</span></label>
+                        <input type="text" name="expense-remarks" id="expense-remarks">
+                    </div>
+                    <div class="form-check w100-Full">
+                        <input class="form-check-input form-check-inline" type="checkbox" value="" id="same-address">
+                        <label class="form-check-label form-check-inline" for="same-address">
+                            核定
+                        </label>
                     </div>
                 </div>
                 <button class="add-btn" type="button">新增項目</button>
                 <h4>經費</h4>
                 <div class="form-gp">
-                    <label for="contestant-bankname">計畫總經費<span>*</span></label>
-                    <input type="number" name="contestant-bankname" id="contestant-bankname">
+                    <label for="total-expense">計畫總經費<span>*</span></label>
+                    <input type="number" name="total-expense" id="total-expense">
                 </div>
                 <div class="form-gp">
-                    <label for="contestant-branchname">申請經費<span>*</span></label>
-                    <input type="number" name="contestant-branchname" id="contestant-branchname">
+                    <label for="apply-expense">申請經費<span>*</span></label>
+                    <input type="number" name="apply-expense" id="apply-expense">
                 </div>
                 <div class="form-gp">
-                    <label for="contestant-bankcode">自籌經費<span>*</span></label>
-                    <input type="number" name="contestant-bankcode" id="contestant-bankcode">
+                    <label for="oneself-expense">自籌經費<span>*</span></label>
+                    <input type="number" name="oneself-expense" id="oneself-expense">
                 </div>
                 <div class="form-gp">
                     <h4>核定函日期<span>*</span></h4>
                     <div class="date">
-                        <input type="date" id="date" name="date" style="width: 100%;">
+                        <input type="date" id="document-date" name="document-date" style="width: 100%;">
                     </div>
                 </div>
                 <div class="form-gp">
-                    <label for="action-object">文號<span>*</span></label>
-                    <input type="text" name="action-object" id="action-object" placeholder="分數/秒數">
+                    <label for="document-ID">文號<span>*</span></label>
+                    <input type="text" name="document-ID" id="document-ID">
                 </div>
                 <div class="form-gp">
-                    <label for="contestant-branchname">補助核定經費<span>*</span></label>
-                    <input type="number" name="contestant-branchname" id="contestant-branchname">
+                    <label for="check-subsidy">補助核定經費<span>*</span></label>
+                    <input type="number" name="check-subsidy" id="check-subsidy">
                 </div>
                 <div class="form-gp">
-                    <label for="action-object">補助核定說明<span>*</span></label>
-                    <input type="text" name="action-object" id="action-object" placeholder="分數/秒數">
+                    <label for="subsidy-explain">補助核定說明</label>
+                    <input type="text" name="subsidy-explain" id="subsidy-explain" placeholder="核定經費為0則須輸入核定說明">
                 </div>
-                <h4>同一案件申請其他單位補助<span>*</span></h4>
-                <div class="list" id="list-contestant">
+                <h4>同一案件申請其他單位補助</h4>
+                <div class="list" id="other-unit">
                     <a class="close"><i class="fas fa-times"></i></a>
                     <div class="form-gp">
-                        <label for="contestant-award">他機關名稱<span>*</span></label>
-                        <input type="text" name="contestant-award" id="contestant-award">
+                        <label for="unit-name">他機關名稱<span>*</span></label>
+                        <input type="text" name="unit-name" id="unit-name">
                     </div>
                     <div class="form-gp">
-                        <label for="contestant-award">金額<span>*</span></label>
-                        <input type="number" name="contestant-award" id="contestant-award">
+                        <label for="other-unit-money">金額<span>*</span></label>
+                        <input type="number" name="other-unit-money" id="other-unit-money">
                     </div>
                 </div>
                 <button class="add-btn" type="button">新增項目</button>
                 <h4>帳戶</h4>
                 <div class="form-gp">
-                    <label for="contestant-bankname">銀行名稱<span>*</span></label>
-                    <input type="text" name="contestant-bankname" id="contestant-bankname">
+                    <label for="action-bankname">銀行名稱<span>*</span></label>
+                    <input type="text" name="action-bankname" id="action-bankname">
                 </div>
                 <div class="form-gp">
-                    <label for="contestant-branchname">分行名稱<span>*</span></label>
-                    <input type="text" name="contestant-branchname" id="contestant-branchname">
+                    <label for="action-branchname">分行名稱<span>*</span></label>
+                    <input type="text" name="action-branchname" id="action-branchname">
                 </div>
                 <div class="form-gp">
-                    <label for="contestant-bankcode">銀行代碼<span>*</span></label>
-                    <input type="number" name="contestant-bankcode" id="contestant-bankcode">
+                    <label for="action-bankcode">銀行代碼<span>*</span></label>
+                    <input type="number" name="action-bankcode" id="action-bankcode">
                 </div>
                 <div class="form-gp">
-                    <label for="contestant-account-number">帳號<span>*</span></label>
-                    <input type="number" name="contestant-account-number" id="contestant-account-number">
+                    <label for="action-account-number">帳號<span>*</span></label>
+                    <input type="number" name="action-account-number" id="action-account-number">
+                </div>
+                <div class="title black">
+                    <h3>活動成果</h3>
+                </div>
+                <div class="form-gp">
+                    <label for="action-name-after">活動名稱<span>*</span></label>
+                    <input type="text" name="action-name-after" id="action-name-after">
+                </div>
+                <div class="form-gp">
+                    <h4>活動辦理日期<span>*</span></h4>
+                    <div class="date">
+                        <input type="date" id="action-date" name="date" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="form-gp">
+                    <label for="action-people">活動參加人數<span>*</span></label>
+                    <input type="number" name="action-people" id="action-people">
+                </div>
+                <div class="form-gp">
+                    <label for="action-img">活動成果照片上傳<span>*</span></label>
+                    <input type="file" id="action-img">
                 </div>
                 <div class="title black">
                     <h3>佐證資料</h3>

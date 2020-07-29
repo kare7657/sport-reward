@@ -4167,6 +4167,25 @@ body .content-case-apply .container .form-apply .list .close {
   cursor: pointer;
 }
 
+html .content-case-apply .container .form-apply .list .form-check,
+body .content-case-apply .container .form-apply .list .form-check {
+  text-align: right;
+}
+
+html .content-case-apply .container .form-apply .list .form-check .form-check-input,
+body .content-case-apply .container .form-apply .list .form-check .form-check-input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+html .content-case-apply .container .form-apply .list .form-check .form-check-label,
+body .content-case-apply .container .form-apply .list .form-check .form-check-label {
+  margin: 0;
+  margin-left: 1.5rem;
+}
+
 html .content-case-apply .container .form-apply .list .fas,
 body .content-case-apply .container .form-apply .list .fas {
   color: #0290cc;
