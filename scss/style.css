@@ -2247,9 +2247,9 @@ body .content-login .container .form .form-gp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -2394,7 +2394,6 @@ body .content-login .container .form .form-gp a {
   color: #0290cc;
   font-weight: bold;
   text-align: center;
-  width: 100%;
 }
 
 html .content-login .container .form .form-gp a:hover,
@@ -2679,9 +2678,9 @@ body .content-signup .form-personal .form-gp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -2826,7 +2825,6 @@ body .content-signup .form-personal .form-gp a {
   color: #0290cc;
   font-weight: bold;
   text-align: center;
-  width: 100%;
 }
 
 html .content-signup .form-personal .form-gp a:hover,
@@ -3114,9 +3112,9 @@ body .content-signup .form-group .form-gp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -3261,7 +3259,6 @@ body .content-signup .form-group .form-gp a {
   color: #0290cc;
   font-weight: bold;
   text-align: center;
-  width: 100%;
 }
 
 html .content-signup .form-group .form-gp a:hover,

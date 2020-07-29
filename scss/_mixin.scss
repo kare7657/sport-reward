@@ -1063,7 +1063,7 @@
         margin: 0;
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
         margin-bottom: $margin-XS;
@@ -1155,7 +1155,6 @@
             color: $blue;
             font-weight: bold;
             text-align: center;
-            width: 100%;
             &:hover {
                 color: $title-BK !important;
             }
