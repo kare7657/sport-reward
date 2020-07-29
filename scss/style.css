@@ -167,6 +167,22 @@
   padding: 0;
 }
 
+* ::-webkit-input-placeholder {
+  color: #595757;
+}
+
+* :-ms-input-placeholder {
+  color: #595757;
+}
+
+* ::-ms-input-placeholder {
+  color: #595757;
+}
+
+* ::placeholder {
+  color: #595757;
+}
+
 * select {
   width: 100%;
   height: 40px;
