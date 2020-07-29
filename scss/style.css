@@ -4486,7 +4486,7 @@ body .content-case-list .container .filter input {
   height: 30px;
   margin: 0;
   margin-right: 1.25rem;
-  background-color: unset;
+  background-color: transparent;
   border: solid 1px #595757;
   border-radius: 8px;
   font-size: 1rem;
@@ -4516,7 +4516,7 @@ body .content-case-list .container .filter input[type="submit"],
 body .content-case-list .container .filter input[type="reset"] {
   width: 9%;
   padding: 5px 0;
-  background-color: unset;
+  background-color: transparent;
   border: solid 1px #595757;
   border-radius: 8px;
   font-size: 1.125rem;
@@ -4764,7 +4764,6 @@ body .content-FQA .container .collapse-gp .collapsible {
   outline: none;
   font-size: 1.125rem;
   color: black;
-  font-weight: bold;
 }
 
 @media (max-width: 320px) {

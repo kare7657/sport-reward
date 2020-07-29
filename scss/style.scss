@@ -984,7 +984,7 @@ body {
                     height: 30px;
                     margin: 0;
                     margin-right: $margin-XS;
-                    background-color: unset;
+                    background-color: transparent;
                     border: solid 1px $text;
                     border-radius: 8px;
                     font-size: $size-p;
@@ -1003,7 +1003,7 @@ body {
                     &[type="reset"] {
                         width: 9%;
                         padding: 5px 0;
-                        background-color: unset;
+                        background-color: transparent;
                         border: solid 1px $text;
                         border-radius: 8px;
                         font-size: $size-h4;
