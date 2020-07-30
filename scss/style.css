@@ -2667,12 +2667,14 @@ html .content-login .container .form .form-check .form-check-label,
 body .content-login .container .form .form-check .form-check-label {
   line-height: 2.25rem;
   margin-right: 1.25rem;
+  vertical-align: middle;
 }
 
 html .content-login .container .form .form-check .form-check-input,
 body .content-login .container .form .form-check .form-check-input {
   margin-left: 0px;
   margin-right: 15px;
+  vertical-align: middle;
 }
 
 html .content-login .container .form .form-check .check-input,
@@ -2815,7 +2817,7 @@ html .content-signup .form-menu,
 body .content-signup .form-menu {
   width: 100%;
   text-align: center;
-  margin: 2.5rem 0;
+  margin: 1.875rem 0;
 }
 
 html .content-signup .form-menu button,
@@ -3094,12 +3096,14 @@ html .content-signup .form-personal .form-check .form-check-label,
 body .content-signup .form-personal .form-check .form-check-label {
   line-height: 2.25rem;
   margin-right: 1.25rem;
+  vertical-align: middle;
 }
 
 html .content-signup .form-personal .form-check .form-check-input,
 body .content-signup .form-personal .form-check .form-check-input {
   margin-left: 0px;
   margin-right: 15px;
+  vertical-align: middle;
 }
 
 html .content-signup .form-personal .form-check .check-input,
@@ -3179,6 +3183,7 @@ body .content-signup .form-personal .form-body .form-gp .postcode {
 
 html .content-signup .form-personal .form-body .form-check,
 body .content-signup .form-personal .form-body .form-check {
+  display: inline-block;
   padding: 0;
 }
 
@@ -3521,12 +3526,14 @@ html .content-signup .form-group .form-check .form-check-label,
 body .content-signup .form-group .form-check .form-check-label {
   line-height: 2.25rem;
   margin-right: 1.25rem;
+  vertical-align: middle;
 }
 
 html .content-signup .form-group .form-check .form-check-input,
 body .content-signup .form-group .form-check .form-check-input {
   margin-left: 0px;
   margin-right: 15px;
+  vertical-align: middle;
 }
 
 html .content-signup .form-group .form-check .check-input,

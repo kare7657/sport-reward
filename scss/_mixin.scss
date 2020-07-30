@@ -1268,10 +1268,12 @@
         .form-check-label {
             line-height: $size-h4 * 2;
             margin-right: $margin-XS;
+            vertical-align: middle;
         }
         .form-check-input {
             margin-left: 0px;
             margin-right: 15px;
+            vertical-align: middle;
         }
         .check-input {
             background-color: #fff;

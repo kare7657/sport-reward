@@ -376,7 +376,7 @@ body {
         .form-menu {
             width: 100%;
             text-align: center;
-            margin: $margin-S 0;
+            margin: $margin-XS * 1.5 0;
             button {
                 margin: 0 $margin-XS/2;
                 opacity: 0.3;
@@ -419,6 +419,7 @@ body {
                     }
                 }
                 .form-check {
+                    display: inline-block;
                     padding: 0;
                     h4 {
                         margin: 0;
