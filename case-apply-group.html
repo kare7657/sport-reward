@@ -88,7 +88,6 @@
                 </div>
                 <h4>申請經費</h4>
                 <div class="list list-expense" id="list-expense">
-                    <a class="close"><i class="fas fa-times"></i></a>
                     <div class="form-gp">
                         <label for="expense-item">項目<span>*</span></label>
                         <select name="type" id="expense-item">
@@ -158,7 +157,6 @@
                 </div>
                 <h4>同一案件申請其他單位補助</h4>
                 <div class="list list-unit" id="list-unit">
-                    <a class="close"><i class="fas fa-times"></i></a>
                     <div class="form-gp">
                         <label for="unit-name">他機關名稱<span>*</span></label>
                         <input type="text" name="unit-name" id="unit-name">
@@ -311,24 +309,26 @@
 
     <!-- 案件申請-經費list -->
     <script>
-        $(".close").click(function () {
-            $('.list').addClass("hide-list");
-        })
-
+        var count = 0;
         $(".add-expense-btn").click(function () {
-            $('.list-expense').after("<div class='list' id='list-expense'><a class='close'><i class='fas fa-times'></i></a><div class='form-gp'><label for='expense-item'>項目<span>*</span></label><select name='type' id='expense-item'><option value='list1'>獎盃(牌/品)費用</option><option value='list2'>選單2</option><option value='list3'>選單3</option></select></div><div class='form-gp'><label for='amount'>數量<span>*</span></label><input type='number' name='amount' id='amount'></div><div class='form-gp'><label for='unit-price'>單價<span>*</span></label><input type='number' name='unit-price' id='unit-price'></div><div class='form-gp'><label for='subtotal'>小計<span>*</span></label><input type='number' name='subtotal' id='subtotal'></div><div class='form-gp'><label for='apply-money'>申請金額<span>*</span></label><input type='number' name='apply-money' id='apply-money'></div><div class='form-gp'><label for='expense-remarks'>備註<span>*</span></label><input type='text' name='expense-remarks' id='expense-remarks'></div><div class='form-check w100-Full'><input class='form-check-input form-check-inline' type='checkbox' value='' id='same-address'><label class='form-check-label form-check-inline' for='same-address'>核定</label></div></div>");
+            count++;
+            $('.list-expense').after("<div class='list' id='list-expense" + count + "'><a class='close' id='" + count + "'><i class='fas fa-times'></i></a><div class='form-gp'><label for='expense-item'>項目<span>*</span></label><select name='type' id='expense-item'><option value='list1'>獎盃(牌/品)費用</option><option value='list2'>選單2</option><option value='list3'>選單3</option></select></div><div class='form-gp'><label for='amount'>數量<span>*</span></label><input type='number' name='amount' id='amount'></div><div class='form-gp'><label for='unit-price'>單價<span>*</span></label><input type='number' name='unit-price' id='unit-price'></div><div class='form-gp'><label for='subtotal'>小計<span>*</span></label><input type='number' name='subtotal' id='subtotal'></div><div class='form-gp'><label for='apply-money'>申請金額<span>*</span></label><input type='number' name='apply-money' id='apply-money'></div><div class='form-gp'><label for='expense-remarks'>備註<span>*</span></label><input type='text' name='expense-remarks' id='expense-remarks'></div><div class='form-check w100-Full'><input class='form-check-input form-check-inline' type='checkbox' value='' id='same-address'><label class='form-check-label form-check-inline' for='same-address'>核定</label></div></div>");
             $(".close").click(function () {
-                $('.list').addClass("hide-list");
+                var id = '#list-expense' + $(this).attr('id');
+                $(id).remove();
             })
         })
     </script>
 
     <!-- 案件申請-其他單位補助list -->
     <script>
+        var count = 0;
         $(".add-unit-btn").click(function () {
-            $('.list-unit').after("<div class='list'><a class='close'><i class='fas fa-times'></i></a><div class='form-gp'><label for='unit-name'>他機關名稱<span>*</span></label><input type='text' name='unit-name' id='unit-name'></div><div class='form-gp'><label for='other-unit-money'>金額<span>*</span></label><input type='number' name='other-unit-money' id='other-unit-money'></div></div>");
+            count++;
+            $('.list-unit').after("<div class='list' id='list-unit" + count + "'><a class='close' id='" + count + "'><i class='fas fa-times'></i></a><div class='form-gp'><label for='unit-name'>他機關名稱<span>*</span></label><input type='text' name='unit-name' id='unit-name'></div><div class='form-gp'><label for='other-unit-money'>金額<span>*</span></label><input type='number' name='other-unit-money' id='other-unit-money'></div></div>");
             $(".close").click(function () {
-                $('.list').addClass("hide-list");
+                var id = '#list-unit' + $(this).attr('id');
+                $(id).remove();
             })
         })
     </script>
