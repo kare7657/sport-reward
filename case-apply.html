@@ -279,31 +279,17 @@
         });
     </script>
 
-    <!-- 案件申請list -->
+    <!-- 案件申請-選手資料list -->
     <script>
-        // var close = document.querySelector(".close")
-        // var list_contestant = document.querySelector(".list-contestant")
-        // var add_btn = document.querySelector(".add-btn")
-
-        // close.onclick = function () {
-        //     list_contestant.classList.add("hide")
-        // }
-        // add_btn.onclick = function () {
-        //     list.classList.remove("hide")
-        // }
-    </script>
-    <script>
-
         $(".close").click(function () {
-            $(".list-contestant").addClass("hide");
+            $('.list-contestant').addClass("hide-list");
         })
 
         $(".add-btn").click(function () {
             $('.list-contestant').after("<div class='list'><a class='close'><i class='fas fa-times'></i></a><div class='form-gp'><label for='contestant-ID'>選手身份證字號<span>*</span></label><input type='text' name='contestant-ID' id='contestant-ID'></div><div class='form-gp'><label for='contestant-name'>選手姓名<span>*</span></label><input type='text' name='contestant-name' id='contestant-name'></div><div class='form-gp'><label for='contestant-email'>選手Email<span>*</span></label><input type='email' name='contestant-email' id='contestant-email'></div><div class='form-gp'><label for='contestant-clause'>選手適用條款<span>*</span></label><select name='type' id='contestant-clause'><option value='list1'>第三點第一項第七款</option><option value='list2'>選單2</option><option value='list3'>選單3</option></select></div><div class='form-gp'><label for='content-service'>選手條款說明</label><textarea name='content-service' id='content-service' rows='2'></textarea></div><div class='form-gp'><label for='contestant-award'>選手獎金<span>*</span></label><input type='number' name='contestant-award' id='contestant-award'></div><h4>選手帳戶</h4><div class='form-gp'><label for='contestant-bankname'>銀行名稱<span>*</span></label><input type='text' name='contestant-bankname' id='contestant-bankname'></div><div class='form-gp'><label for='contestant-branchname'>分行名稱<span>*</span></label><input type='text' name='contestant-branchname' id='contestant-branchname'></div><div class='form-gp'><label for='contestant-bankcode'>銀行代碼<span>*</span></label><input type='number' name='contestant-bankcode' id='contestant-bankcode'></div><div class='form-gp'><label for='contestant-account-number'>帳號<span>*</span></label><input type='number' name='contestant-account-number' id='contestant-account-number'></div></div>");
+
         })
-
     </script>
-
 
 </body>
 

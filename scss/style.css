@@ -4140,6 +4140,30 @@ body .content-case-apply .container .form-apply .w100 {
           flex-direction: column;
 }
 
+html .content-case-apply .container .form-apply .w100 label,
+html .content-case-apply .container .form-apply .w100 input,
+html .content-case-apply .container .form-apply .w100 select,
+html .content-case-apply .container .form-apply .w100 textarea,
+body .content-case-apply .container .form-apply .w100 label,
+body .content-case-apply .container .form-apply .w100 input,
+body .content-case-apply .container .form-apply .w100 select,
+body .content-case-apply .container .form-apply .w100 textarea {
+  width: 45%;
+}
+
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .w100 label,
+  html .content-case-apply .container .form-apply .w100 input,
+  html .content-case-apply .container .form-apply .w100 select,
+  html .content-case-apply .container .form-apply .w100 textarea,
+  body .content-case-apply .container .form-apply .w100 label,
+  body .content-case-apply .container .form-apply .w100 input,
+  body .content-case-apply .container .form-apply .w100 select,
+  body .content-case-apply .container .form-apply .w100 textarea {
+    width: 100%;
+  }
+}
+
 html .content-case-apply .container .form-apply .list,
 body .content-case-apply .container .form-apply .list {
   width: 100%;
@@ -4213,8 +4237,8 @@ body .content-case-apply .container .form-apply .list .fas:hover {
   }
 }
 
-html .content-case-apply .container .form-apply .hide,
-body .content-case-apply .container .form-apply .hide {
+html .content-case-apply .container .form-apply .hide-list,
+body .content-case-apply .container .form-apply .hide-list {
   display: none;
 }
 
@@ -4306,67 +4330,6 @@ body .content-case-apply .container .form-apply .form-submit .btn input {
   body .content-case-apply .container .form-apply .form-submit .btn input {
     width: 100%;
     margin-bottom: 1.25rem;
-  }
-}
-
-html .content-member-data,
-body .content-member-data {
-  padding-top: 120px;
-}
-
-@media (max-width: 768px) {
-  html .content-member-data,
-  body .content-member-data {
-    padding-top: 60px;
-  }
-}
-
-html .content-member-data h1,
-body .content-member-data h1 {
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
-
-@media (max-width: 568px) {
-  html .content-member-data h1,
-  body .content-member-data h1 {
-    margin: 1.25rem 0;
-  }
-}
-
-html .content-member-data h3,
-body .content-member-data h3 {
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-html .content-member-data ul,
-body .content-member-data ul {
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-  line-height: 2rem;
-  color: #595757;
-}
-
-html .content-member-data .btn,
-body .content-member-data .btn {
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  margin: 3.75rem 0;
-}
-
-@media (max-width: 568px) {
-  html .content-member-data .container,
-  body .content-member-data .container {
-    width: 100%;
-    padding-bottom: 0;
-  }
-  html .content-member-data .container h1,
-  body .content-member-data .container h1 {
-    text-align: center;
-    margin-top: 0;
   }
 }
 
@@ -4674,6 +4637,67 @@ body .content-case-list .container .case-list h4 {
   html .content-case-list .container .pagination,
   body .content-case-list .container .pagination {
     padding: 0 2.8125rem;
+  }
+}
+
+html .content-member-data,
+body .content-member-data {
+  padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  html .content-member-data,
+  body .content-member-data {
+    padding-top: 60px;
+  }
+}
+
+html .content-member-data h1,
+body .content-member-data h1 {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+@media (max-width: 568px) {
+  html .content-member-data h1,
+  body .content-member-data h1 {
+    margin: 1.25rem 0;
+  }
+}
+
+html .content-member-data h3,
+body .content-member-data h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+html .content-member-data ul,
+body .content-member-data ul {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #595757;
+}
+
+html .content-member-data .btn,
+body .content-member-data .btn {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  margin: 3.75rem 0;
+}
+
+@media (max-width: 568px) {
+  html .content-member-data .container,
+  body .content-member-data .container {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  html .content-member-data .container h1,
+  body .content-member-data .container h1 {
+    text-align: center;
+    margin-top: 0;
   }
 }
 

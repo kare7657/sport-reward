@@ -818,15 +818,15 @@ body {
                     justify-content: flex-start;
                     flex-wrap: wrap;
                     flex-direction: column;
-                    // label,
-                    // input,
-                    // select,
-                    // textarea {
-                    //     width: 45%;
-                    //     @include mobile-L() {
-                    //         width: 100%;
-                    //     }
-                    // }
+                    label,
+                    input,
+                    select,
+                    textarea {
+                        width: 45%;
+                        @include mobile-L() {
+                            width: 100%;
+                        }
+                    }
                 }
                 .list {
                     width: 100%;
@@ -872,12 +872,8 @@ body {
                         padding: $padding-XS 0;
                         border-radius: 0px;
                     }
-                    // .form-gp:nth-child(1),
-                    // .form-gp:nth-child(2) {
-                    //     margin-top: 0;
-                    // }
                 }
-                .hide {
+                .hide-list {
                     display: none;
                 }
                 h4 {
@@ -933,22 +929,7 @@ body {
         }
     }
 
-    //會員資料修改
-    .content-member-data {
-        @include papers();
-        .container {
-            @include mobile-L() {
-                width: 100%;
-                h1 {
-                    text-align: center;
-                    margin-top: 0;
-                }
-                padding-bottom: 0;
-            }
-        }
-    }
-
-    //意見反映
+    //意見查詢
     .content-case-list {
         @include papers();
         @include text-important();
@@ -1041,6 +1022,20 @@ body {
             }
         }
     }
+    //會員資料修改
+    .content-member-data {
+        @include papers();
+        .container {
+            @include mobile-L() {
+                width: 100%;
+                h1 {
+                    text-align: center;
+                    margin-top: 0;
+                }
+                padding-bottom: 0;
+            }
+        }
+    }
     //FAQ
     .content-FQA {
         @include papers();
@@ -1059,7 +1054,7 @@ body {
             .collapse-gp {
                 @include collapse;
             }
-            span{
+            span {
                 color: $blue;
             }
         }
