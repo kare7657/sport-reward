@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- jquery -->
+    <script src="jQuery/jquery-3.5.1.min.js"></script>
 
 </head>
 
@@ -84,7 +86,7 @@
                 <div class="title">
                     <h3>選手資料</h3>
                 </div>
-                <div class="list list-contestant">
+                <div class="list list-contestant" id="list-contestant">
                     <a class="close"><i class="fas fa-times"></i></a>
                     <div class="form-gp">
                         <label for="contestant-ID">選手身份證字號<span>*</span></label>
@@ -132,7 +134,7 @@
                         <input type="number" name="contestant-account-number" id="contestant-account-number">
                     </div>
                 </div>
-                <button class="add-btn" type="button">增加選手資料(團體)</button>
+                <button class="add-contestant-btn" type="button">增加選手資料(團體)</button>
                 <div class="title">
                     <h3>教練資料</h3>
                 </div>
@@ -282,12 +284,14 @@
     <!-- 案件申請-選手資料list -->
     <script>
         $(".close").click(function () {
-            $('.list-contestant').addClass("hide-list");
+            $('.list').addClass("hide-list");
         })
 
-        $(".add-btn").click(function () {
+        $(".add-contestant-btn").click(function () {
             $('.list-contestant').after("<div class='list'><a class='close'><i class='fas fa-times'></i></a><div class='form-gp'><label for='contestant-ID'>選手身份證字號<span>*</span></label><input type='text' name='contestant-ID' id='contestant-ID'></div><div class='form-gp'><label for='contestant-name'>選手姓名<span>*</span></label><input type='text' name='contestant-name' id='contestant-name'></div><div class='form-gp'><label for='contestant-email'>選手Email<span>*</span></label><input type='email' name='contestant-email' id='contestant-email'></div><div class='form-gp'><label for='contestant-clause'>選手適用條款<span>*</span></label><select name='type' id='contestant-clause'><option value='list1'>第三點第一項第七款</option><option value='list2'>選單2</option><option value='list3'>選單3</option></select></div><div class='form-gp'><label for='content-service'>選手條款說明</label><textarea name='content-service' id='content-service' rows='2'></textarea></div><div class='form-gp'><label for='contestant-award'>選手獎金<span>*</span></label><input type='number' name='contestant-award' id='contestant-award'></div><h4>選手帳戶</h4><div class='form-gp'><label for='contestant-bankname'>銀行名稱<span>*</span></label><input type='text' name='contestant-bankname' id='contestant-bankname'></div><div class='form-gp'><label for='contestant-branchname'>分行名稱<span>*</span></label><input type='text' name='contestant-branchname' id='contestant-branchname'></div><div class='form-gp'><label for='contestant-bankcode'>銀行代碼<span>*</span></label><input type='number' name='contestant-bankcode' id='contestant-bankcode'></div><div class='form-gp'><label for='contestant-account-number'>帳號<span>*</span></label><input type='number' name='contestant-account-number' id='contestant-account-number'></div></div>");
-
+            $(".close").click(function () {
+                $('.list').addClass("hide-list");
+            })
         })
     </script>
 

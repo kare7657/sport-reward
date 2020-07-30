@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- jquery -->
+    <script src="jQuery/jquery-3.5.1.min.js"></script>
 
 </head>
 
@@ -85,7 +87,7 @@
                     <h3>申請補助資料</h3>
                 </div>
                 <h4>申請經費</h4>
-                <div class="list" id="expense">
+                <div class="list list-expense" id="list-expense">
                     <a class="close"><i class="fas fa-times"></i></a>
                     <div class="form-gp">
                         <label for="expense-item">項目<span>*</span></label>
@@ -122,7 +124,7 @@
                         </label>
                     </div>
                 </div>
-                <button class="add-btn" type="button">新增項目</button>
+                <button class="add-expense-btn" type="button">新增項目</button>
                 <h4>經費</h4>
                 <div class="form-gp">
                     <label for="total-expense">計畫總經費<span>*</span></label>
@@ -155,7 +157,7 @@
                     <input type="text" name="subsidy-explain" id="subsidy-explain" placeholder="核定經費為0則須輸入核定說明">
                 </div>
                 <h4>同一案件申請其他單位補助</h4>
-                <div class="list" id="other-unit">
+                <div class="list list-unit" id="list-unit">
                     <a class="close"><i class="fas fa-times"></i></a>
                     <div class="form-gp">
                         <label for="unit-name">他機關名稱<span>*</span></label>
@@ -166,7 +168,7 @@
                         <input type="number" name="other-unit-money" id="other-unit-money">
                     </div>
                 </div>
-                <button class="add-btn" type="button">新增他機關項目</button>
+                <button class="add-unit-btn" type="button">新增他機關項目</button>
                 <h4>帳戶</h4>
                 <div class="form-gp">
                     <label for="action-bankname">銀行名稱<span>*</span></label>
@@ -307,20 +309,31 @@
         });
     </script>
 
-    <!-- 案件申請list -->
+    <!-- 案件申請-經費list -->
     <script>
-        var close = document.querySelector(".close")
-        var list = document.querySelector(".list")
-        var add_btn = document.querySelector(".add-btn")
+        $(".close").click(function () {
+            $('.list').addClass("hide-list");
+        })
 
-        close.onclick = function () {
-            list.classList.add("hide")
-        }
-        add_btn.onclick = function () {
-            list.classList.remove("hide")
-        }
-
+        $(".add-expense-btn").click(function () {
+            $('.list-expense').after("<div class='list' id='list-expense'><a class='close'><i class='fas fa-times'></i></a><div class='form-gp'><label for='expense-item'>項目<span>*</span></label><select name='type' id='expense-item'><option value='list1'>獎盃(牌/品)費用</option><option value='list2'>選單2</option><option value='list3'>選單3</option></select></div><div class='form-gp'><label for='amount'>數量<span>*</span></label><input type='number' name='amount' id='amount'></div><div class='form-gp'><label for='unit-price'>單價<span>*</span></label><input type='number' name='unit-price' id='unit-price'></div><div class='form-gp'><label for='subtotal'>小計<span>*</span></label><input type='number' name='subtotal' id='subtotal'></div><div class='form-gp'><label for='apply-money'>申請金額<span>*</span></label><input type='number' name='apply-money' id='apply-money'></div><div class='form-gp'><label for='expense-remarks'>備註<span>*</span></label><input type='text' name='expense-remarks' id='expense-remarks'></div><div class='form-check w100-Full'><input class='form-check-input form-check-inline' type='checkbox' value='' id='same-address'><label class='form-check-label form-check-inline' for='same-address'>核定</label></div></div>");
+            $(".close").click(function () {
+                $('.list').addClass("hide-list");
+            })
+        })
     </script>
+
+    <!-- 案件申請-其他單位補助list -->
+    <script>
+        $(".add-unit-btn").click(function () {
+            $('.list-unit').after("<div class='list'><a class='close'><i class='fas fa-times'></i></a><div class='form-gp'><label for='unit-name'>他機關名稱<span>*</span></label><input type='text' name='unit-name' id='unit-name'></div><div class='form-gp'><label for='other-unit-money'>金額<span>*</span></label><input type='number' name='other-unit-money' id='other-unit-money'></div></div>");
+            $(".close").click(function () {
+                $('.list').addClass("hide-list");
+            })
+        })
+    </script>
+
+
 
 </body>
 
