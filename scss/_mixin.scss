@@ -174,7 +174,7 @@
             padding: 0;
         }
     }
-    ::placeholder{
+    ::placeholder {
         color: $text;
     }
     select {
@@ -1050,6 +1050,69 @@
         }
     }
 }
+@mixin collapse() {
+    padding: 0 $padding-L;
+    @include pad() {
+        padding: 0 $padding-XS;
+    }
+    .collapsible {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: $padding-XXS $padding-XS;
+        border: none;
+        background-color: $light-gray;
+        text-align: left;
+        outline: none;
+        font-size: $size-h4;
+        color: $title-BK;
+        // font-weight: bold;
+        @include mobile-XS() {
+            font-size: $text;
+        }
+    }
+    .collapsible:after {
+        content: "\002B";
+        color: $title-BK;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+    .active:after {
+        content: "\2212";
+    }
+    .content {
+        padding: 0 $padding-XS;
+        margin-bottom: $margin-XS;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        @include mobile-XS() {
+            margin-bottom: $margin-XS;
+        }
+        p {
+            text-align: justify;
+            font-size: $text;
+            color: $text;
+            line-height: $text * 2;
+            margin-top: $margin-XS/2;
+            @include mobile-XS() {
+                font-size: $size-p;
+                line-height: $size-p * 2;
+            }
+        }
+        ul,
+        li {
+            list-style: none;
+            font-size: $text;
+            color: $text;
+            @include mobile-XS() {
+                font-size: $size-p;
+            }
+        }
+    }
+}
+
 @mixin form() {
     background-color: $light-gray;
     border-radius: 20px;
@@ -1236,95 +1299,221 @@
         margin-left: 3px;
     }
 }
-@mixin account-list($main-color) {
-    width: 30%;
-    border-radius: 15px;
-    border: solid 1px $main-color;
-    margin-bottom: $margin-M;
-    &:hover {
-        transform: translateY(-1%);
-        transition: 0.5s;
-    }
-    @include pad() {
+
+@mixin form-apply() {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .title {
         width: 100%;
-    }
-    @include mobile-L() {
-        border-radius: unset;
-        border: unset;
-        margin-bottom: unset;
-    }
-    .top {
-        width: 100%;
-        background-color: $main-color;
-        padding: $padding-XS * 1.5 0;
-        text-align: center;
-        border-radius: 10px 10px 0 0;
         @include mobile-L() {
-            border-radius: unset;
-            padding: $padding-XS 0;
+            margin: 0 $padding-XS * 1.5;
         }
         h3 {
-            margin: 0;
-            color: $title-W;
+            margin-bottom: 0;
         }
-        img {
-            @include mobile-L() {
-                width: 25%;
-            }
-        }
+        border-bottom: solid 3px $blue;
+        margin-bottom: $margin-XS/2;
     }
-    .body {
-        padding: $padding-XS;
-        text-align: center;
-        height: 41%;
-        @include web-S() {
-            height: unset;
+    .green {
+        h3 {
+            color: $green;
+        }
+        border-bottom: solid 3px $green;
+    }
+    .black {
+        h3 {
+            color: $title-BK;
+        }
+        border-bottom: solid 3px $title-BK;
+    }
+    .form-gp,
+    .form-check {
+        width: 45%;
+        margin-top: $margin-XS;
+        padding: 0;
+        @include mobile-L() {
+            width: 100%;
+            padding: 0 $padding-XS * 1.5;
+        }
+        label,
+        input,
+        select,
+        textarea {
+            width: 100%;
+            margin-bottom: $margin-XS/2;
+            font-size: $size-h4;
+            line-height: $size-h4 * 1.5;
+            color: $text;
+        }
+        label {
+            font-weight: bold;
+        }
+        p,
+        span {
+            color: $red;
+            margin-left: 3px;
         }
         h4 {
-            color: $main-color;
-            text-align: left;
+            color: $text;
+            padding: 0;
+            margin: 0;
         }
-    }
-    .bot {
-        padding: $padding-XS;
-        padding-top: 0;
-        .btn {
-            padding: 5px 0;
-            width: 100%;
-            button {
-                background-color: $main-color;
-                width: 90%;
-                margin-bottom: $margin-S;
-                @include pad() {
-                    padding: 10px 0;
-                }
+        .date {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include mobile-L() {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            input,
+            label {
+                width: 45%;
+                margin-top: $margin-XS/2;
                 @include mobile-L() {
                     width: 100%;
-                    padding: 8px 0;
                 }
-                &:hover {
-                    background-color: rgba($color: $blue, $alpha: 0.7);
-                }
-                &[disabled] {
-                    background-color: $light-sky;
-                    &:hover {
-                        background-color: $light-sky;
-                    }
+            }
+            h4 {
+                width: unset;
+                @include mobile-L() {
+                    display: none;
                 }
             }
         }
-        .social {
-            margin-bottom: $margin-XS;
-            text-align: center;
-            p {
-                text-align: center;
+    }
+    .form-check {
+        input,
+        label {
+            width: unset;
+        }
+        .custom-control-label {
+            margin-top: $margin-XS/2;
+            font-weight: normal;
+            font-size: $size-h4;
+            color: $text;
+        }
+    }
+    .w100-Full {
+        width: 100%;
+    }
+    .w100 {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        label,
+        input,
+        select,
+        textarea {
+            width: 45%;
+            @include mobile-L() {
+                width: 100%;
             }
-            img {
-                margin: $margin-XS;
+        }
+    }
+    .list {
+        width: 100%;
+        background-color: $table-blue;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: $padding-XS $padding-S;
+        margin: $margin-XS 0;
+        position: relative;
+        transition: 0.5s;
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .form-check {
+            text-align: right;
+            .form-check-input {
+                width: 15px;
+                height: 15px;
+                margin: 0;
+                margin-top: 5px;
+            }
+            .form-check-label {
+                margin: 0;
+                margin-left: $margin-XS * 1.2;
+            }
+        }
+        .fas {
+            color: $blue;
+            font-size: $size-h1 * 1.2;
+            &:hover {
+                color: $title-BK;
+            }
+        }
+        @include pad() {
+            padding: $padding-XS;
+        }
+        @include mobile-L() {
+            padding: $padding-XS 0;
+            border-radius: 0px;
+        }
+    }
+    .hide-list {
+        display: none;
+    }
+    h4 {
+        width: 100%;
+        font-size: $size-h4;
+        line-height: $size-h4 * 1.5;
+        margin: 0;
+        margin-top: $margin-XS/2;
+        @include mobile-L() {
+            padding: 0 $padding-XS * 1.5;
+        }
+    }
+    .green-h4 {
+        color: $green;
+        @include mobile-L() {
+            padding: 0 $padding-XS * 1.5;
+        }
+    }
+    .black-h4 {
+        color: $title-BK;
+        @include mobile-L() {
+            padding: 0 $padding-XS * 1.5;
+        }
+    }
+    button {
+        margin: $margin-XS/2 0;
+        @include mobile-L() {
+            margin: $margin-XS $padding-XS * 1.5;
+        }
+    }
+    .form-submit {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+        margin-top: $margin-S;
+        .btn {
+            width: 100%;
+            margin-top: $margin-XS;
+            input {
+                width: 30%;
+                margin: 0;
+                @include mobile-L() {
+                    width: 100%;
+                    margin-bottom: $margin-XS;
+                }
             }
         }
     }
 }
+
 @mixin case-list() {
     .list {
         display: flex;
@@ -1391,68 +1580,5 @@
     }
     h4 {
         text-align: right;
-    }
-}
-
-@mixin collapse() {
-    padding: 0 $padding-L;
-    @include pad() {
-        padding: 0 $padding-XS;
-    }
-    .collapsible {
-        width: 100%;
-        border-radius: 10px;
-        cursor: pointer;
-        padding: $padding-XXS $padding-XS;
-        border: none;
-        background-color: $light-gray;
-        text-align: left;
-        outline: none;
-        font-size: $size-h4;
-        color: $title-BK;
-        // font-weight: bold;
-        @include mobile-XS() {
-            font-size: $text;
-        }
-    }
-    .collapsible:after {
-        content: "\002B";
-        color: $title-BK;
-        font-weight: bold;
-        float: right;
-        margin-left: 5px;
-    }
-    .active:after {
-        content: "\2212";
-    }
-    .content {
-        padding: 0 $padding-XS;
-        margin-bottom: $margin-XS;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        @include mobile-XS() {
-            margin-bottom: $margin-XS;
-        }
-        p {
-            text-align: justify;
-            font-size: $text;
-            color: $text;
-            line-height: $text * 2;
-            margin-top: $margin-XS/2;
-            @include mobile-XS() {
-                font-size: $size-p;
-                line-height: $size-p * 2;
-            }
-        }
-        ul,
-        li {
-            list-style: none;
-            font-size: $text;
-            color: $text;
-            @include mobile-XS() {
-                font-size: $size-p;
-            }
-        }
     }
 }

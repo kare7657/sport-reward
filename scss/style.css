@@ -1059,8 +1059,8 @@ body .content-banner img {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center 0%;
-     object-position: center 0%;
+  -o-object-position: center 50%;
+     object-position: center 50%;
 }
 
 @media (max-width: 568px) {
@@ -2062,6 +2062,178 @@ body .content-news-info .container .btn {
   body .content-news-info .container .btn {
     margin: 1.25rem 0;
   }
+}
+
+html .content-FQA,
+body .content-FQA {
+  padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  html .content-FQA,
+  body .content-FQA {
+    padding-top: 60px;
+  }
+}
+
+html .content-FQA h1,
+body .content-FQA h1 {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+@media (max-width: 568px) {
+  html .content-FQA h1,
+  body .content-FQA h1 {
+    margin: 1.25rem 0;
+  }
+}
+
+html .content-FQA h3,
+body .content-FQA h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+html .content-FQA ul,
+body .content-FQA ul {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #595757;
+}
+
+html .content-FQA .btn,
+body .content-FQA .btn {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  margin: 3.75rem 0;
+}
+
+@media (max-width: 568px) {
+  html .content-FQA .container,
+  body .content-FQA .container {
+    width: 100%;
+    margin: 0;
+  }
+  html .content-FQA .container h1,
+  body .content-FQA .container h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 568px) and (max-width: 568px) {
+  html .content-FQA .container h1,
+  body .content-FQA .container h1 {
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+}
+
+html .content-FQA .container .collapse-gp,
+body .content-FQA .container .collapse-gp {
+  padding: 0 7.5rem;
+}
+
+@media (max-width: 768px) {
+  html .content-FQA .container .collapse-gp,
+  body .content-FQA .container .collapse-gp {
+    padding: 0 1.875rem;
+  }
+}
+
+html .content-FQA .container .collapse-gp .collapsible,
+body .content-FQA .container .collapse-gp .collapsible {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.625rem 1.875rem;
+  border: none;
+  background-color: #eeefef;
+  text-align: left;
+  outline: none;
+  font-size: 1.125rem;
+  color: black;
+}
+
+@media (max-width: 320px) {
+  html .content-FQA .container .collapse-gp .collapsible,
+  body .content-FQA .container .collapse-gp .collapsible {
+    font-size: #595757;
+  }
+}
+
+html .content-FQA .container .collapse-gp .collapsible:after,
+body .content-FQA .container .collapse-gp .collapsible:after {
+  content: "\002B";
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+html .content-FQA .container .collapse-gp .active:after,
+body .content-FQA .container .collapse-gp .active:after {
+  content: "\2212";
+}
+
+html .content-FQA .container .collapse-gp .content,
+body .content-FQA .container .collapse-gp .content {
+  padding: 0 1.875rem;
+  margin-bottom: 1.25rem;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+@media (max-width: 320px) {
+  html .content-FQA .container .collapse-gp .content,
+  body .content-FQA .container .collapse-gp .content {
+    margin-bottom: 1.25rem;
+  }
+}
+
+html .content-FQA .container .collapse-gp .content p,
+body .content-FQA .container .collapse-gp .content p {
+  text-align: justify;
+  font-size: #595757;
+  color: #595757;
+  line-height: #b2aeae;
+  margin-top: 0.625rem;
+}
+
+@media (max-width: 320px) {
+  html .content-FQA .container .collapse-gp .content p,
+  body .content-FQA .container .collapse-gp .content p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+html .content-FQA .container .collapse-gp .content ul,
+html .content-FQA .container .collapse-gp .content li,
+body .content-FQA .container .collapse-gp .content ul,
+body .content-FQA .container .collapse-gp .content li {
+  list-style: none;
+  font-size: #595757;
+  color: #595757;
+}
+
+@media (max-width: 320px) {
+  html .content-FQA .container .collapse-gp .content ul,
+  html .content-FQA .container .collapse-gp .content li,
+  body .content-FQA .container .collapse-gp .content ul,
+  body .content-FQA .container .collapse-gp .content li {
+    font-size: 1rem;
+  }
+}
+
+html .content-FQA .container span,
+body .content-FQA .container span {
+  color: #0290cc;
 }
 
 html .content-link,
@@ -4699,177 +4871,5 @@ body .content-member-data .btn {
     text-align: center;
     margin-top: 0;
   }
-}
-
-html .content-FQA,
-body .content-FQA {
-  padding-top: 120px;
-}
-
-@media (max-width: 768px) {
-  html .content-FQA,
-  body .content-FQA {
-    padding-top: 60px;
-  }
-}
-
-html .content-FQA h1,
-body .content-FQA h1 {
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
-
-@media (max-width: 568px) {
-  html .content-FQA h1,
-  body .content-FQA h1 {
-    margin: 1.25rem 0;
-  }
-}
-
-html .content-FQA h3,
-body .content-FQA h3 {
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-html .content-FQA ul,
-body .content-FQA ul {
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-  line-height: 2rem;
-  color: #595757;
-}
-
-html .content-FQA .btn,
-body .content-FQA .btn {
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  margin: 3.75rem 0;
-}
-
-@media (max-width: 568px) {
-  html .content-FQA .container,
-  body .content-FQA .container {
-    width: 100%;
-    margin: 0;
-  }
-  html .content-FQA .container h1,
-  body .content-FQA .container h1 {
-    text-align: center;
-  }
-}
-
-@media (max-width: 568px) and (max-width: 568px) {
-  html .content-FQA .container h1,
-  body .content-FQA .container h1 {
-    margin: 0;
-    margin-bottom: 1.25rem;
-  }
-}
-
-html .content-FQA .container .collapse-gp,
-body .content-FQA .container .collapse-gp {
-  padding: 0 7.5rem;
-}
-
-@media (max-width: 768px) {
-  html .content-FQA .container .collapse-gp,
-  body .content-FQA .container .collapse-gp {
-    padding: 0 1.875rem;
-  }
-}
-
-html .content-FQA .container .collapse-gp .collapsible,
-body .content-FQA .container .collapse-gp .collapsible {
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  padding: 0.625rem 1.875rem;
-  border: none;
-  background-color: #eeefef;
-  text-align: left;
-  outline: none;
-  font-size: 1.125rem;
-  color: black;
-}
-
-@media (max-width: 320px) {
-  html .content-FQA .container .collapse-gp .collapsible,
-  body .content-FQA .container .collapse-gp .collapsible {
-    font-size: #595757;
-  }
-}
-
-html .content-FQA .container .collapse-gp .collapsible:after,
-body .content-FQA .container .collapse-gp .collapsible:after {
-  content: "\002B";
-  color: black;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-html .content-FQA .container .collapse-gp .active:after,
-body .content-FQA .container .collapse-gp .active:after {
-  content: "\2212";
-}
-
-html .content-FQA .container .collapse-gp .content,
-body .content-FQA .container .collapse-gp .content {
-  padding: 0 1.875rem;
-  margin-bottom: 1.25rem;
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.2s ease-out;
-  transition: max-height 0.2s ease-out;
-}
-
-@media (max-width: 320px) {
-  html .content-FQA .container .collapse-gp .content,
-  body .content-FQA .container .collapse-gp .content {
-    margin-bottom: 1.25rem;
-  }
-}
-
-html .content-FQA .container .collapse-gp .content p,
-body .content-FQA .container .collapse-gp .content p {
-  text-align: justify;
-  font-size: #595757;
-  color: #595757;
-  line-height: #b2aeae;
-  margin-top: 0.625rem;
-}
-
-@media (max-width: 320px) {
-  html .content-FQA .container .collapse-gp .content p,
-  body .content-FQA .container .collapse-gp .content p {
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-}
-
-html .content-FQA .container .collapse-gp .content ul,
-html .content-FQA .container .collapse-gp .content li,
-body .content-FQA .container .collapse-gp .content ul,
-body .content-FQA .container .collapse-gp .content li {
-  list-style: none;
-  font-size: #595757;
-  color: #595757;
-}
-
-@media (max-width: 320px) {
-  html .content-FQA .container .collapse-gp .content ul,
-  html .content-FQA .container .collapse-gp .content li,
-  body .content-FQA .container .collapse-gp .content ul,
-  body .content-FQA .container .collapse-gp .content li {
-    font-size: 1rem;
-  }
-}
-
-html .content-FQA .container span,
-body .content-FQA .container span {
-  color: #0290cc;
 }
 /*# sourceMappingURL=style.css.map */
