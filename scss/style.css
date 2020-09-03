@@ -4627,6 +4627,38 @@ body .content-case-list .container .filter label {
   }
 }
 
+html .content-case-list .container .filter select,
+body .content-case-list .container .filter select {
+  width: 15%;
+  height: 30px;
+  margin: 0;
+  margin-right: 1.25rem;
+  background-color: transparent;
+  border: solid 1px #595757;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #595757;
+  text-align-last: center;
+}
+
+@media (max-width: 768px) {
+  html .content-case-list .container .filter select,
+  body .content-case-list .container .filter select {
+    width: 28%;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-case-list .container .filter select,
+  body .content-case-list .container .filter select {
+    width: 100%;
+    margin: unset;
+    margin-bottom: 1.25rem;
+  }
+}
+
 html .content-case-list .container .filter input,
 body .content-case-list .container .filter input {
   width: 15%;
@@ -4640,13 +4672,6 @@ body .content-case-list .container .filter input {
   line-height: 2rem;
   color: #595757;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  html .content-case-list .container .filter input,
-  body .content-case-list .container .filter input {
-    width: 25%;
-  }
 }
 
 @media (max-width: 568px) {

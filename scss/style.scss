@@ -780,6 +780,28 @@ body {
                         display: none;
                     }
                 }
+                select {
+                    width: 15%;
+                    height: 30px;
+                    margin: 0;
+                    margin-right: $margin-XS;
+                    background-color: transparent;
+                    border: solid 1px $text;
+                    border-radius: 8px;
+                    font-size: $size-p;
+                    line-height: $size-p * 1.5;
+                    font-weight: bold;
+                    color: $text;
+                    text-align-last: center;
+                    @include pad() {
+                        width: 28%;
+                    }
+                    @include mobile-L() {
+                        width: 100%;
+                        margin: unset;
+                        margin-bottom: $margin-XS;
+                    }
+                }
                 input {
                     width: 15%;
                     height: 30px;
@@ -792,9 +814,6 @@ body {
                     line-height: $size-p * 2;
                     color: $text;
                     text-align: center;
-                    @include pad() {
-                        width: 25%;
-                    }
                     @include mobile-L() {
                         width: 100%;
                         margin: unset;
