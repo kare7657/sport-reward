@@ -1387,7 +1387,8 @@
             }
         }
         a {
-            width: 80%;
+            text-align: justify;
+            word-wrap: break-word;
         }
     }
     .form-check {
@@ -1593,6 +1594,22 @@
     }
     .c4 {
         width: 10%;
+        span{
+            text-align: center;
+            color: $title-W;
+            padding: 3px 5px;
+            border-radius: 5px;
+            font-size: $size-p;
+        }
+        .state-green {
+            background-color: #88BC3B;
+        }
+        .state-blue {
+            background-color: $blue;
+        }
+        .state-gray {
+            background-color: #797979;
+        }
     }
     .blue {
         background-color: $table-blue;

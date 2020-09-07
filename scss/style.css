@@ -4289,7 +4289,8 @@ html .content-case-apply .container .form-apply .form-gp a,
 html .content-case-apply .container .form-apply .form-check a,
 body .content-case-apply .container .form-apply .form-gp a,
 body .content-case-apply .container .form-apply .form-check a {
-  width: 80%;
+  text-align: justify;
+  word-wrap: break-word;
 }
 
 html .content-case-apply .container .form-apply .form-check input,
@@ -4852,6 +4853,30 @@ body .content-case-list .container .case-list .c3 {
 html .content-case-list .container .case-list .c4,
 body .content-case-list .container .case-list .c4 {
   width: 10%;
+}
+
+html .content-case-list .container .case-list .c4 span,
+body .content-case-list .container .case-list .c4 span {
+  text-align: center;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+html .content-case-list .container .case-list .c4 .state-green,
+body .content-case-list .container .case-list .c4 .state-green {
+  background-color: #88BC3B;
+}
+
+html .content-case-list .container .case-list .c4 .state-blue,
+body .content-case-list .container .case-list .c4 .state-blue {
+  background-color: #0290cc;
+}
+
+html .content-case-list .container .case-list .c4 .state-gray,
+body .content-case-list .container .case-list .c4 .state-gray {
+  background-color: #797979;
 }
 
 html .content-case-list .container .case-list .blue,
