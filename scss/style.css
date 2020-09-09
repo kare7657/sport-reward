@@ -2312,14 +2312,7 @@ body .content-explain .container {
 
 html .content-explain .container h1,
 body .content-explain .container h1 {
-  margin: 1.25rem 0;
-}
-
-@media (max-width: 768px) {
-  html .content-explain .container h1,
-  body .content-explain .container h1 {
-    margin: 0;
-  }
+  margin: 0;
 }
 
 html .content-explain .container h3,
@@ -2408,14 +2401,7 @@ body .content-link span {
 
 html .content-link .container h1,
 body .content-link .container h1 {
-  margin: 1.25rem 0;
-}
-
-@media (max-width: 568px) {
-  html .content-link .container h1,
-  body .content-link .container h1 {
-    margin-top: 0;
-  }
+  margin-top: 0;
 }
 
 html .content-link .container .logo-gp,

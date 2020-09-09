@@ -288,10 +288,7 @@ body {
         .container {
             max-width: 900px;
             h1 {
-                margin: $margin-XS 0;
-                @include pad() {
-                    margin: 0;
-                }
+                margin: 0;
             }
             h3 {
                 color: $title-BK;
@@ -319,10 +316,7 @@ body {
         @include text-important();
         .container {
             h1 {
-                margin: $margin-XS 0;
-                @include mobile-L() {
-                    margin-top: 0;
-                }
+                margin-top: 0;
             }
             .logo-gp {
                 display: flex;
