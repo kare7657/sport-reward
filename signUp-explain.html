@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>報名教學</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+
+    <!-- 報名教學 -->
+    <section class="content-explain">
+        <div class="container">
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+            <h1>報名教學</h1>
+            <h3>如何註冊會員？</h3>
+            <img src="img/sign-up-1.jpg" alt="註冊會員說明1">
+            <p>1.點擊右上「註冊」按鈕</p>
+            <img src="img/sign-up-2.jpg" alt="註冊會員說明2">
+            <p>2.上方按鈕可選擇「個人」或「團體」身分註冊，填寫完成後送出表單</p>
+            <img src="img/sign-up-3.jpg" alt="註冊會員說明3">
+            <p>3.系統會寄發一封Email認證信至您申請時所填的信箱，點擊信件中的連結後即可完成註冊，點選「登入會員」開始使用帳號</p>
+            <hr>
+            <h3>如何申請案件？</h3>
+            <img src="img/case-apply-1.jpg" alt="案件申請說明1">
+            <p>1.登入會員後，點擊右上選單「會員專區」</p>
+            <img src="img/case-apply-2.jpg" alt="案件申請說明2">
+            <p>2.選擇「案件申請」</p>
+            <img src="img/case-apply-3.jpg" alt="案件申請說明3">
+            <p>3.上方按鈕可選擇申請類型，填寫表單送出後即完成申請</p>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <script src="js/footer.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            // loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+        });
+    </script>
+
+</body>
+
+</html>

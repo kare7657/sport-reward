@@ -881,19 +881,20 @@ body .navbar .pc .navbar-R .nav-list {
   position: absolute;
   top: 40px;
   left: 0;
-  -webkit-transform: translateX(-25%);
-          transform: translateX(-25%);
-  width: 180px;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  width: 160px;
   border-radius: 0 0 8px 8px;
-  padding: 0 20px 10px 20px;
-  background-color: #1480be;
+  padding: 5px 20px 10px 20px;
+  background-color: rgba(2, 144, 204, 0.8);
+  list-style: none;
 }
 
 html .navbar .pc .navbar-R .nav-list h4,
 body .navbar .pc .navbar-R .nav-list h4 {
   margin: 0;
   padding: 0;
-  line-height: 2.8125rem;
+  line-height: 2.475rem;
   color: white;
 }
 
@@ -954,16 +955,30 @@ body .navbar .mobile .menu ul {
           transition-duration: 0.7s;
 }
 
+@media (max-width: 320px) {
+  html .navbar .mobile .menu ul,
+  body .navbar .mobile .menu ul {
+    line-height: 45px;
+  }
+}
+
 html .navbar .mobile .menu ul .nav-item.dropdown .dropdown-menu,
 body .navbar .mobile .menu ul .nav-item.dropdown .dropdown-menu {
-  background-color: #0290cc;
+  background-color: #a7e5ff;
   color: white;
   text-align: center;
+  border: none;
 }
 
 html .navbar .mobile .menu ul .nav-item.dropdown .dropdown-menu .dropdown-item,
 body .navbar .mobile .menu ul .nav-item.dropdown .dropdown-menu .dropdown-item {
-  padding: 15px 0;
+  padding: 14px 0;
+}
+
+html .navbar .mobile .menu ul .nav-item.dropdown .dropdown-menu .dropdown-item h4,
+body .navbar .mobile .menu ul .nav-item.dropdown .dropdown-menu .dropdown-item h4 {
+  margin: 0;
+  color: #0290cc;
 }
 
 html .navbar .mobile .menu ul .nav-item.dropdown .nav-link.dropdown-toggle,
@@ -2234,6 +2249,107 @@ body .content-FQA .container .collapse-gp .content li {
 html .content-FQA .container span,
 body .content-FQA .container span {
   color: #0290cc;
+}
+
+html .content-explain,
+body .content-explain {
+  padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  html .content-explain,
+  body .content-explain {
+    padding-top: 60px;
+  }
+}
+
+html .content-explain h1,
+body .content-explain h1 {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+@media (max-width: 568px) {
+  html .content-explain h1,
+  body .content-explain h1 {
+    margin: 1.25rem 0;
+  }
+}
+
+html .content-explain h3,
+body .content-explain h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+html .content-explain ul,
+body .content-explain ul {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #595757;
+}
+
+html .content-explain .btn,
+body .content-explain .btn {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  margin: 3.75rem 0;
+}
+
+html .content-explain span,
+body .content-explain span {
+  color: #0290cc;
+  font-weight: bold;
+}
+
+html .content-explain .container,
+body .content-explain .container {
+  max-width: 900px;
+}
+
+html .content-explain .container h1,
+body .content-explain .container h1 {
+  margin: 1.25rem 0;
+}
+
+@media (max-width: 768px) {
+  html .content-explain .container h1,
+  body .content-explain .container h1 {
+    margin: 0;
+  }
+}
+
+html .content-explain .container h3,
+body .content-explain .container h3 {
+  color: black;
+}
+
+html .content-explain .container img,
+body .content-explain .container img {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #cccccc;
+}
+
+html .content-explain .container p,
+body .content-explain .container p {
+  margin: 0;
+  margin-bottom: 1.875rem;
+}
+
+html .content-explain .container hr,
+body .content-explain .container hr {
+  margin: 2.5rem 0;
+}
+
+@media (max-width: 568px) {
+  html .content-explain .container hr,
+  body .content-explain .container hr {
+    margin: 1.25rem 0;
+  }
 }
 
 html .content-link,
