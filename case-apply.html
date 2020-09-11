@@ -87,6 +87,9 @@
                     <h3>選手資料</h3>
                 </div>
                 <div class="list list-contestant" id="list-contestant">
+                    <div class="form-gp contestant-btn">
+                        <input type="button" value="選手資料選擇" data-toggle="modal" data-target="#contestant-chage">
+                    </div>
                     <div class="form-gp">
                         <label for="contestant-ID">選手身份證字號<span>*</span></label>
                         <input type="text" name="contestant-ID" id="contestant-ID">
@@ -274,6 +277,131 @@
         </div>
     </section>
 
+    <!-- modal-sp 選手資料-->
+    <div class="modal fade modal-sp" id="contestant-chage" tabindex="-1" role="dialog" aria-labelledby="modalPrivateLabel"
+        data-backdrop="static" style=" padding-top: 0;">
+        <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h2 class="modal-title" id="modalPrivateLabel">選手資料選擇</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="case-list">
+                            <div class="list head">
+                                <p class="c4">選手姓名</p>
+                                <p class="c2">身分證字號</p>
+                            </div>
+                            <div class="list-gp">
+                                <div class="list blue">
+                                    <div class="c4">
+                                        <a href="">
+                                            <span class="state-green">選手名</span>
+                                        </a>
+                                    </div>
+                                    <div class="c2">
+                                        <p>A123456789</p>
+                                    </div>
+                                </div>
+                                <div class="list white">
+                                    <div class="c4">
+                                        <a href="">
+                                            <span class="state-green">選手名</span>
+                                        </a>
+                                    </div>
+                                    <div class="c2">
+                                        <p>A123456789</p>
+                                    </div>
+
+                                </div>
+                                <div class="list blue">
+                                    <div class="c4">
+                                        <a href="">
+                                            <span class="state-green">選手名</span>
+                                        </a>
+                                    </div>
+                                    <div class="c2">
+                                        <p>A123456789</p>
+                                    </div>
+                                </div>
+                                <div class="list white">
+                                    <div class="c4">
+                                        <a href="">
+                                            <span class="state-green">選手名</span>
+                                        </a>
+                                    </div>
+                                    <div class="c2">
+                                        <p>A123456789</p>
+                                    </div>
+                                </div>
+                                <div class="list blue">
+                                    <div class="c4">
+                                        <a href="">
+                                            <span class="state-green">選手名</span>
+                                        </a>
+                                    </div>
+                                    <div class="c2">
+                                        <p>A123456789</p>
+                                    </div>
+                                </div>
+                                <div class="list white">
+                                    <div class="c4">
+                                        <a href="">
+                                            <span class="state-green">選手名</span>
+                                        </a>
+                                    </div>
+                                    <div class="c2">
+                                        <p>A123456789</p>
+                                    </div>
+                                </div>
+                                <div class="list blue">
+                                    <div class="c4">
+                                        <a href="">
+                                            <span class="state-green">選手名</span>
+                                        </a>
+                                    </div>
+                                    <div class="c2">
+                                        <p>A123456789</p>
+                                    </div>
+                                </div>
+                                <div class="list white">
+                                    <div class="c4">
+                                        <a href="">
+                                            <span class="state-green">選手名</span>
+                                        </a>
+                                    </div>
+                                    <div class="c2">
+                                        <p>A123456789</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <ul>
+                                <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                                <li><a href="" class="active">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="go" id="go" class="btn-sp">確認</button>
+                        <button type="button" name="cancel" id="cancel" class="btn-sp" data-dismiss="modal">取消</button>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <!-- footer -->
     <script src="js/footer.js"></script>
 
@@ -331,7 +459,7 @@
         var count = 0;
         $(".add-contestant-btn").click(function () {
             count++;
-            $('.list-contestant').after("<div class='list' id='list-contestant"+count+"'><a class='close' id='"+count+"'><i class='fas fa-times'></i></a><div class='form-gp'><label for='contestant-ID'>選手身份證字號<span>*</span></label><input type='text' name='contestant-ID' id='contestant-ID'></div><div class='form-gp'><label for='contestant-name'>選手姓名<span>*</span></label><input type='text' name='contestant-name' id='contestant-name'></div><div class='form-gp'><label for='contestant-email'>選手Email<span>*</span></label><input type='email' name='contestant-email' id='contestant-email'></div><div class='form-gp'><label for='contestant-clause'>選手適用條款<span>*</span></label><select name='type' id='contestant-clause'><option value='list1'>第三點第一項第七款</option><option value='list2'>選單2</option><option value='list3'>選單3</option></select></div><div class='form-gp'><label for='content-service'>選手條款說明</label><textarea name='content-service' id='content-service' rows='2'></textarea></div><div class='form-gp'><label for='contestant-award'>選手獎金<span>*</span></label><input type='number' name='contestant-award' id='contestant-award'></div><h4>選手帳戶</h4><div class='form-gp'><label for='contestant-bankname'>銀行名稱<span>*</span></label><input type='text' name='contestant-bankname' id='contestant-bankname'></div><div class='form-gp'><label for='contestant-branchname'>分行名稱<span>*</span></label><input type='text' name='contestant-branchname' id='contestant-branchname'></div><div class='form-gp'><label for='contestant-bankcode'>銀行代碼<span>*</span></label><input type='number' name='contestant-bankcode' id='contestant-bankcode'></div><div class='form-gp'><label for='contestant-account-number'>帳號<span>*</span></label><input type='number' name='contestant-account-number' id='contestant-account-number'></div></div>");
+            $('.list-contestant').after("<div class='list' id='list-contestant"+count+"'><a class='close' id='"+count+"'><i class='fas fa-times'></i></a><div class='form-gp contestant-btn'><input type='button' value='選手資料選擇' data-toggle='modal' data-target='#contestant-chage'></div><div class='form-gp'><label for='contestant-ID'>選手身份證字號<span>*</span></label><input type='text' name='contestant-ID' id='contestant-ID'></div><div class='form-gp'><label for='contestant-name'>選手姓名<span>*</span></label><input type='text' name='contestant-name' id='contestant-name'></div><div class='form-gp'><label for='contestant-email'>選手Email<span>*</span></label><input type='email' name='contestant-email' id='contestant-email'></div><div class='form-gp'><label for='contestant-clause'>選手適用條款<span>*</span></label><select name='type' id='contestant-clause'><option value='list1'>第三點第一項第七款</option><option value='list2'>選單2</option><option value='list3'>選單3</option></select></div><div class='form-gp'><label for='content-service'>選手條款說明</label><textarea name='content-service' id='content-service' rows='2'></textarea></div><div class='form-gp'><label for='contestant-award'>選手獎金<span>*</span></label><input type='number' name='contestant-award' id='contestant-award'></div><h4>選手帳戶</h4><div class='form-gp'><label for='contestant-bankname'>銀行名稱<span>*</span></label><input type='text' name='contestant-bankname' id='contestant-bankname'></div><div class='form-gp'><label for='contestant-branchname'>分行名稱<span>*</span></label><input type='text' name='contestant-branchname' id='contestant-branchname'></div><div class='form-gp'><label for='contestant-bankcode'>銀行代碼<span>*</span></label><input type='number' name='contestant-bankcode' id='contestant-bankcode'></div><div class='form-gp'><label for='contestant-account-number'>帳號<span>*</span></label><input type='number' name='contestant-account-number' id='contestant-account-number'></div></div>");
             $(".close").click(function () {
                 var id = '#list-contestant' + $(this).attr('id');
                 $(id).remove();

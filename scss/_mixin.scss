@@ -328,7 +328,7 @@
                     padding: 0 $padding-S;
                     padding-top: $padding-XS;
                     @include mobile-L() {
-                        padding: 0 $padding-XS * 1.5;
+                        padding: 0 $padding-XS;
                         padding-top: $padding-XS;
                     }
                     @include mobile-XS() {
@@ -380,6 +380,19 @@
                         color: $red;
                         margin-left: 3px;
                     }
+                    .case-list{
+                        @include case-list();
+                        p{
+                            color: $text;
+                            margin: 0;
+                        }
+                        .c4,.c2{
+                            width: 50% !important;
+                        }
+                    }
+                    .pagination{
+                        margin-top: $margin-XS/2;
+                    }
                 }
                 .modal-footer {
                     border-top: none;
@@ -387,7 +400,7 @@
                     padding: 0;
                     padding: 0 $padding-S;
                     @include mobile-L() {
-                        padding: 0 $padding-XS * 1.5;
+                        padding: 0 $padding-XS;
                         margin-bottom: $margin-XS;
                     }
                     @include mobile-XS() {
@@ -711,7 +724,7 @@
                         border: none;
                         .dropdown-item {
                             padding: 14px 0;
-                            h4{
+                            h4 {
                                 margin: 0;
                                 color: $blue;
                             }
@@ -765,7 +778,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-45%, -50%);
-                @include mobile-XS(){
+                @include mobile-XS() {
                     height: 65%;
                 }
             }
@@ -1342,6 +1355,24 @@
         }
         border-bottom: solid 3px $title-BK;
     }
+    .contestant-btn {
+        width: 100% !important;
+        input[type="button"] {
+            max-width: 20%;
+            border: solid 1px $blue;
+            border-radius: 20px;
+            font-size: $size-h4;
+            color: $blue;
+            font-weight: bold;
+            background-color: transparent;
+            @include pad(){
+                max-width: 30%;
+            }
+            @include mobile-L(){
+                max-width: unset;
+            }
+        }
+    }
     .form-gp,
     .form-check {
         width: 45%;
@@ -1605,7 +1636,7 @@
     }
     .c4 {
         width: 10%;
-        span{
+        span {
             text-align: center;
             color: $title-W;
             padding: 3px 5px;
@@ -1613,7 +1644,7 @@
             font-size: $size-p;
         }
         .state-green {
-            background-color: #88BC3B;
+            background-color: #88bc3b;
         }
         .state-blue {
             background-color: $blue;
