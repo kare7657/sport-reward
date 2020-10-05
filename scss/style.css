@@ -3070,6 +3070,24 @@ body .content-signup .form-menu .show-menu {
   opacity: 1;
 }
 
+html .content-signup .form-menu .active-blue,
+body .content-signup .form-menu .active-blue {
+  background-color: #0290cc;
+  color: white;
+}
+
+html .content-signup .form-menu .active-green,
+body .content-signup .form-menu .active-green {
+  background-color: #90c541;
+  color: white;
+}
+
+html .content-signup .form-menu .active-black,
+body .content-signup .form-menu .active-black {
+  background-color: black;
+  color: white;
+}
+
 html .content-signup .form-personal,
 body .content-signup .form-personal {
   width: 100%;
