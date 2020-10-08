@@ -322,11 +322,17 @@ body {
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
+                word-wrap: break-word;
                 a {
                     margin: 0 $margin-XS;
                     margin-bottom: $margin-S;
+                    color: $text;
                     @include pad() {
                         margin-bottom: $margin-XS;
+                    }
+                    @include mobile-L() {
+                        width: 100%;
+                        text-align: center;
                     }
                 }
                 img {
@@ -432,13 +438,11 @@ body {
             justify-content: center;
             flex-wrap: wrap;
             .form-body {
-                width: 55vh;
+                width: 100%;
+                max-width: 650px;
                 padding: $padding-S;
-
                 @include pad() {
                     padding: $padding-XS * 1.5;
-                }
-                @include mobile-L() {
                 }
                 h4 {
                     margin: 0;
@@ -882,9 +886,19 @@ body {
                         }
                     }
                 }
+                #type {
+                    background-color: $text;
+                    color: $title-W;
+                    option {
+                        color: $title-W;
+                    }
+                }
             }
             .case-list {
                 @include case-list();
+            }
+            .case-list-mobile {
+                @include case-list-mobile();
             }
             .pagination {
                 @include mobile-L() {
@@ -906,6 +920,5 @@ body {
                 padding-bottom: 0;
             }
         }
-
     }
 }

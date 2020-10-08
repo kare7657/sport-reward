@@ -380,17 +380,18 @@
                         color: $red;
                         margin-left: 3px;
                     }
-                    .case-list{
+                    .case-list {
                         @include case-list();
-                        p{
+                        p {
                             color: $text;
                             margin: 0;
                         }
-                        .c4,.c2{
+                        .c4,
+                        .c2 {
                             width: 50% !important;
                         }
                     }
-                    .pagination{
+                    .pagination {
                         margin-top: $margin-XS/2;
                     }
                 }
@@ -1365,10 +1366,10 @@
             color: $blue;
             font-weight: bold;
             background-color: transparent;
-            @include pad(){
+            @include pad() {
                 max-width: 30%;
             }
-            @include mobile-L(){
+            @include mobile-L() {
                 max-width: unset;
             }
         }
@@ -1580,8 +1581,13 @@
 }
 
 @mixin case-list() {
+    display: block;
+    @include mobile-L() {
+        display: none;
+    }
     .list {
         display: flex;
+        justify-content: space-between;
         padding: $padding-XXS $padding-XS;
         padding-left: $padding-S;
         @include pad() {
@@ -1590,20 +1596,6 @@
         @include mobile-L() {
             padding: $padding-XXS $padding-XS;
             width: 100%;
-            .c1 {
-                width: 30%;
-                margin-right: 15px;
-            }
-            .c2 {
-                width: 50%;
-                margin-right: 10px;
-            }
-            .c3 {
-                display: none;
-            }
-            .c4 {
-                width: 20%;
-            }
         }
         a {
             color: $text;
@@ -1625,33 +1617,21 @@
             font-weight: bold;
         }
     }
-    .c1 {
-        width: 25%;
+    .row {
+        width: calc(100% / 5);
+        margin-right: 10px;
+        &:nth-last-child(1) {
+            margin: 0;
+        }
     }
-    .c2 {
-        width: 35%;
-    }
-    .c3 {
-        width: 35%;
+    .c1{
+        width: 15%;
     }
     .c4 {
+        width: 15%;
+    }
+    .c5 {
         width: 10%;
-        span {
-            text-align: center;
-            color: $title-W;
-            padding: 3px 5px;
-            border-radius: 5px;
-            font-size: $size-p;
-        }
-        .state-green {
-            background-color: #88bc3b;
-        }
-        .state-blue {
-            background-color: $blue;
-        }
-        .state-gray {
-            background-color: #797979;
-        }
     }
     .blue {
         background-color: $table-blue;
@@ -1659,7 +1639,90 @@
     .white {
         background-color: $title-W;
     }
+    span {
+        text-align: center;
+        color: $title-W;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: $size-p;
+    }
+    .state-green {
+        background-color: #88bc3b;
+    }
+    .state-blue {
+        background-color: $blue;
+    }
+    .state-gray {
+        background-color: #797979;
+    }
+    .state-red {
+        background-color: $red;
+    }
+    .state-orange {
+        background-color: $orange;
+    }
     h4 {
         text-align: right;
+    }
+}
+
+@mixin case-list-mobile() {
+    display: none;
+    @include mobile-L() {
+        width: 100%;
+        display: block;
+        margin-bottom: $margin-XS;
+    }
+    .list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: $table-blue;
+        a {
+            color: $blue;
+            font-size: $size-p;
+            line-height: $size-p * 2;
+        }
+        .row {
+            width: 70%;
+            margin: 0;
+            border-bottom: solid 1px $title-W;
+            padding: $padding-XXS $padding-XXS*1.5;
+        }
+    }
+    .head {
+        width: 30%;
+        background-color: $blue;
+        padding: $padding-XXS;
+        border-bottom: solid 1px $light-sky;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            color: $title-W;
+            font-weight: bold;
+        }
+    }
+    span {
+        text-align: center;
+        color: $title-W;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: $size-p;
+    }
+    .state-green {
+        background-color: #88bc3b;
+    }
+    .state-blue {
+        background-color: $blue;
+    }
+    .state-gray {
+        background-color: #797979;
+    }
+    .state-red {
+        background-color: $red;
+    }
+    .state-orange {
+        background-color: $orange;
     }
 }
