@@ -382,6 +382,9 @@
                     }
                     .case-list {
                         @include case-list();
+                        @include mobile-L() {
+                            display: block;
+                        }
                         p {
                             color: $text;
                             margin: 0;
@@ -389,6 +392,9 @@
                         .c4,
                         .c2 {
                             width: 50% !important;
+                        }
+                        .c4{
+                            margin-right: $margin-XS/1.5;
                         }
                     }
                     .pagination {
@@ -1712,17 +1718,22 @@
     }
     .state-green {
         background-color: #88bc3b;
+        margin-right: $margin-XS/2;
     }
     .state-blue {
         background-color: $blue;
+        margin-right: $margin-XS/2;
     }
     .state-gray {
         background-color: #797979;
+        margin-right: $margin-XS/2;
     }
     .state-red {
         background-color: $red;
+        margin-right: $margin-XS/2;
     }
     .state-orange {
         background-color: $orange;
+        margin-right: $margin-XS/2;
     }
 }
