@@ -123,9 +123,16 @@
         width: 100%;
     }
     hr {
-        border-top: 1px solid $light-sky;
+        border-top: 2px solid $light-sky;
         margin: 0;
         margin: auto;
+        width: 100%;
+        @include mobile-L(){
+            padding: 0 $padding-XXS;
+        }
+    }
+    .hidden{
+        display: none;
     }
     //清除預設按鈕樣式
     input[type="button"],
@@ -707,7 +714,7 @@
                 color: $blue;
             }
             ul {
-                display: inline-block;
+                display: inline-block !important;
                 width: 100vw;
                 height: 100vh;
                 background-color: $blue;

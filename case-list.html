@@ -23,12 +23,19 @@
         <div class="container">
             <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
             <h1>案件查詢</h1>
+            <div class="btn">
+                <button class="active-blue" type="button"
+                    onclick="javascript:location.href=''">運動獎金</button>
+                <button type="button" onclick="javascript:location.href=''">培訓獎助金</button>
+                <button type="button" onclick="javascript:location.href=''">民間團體補助</button>
+            </div>
+            <hr>
             <form class="filter">
-                <select name="type" id="type">
+                <!-- <select name="type" id="type">
                     <option value="list1">培訓獎助金</option>
                     <option value="list2">民間補助團體</option>
                     <option value="list3">體育獎金</option>
-                </select>
+                </select> -->
                 <input type="date" id="from" name="from">
                 <label for="to" class="to">~</label>
                 <input type="date" id="to" name="to">

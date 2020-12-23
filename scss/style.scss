@@ -797,15 +797,51 @@ body {
                     text-align: center;
                     @include mobile-L() {
                         margin: 0;
+                        margin-bottom: $margin-XS;
                     }
+                }
+            }
+            .btn {
+                margin: $margin-XS/1.2 0;
+                text-align: left;
+                @include mobile-L() {
+                    margin: 0;
+                    padding: 0 $padding-XS * 1.5;
+                }
+                button {
+                    height: 40px;
+                    margin: 0 $margin-XS/2;
+                    border-radius: 40px;
+                    background-color: $light-gray;
+                    color: $text;
+                    @include mobile-L() {
+                        width: 100%;
+                        margin: 0;
+                        margin-bottom: $margin-XS;
+                    }
+                    &:nth-child(1) {
+                        margin-left: 0;
+                    }
+                }
+                .active-blue {
+                    background-color: $blue;
+                    color: $title-W;
+                }
+                .active-green {
+                    background-color: $green;
+                    color: $title-W;
+                }
+                .active-black {
+                    background-color: $title-BK;
+                    color: $title-W;
                 }
             }
             .filter {
                 display: flex;
                 justify-content: flex-start;
+                // justify-content: center;
                 width: 100%;
-                margin-top: $margin-S;
-                margin-bottom: $margin-XS;
+                margin: $margin-XS/1.2 0;
                 @include mobile-L() {
                     flex-wrap: wrap;
                     justify-content: space-between;
@@ -865,8 +901,7 @@ body {
                     &[type="reset"] {
                         width: 9%;
                         padding: 5px 0;
-                        background-color: transparent;
-                        border: solid 1px $text;
+                        background-color: $title-W;
                         border-radius: 8px;
                         font-size: $size-h4;
                         line-height: $size-h4;
@@ -877,7 +912,7 @@ body {
                             width: 20%;
                         }
                         @include mobile-L() {
-                            width: 100%;
+                            width: 47%;
                         }
                         &:hover {
                             background-color: $title-BK;

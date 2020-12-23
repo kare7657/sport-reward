@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66.065" height="60" viewBox="0 0 66.065 60">
+  <g id="icon-apply" transform="translate(0 -23.5)">
+    <g id="组_825" data-name="组 825" transform="translate(3.871 29.306)">
+      <g id="组_824" data-name="组 824">
+        <path id="路径_3394" data-name="路径 3394" d="M41.742,68.5H31.935a1.935,1.935,0,0,0,0,3.871h9.806a1.935,1.935,0,0,0,0-3.871Z" transform="translate(-30 -68.5)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="组_827" data-name="组 827" transform="translate(3.871 44.79)">
+      <g id="组_826" data-name="组 826">
+        <path id="路径_3395" data-name="路径 3395" d="M41.742,188.5H31.935a1.935,1.935,0,0,0,0,3.871h9.806a1.935,1.935,0,0,0,0-3.871Z" transform="translate(-30 -188.5)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="组_829" data-name="组 829" transform="translate(0 37.048)">
+      <g id="组_828" data-name="组 828">
+        <path id="路径_3396" data-name="路径 3396" d="M11.742,128.5H1.935a1.935,1.935,0,0,0,0,3.871h9.806a1.935,1.935,0,0,0,0-3.871Z" transform="translate(0 -128.5)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="组_831" data-name="组 831" transform="translate(25.29 35.11)">
+      <g id="组_830" data-name="组 830">
+        <path id="路径_3397" data-name="路径 3397" d="M232.9,125.093H221.161v-7.742a3.877,3.877,0,0,0-6.609-2.736L199.069,130.1a3.869,3.869,0,0,0,0,5.474l8.876,8.876-10.811,10.811a3.871,3.871,0,0,0,5.474,5.474l13.548-13.548a3.869,3.869,0,0,0,0-5.474l-8.876-8.876,6.139-6.139v2.268a3.871,3.871,0,0,0,3.871,3.871H232.9a3.871,3.871,0,1,0,0-7.742Z" transform="translate(-196 -113.477)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="组_833" data-name="组 833" transform="translate(19.484 26.404)">
+      <g id="组_832" data-name="组 832">
+        <path id="路径_3398" data-name="路径 3398" d="M167.662,46.656a3.872,3.872,0,0,0-4.884.484L152.133,57.785a3.871,3.871,0,1,0,5.474,5.474l8.4-8.4,2.83,2.039,3.781-3.781a7.7,7.7,0,0,1,2.194-1.507Z" transform="translate(-150.999 -46.006)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="组_835" data-name="组 835" transform="translate(2.064 56.448)">
+      <g id="组_834" data-name="组 834">
+        <path id="路径_3399" data-name="路径 3399" d="M39.558,282.343a7.672,7.672,0,0,1-1.981-3.493L17.134,299.294a3.871,3.871,0,0,0,5.474,5.474L42.3,285.08Z" transform="translate(-16 -278.85)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="组_837" data-name="组 837" transform="translate(46.581 23.5)">
+      <g id="组_836" data-name="组 836">
+        <circle id="椭圆_42" data-name="椭圆 42" cx="5.806" cy="5.806" r="5.806" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

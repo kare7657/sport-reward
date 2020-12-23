@@ -109,9 +109,20 @@
 }
 
 * hr {
-  border-top: 1px solid #a7e5ff;
+  border-top: 2px solid #a7e5ff;
   margin: 0;
   margin: auto;
+  width: 100%;
+}
+
+@media (max-width: 568px) {
+  * hr {
+    padding: 0 0.625rem;
+  }
+}
+
+* .hidden {
+  display: none;
 }
 
 * input[type="button"],
@@ -1091,7 +1102,7 @@ body .navbar .mobile .menu .fas.fa-bars {
 
 html .navbar .mobile .menu ul,
 body .navbar .mobile .menu ul {
-  display: inline-block;
+  display: inline-block !important;
   width: 100vw;
   height: 100vh;
   background-color: #0290cc;
@@ -4935,7 +4946,63 @@ body .content-case-list span {
   html .content-case-list .container h1,
   body .content-case-list .container h1 {
     margin: 0;
+    margin-bottom: 1.25rem;
   }
+}
+
+html .content-case-list .container .btn,
+body .content-case-list .container .btn {
+  margin: 1.04167rem 0;
+  text-align: left;
+}
+
+@media (max-width: 568px) {
+  html .content-case-list .container .btn,
+  body .content-case-list .container .btn {
+    margin: 0;
+    padding: 0 2.8125rem;
+  }
+}
+
+html .content-case-list .container .btn button,
+body .content-case-list .container .btn button {
+  height: 40px;
+  margin: 0 0.625rem;
+  border-radius: 40px;
+  background-color: #eeefef;
+  color: #595757;
+}
+
+@media (max-width: 568px) {
+  html .content-case-list .container .btn button,
+  body .content-case-list .container .btn button {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+}
+
+html .content-case-list .container .btn button:nth-child(1),
+body .content-case-list .container .btn button:nth-child(1) {
+  margin-left: 0;
+}
+
+html .content-case-list .container .btn .active-blue,
+body .content-case-list .container .btn .active-blue {
+  background-color: #0290cc;
+  color: white;
+}
+
+html .content-case-list .container .btn .active-green,
+body .content-case-list .container .btn .active-green {
+  background-color: #90c541;
+  color: white;
+}
+
+html .content-case-list .container .btn .active-black,
+body .content-case-list .container .btn .active-black {
+  background-color: black;
+  color: white;
 }
 
 html .content-case-list .container .filter,
@@ -4947,8 +5014,7 @@ body .content-case-list .container .filter {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
-  margin-top: 2.5rem;
-  margin-bottom: 1.25rem;
+  margin: 1.04167rem 0;
 }
 
 @media (max-width: 568px) {
@@ -5041,8 +5107,7 @@ body .content-case-list .container .filter input[type="submit"],
 body .content-case-list .container .filter input[type="reset"] {
   width: 9%;
   padding: 5px 0;
-  background-color: transparent;
-  border: solid 1px #595757;
+  background-color: white;
   border-radius: 8px;
   font-size: 1.125rem;
   line-height: 1.125rem;
@@ -5063,7 +5128,7 @@ body .content-case-list .container .filter input[type="reset"] {
   html .content-case-list .container .filter input[type="submit"], html .content-case-list .container .filter input[type="reset"],
   body .content-case-list .container .filter input[type="submit"],
   body .content-case-list .container .filter input[type="reset"] {
-    width: 100%;
+    width: 47%;
   }
 }
 
