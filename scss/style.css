@@ -165,6 +165,11 @@
   background-color: black;
 }
 
+* input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
 * input[disabled] {
   background-color: #a7e5ff;
 }
@@ -4477,9 +4482,7 @@ body .content-case-apply .container .form-apply .contestant-btn input[type="butt
 }
 
 html .content-case-apply .container .form-apply .form-gp,
-html .content-case-apply .container .form-apply .form-check,
-body .content-case-apply .container .form-apply .form-gp,
-body .content-case-apply .container .form-apply .form-check {
+body .content-case-apply .container .form-apply .form-gp {
   width: 45%;
   margin-top: 1.25rem;
   padding: 0;
@@ -4487,9 +4490,7 @@ body .content-case-apply .container .form-apply .form-check {
 
 @media (max-width: 568px) {
   html .content-case-apply .container .form-apply .form-gp,
-  html .content-case-apply .container .form-apply .form-check,
-  body .content-case-apply .container .form-apply .form-gp,
-  body .content-case-apply .container .form-apply .form-check {
+  body .content-case-apply .container .form-apply .form-gp {
     width: 100%;
     padding: 0 2.8125rem;
   }
@@ -4499,18 +4500,10 @@ html .content-case-apply .container .form-apply .form-gp label,
 html .content-case-apply .container .form-apply .form-gp input,
 html .content-case-apply .container .form-apply .form-gp select,
 html .content-case-apply .container .form-apply .form-gp textarea,
-html .content-case-apply .container .form-apply .form-check label,
-html .content-case-apply .container .form-apply .form-check input,
-html .content-case-apply .container .form-apply .form-check select,
-html .content-case-apply .container .form-apply .form-check textarea,
 body .content-case-apply .container .form-apply .form-gp label,
 body .content-case-apply .container .form-apply .form-gp input,
 body .content-case-apply .container .form-apply .form-gp select,
-body .content-case-apply .container .form-apply .form-gp textarea,
-body .content-case-apply .container .form-apply .form-check label,
-body .content-case-apply .container .form-apply .form-check input,
-body .content-case-apply .container .form-apply .form-check select,
-body .content-case-apply .container .form-apply .form-check textarea {
+body .content-case-apply .container .form-apply .form-gp textarea {
   width: 100%;
   margin-bottom: 0.625rem;
   font-size: 1.125rem;
@@ -4519,37 +4512,27 @@ body .content-case-apply .container .form-apply .form-check textarea {
 }
 
 html .content-case-apply .container .form-apply .form-gp label,
-html .content-case-apply .container .form-apply .form-check label,
-body .content-case-apply .container .form-apply .form-gp label,
-body .content-case-apply .container .form-apply .form-check label {
+body .content-case-apply .container .form-apply .form-gp label {
   font-weight: bold;
 }
 
 html .content-case-apply .container .form-apply .form-gp p,
 html .content-case-apply .container .form-apply .form-gp span,
-html .content-case-apply .container .form-apply .form-check p,
-html .content-case-apply .container .form-apply .form-check span,
 body .content-case-apply .container .form-apply .form-gp p,
-body .content-case-apply .container .form-apply .form-gp span,
-body .content-case-apply .container .form-apply .form-check p,
-body .content-case-apply .container .form-apply .form-check span {
+body .content-case-apply .container .form-apply .form-gp span {
   color: #da382d;
   margin-left: 3px;
 }
 
 html .content-case-apply .container .form-apply .form-gp h4,
-html .content-case-apply .container .form-apply .form-check h4,
-body .content-case-apply .container .form-apply .form-gp h4,
-body .content-case-apply .container .form-apply .form-check h4 {
+body .content-case-apply .container .form-apply .form-gp h4 {
   color: #595757;
   padding: 0;
   margin: 0;
 }
 
 html .content-case-apply .container .form-apply .form-gp .date,
-html .content-case-apply .container .form-apply .form-check .date,
-body .content-case-apply .container .form-apply .form-gp .date,
-body .content-case-apply .container .form-apply .form-check .date {
+body .content-case-apply .container .form-apply .form-gp .date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4563,9 +4546,7 @@ body .content-case-apply .container .form-apply .form-check .date {
 
 @media (max-width: 568px) {
   html .content-case-apply .container .form-apply .form-gp .date,
-  html .content-case-apply .container .form-apply .form-check .date,
-  body .content-case-apply .container .form-apply .form-gp .date,
-  body .content-case-apply .container .form-apply .form-check .date {
+  body .content-case-apply .container .form-apply .form-gp .date {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: vertical;
@@ -4577,12 +4558,8 @@ body .content-case-apply .container .form-apply .form-check .date {
 
 html .content-case-apply .container .form-apply .form-gp .date input,
 html .content-case-apply .container .form-apply .form-gp .date label,
-html .content-case-apply .container .form-apply .form-check .date input,
-html .content-case-apply .container .form-apply .form-check .date label,
 body .content-case-apply .container .form-apply .form-gp .date input,
-body .content-case-apply .container .form-apply .form-gp .date label,
-body .content-case-apply .container .form-apply .form-check .date input,
-body .content-case-apply .container .form-apply .form-check .date label {
+body .content-case-apply .container .form-apply .form-gp .date label {
   width: 45%;
   margin-top: 0.625rem;
 }
@@ -4590,53 +4567,185 @@ body .content-case-apply .container .form-apply .form-check .date label {
 @media (max-width: 568px) {
   html .content-case-apply .container .form-apply .form-gp .date input,
   html .content-case-apply .container .form-apply .form-gp .date label,
-  html .content-case-apply .container .form-apply .form-check .date input,
-  html .content-case-apply .container .form-apply .form-check .date label,
   body .content-case-apply .container .form-apply .form-gp .date input,
-  body .content-case-apply .container .form-apply .form-gp .date label,
-  body .content-case-apply .container .form-apply .form-check .date input,
-  body .content-case-apply .container .form-apply .form-check .date label {
+  body .content-case-apply .container .form-apply .form-gp .date label {
     width: 100%;
   }
 }
 
 html .content-case-apply .container .form-apply .form-gp .date h4,
-html .content-case-apply .container .form-apply .form-check .date h4,
-body .content-case-apply .container .form-apply .form-gp .date h4,
-body .content-case-apply .container .form-apply .form-check .date h4 {
-  width: unset;
+body .content-case-apply .container .form-apply .form-gp .date h4 {
+  width: 20px;
 }
 
 @media (max-width: 568px) {
   html .content-case-apply .container .form-apply .form-gp .date h4,
-  html .content-case-apply .container .form-apply .form-check .date h4,
-  body .content-case-apply .container .form-apply .form-gp .date h4,
-  body .content-case-apply .container .form-apply .form-check .date h4 {
+  body .content-case-apply .container .form-apply .form-gp .date h4 {
     display: none;
   }
 }
 
 html .content-case-apply .container .form-apply .form-gp a,
-html .content-case-apply .container .form-apply .form-check a,
-body .content-case-apply .container .form-apply .form-gp a,
-body .content-case-apply .container .form-apply .form-check a {
+body .content-case-apply .container .form-apply .form-gp a {
   text-align: justify;
   word-wrap: break-word;
 }
 
-html .content-case-apply .container .form-apply .form-check input,
-html .content-case-apply .container .form-apply .form-check label,
-body .content-case-apply .container .form-apply .form-check input,
-body .content-case-apply .container .form-apply .form-check label {
-  width: unset;
+html .content-case-apply .container .form-apply .form-check,
+body .content-case-apply .container .form-apply .form-check {
+  width: 45%;
+  margin-top: 1.25rem;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-html .content-case-apply .container .form-apply .form-check .custom-control-label,
-body .content-case-apply .container .form-apply .form-check .custom-control-label {
-  margin-top: 0.625rem;
-  font-weight: normal;
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .form-check,
+  body .content-case-apply .container .form-apply .form-check {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 0 2.8125rem;
+  }
+}
+
+html .content-case-apply .container .form-apply .form-check h3,
+body .content-case-apply .container .form-apply .form-check h3 {
+  width: 100%;
   font-size: 1.125rem;
+  line-height: 1.6875rem;
   color: #595757;
+  margin: 0;
+  margin-bottom: 0.625rem;
+}
+
+html .content-case-apply .container .form-apply .form-check .text-gp,
+body .content-case-apply .container .form-apply .form-check .text-gp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1.25rem;
+}
+
+html .content-case-apply .container .form-apply .form-check .text-gp label,
+html .content-case-apply .container .form-apply .form-check .text-gp input,
+body .content-case-apply .container .form-apply .form-check .text-gp label,
+body .content-case-apply .container .form-apply .form-check .text-gp input {
+  height: 40px;
+  line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .content-case-apply .container .form-apply .form-check .text-gp label,
+body .content-case-apply .container .form-apply .form-check .text-gp label {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  color: #595757;
+}
+
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .form-check .text-gp label,
+  body .content-case-apply .container .form-apply .form-check .text-gp label {
+    width: 80%;
+  }
+}
+
+html .content-case-apply .container .form-apply .form-check .text-gp input[type="checkbox"],
+body .content-case-apply .container .form-apply .form-check .text-gp input[type="checkbox"] {
+  width: 20px;
+  height: 40px;
+  line-height: 40px;
+  line-height: 2.25rem;
+  border: 1px solid #a7e5ff;
+  margin-right: 0.625rem;
+}
+
+html .content-case-apply .container .form-apply .table,
+body .content-case-apply .container .form-apply .table {
+  width: 45%;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .table,
+  body .content-case-apply .container .form-apply .table {
+    width: 100%;
+    padding: 0 2.8125rem;
+  }
+}
+
+html .content-case-apply .container .form-apply .table h3,
+body .content-case-apply .container .form-apply .table h3 {
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  color: #595757;
+  margin: 0.625rem 0;
+}
+
+html .content-case-apply .container .form-apply .table .row,
+body .content-case-apply .container .form-apply .table .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0.9375rem;
+  margin-bottom: 0.625rem;
+}
+
+html .content-case-apply .container .form-apply .table .row .td,
+body .content-case-apply .container .form-apply .table .row .td {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.625rem 0;
+  border-bottom: 1px solid #eeefef;
+}
+
+@media (max-width: 568px) {
+  html .content-case-apply .container .form-apply .table .row .td,
+  body .content-case-apply .container .form-apply .table .row .td {
+    margin-bottom: 0.625rem;
+  }
+}
+
+html .content-case-apply .container .form-apply .table .row .td label,
+body .content-case-apply .container .form-apply .table .row .td label {
+  width: 30%;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  color: #595757;
+  font-weight: bold;
+  padding: 0;
+}
+
+html .content-case-apply .container .form-apply .table .row .td input,
+body .content-case-apply .container .form-apply .table .row .td input {
+  width: 70%;
+  height: 30px;
+  padding: 0;
+  margin-right: 1.25rem;
+}
+
+html .content-case-apply .container .form-apply .table .row span,
+body .content-case-apply .container .form-apply .table .row span {
+  color: #da382d;
+  margin-left: 3px;
 }
 
 html .content-case-apply .container .form-apply .form-check-del,

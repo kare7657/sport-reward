@@ -254,6 +254,15 @@
                     <textarea name="remark" id="remark2" rows="3"></textarea>
                 </div>
 
+                <div class="form-gp w100-Full">
+                    <h4>舉辦各項活動皆須辦理保險，請確認您已辦理或正在進行保險事宜。</h4>
+                    <div class="form-check-del mt-2">
+                        <input type="checkbox" name="insuranceCheck" id="insuranceCheck">
+                        <h4 >我知道了</h4>
+                    </div>
+                    <span id="insuranceCheck_Err"></span>
+                </div>
+
                 <div class="form-submit">
                     <div class="g-recaptcha" data-sitekey="6LcEuLAUAAAAAOK774BX-VqhAYq-gBoCLIoPXWQj">
                         <div style="width: 304px; height: 78px;margin: auto;">
@@ -273,13 +282,14 @@
                         <input type="submit" value="送出表單">
                     </div>
                 </div>
+
             </form>
         </div>
     </section>
 
     <!-- modal-sp 選手資料-->
-    <div class="modal fade modal-sp" id="contestant-chage" tabindex="-1" role="dialog" aria-labelledby="modalPrivateLabel"
-        data-backdrop="static" style=" padding-top: 0;">
+    <div class="modal fade modal-sp" id="contestant-chage" tabindex="-1" role="dialog"
+        aria-labelledby="modalPrivateLabel" data-backdrop="static" style=" padding-top: 0;">
         <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -459,7 +469,7 @@
         var count = 0;
         $(".add-contestant-btn").click(function () {
             count++;
-            $('.list-contestant').after("<div class='list' id='list-contestant"+count+"'><a class='close' id='"+count+"'><i class='fas fa-times'></i></a><div class='form-gp contestant-btn'><input type='button' value='選手資料選擇' data-toggle='modal' data-target='#contestant-chage'></div><div class='form-gp'><label for='contestant-ID'>選手身份證字號<span>*</span></label><input type='text' name='contestant-ID' id='contestant-ID'></div><div class='form-gp'><label for='contestant-name'>選手姓名<span>*</span></label><input type='text' name='contestant-name' id='contestant-name'></div><div class='form-gp'><label for='contestant-email'>選手Email<span>*</span></label><input type='email' name='contestant-email' id='contestant-email'></div><div class='form-gp'><label for='contestant-clause'>選手適用條款<span>*</span></label><select name='type' id='contestant-clause'><option value='list1'>第三點第一項第七款</option><option value='list2'>選單2</option><option value='list3'>選單3</option></select></div><div class='form-gp'><label for='content-service'>選手條款說明</label><textarea name='content-service' id='content-service' rows='2'></textarea></div><div class='form-gp'><label for='contestant-award'>選手獎金<span>*</span></label><input type='number' name='contestant-award' id='contestant-award'></div><h4>選手帳戶</h4><div class='form-gp'><label for='contestant-bankname'>銀行名稱<span>*</span></label><input type='text' name='contestant-bankname' id='contestant-bankname'></div><div class='form-gp'><label for='contestant-branchname'>分行名稱<span>*</span></label><input type='text' name='contestant-branchname' id='contestant-branchname'></div><div class='form-gp'><label for='contestant-bankcode'>銀行代碼<span>*</span></label><input type='number' name='contestant-bankcode' id='contestant-bankcode'></div><div class='form-gp'><label for='contestant-account-number'>帳號<span>*</span></label><input type='number' name='contestant-account-number' id='contestant-account-number'></div></div>");
+            $('.list-contestant').after("<div class='list' id='list-contestant" + count + "'><a class='close' id='" + count + "'><i class='fas fa-times'></i></a><div class='form-gp contestant-btn'><input type='button' value='選手資料選擇' data-toggle='modal' data-target='#contestant-chage'></div><div class='form-gp'><label for='contestant-ID'>選手身份證字號<span>*</span></label><input type='text' name='contestant-ID' id='contestant-ID'></div><div class='form-gp'><label for='contestant-name'>選手姓名<span>*</span></label><input type='text' name='contestant-name' id='contestant-name'></div><div class='form-gp'><label for='contestant-email'>選手Email<span>*</span></label><input type='email' name='contestant-email' id='contestant-email'></div><div class='form-gp'><label for='contestant-clause'>選手適用條款<span>*</span></label><select name='type' id='contestant-clause'><option value='list1'>第三點第一項第七款</option><option value='list2'>選單2</option><option value='list3'>選單3</option></select></div><div class='form-gp'><label for='content-service'>選手條款說明</label><textarea name='content-service' id='content-service' rows='2'></textarea></div><div class='form-gp'><label for='contestant-award'>選手獎金<span>*</span></label><input type='number' name='contestant-award' id='contestant-award'></div><h4>選手帳戶</h4><div class='form-gp'><label for='contestant-bankname'>銀行名稱<span>*</span></label><input type='text' name='contestant-bankname' id='contestant-bankname'></div><div class='form-gp'><label for='contestant-branchname'>分行名稱<span>*</span></label><input type='text' name='contestant-branchname' id='contestant-branchname'></div><div class='form-gp'><label for='contestant-bankcode'>銀行代碼<span>*</span></label><input type='number' name='contestant-bankcode' id='contestant-bankcode'></div><div class='form-gp'><label for='contestant-account-number'>帳號<span>*</span></label><input type='number' name='contestant-account-number' id='contestant-account-number'></div></div>");
             $(".close").click(function () {
                 var id = '#list-contestant' + $(this).attr('id');
                 $(id).remove();

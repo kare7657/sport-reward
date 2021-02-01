@@ -127,11 +127,11 @@
         margin: 0;
         margin: auto;
         width: 100%;
-        @include mobile-L(){
+        @include mobile-L() {
             padding: 0 $padding-XXS;
         }
     }
-    .hidden{
+    .hidden {
         display: none;
     }
     //清除預設按鈕樣式
@@ -170,6 +170,11 @@
                 background-color: $title-BK;
             }
         }
+        &[type="checkbox"] {
+            width: 20px ;
+            height: 20px;
+        }
+
         &[disabled] {
             background-color: $light-sky;
             &:hover {
@@ -400,7 +405,7 @@
                         .c2 {
                             width: 50% !important;
                         }
-                        .c4{
+                        .c4 {
                             margin-right: $margin-XS/1.5;
                         }
                     }
@@ -1240,6 +1245,16 @@
                 background-color: $gray;
             }
         }
+        // input{
+        //     width: unset;
+        //     height: unset;
+        //     &[type="checkbox"] {
+        //         width: 20px ;
+        //         height: 20px;
+        //     }
+        // }
+
+
         textarea {
             width: 100%;
             border-radius: 5px;
@@ -1387,8 +1402,7 @@
             }
         }
     }
-    .form-gp,
-    .form-check {
+    .form-gp {
         width: 45%;
         margin-top: $margin-XS;
         padding: 0;
@@ -1436,7 +1450,7 @@
                 }
             }
             h4 {
-                width: unset;
+                width: 20px;
                 @include mobile-L() {
                     display: none;
                 }
@@ -1448,17 +1462,108 @@
         }
     }
     .form-check {
-        input,
-        label {
-            width: unset;
+        width: 45%;
+        margin-top: $margin-XS;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        @include mobile-L() {
+            flex-direction: column;
+            width: 100%;
+            padding: 0 $padding-XS * 1.5;
         }
-        .custom-control-label {
-            margin-top: $margin-XS/2;
-            font-weight: normal;
+        h3 {
+            width: 100%;
             font-size: $size-h4;
+            line-height: $size-h4 * 1.5;
             color: $text;
+            margin: 0;
+            margin-bottom: $margin-XS/2;
+        }
+        .text-gp {
+            display: flex;
+            margin-right: $margin-XS;
+            @include mobile-L() {
+            }
+            label,
+            input {
+                height: 40px;
+                line-height: 40px;
+                display: flex;
+                align-items: center;
+            }
+            label {
+                margin-bottom: 0;
+                font-size: $size-h4;
+                line-height: $size-h4 * 1.5;
+                color: $text;
+                @include mobile-L() {
+                    width: 80%;
+                }
+            }
+            input {
+                &[type="checkbox"] {
+                    width: 20px;
+                    height: 40px;
+                    line-height: 40px;
+                    line-height: $size-h4 * 2;
+                    border: 1px solid $light-sky;
+                    margin-right: $margin-XS/2;
+                }
+            }
         }
     }
+    .table {
+        width: 45%;
+        font-size: $size-h4;
+        @include mobile-L() {
+            width: 100%;
+            padding: 0 $padding-XS * 1.5;
+        }
+        h3 {
+            width: 100%;
+            font-size: $size-h4;
+            line-height: $size-h4 * 1.5;
+            color: $text;
+            margin: $margin-XS/2 0;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            padding: 0 $padding-XXS * 1.5;
+            margin-bottom: $margin-XS/2;
+            .td {
+                width: 30%;
+                display: flex;
+                padding: $padding-XXS 0;
+                border-bottom: 1px solid $light-gray;
+                @include mobile-L() {
+                    margin-bottom: $margin-XS/2;
+                }
+
+                label {
+                    width: 30%;
+                    font-size: $size-h4;
+                    line-height: $size-h4 * 1.5;
+                    color: $text;
+                    font-weight: bold;
+                    padding: 0;
+                }
+                input {
+                    width: 70%;
+                    height: 30px;
+                    padding: 0;
+                    margin-right: $margin-XS;
+                }
+            }
+
+            span {
+                color: $red;
+                margin-left: 3px;
+            }
+        }
+    }
+
     .form-check-del {
         display: flex;
         margin-top: 3px;
@@ -1637,7 +1742,7 @@
             margin: 0;
         }
     }
-    .c1{
+    .c1 {
         width: 15%;
     }
     .c4 {
@@ -1700,7 +1805,7 @@
             width: 70%;
             margin: 0;
             border-bottom: solid 1px $title-W;
-            padding: $padding-XXS $padding-XXS*1.5;
+            padding: $padding-XXS $padding-XXS * 1.5;
         }
     }
     .head {
