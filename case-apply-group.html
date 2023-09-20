@@ -403,23 +403,41 @@
                     <label for="remark">備註</label>
                     <textarea name="remark" id="remark2" rows="3"></textarea>
                 </div>
-                <div class="form-submit">
-                    <div class="g-recaptcha" data-sitekey="6LcEuLAUAAAAAOK774BX-VqhAYq-gBoCLIoPXWQj">
-                        <div style="width: 304px; height: 78px;margin: auto;">
-                            <div><iframe
-                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcEuLAUAAAAAOK774BX-VqhAYq-gBoCLIoPXWQj&amp;co=aHR0cHM6Ly9pb3Qud3JhLmdvdi50dzo0NDM.&amp;hl=zh-TW&amp;v=2diXFiiA9NsPIBTU15LG6xPf&amp;size=normal&amp;cb=w9t57zywk9t1"
-                                    width="304" height="78" role="presentation" name="a-bhf3r1m2u1sq" frameborder="0"
-                                    scrolling="no"
-                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
-                            </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                                class="g-recaptcha-response"
-                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                        </div><iframe style="display: none;"></iframe>
+                <div class="form-bot">
+                    <div class="form-submit">
+                        <!-- <div class="g-recaptcha" data-sitekey="6LcEuLAUAAAAAOK774BX-VqhAYq-gBoCLIoPXWQj">
+                            <div style="width: 304px; height: 78px;margin: auto;">
+                                <div><iframe
+                                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcEuLAUAAAAAOK774BX-VqhAYq-gBoCLIoPXWQj&amp;co=aHR0cHM6Ly9pb3Qud3JhLmdvdi50dzo0NDM.&amp;hl=zh-TW&amp;v=2diXFiiA9NsPIBTU15LG6xPf&amp;size=normal&amp;cb=w9t57zywk9t1"
+                                        width="304" height="78" role="presentation" name="a-bhf3r1m2u1sq" frameborder="0"
+                                        scrolling="no"
+                                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                    class="g-recaptcha-response"
+                                    style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                            </div><iframe style="display: none;"></iframe>
 
-                        <input name="JSessId" type="hidden" value="25C42F78A3D3E67621485F7594B29385">
-                    </div>
-                    <div class="btn">
-                        <input type="submit" value="送出表單">
+                            <input name="JSessId" type="hidden" value="25C42F78A3D3E67621485F7594B29385">
+                        </div> -->
+                        <!-- 圖片驗證碼 -->
+                        <div class="code-gp">
+                            <label for="code">驗證碼<span class="notice">*</span></label>
+                            <div class="text-gp">
+                                <input class="code" type="text" name="code" id="code">
+                                <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                                <button name="" id="" class="reform" onclick="" title="重新整理" type="button"><i
+                                        class="fas fa-sync-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="text-gp">
+                            <input type="checkbox" value="" id="private-agree">
+                            <label for="private-agree">
+                                我同意<a href="private.html" target="_blank">隱私權保護政策</a><span>*</span>
+                            </label>
+                        </div>
+                        <div class="btn">
+                            <input type="submit" value="送出表單">
+                        </div>
                     </div>
                 </div>
             </form>

@@ -99,6 +99,10 @@
             color: $blue !important;
         }
     }
+    .notice{
+        color: $red;
+        margin-left: 4px;
+    }
     //font-awesome
     .fa,
     .fas,
@@ -171,7 +175,7 @@
             }
         }
         &[type="checkbox"] {
-            width: 20px ;
+            width: 20px;
             height: 20px;
         }
 
@@ -1137,11 +1141,11 @@
             text-align: justify;
             font-size: $text;
             color: $text;
-            line-height: $text * 2;
-            margin-top: $margin-XS/2;
+            line-height: 2;
+            margin-top: $margin-XS;
             @include mobile-XS() {
                 font-size: $size-p;
-                line-height: $size-p * 2;
+                line-height: 2;
             }
         }
         ul,
@@ -1254,7 +1258,6 @@
         //     }
         // }
 
-
         textarea {
             width: 100%;
             border-radius: 5px;
@@ -1353,6 +1356,76 @@
     span {
         color: $red;
         margin-left: 3px;
+    }
+    //圖片驗證碼
+    .code-gp {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        margin-bottom: $margin-XS;
+        flex-wrap: wrap;
+        @include web-S {
+            justify-content: start;
+        }
+        label {
+            width: 25%;
+            text-align: left;
+            font-weight: bold;
+            font-size: $size-h4;
+            color: $title-D;
+            @include pad{
+                width: 100%;
+            }
+        }
+        .text-gp {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            @include mobile-L() {
+                flex-wrap: wrap;
+            }
+            .code {
+                width: 40%;
+                margin-right: 10px;
+                margin-bottom: 0;
+                @include mobile-L() {
+                    width: 100%;
+                    margin-bottom: $margin-XS;
+                }
+            }
+            .RP {
+                height: 25px;
+                margin: 0;
+                margin-right: 10px;
+                @include web-L {
+                    width: auto;
+                    max-height: unset;
+                    height: 30px;
+                }
+                @include mobile-L() {
+                    height: 35px;
+                }
+            }
+            .reform {
+                height: auto;
+                color: $title-D;
+                font-weight: bold;
+                height: 30px;
+                background-color: transparent;
+                border-radius: 6px;
+                padding: 0 4px;
+                @include mobile-L() {
+                    margin: 0;
+                    margin-left: 6px;
+                }
+                i {
+                    margin: 0;
+                    font-size: 20px;
+                    padding: 0;
+                }
+            }
+        }
     }
 }
 
@@ -1675,23 +1748,72 @@
             margin: $margin-XS $padding-XS * 1.5;
         }
     }
-    .form-submit {
+    //圖片驗證碼
+    .code-gp {
         width: 100%;
+        padding: 0;
         display: flex;
-        justify-content: center;
+        margin-bottom: $margin-XS;
         flex-wrap: wrap;
-        flex-direction: column;
-        text-align: center;
-        margin-top: $margin-S;
-        .btn {
+        @include web-S {
+            justify-content: start;
+        }
+        label {
+            width: 25%;
+            text-align: left;
+            font-weight: bold;
+            font-size: $size-h4;
+            color: $title-D;
+            @include pad{
+                width: 100%;
+            }
+        }
+        .text-gp {
             width: 100%;
-            margin-top: $margin-XS;
-            input {
-                width: 30%;
-                margin: 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            @include mobile-L() {
+                flex-wrap: wrap;
+            }
+            .code {
+                width: 40%;
+                margin-right: 10px;
+                margin-bottom: 0;
                 @include mobile-L() {
                     width: 100%;
                     margin-bottom: $margin-XS;
+                }
+            }
+            .RP {
+                height: 25px;
+                margin: 0;
+                margin-right: 10px;
+                @include web-L {
+                    width: auto;
+                    max-height: unset;
+                    height: 30px;
+                }
+                @include mobile-L() {
+                    height: 35px;
+                }
+            }
+            .reform {
+                height: auto;
+                color: $title-D;
+                font-weight: bold;
+                height: 30px;
+                background-color: transparent;
+                border-radius: 6px;
+                padding: 0 4px;
+                @include mobile-L() {
+                    margin: 0;
+                    margin-left: 6px;
+                }
+                i {
+                    margin: 0;
+                    font-size: 20px;
+                    padding: 0;
                 }
             }
         }

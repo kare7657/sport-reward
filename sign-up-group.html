@@ -117,12 +117,25 @@
             </div>
             <div class="form-bot">
                 <div class="form-submit">
-                    <input class="form-check-input form-check-inline" type="checkbox" value="" id="private-agree">
-                    <label class="form-check-label" for="private-agree">
-                        我同意<a href="private.html" target="_blank">隱私權保護政策</a><span>*</span>
-                    </label>
+                    <!-- 圖片驗證碼 -->
+                    <div class="code-gp">
+                        <label for="code">驗證碼<span class="notice">*</span></label>
+                        <div class="text-gp">
+                            <input class="code" type="text" name="code" id="code">
+                            <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                            <button name="" id="" class="reform" onclick="" title="重新整理" type="button"><i
+                                    class="fas fa-sync-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="text-gp">
+                        <input type="checkbox" value="" id="private-agree">
+                        <label for="private-agree">
+                            我同意<a href="private.html" target="_blank">隱私權保護政策</a><span>*</span>
+                        </label>
+                    </div>
                     <div class="btn">
                         <input type="submit" value="送出表單">
+                        <input class="btn-outline" style="margin-top: 20px;" type="button" value="回上一頁">
                     </div>
                 </div>
             </div>
