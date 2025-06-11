@@ -472,6 +472,9 @@ body {
                 }
                 .form-gp {
                     padding: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
                     .city,
                     .area,
                     .postcode {
@@ -607,9 +610,9 @@ body {
                         margin: 0;
                         margin: $margin-XS/2 0;
                     }
-                    label {
-                        margin-left: $margin-XS * 1.5;
-                    }
+                    // label {
+                    //     margin-left: $margin-XS * 1.5;
+                    // }
                 }
             }
             .form-bot {
@@ -772,6 +775,7 @@ body {
             }
             .btn {
                 margin: $margin-XS/2 0;
+                border: none !important;
                 @include mobile-L() {
                     margin: 0;
                     padding: 0 $padding-XS * 1.5;

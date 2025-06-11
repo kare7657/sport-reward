@@ -99,7 +99,7 @@
             color: $blue !important;
         }
     }
-    .notice{
+    .notice {
         color: $red;
         margin-left: 4px;
     }
@@ -188,6 +188,24 @@
         &[type="file"] {
             border: none;
             padding: 0;
+        }
+    }
+    .custom-control {
+        display: flex;
+        align-items: center;
+        @include mobile-L() {
+            padding: 0 $padding-XS * 1.5;
+            line-height: 2.5;
+        }
+        .custom-control-input {
+            height: 22px;
+            width: 22px;
+            margin-right: 8px;
+        }
+        .custom-control-label {
+            vertical-align: middle;
+            margin-right: $margin-XS;
+            font-size: $size-p;
         }
     }
     ::placeholder {
@@ -281,6 +299,9 @@
     .outline-BK {
         border: solid 1px $title-BK;
         color: $title-BK;
+    }
+    .btn {
+        border: none !important;
     }
     //swiper
     .swiper-container {
@@ -414,7 +435,7 @@
                         }
                     }
                     .pagination {
-                        margin-top: $margin-XS/2;
+                        margin-top: 10px;
                     }
                 }
                 .modal-footer {
@@ -1373,7 +1394,7 @@
             font-weight: bold;
             font-size: $size-h4;
             color: $title-D;
-            @include pad{
+            @include pad {
                 width: 100%;
             }
         }
@@ -1553,6 +1574,12 @@
             margin: 0;
             margin-bottom: $margin-XS/2;
         }
+        h4 {
+            color: $text;
+            span {
+                color: $red;
+            }
+        }
         .text-gp {
             display: flex;
             margin-right: $margin-XS;
@@ -1603,7 +1630,7 @@
         .row {
             display: flex;
             justify-content: center;
-            padding: 0 $padding-XXS * 1.5;
+            padding: 0;
             margin-bottom: $margin-XS/2;
             .td {
                 width: 30%;
@@ -1639,18 +1666,20 @@
 
     .form-check-del {
         display: flex;
+        align-items: center;
         margin-top: 3px;
         input {
             &[type="checkbox"] {
-                width: 18px;
-                height: 18px;
+                width: 20px;
+                height: 20px;
                 margin: 0;
-                margin-top: 3px;
+                // margin-top: 3px;
                 margin-right: 8px;
             }
         }
         label {
             color: $red;
+            margin-bottom: 0;
         }
     }
     .w100-Full {
@@ -1691,15 +1720,16 @@
         }
         .form-check {
             text-align: right;
+            display: flex;
+            align-items: center;
             .form-check-input {
-                width: 15px;
-                height: 15px;
+                width: 20px;
+                height: 20px;
                 margin: 0;
-                margin-top: 5px;
             }
             .form-check-label {
                 margin: 0;
-                margin-left: $margin-XS * 1.2;
+                margin-left: $margin-XS/2;
             }
         }
         .fas {
@@ -1764,7 +1794,7 @@
             font-weight: bold;
             font-size: $size-h4;
             color: $title-D;
-            @include pad{
+            @include pad {
                 width: 100%;
             }
         }

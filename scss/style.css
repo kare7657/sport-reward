@@ -158,6 +158,26 @@
   border: none;
   padding: 0;
 }
+* .custom-control {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 568px) {
+  * .custom-control {
+    padding: 0 2.8125rem;
+    line-height: 2.5;
+  }
+}
+* .custom-control .custom-control-input {
+  height: 22px;
+  width: 22px;
+  margin-right: 8px;
+}
+* .custom-control .custom-control-label {
+  vertical-align: middle;
+  margin-right: 1.25rem;
+  font-size: 1rem;
+}
 * ::-moz-placeholder {
   color: #595757;
 }
@@ -251,6 +271,9 @@
 * .outline-BK {
   border: solid 1px black;
   color: black;
+}
+* .btn {
+  border: none !important;
 }
 @media (max-width: 568px) {
   * .swiper-container .swiper-button-next,
@@ -479,7 +502,7 @@
   margin-right: 0.8333333333rem;
 }
 * .modal-sp .modal-dialog .modal-content .modal-body .pagination {
-  margin-top: 0.625rem;
+  margin-top: 10px;
 }
 * .modal-sp .modal-dialog .modal-content .modal-footer {
   border-top: none;
@@ -3037,6 +3060,9 @@ body .content-signup .form-personal .form-body h4 {
 html .content-signup .form-personal .form-body .form-gp,
 body .content-signup .form-personal .form-body .form-gp {
   padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 html .content-signup .form-personal .form-body .form-gp .city,
 html .content-signup .form-personal .form-body .form-gp .area,
@@ -3589,10 +3615,6 @@ body .content-signup .form-group .form-body .form-check h4 {
   margin: 0;
   margin: 0.625rem 0;
 }
-html .content-signup .form-group .form-body .form-check label,
-body .content-signup .form-group .form-body .form-check label {
-  margin-left: 1.875rem;
-}
 html .content-signup .form-group .form-bot,
 body .content-signup .form-group .form-bot {
   width: 100%;
@@ -3882,6 +3904,7 @@ body .content-case-apply .btn {
 html .content-case-apply .container .btn,
 body .content-case-apply .container .btn {
   margin: 0.625rem 0;
+  border: none !important;
 }
 @media (max-width: 568px) {
   html .content-case-apply .container .btn,
@@ -4098,6 +4121,14 @@ body .content-case-apply .container .form-apply .form-check h3 {
   margin: 0;
   margin-bottom: 0.625rem;
 }
+html .content-case-apply .container .form-apply .form-check h4,
+body .content-case-apply .container .form-apply .form-check h4 {
+  color: #595757;
+}
+html .content-case-apply .container .form-apply .form-check h4 span,
+body .content-case-apply .container .form-apply .form-check h4 span {
+  color: #da382d;
+}
 html .content-case-apply .container .form-apply .form-check .text-gp,
 body .content-case-apply .container .form-apply .form-check .text-gp {
   display: flex;
@@ -4158,7 +4189,7 @@ html .content-case-apply .container .form-apply .table .row,
 body .content-case-apply .container .form-apply .table .row {
   display: flex;
   justify-content: center;
-  padding: 0 0.9375rem;
+  padding: 0;
   margin-bottom: 0.625rem;
 }
 html .content-case-apply .container .form-apply .table .row .td,
@@ -4198,19 +4229,20 @@ body .content-case-apply .container .form-apply .table .row span {
 html .content-case-apply .container .form-apply .form-check-del,
 body .content-case-apply .container .form-apply .form-check-del {
   display: flex;
+  align-items: center;
   margin-top: 3px;
 }
 html .content-case-apply .container .form-apply .form-check-del input[type=checkbox],
 body .content-case-apply .container .form-apply .form-check-del input[type=checkbox] {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   margin: 0;
-  margin-top: 3px;
   margin-right: 8px;
 }
 html .content-case-apply .container .form-apply .form-check-del label,
 body .content-case-apply .container .form-apply .form-check-del label {
   color: #da382d;
+  margin-bottom: 0;
 }
 html .content-case-apply .container .form-apply .w100-Full,
 body .content-case-apply .container .form-apply .w100-Full {
@@ -4269,18 +4301,19 @@ body .content-case-apply .container .form-apply .list .close {
 html .content-case-apply .container .form-apply .list .form-check,
 body .content-case-apply .container .form-apply .list .form-check {
   text-align: right;
+  display: flex;
+  align-items: center;
 }
 html .content-case-apply .container .form-apply .list .form-check .form-check-input,
 body .content-case-apply .container .form-apply .list .form-check .form-check-input {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   margin: 0;
-  margin-top: 5px;
 }
 html .content-case-apply .container .form-apply .list .form-check .form-check-label,
 body .content-case-apply .container .form-apply .list .form-check .form-check-label {
   margin: 0;
-  margin-left: 1.5rem;
+  margin-left: 0.625rem;
 }
 html .content-case-apply .container .form-apply .list .fas,
 body .content-case-apply .container .form-apply .list .fas {
