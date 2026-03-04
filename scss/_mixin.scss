@@ -353,8 +353,13 @@
                     }
                     .close {
                         position: absolute;
-                        right: 2.5%;
-                        margin: -1rem -1rem -1rem 0;
+                        top: 0;
+                        right: 0;
+                        background-color: transparent;
+                        color: $text;
+                        border-radius: 0;
+                        font-size: $size-h2;
+                        padding: $padding-XXS $padding-XS;
                     }
                 }
                 .modal-body {

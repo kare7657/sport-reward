@@ -7,7 +7,7 @@
     <title>登入</title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-           <link rel="stylesheet" href="scss/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/bootstrap.min.css">
     <link rel="stylesheet" href="scss/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
@@ -48,8 +48,8 @@
 
                         <input name="JSessId" type="hidden" value="25C42F78A3D3E67621485F7594B29385">
                     </div> -->
-                     <!-- 圖片驗證碼 -->
-                     <div class="code-gp">
+                    <!-- 圖片驗證碼 -->
+                    <div class="code-gp">
                         <label for="code">驗證碼<span class="notice">*</span></label>
                         <div class="text-gp">
                             <input class="code" type="text" name="code" id="code">
@@ -63,6 +63,7 @@
                         <input type="button" value="忘記密碼？" data-toggle="modal" data-target="#modalChangPWD">
                         <a href="#">補發會員認證信</a>
                     </div>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#modalChangPWD">開啟modal</a>
                 </form>
             </div>
         </div>
@@ -75,8 +76,9 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                         <h2 class="modal-title" id="modalPrivateLabel">變更密碼</h2>
                     </div>
                     <div class="modal-body">
@@ -104,7 +106,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" name="go" id="go" class="btn-sp">確認更改</button>
-                        <button type="button" name="cancel" id="cancel" class="btn-sp" data-dismiss="modal">取消</button>
+                        <button type="button" name="cancel" id="cancel" class="btn-sp"
+                            data-bs-dismiss="modal">取消</button>
 
                     </div>
                 </div>
@@ -125,6 +128,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script> -->
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- mobile-menu -->
     <script>
